@@ -1,0 +1,8 @@
+site_name: Ballerina Blog
+repo_url: https://github.com/ballerina-platform/blog
+site_description: Documentation for the Ballerina Programming Language
+site_author: WSO2, Inc.
+copyright: 2018 WSO2, Inc.
+pages:   
+theme: null
+theme_dir: three-column-pages
