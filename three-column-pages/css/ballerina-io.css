@@ -5,12 +5,13 @@
         ;
     
 }
-body.cBallerina-io {
+body.cBallerina-io  {
   background-color: #e7eaeb;
   font-family: "pragmatica",sans-serif;
 }
-body.cBallerina-io {
-  background-color: #e7eaeb;
+
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="date"], input[type="month"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="week"], input[type="number"], input[type="tel"], input[type="color"], input[type="search"] {
+    font-family: "pragmatica",sans-serif;
 }
 
 body.cBallerina-io .row {
@@ -60,9 +61,12 @@ a:hover {
 .cBallerina-io-Nav {
     
 }
+.cTagLine  {
+    font-size: 16px !important;
+}
 
 .cBallerina-io p {
-  font-size: 12px; 
+ font-size: 14px; 
   color: #57595d;
   line-height: 18px;
 }
@@ -86,6 +90,11 @@ a.cLogo img {
     margin-bottom: 0;
     padding: 0;
 }
+
+.navbar-nav > li:last-child a {
+    padding-right: 0;
+}
+
 .navbar-nav > li > a {
     padding-top: 0;
     line-height: 12px;
@@ -93,9 +102,13 @@ a.cLogo img {
     color: #57595d;
 }
 
-.navbar-nav.cTopNav > li:first-child , .navbar-nav.cTopNav > li:nth-child(2) {
-    display: none;
+.navbar-nav > li.cActive > a {
+    color: #3ad1ca !important;
 }
+
+/*.navbar-nav.cTopNav > li:first-child , .navbar-nav.cTopNav > li:last-child  {
+    display: none;
+}*/
 
 
 .nav.navbar-nav.cTopNav li ul {
@@ -126,7 +139,43 @@ ul.navbar-nav {
 
 .cBallerina-io-White-row {
     background-color: #ffffff;
+    padding-bottom: 100px;
+    padding: 90px 0;
 }
+
+.cSearchBoxTopMenu {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    height: 20px;
+    width: 200px;
+/*    background: red;*/
+opacity: 0;
+transition: all 0.2s ease 0s;
+}
+
+#rtd-search-form input {
+    font-size: 14px;
+    padding: 2px 10px;
+    width: 0%;
+    border-radius: 0px;
+    border: none;
+     padding: 2px 10px;
+    width: 100%;
+    
+
+}
+
+.cSearchBoxTopMenu.cShowcSearchTopMenu {
+    opacity: 1;
+    top: 40px;
+    transition: all 0.2s ease 0s;
+}
+
+/*.cSearchBoxTopMenu.cShowcSearchTopMenu #rtd-search-form input {
+    transition: all 0.2s ease 0s;
+    
+}*/
 
 
 /*COLUMNS*/
@@ -149,21 +198,52 @@ ul.navbar-nav {
 }
 
 
+/*GEN INNER*/
+
+.cGreenLink ,  .cGreenTitle , .cGreenLink a,  .cGreenTitle a {
+   font-size: 14px;
+
+font-weight: 800;
+font-family: "CalibreWeb-Semibold";
+color: #22b7b1;
+margin-bottom: 30px;
+margin-top: 0px;
+}
+
+
+
+
+.cInnerPageContentCol {
+    
+    padding-left: 0;
+}
+.cBallerina-io-Home-Left-col .cInnerPageContentCol p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 20px;  
+    
+}
+
 
 /*HOME*/
 
+.cMainParagraph {
+    font-weight: 200;
+}
 
 .cBallerina-io-Home-Left-col {
     padding-top: 50px;
 }
 .cBallerina-io-Home-Left-col p {
-    font-size: 23px;
+    font-size: 25px;
     line-height: 30px;
     margin-bottom: 0;
+    
 }
 .cBallerina-io-Home-Left-col a {
     font-size: 14px;
     color: #22b7b1;
+/*    font-family: "CalibreWeb-Semibold";*/
 }
 .cHomeButtonContainer {
     display: inline-block;
@@ -182,11 +262,12 @@ a.cBallerina-io-Home-main-download-button {
      background-position: 26px center;
      margin-top: 30px;
     
-    
 }
+
+
 p.cBallerina-io-Home-OS {
-    font-size: 10px;
-    line-height: 14px;
+    font-size: 14px;
+    line-height: 20px;
 
 display: inline-block;
 
@@ -208,21 +289,20 @@ margin-top: 10px;
 }*/
 
 .cBallerina-io-Home-main-instructions p {
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .cBallerina-io-Home-main-instructions p span {
     color: #22b7b1;
     text-transform: uppercase;
+    font-family: "CalibreWeb-Semibold";
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 .cBallerina-io-Home-widget img {
     max-width: 100%;
 }
-
-
-
-
 
 
 
@@ -233,6 +313,22 @@ margin-top: 10px;
 .cBallerina-io-Home-Middle-col {
     background-color: #ffffff;
 }
+
+h2.cMainH2Title {
+    font-weight: 200;
+    margin-bottom: 30px;
+    margin-top: 0;
+    color: #57595d;
+}
+
+#ballerina_grammar , #ballerina_grammar_2 {
+    min-height: 400px;
+
+}
+
+
+
+
 
 
 
@@ -247,22 +343,35 @@ margin-top: 10px;
 }
 .cBallerinaFooterLinks ul li {
  list-style: none;
- font-size: 10px;
+/* font-size: 10px;*/
  color: #57595d;
  font-weight: 400;
 }
 
 .cBallerinaFooterLinks ul li a {
     color: #57595d;
+    text-transform: uppercase;
+    font-family: "CalibreWeb-Semibold" !important;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 1px;
 }
 
 .cBallerinaFooterSignUp p {
     font-size: 10px;
     margin-bottom: 0px;
+   
 }
 
 .cBallerinaFooterSignUp p span {
     font-weight: 400;
+     font-family: "CalibreWeb-Semibold" !important;
+        font-weight: 600;
+        font-size: 12px;
+         letter-spacing: 1px;
+         text-transform: uppercase;
+         margin-bottom: 10px;
+         display: inline-block;
 }
 
 .cBallerina-io-middle-col.cBallerinaFooterSignUp {
@@ -271,7 +380,7 @@ margin-top: 10px;
 
 
 #iBallerinaFooter .cBallerina-io-right-col p {
-    font-size: 10px;
+    font-size: 12px;
     padding-left: 40px;
 }
 
@@ -295,12 +404,42 @@ padding-left: 2px;
 }
 #emailUser {
     background-color: #e6e9ea;
-    height: 20px;
-    font-size: 10px;
-    width: 230px;
-    border: none;
-    padding-left: 7px;
+/*height: 20px;*/
+font-size: 14px;
+width: 160px;
+border: none;
+padding-left: 10px;
+padding: 5px;
 }
+
+#iBallerinaFooter p {
+    line-height: 16px !important;
+}
+.cSocialmedia {
+    margin-top: 7px;
+}
+
+
+
+#subscribeUserButton {
+          font-family: "CalibreWeb-Semibold";
+          text-transform: uppercase;
+          font-weight: 400;
+          letter-spacing: 1px;
+          padding: 5px 16px;
+/*          background: #585a5e;*/
+background-color: #ffffff;
+          border: 1px solid #a7a8ab;
+          font-size: 14px;
+          line-height: 23px;
+          color: #3ad1ca;
+          font-weight: 800;
+       }
+
+
+
+
+
 
 /*MOBILE */
 
@@ -326,6 +465,13 @@ button.navbar-toggle {
     display: none;
 }
 
+.cBallerinaButtonWhite {
+    border: 1px solid #000000;
+    font-family: "CalibreWeb-Semibold" !important;
+   text-transform: uppercase;
+    
+    
+}
 @media screen and (max-width: 768px) {
     
     
@@ -402,7 +548,8 @@ margin-right: 0;
         height: 100px;
     }
 
-/*    FOOTER
+    
+    /*    FOOTER
     */
     
     .cBallerina-io-middle-col.cBallerinaFooterSignUp {
@@ -415,4 +562,6 @@ margin-right: 0;
         padding-top: 30px;
         padding-bottom: 30px;
     }
+    
+    
 }
