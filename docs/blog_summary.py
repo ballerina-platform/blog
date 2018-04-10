@@ -4,7 +4,7 @@ import os
 md = markdown.Markdown(extensions = ['markdown.extensions.meta'])
 
 print('<link rel="stylesheet" href="/css/blog-home-page.css"></link>')
-for file in os.listdir("./posts"):
+for file in sorted(os.listdir("./posts"), reverse=True):
     if file.endswith(".md"):
         file_name = os.path.join("./posts", file)
         with open(file_name, "r") as mdfile:
