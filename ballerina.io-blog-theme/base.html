@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en" >
+   <![endif]-->
+   <!--[if gt IE 8]><!-->
+   <html class="no-js" lang="en">
+      <!--<![endif]-->
+      <head>
+         {%- block site_meta %}
+         <meta charset="utf-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         {% if page and page.is_homepage %}
+         <meta name="description" content="{{ config.site_description }}">
+         {% endif %} {% if config.site_author %}
+         <meta name="author" content="{{ config.site_author }}">
+         {% endif %} {% if config.site_favicon %}
+         <link rel="shortcut icon" href="{{ base_url }}/{{ config.site_favicon }}">
+         {% else %}
+         <link rel="shortcut icon" href="/img/favicon.ico">
+         {% endif %} {%- endblock %} {%- block htmltitle %}
+         <title>{% if page and page.title and not page.is_hompage %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+         {%- endblock %} {%- block styles %}
+         <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+         <!-- Optional theme -->
+         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+         <!-- Latest compiled and minified JavaScript -->
+         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+         <!--<script src="{{ base_url }}/js/jquery-2.1.1.min.js"></script>-->
+         <!--<script src="{{ base_url }}/js/modernizr-2.8.3.min.js"></script>
+            <script type="text/javascript" src="{{ base_url }}/js/highlight.pack.js"></script>-->
+         <script src="/js/jquery-2.1.1.min.js"></script>
+         <script src="/js/modernizr-2.8.3.min.js"></script>
+         <script type="text/javascript" src="{{ base_url }}/js/highlight.pack.js"></script>
+         <script>
+            var base_url = "";
+         </script>
+         <script data-main="/search/search.js" src="/search/require.js"></script>
+         <link rel="stylesheet" href="https://use.typekit.net/son4ymv.css" />
+         <link rel="stylesheet" href="/css/theme.css" type="text/css" />
+         <link rel="stylesheet" href="/css/theme_extra.css" type="text/css" />
+         <link rel="stylesheet" href="/css/highlight.css">
+         <script src="/js/ballerina-common.js"></script>
+         <link rel="stylesheet" href="/css/ballerina-io.css">
+         <link rel="stylesheet" href="/css/ballerina-io-docs.css">
+         {%- for path in extra_css %}
+         <!--  <link href="{{ path }}" rel="stylesheet">-->
+         {%- endfor %} {%- endblock %} {%- block libs %} {% if page %}
+         {% endif %} {%- endblock %} {%- block extrahead %} {% endblock %} {%- block analytics %} {% if config.google_analytics %} {% endif %} {%- endblock %}
+      </head>
+      <body class="cBallerina-io" role="document">
+         {% include "navigation.html" %}
+         <div class="row cBallerina-io-Gray-row">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-Home-Left-col">
+                     <div class="cBlallerina-io-docs-left-nav-container">
+                        <div class="cSideBar-Button"><img src="/img/sidebar.svg" /></div>
+                        <div class="cBlallerina-io-docs-left-nav-box">
+                           <div class="cBallerina-io-docs-Title">TABLE OF CONTENTS</div>
+                           <ul>
+                              {% for toc_item in page.toc %}
+                              <li class="toctree-l3"><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+                              {% for toc_item in toc_item.children %}
+                              <li><a class="toctree-l4" href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+                              {% endfor %} {% endfor %}
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-6 cBallerina-io-Home-Middle-col">
+                     <div class="cBallerina-io-breadcrumbs">
+                        {% include "breadcrumbs.html" %}
+                     </div>
+                     <div class="cBlallerina-io-docs-content-container">
+                        <div class="wy-nav-content">
+                           <div class="rst-content">
+                              <div role="main">
+                                 <div class="section">
+                                    <!--                <h1>{{ page.title }}</h1>-->
+                                    {% block content %} {{ page.content }} {% endblock %}
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 cBallerina-io-Home-Right-col">
+                     <div class="cBlallerina-io-docs-right-nav-container">
+                        <div class="cBlallerina-io-docs-right-nav-box">
+                           <div class="cBallerina-io-docs-Title">TABLE OF CONTENTS RIGHT</div>
+                           <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                              {%- block site_nav %}
+                              <ul class="current">
+                                 {% for nav_item in nav %}
+                                 <li>{% include "toc.html" %}
+                                 <li>
+                                    {% endfor %}
+                              </ul>
+                              {%- endblock %}
+                           </div>
+                           <div style="padding-top: 30px;">
+                              {%- block search_button %}
+                              {% include "searchbox.html" %}
+                              {%- endblock %}
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         {% include "footer.html" %} {%- block scripts %}
+         <script>
+            $(document).ready(function() {
+                
+//                $(".section ul ").attr('class','col-xs-12 col-sm-6 col-md-3 col-lg-3');
+                $(".section ul ").addClass('cBlogPostContainer'); 
+                $( "ul.cBlogPostContainer" ).wrap( "<div class='col-xs-12 col-sm-6 col-md-3 col-lg-3' />");
+                
+                $(".cSideBar-Button").click(function() {
+            		$(".cSideBar-Button").toggleClass('cOpen');
+            		$(".cBallerina-io-Home-Left-col").toggleClass('cOpen-col');
+            
+            
+            	});
+            
+                      $( "#breadcrumb-list li" ).each(function( index ) {
+                          var current= $( this );
+                          var currentLink = $(current.find( "a" )[0]);
+                          if(currentLink && currentLink.attr("href") =="#" && !current.hasClass("wy-breadcrumbs-aside") &&
+                             !current.next().hasClass("wy-breadcrumbs-aside")){
+                              var prevLink = $(current.prev().find( "a" )[0]);
+                              if(prevLink && prevLink.attr("href") !="#"){
+                                  currentLink.attr("href", prevLink.attr("href") +
+            										 (prevLink.attr("href").match(/\/$/) ? "" : "/") +
+            										 current.attr("link_candidate").toLowerCase().split(" ").join("-"));
+                              }
+                          }
+                      });
+                      
+                  });
+            
+            
+            
+            $(function() {
+            	var pathname = window.location.pathname;
+            
+            	if (pathname.indexOf("learn") != -1) {
+            		$("#learnli").addClass("cActive");
+            	} else if (pathname.indexOf("blog") != -1) {
+            		$("#blogli").addClass("cActive");
+            	} else if (pathname.indexOf("philosophy") != -1) {
+            		$("#philosophyli").addClass("cActive");
+            	} else if (pathname.indexOf("open-source") != -1) {
+            		$("#openli").addClass("cActive");
+            	} else if (pathname.indexOf("help") != -1) {
+            		$("#helpli").addClass("cActive");
+            	}
+            });
+         </script>
+         <script src="/js/theme.js"></script>
+         {%- for path in extra_javascript %}
+         <script src="{{ path }}"></script>
+         {%- endfor %} {%- endblock %}
+         <!-- Slack form -->
+         <div class="modal fade" id="subscribe" role="dialog">
+            <div class="modal-dialog">
+               <!-- Modal content-->
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                     <h4 class="modal-title">Request an invite</h4>
+                  </div>
+                  <div class="modal-body">
+                     <form>
+                        <div class="cBallerinaFormFieldContainer">
+                           <span id="subscribeMessage"></span>
+                           <label class="subscribeForm">Email Address</label>
+                           <input maxlength="90" value="" id="email" name="email" placeholder="Email" title="Email" class="cTextfieldstyle contact_email subscribeForm" type="text">
+                        </div>
+                        <a class="cBallerinaButtons subscribeForm" href="" id="subscribeButton">Submit</a>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </body>
+   </html>
+   {% if page and page.is_homepage %}
+   <!--
+      MkDocs version : {{ mkdocs_version }}
+      Build Date UTC : {{ build_date_utc }}
+      -->
+   {% endif %}
