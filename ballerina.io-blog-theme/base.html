@@ -36,14 +36,19 @@
          <script>
             var base_url = "";
          </script>
-         <script data-main="/search/search.js" src="/search/require.js"></script>
-         <link rel="stylesheet" href="https://use.typekit.net/son4ymv.css" />
-         <link rel="stylesheet" href="/css/theme.css" type="text/css" />
-         <link rel="stylesheet" href="/css/theme_extra.css" type="text/css" />
-         <link rel="stylesheet" href="/css/highlight.css">
-         <script src="/js/ballerina-common.js"></script>
-         <link rel="stylesheet" href="/css/ballerina-io.css">
-         <link rel="stylesheet" href="/css/ballerina-io-docs.css">
+   <script src="{{config.base_common_resouce_url}}/search/require.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/son4ymv.css" />
+    <link rel="stylesheet" href="{{config.base_common_resouce_url}}/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="{{config.base_common_resouce_url}}/css/theme_extra.css" type="text/css" />
+    <script type="text/javascript" src="{{config.base_common_resouce_url}}/js/highlight.pack.js"></script>
+    <link rel="stylesheet" href="{{config.base_common_resouce_url}}/css/highlight.css">
+    <script src="{{config.base_common_resouce_url}}/js/ballerina-common.js"></script>
+         
+         
+         
+         <link rel="stylesheet" href="{{config.base_common_resouce_url}}/css/ballerina-io.css">
+         <link rel="stylesheet" href="{{config.base_common_resouce_url}}/css/ballerina-io-docs.css">
+         <link rel="stylesheet" href="{{config.base_common_resouce_url}}/css/ballerina-io-blog-inner-pages.css">
          {%- for path in extra_css %}
          <!--  <link href="{{ path }}" rel="stylesheet">-->
          {%- endfor %} {%- endblock %} {%- block libs %} {% if page %}
@@ -56,7 +61,7 @@
                <div class="row">
                   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-Home-Left-col">
                      <div class="cBlallerina-io-docs-left-nav-container">
-                        <div class="cSideBar-Button"><img src="/img/sidebar.svg" /></div>
+                        <div class="cSideBar-Button"><img src="{{config.base_common_resouce_url}}/img/sidebar.svg" /></div>
                         <div class="cBlallerina-io-docs-left-nav-box">
                            <div class="cBallerina-io-docs-Title">TABLE OF CONTENTS</div>
                            <ul>
@@ -68,8 +73,28 @@
                            </ul>
                         </div>
                      </div>
+                     <div class="cBlallerina-io-docs-left-nav-container">
+                        <div class="cBlallerina-io-docs-left-nav-box">
+                           <div class="cBallerina-io-docs-Title">BLOGS</div>
+                           <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                              {%- block site_nav %}
+                              <ul class="current">
+                                 {% for nav_item in nav %}
+                                 <li>{% include "toc.html" %}
+                                 <li>
+                                    {% endfor %}
+                              </ul>
+                              {%- endblock %}
+                           </div>
+<!--                           <div style="padding-top: 30px;">
+                              {%- block search_button %}
+                              {% include "searchbox.html" %}
+                              {%- endblock %}
+                           </div>-->
+                        </div>
+                     </div>
                   </div>
-                  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-6 cBallerina-io-Home-Middle-col">
+                  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 cBallerina-io-Home-Middle-col">
                      <div class="cBallerina-io-breadcrumbs">
                         {% include "breadcrumbs.html" %}
                      </div>
@@ -86,39 +111,14 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 cBallerina-io-Home-Right-col">
-                     <div class="cBlallerina-io-docs-right-nav-container">
-                        <div class="cBlallerina-io-docs-right-nav-box">
-                           <div class="cBallerina-io-docs-Title">TABLE OF CONTENTS RIGHT</div>
-                           <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                              {%- block site_nav %}
-                              <ul class="current">
-                                 {% for nav_item in nav %}
-                                 <li>{% include "toc.html" %}
-                                 <li>
-                                    {% endfor %}
-                              </ul>
-                              {%- endblock %}
-                           </div>
-                           <div style="padding-top: 30px;">
-                              {%- block search_button %}
-                              {% include "searchbox.html" %}
-                              {%- endblock %}
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+                </div>
             </div>
          </div>
          {% include "footer.html" %} {%- block scripts %}
          <script>
             $(document).ready(function() {
                 
-//                $(".section ul ").attr('class','col-xs-12 col-sm-6 col-md-3 col-lg-3');
-                $(".section ul ").addClass('cBlogPostContainer'); 
-                $( "ul.cBlogPostContainer" ).wrap( "<div class='col-xs-12 col-sm-6 col-md-3 col-lg-3' />");
-                
+
                 $(".cSideBar-Button").click(function() {
             		$(".cSideBar-Button").toggleClass('cOpen');
             		$(".cBallerina-io-Home-Left-col").toggleClass('cOpen-col');
