@@ -14,5 +14,6 @@ pages:
 
 theme: null
 theme_dir: ballerina.io-blog-theme
+base_common_resouce_url : 'https://stage.ballerina.io'
 markdown_extensions:
  - meta
