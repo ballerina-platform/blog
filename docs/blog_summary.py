@@ -10,11 +10,14 @@ for file in sorted(os.listdir("./posts"), reverse=True):
         with open(file_name, "r") as mdfile:
             text = mdfile.read()
             html = md.convert(text)
-            print('---')            
+            print('---')
             print( '* [' + md.Meta['title'][0] + '](' + file_name + ')')
             print('* ' + md.Meta['author'][0])
             print('* ' + md.Meta['date'][0])
             print('* ' + md.Meta['abstract'][1])
             print('* ' + md.Meta['status'][0])
-            print('---')            
-
+            print(md.Meta['sm-twitter-img'][0])
+            print(md.Meta['sm-twitter-desc'][0])
+            print(md.Meta['sm-fb-img'][0])
+            print(md.Meta['sm-fb-desc'][0])
+            print('---')
