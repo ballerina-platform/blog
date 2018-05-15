@@ -21,6 +21,40 @@
          {% endif %} {%- endblock %} {%- block htmltitle %}
          <title>{% if page and page.title and not page.is_hompage %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
          {%- endblock %} {%- block styles %}
+         
+         
+         
+<!--         SOCIAL MEDIA-->
+         
+         
+      
+         
+          <!--FB-->
+
+        <meta property="og:type"               content="article" />
+        <meta property="og:title"              content="{{ page.title }}" />
+         {% if page and page.meta.abstract %}<meta property="og:description" content="{{ page.meta.abstract[0] }}" />{% endif %}
+         {% if page and page.meta.socialmediaimage %}<meta property="og:image" content="/{{ page.meta.socialmediaimage[0] }}" />{% endif %}
+
+        <!--TWITTER-->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@ballerinaplat">
+        <meta name="twitter:creator" content="@ballerinaplat">
+        <meta name="twitter:title" content="{{ page.title }}">
+        {% if page and page.meta.abstract %}<meta name="twitter:description" content="{{ page.meta.abstract[0] }}">{% endif %}
+        {% if page and page.meta.socialmediaimage %}<meta name="twitter:image" content="{{ page.meta.socialmediaimage[0] }}"> {% endif %}
+        {% if page and page.meta.abstract %}<meta name="twitter:text:description" content="{{ page.meta.abstract[0] }}"> {% endif %}
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image:width" content="610">
+
+        <!--LINKED IN  -->
+
+        <meta property='og:title' content="{{ page.title }}"/>
+        {% if page and page.meta.socialmediaimage %}<meta property='og:image' content="{{ page.meta.socialmediaimage[0] }}"/>{% endif %}
+        {% if page and page.meta.abstract %}<meta property='og:description' content="{{ page.meta.abstract[0] }}"/>{% endif %}
+      
+
+         
          <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
          <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
          <!-- Optional theme -->
@@ -42,13 +76,11 @@
     <link rel="stylesheet" href="{{config.base_common_resouce_url}}/css/theme_extra.css" type="text/css" />
     <script type="text/javascript" src="{{config.base_common_resouce_url}}/js/highlight.pack.js"></script>
     <link rel="stylesheet" href="{{config.base_common_resouce_url}}/css/highlight.css">
-    <script src="{{config.base_common_resouce_url}}/js/ballerina-common.js"></script>
+    <script src="/js/ballerina-common.js"></script>
          
-         
-         
-         <link rel="stylesheet" href="{{config.base_common_resouce_url}}/css/ballerina-io.css">
+  <link rel="stylesheet" href="{{config.base_common_resouce_url}}/css/ballerina-io.css">
          <link rel="stylesheet" href="{{config.base_common_resouce_url}}/css/ballerina-io-docs.css">
-         <link rel="stylesheet" href="{{config.base_common_resouce_url}}/css/ballerina-io-blog-inner-pages.css">
+         <link rel="stylesheet" href="/css/ballerina-io-blog-inner-pages.css">
          {%- for path in extra_css %}
          <!--  <link href="{{ path }}" rel="stylesheet">-->
          {%- endfor %} {%- endblock %} {%- block libs %} {% if page %}
@@ -186,6 +218,27 @@
                </div>
             </div>
          </div>
+         
+         <div class="cSocial-sidebar">
+             <ul class="cHorizontalList cSocialMedia" style="list-style: none; padding: 0; margin: 0;">
+                 <li>
+                     <a target="_blank" rel="external nofollow" <a class="w-inline-block social-share-btn tw" href="https://twitter.com/intent/tweet?" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;">
+                             <img id="iFloating-Twitter-Share" src="/img/twitter.svg" alt="Twitter">
+                         </a>
+                 </li>
+                 <li>
+                     <a target="_blank" rel="external nofollow" title="Share with your friends on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;">
+                         <img id="iFloating-Facebook-Share" src="/img/facebook.svg" alt="Facebook">
+                     </a>
+                 </li>
+                 <li>
+                     <a target="_blank" rel="external nofollow" <a class="w-inline-block social-share-btn lnk" href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;">
+                             <img id="iFloating-LinkedIn-Share" src="/img/linkedin.svg" alt="LinkedIn">
+                         </a>
+                 </li>
+             </ul>
+         </div>
+         
       </body>
    </html>
    {% if page and page.is_homepage %}
