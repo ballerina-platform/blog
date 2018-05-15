@@ -9,6 +9,7 @@ KEY_AUTHOR = 'author'
 KEY_DATE = 'date'
 KEY_ABSTRACT = 'abstract'
 KEY_STATUS = 'status'
+KEY_IMG = 'socialmediaimage'
 DATE_FORMAT_IN_MD = '%d %B %Y' # For more info - https://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior
 
 md = markdown.Markdown(extensions = ['markdown.extensions.meta'])
@@ -29,6 +30,7 @@ for file in sorted(os.listdir("./posts"), reverse=False):
                     metadata[date] = {}
                 title = md.Meta[KEY_TITLE][0]
                 metadata[date][title] = {
+                    KEY_IMG: md.Meta[KEY_IMG][0],
                     KEY_FILENAME: file_name,
                     KEY_AUTHOR: md.Meta[KEY_AUTHOR][0],
                     KEY_DATE: md.Meta[KEY_DATE][0],
@@ -48,7 +50,10 @@ for date in ordered_data:
     for title in sorted(titlesInDate):  # order by title
         current = titlesInDate[title]
         print('---')
-        print('* [' + title + '](' + current[KEY_FILENAME] + ')')
+        # print('<a href="(' + current[KEY_FILENAME] + ')"><img src="('+ current[KEY_IMG] +')"/></a>')
+        # print('* __![xx]('+ current[KEY_IMG] +')__[' + title + '](' + current[KEY_FILENAME] + ')')
+        # print('* [' + title + '](' + current[KEY_FILENAME] + ')')
+        print('* <div class="cBlogThumbnailContainer"><img src="'+ current[KEY_IMG] +'"/></div> [' + title + '](' + current[KEY_FILENAME] + ') ')
         print('* ' + current[KEY_AUTHOR])
         print('* ' + current[KEY_DATE])
         print('* ' + current[KEY_ABSTRACT])
