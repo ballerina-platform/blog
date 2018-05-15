@@ -1,23 +1,56 @@
 import markdown
 import os
+from datetime import datetime
+from collections import OrderedDict
+
+KEY_TITLE = 'title'
+KEY_FILENAME = 'filename'
+KEY_AUTHOR = 'author'
+KEY_DATE = 'date'
+KEY_ABSTRACT = 'abstract'
+KEY_STATUS = 'status'
+DATE_FORMAT_IN_MD = '%d %B %Y' # For more info - https://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior
 
 md = markdown.Markdown(extensions = ['markdown.extensions.meta'])
-
+metadata = {}
 print('<link rel="stylesheet" href="/css/blog-home-page.css"></link>')
 print('<script src="/js/blog-home-page.js"></script>')
+
+# Extracting information
 for file in sorted(os.listdir("./posts"), reverse=False):
-# for file in sorted(os.listdir("./posts"), reverse=False):
     if file.endswith(".md"):
         file_name = os.path.join("./posts", file)
         with open(file_name, "r") as mdfile:
             text = mdfile.read()
             html = md.convert(text)
-            print('---')
-            # print('* ! [xx]('+ md.Meta['socialmediaimage'][0] +')')
-            # print('* __![xx]('+ md.Meta['socialmediaimage'][0] +')__[' + md.Meta['title'][0] + '](' + file_name + ')')
-            print('* [' + md.Meta['title'][0] + '](' + file_name + ')')
-            print('* ' + md.Meta['author'][0])
-            print('* ' + md.Meta['date'][0])
-            print('* ' + md.Meta['abstract'][0])
-            print('* ' + md.Meta['status'][0])
-            print('---')
+            date = md.Meta[KEY_DATE][0]
+            if date:
+                if date not in metadata:
+                    metadata[date] = {}
+                title = md.Meta[KEY_TITLE][0]
+                metadata[date][title] = {
+                    KEY_FILENAME: file_name,
+                    KEY_AUTHOR: md.Meta[KEY_AUTHOR][0],
+                    KEY_DATE: md.Meta[KEY_DATE][0],
+                    KEY_ABSTRACT: md.Meta[KEY_ABSTRACT][0],
+                    KEY_STATUS: md.Meta[KEY_STATUS][0]
+
+                }
+
+
+# Ordering by date
+ordered_data = OrderedDict(
+    sorted(metadata.items(), key = lambda x:datetime.strptime(x[0], DATE_FORMAT_IN_MD), reverse=True))
+
+
+for date in ordered_data:
+    titlesInDate = ordered_data[date]
+    for title in sorted(titlesInDate):  # order by title
+        current = ordered_data[date][title]
+        print('---')
+        print('* [' + title + '](' + current[KEY_FILENAME] + ')')
+        print('* ' + current[KEY_AUTHOR])
+        print('* ' + current[KEY_DATE])
+        print('* ' + current[KEY_ABSTRACT])
+        print('* ' + current[KEY_STATUS])
+        print('---')
