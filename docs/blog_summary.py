@@ -46,7 +46,7 @@ ordered_data = OrderedDict(
 for date in ordered_data:
     titlesInDate = ordered_data[date]
     for title in sorted(titlesInDate):  # order by title
-        current = ordered_data[date][title]
+        current = titlesInDate[title]
         print('---')
         print('* [' + title + '](' + current[KEY_FILENAME] + ')')
         print('* ' + current[KEY_AUTHOR])
