@@ -33,8 +33,8 @@
 
         <meta property="og:type"               content="article" />
         <meta property="og:title"              content="{{ page.title }}" />
-         {% if page and page.meta.abstract %}<meta property="og:description" content="{{ page.meta.abstract }}" />{% endif %}
-         {% if page and page.meta.socialmediaimage %}<meta property="og:image" content="{{ page.meta.socialmediaimage }}" />{% endif %}
+         {% if page and page.meta.abstract %}<meta property="og:description" content="{{ page.meta.abstract[0] }}" />{% endif %}
+         {% if page and page.meta.socialmediaimage %}<meta property="og:image" content="/{{ page.meta.socialmediaimage[0] }}" />{% endif %}
 
         <!--TWITTER-->
         <meta name="twitter:card" content="summary" />
@@ -47,13 +47,11 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:image:width" content="610">
 
-xhgxhgxkhgxak
-
         <!--LINKED IN  -->
 
         <meta property='og:title' content="{{ page.title }}"/>
-        {% if page and page.meta.socialmediaimage %}<meta property='og:image' content="{{ page.meta.socialmediaimage }}"/>{% endif %}
-        {% if page and page.meta.abstract %}<meta property='og:description' content="{{ page.meta.abstract }}"/>{% endif %}
+        {% if page and page.meta.socialmediaimage %}<meta property='og:image' content="{{ page.meta.socialmediaimage[0] }}"/>{% endif %}
+        {% if page and page.meta.abstract %}<meta property='og:description' content="{{ page.meta.abstract[0] }}"/>{% endif %}
       
 
          
@@ -78,7 +76,7 @@ xhgxhgxkhgxak
     <link rel="stylesheet" href="{{config.base_common_resouce_url}}/css/theme_extra.css" type="text/css" />
     <script type="text/javascript" src="{{config.base_common_resouce_url}}/js/highlight.pack.js"></script>
     <link rel="stylesheet" href="{{config.base_common_resouce_url}}/css/highlight.css">
-    <script src="{{config.base_common_resouce_url}}/js/ballerina-common.js"></script>
+    <script src="/js/ballerina-common.js"></script>
          
   <link rel="stylesheet" href="{{config.base_common_resouce_url}}/css/ballerina-io.css">
          <link rel="stylesheet" href="{{config.base_common_resouce_url}}/css/ballerina-io-docs.css">
@@ -224,7 +222,7 @@ xhgxhgxkhgxak
          <div class="cSocial-sidebar">
              <ul class="cHorizontalList cSocialMedia" style="list-style: none; padding: 0; margin: 0;">
                  <li>
-                     <a target="_blank" rel="external nofollow" <a class="w-inline-block social-share-btn tw" href="https://twitter.com/intent/tweet?" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=%20Check%20up%20this%20awesome%20content' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;">
+                     <a target="_blank" rel="external nofollow" <a class="w-inline-block social-share-btn tw" href="https://twitter.com/intent/tweet?" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;">
                              <img id="iFloating-Twitter-Share" src="/img/twitter.svg" alt="Twitter">
                          </a>
                  </li>

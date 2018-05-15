@@ -1,11 +1,10 @@
 ---
-title: "Thinking in Ballerina"
+title: Thinking in Ballerina
 author: Selvaratnam Uthaiyashankar
-date: 1 May 2018
+date: 14 May 2018
 status: Published
-abstract: |
-    Ballerina's syntax, code, and compiler create runtime services and deployment artifacts that are cloud native ready for deployment within your IaaS, orchestrator, or service mesh of choice. The developer experience is designed to maintain flow, where the edit, build, debug cycle is rapid and integrated to your team's lifecycle toolchain.
-socialmediaimage:  /blog-images/dummy-image.jpg
+abstract:  Ballerina's syntax, code, and compiler create runtime services and deployment artifacts that are cloud native ready for deployment within your IaaS, orchestrator, or service mesh of choice. The developer experience is designed to maintain flow, where the edit, build, debug cycle is rapid and integrated to your team's lifecycle toolchain.
+socialmediaimage: http://localhost/blog/img/blog-images/dummy-image.jpg
 ---
 
 # Thinking in Ballerina
@@ -62,7 +61,8 @@ Aliquam ut massa in turpis dapibus convallis. Praesent elit lacus, vestibulum at
 ## Think fuctional, think objects
 Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. Fusce eget orci a orci congue vestibulum. Ut dolor diam, elementum et vestibulum eu, porttitor vel elit. Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id justo. Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper. Aliquam at massa ipsum. Quisque bibendum purus convallis nulla ultrices ultricies. Nullam aliquam, mi eu aliquam tincidunt, purus velit laoreet tortor, viverra pretium nisi quam vitae mi. Fusce vel volutpat elit. Nam sagittis nisi dui.
 
-```ballerina(){show=true}
+```ballerina
+(){show=true}
 // Dynamically define your types
 final Person? person = Programmer;
 
