@@ -5,14 +5,14 @@ site_author: WSO2, Inc.
 copyright: 2018 WSO2, Inc.
 pages:
 - Home: 'index.md'
-- Introducting Native Programming: 'posts/id-001-thinking-in-ballerina.md'
-- Quick Tour with Ballerina: 'posts/id-002-quick-tour with-ballerina.md'
-- Next geneation integration: 'posts/id-003-next-geneation-integration.md'
-- Thinking in Ballerina: 'posts/id-004-introducting-native-programming.md'
-- Post 1 title: 'posts/id-005-post_0001.md'
-- Post 2 title: 'posts/id-006-post_0002.md'
-- Post 3 title: 'posts/id-007-post_0003.md'
-- Post 4 title: 'posts/id-008-post_0004.md'
+- Introducting Native Programming: 'posts/thinking-in-ballerina.md'
+- Quick Tour with Ballerina: 'posts/quick-tour with-ballerina.md'
+- Next geneation integration: 'posts/next-geneation-integration.md'
+- Thinking in Ballerina: 'posts/introducting-native-programming.md'
+- Post 1 title: 'posts/post_0001.md'
+- Post 2 title: 'posts/post_0002.md'
+- Post 3 title: 'posts/post_0003.md'
+- Post 4 title: 'posts/post_0004.md'
 
 
 theme: null
