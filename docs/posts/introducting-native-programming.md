@@ -4,7 +4,7 @@ author: Sanjiva Weerawarana
 date: 30 April 2018
 status: Published
 abstract: Designed to be cloud-first, Ballerina has built-in support for modern web protocols and data formats, full power of a Turing-complete programming language, and native support for microservices architectures.
-socialmediaimage: img/blog-images/apple-black-and-white-brick-wall-169573.jpg
+socialmediaimage: apple-black-and-white-brick-wall-169573.jpg
 ---
 
 # Introducting Native Programming
