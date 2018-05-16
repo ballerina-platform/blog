@@ -4,7 +4,7 @@ author: Selvaratnam Uthaiyashankar
 date: 14 May 2018
 status: Published
 abstract:  Ballerina's syntax, code, and compiler create runtime services and deployment artifacts that are cloud native ready for deployment within your IaaS, orchestrator, or service mesh of choice. The developer experience is designed to maintain flow, where the edit, build, debug cycle is rapid and integrated to your team's lifecycle toolchain.
-socialmediaimage: img/blog-images/drone-innovation-technology-57544.jpg
+socialmediaimage: drone-innovation-technology-57544.jpg
 ---
 
 # Thinking in Ballerina

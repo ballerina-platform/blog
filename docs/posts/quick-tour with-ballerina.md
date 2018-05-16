@@ -4,7 +4,7 @@ author: Tyler Jewell
 date: 12 May 2018
 status: Published
 abstract: The future apps we write increasingly depend upon programmable endpoints. The discipline of resilient communication between endpoints is integration. It is a domain of hard problems.
-socialmediaimage: img/blog-images/pexels-photo-258447.jpg
+socialmediaimage: pexels-photo-258447.jpg
 ---
 
 # Quick Tour with Ballerina

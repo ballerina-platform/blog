@@ -4,7 +4,7 @@ author: Paul Fremantle
 date: 2 May 2018
 status: Published
 abstract: Integration products simplify integration but are not agile. General purpose programming languages are agile, but not integration simple. With Ballerina you can bridge the integration gap in an agile and integration simple manner.
-socialmediaimage: img/blog-images/blackboard-board-chalk-6375.jpg
+socialmediaimage: blackboard-board-chalk-6375.jpg
 ---
 
 # Next geneation integration
