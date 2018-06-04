@@ -87,34 +87,34 @@ check is a unary expression that is used to handle errors. The check expression 
 ## Concurrency Constructs
 The concurrency model is based on workers, which are the fundamental execution units defined in Ballerina. The worker model is designed to be very light-weight constructs, which follows a fully non-blocking approach in its executions, which in-turn makes sure it has optimal utilization of the CPU.
 
-###Workers
+### Workers
 In Ballerina, every callable unit, that is, a function, action or a resource is made up of one or more workers. A worker is a concurrent execution unit, which is independently run when a function call is made. 
 
 
-###Asynchronous Functions
+### Asynchronous Functions
 Any function or action can be invoked in an asynchronous mode by prefixing the call with the start keyword and the result is accessible via a future. 
 
-###Fork/Join
+### Fork/Join
 The fork/join construct in Ballerina is used in order to split (fork) the current function execution to multiple workers, do some processing in parallel, and join together the results of the workers to a single execution again.
 
-###Lock
+### Lock
 Ballerina locks are used for concurrency management, encapsulating a block of statements will acquire the locks for each global or service level variable reference used within those block of statements.
 
 
-##Functions
+## Functions
 Ballerina functions operate the same way as any other language. It is a mechanism to create a reusable unit of functionality within a program.  
 A function pointer is a Ballerina type that allows you to use functions as variables, arguments to functions, and function return values. 
 Lambdas are a syntactic shortcut for defining inline functions. In comparison to a normal function definition, the only missing part is the name. 
 
 
-#Syntax
+# Syntax
 
 Ballerina’s underlying language semantics were designed by modeling how independent parties communicate via structured interactions. Subsequently, every Ballerina program can be displayed as a sequence diagram of its flow with endpoints, including synchronous and asynchronous calls. Ballerina’s syntax has both textual and graphical representation designed around sequence diagrams,therefore, the way a developer thinks when writing Ballerina code encourages strong interaction best practices.
 
-##Textual Syntax
+## Textual Syntax
 Ballerina’s textual syntax is largely inspired by C, Java, and Go languages. The key language constructs in Ballerina are Function, Worker and Service. 
 
-##Graphical Syntax
+## Graphical Syntax
 Ballerina’s graphical syntax resembles a sequence diagram. The control flow within a worker is represented with flow diagram based elements. Graphical representation of a service is represented with network interactions.
 
 Ballerina platform comes with the Composer IDE, which allows you to edit and view Ballerina programs graphically and textually. VS Code plugin can be also used to view Ballerina programs graphically.
@@ -124,43 +124,43 @@ Ballerina has first class support for services and endpoints. HTTP/HTTP2, WebSoc
 
 In the context of integration specialization, the following are the released features.
 
-##HTTP 1.x/2 
+## HTTP 1.x/2 
 Ballerina includes HTTP 1 and 2 support with server and client endpoints. 
 
-##WebSockets
+## WebSockets
 WebSocket client/server endpoints. 
 
-##Resiliency
+## Resiliency
 Support for network resiliency with Circuit breaker, retry, timeout, load balancing and failover. 
 
-##MIME
+## MIME
 Ballerina provides built-in implementation of the MIME specification.  
 
-##gRPC
+## gRPC
 Ballerina based gRPC server/client supports interacting with server and client written either in Ballerina or any other supported languages. 
 
-##Database client endpoints
+## Database client endpoints
 Ballerina Database client endpoints allow you to connect to SQL-based relational database systems and perform data definition, data access, and data manipulation operations on the database. These database client endpoints are supported: JDBC for any JDBC supported database, MySQL, H2. 
 
-##Messaging endpoints
+## Messaging endpoints
 Messaging connectors enable the services and programs written in Ballerina to communicate with messaging backends like Ballerina Message Broker and ActiveMQ. The messaging connector API provides features like transactions, message headers, properties, and different acknowledgement mode support to address the common requirements of a modern integration engineer when integrating with a messaging system.
 
-##WebSub
+## WebSub
 Implementation of the WebSub recommendation that facilitates push-based content delivery/notification mechanism between publishers and subscribers.
 
-#Standard Library 
+# Standard Library 
 The Ballerina standard library provides a set of commonly used functionalities. The following packages are available as a part of the standard library:
 
-##ballerina/auth
+## ballerina/auth
 Provides an interface for looking up user data for authentication and authorization purposes. Also it contains a sample implementation that uses a Ballerina configuration file as user registry.
 
-##ballerina/cache
+## ballerina/cache
 Provides a configurable in-memory caching solution that supports both time-based eviction and size-based eviction.
 
-##ballerina/config
+## ballerina/config
 Provides a configuration lookup and resolve mechanism, with the option for securing configurations, and an API for reading these configurations.
 
-##ballerina/crypto
+## ballerina/crypto
 Provides a set of functions for some of the commonly used hashing algorithms.
 
 ##ballerina/file
