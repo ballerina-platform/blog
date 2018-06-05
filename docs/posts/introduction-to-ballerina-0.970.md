@@ -163,58 +163,58 @@ Provides a configuration lookup and resolve mechanism, with the option for secur
 ## ballerina/crypto
 Provides a set of functions for some of the commonly used hashing algorithms.
 
-##ballerina/file
+## ballerina/file
 Provides a directory listener that can be used to listen to directory events.
 
-##ballerina/io
+## ballerina/io
 Provides an asynchronous I/O framework to source/sink that reads/writes as bytes, characters, and records.
 
-##ballerina/log
+## ballerina/log
 Provides an API for logging.
 
-##ballerina/sql
+## ballerina/sql
 Provides the common types and constants used across all the database client endpoints.
 
 
-##ballerina/math
+## ballerina/math
 Provides a set of functions for performing commonly used mathematical calculations and operations.
 
-##ballerina/reflect
+## ballerina/reflect
 Provides utility functions for reading annotations and deep equality checks.
 
-##ballerina/runtime
+## ballerina/runtime
 Provides utility functions and records related to the runtime.
 
-##ballerina/system
+## ballerina/system
 Provides a set of functions for retrieving details related to the system.
 
-##ballerina/task
+## ballerina/task
 Provides an API for managing task timers and task appointments.
 
-##ballerina/time
+## ballerina/time
 Provides a set of functions for handling, parsing and formatting date and time.
 
 
-#IDEs and Language Server 
+# IDEs and Language Server 
 
-##Language Server 
+## Language Server 
 Ballerina Language Server provides the code intelligence for Ballerina programming. Ballerina Language Server can be integrated with any Language Server Protocol (LSP) supported development tool to provide consistent code intelligence throughout. 
 
-##VSCode Plugin
+## VSCode Plugin
 The Ballerina VSCode plugin includes the following features: - Syntax highlighting - Intellisense for Ballerina language via Ballerina Language Server - Diagramming (view Ballerina programs graphically) - Debugging
 
-##IntelliJ IDEA
+## IntelliJ IDEA
 The Ballerina IDEA plugin includes the following features: - Syntax highlighting - Code completion and suggestions - Code formatting - Go to definitions - Find usages - Code diagnostics - Ballerina program running and debugging
 
-##Composer
+## Composer
 Composer is an IDE included with the Ballerina platform that allows you to design and write Ballerina programs textually as well as graphically. It also comes with a set of features targeted for integration development; graphical interaction flow designing, textual editing support for Ballerina, intelligent code completion via Ballerina Language Server, run and Debug support for Ballerina programs, design-first API development with Open API Specification, try-it client, dev time service tracing. 
 
 
-#Observability 
+# Observability 
 Ballerina observability enables developers to understand the execution and performance impact introduced by the Ballerina program. For example, by enabling the metrics monitoring and distributed tracing, developers can identify slow services and can drill down from the services to the actual request hop that is causing the delay in the overall request flow. Similarly, by log monitoring and analysis, the additional debug information regarding any unfavorable situations can be revealed to pinpoint the root cause.
 
 Developers can enable a Ballerina program to collect the data to observe by simply using the --observe flag (with default configurations) or passing specific Ballerina configurations when running the Ballerina program. The external systems, such as Prometheus and Jaeger, need to be used to analyze and graphically represent the collected data from a Ballerina program.
 
-#Try it out! 
+# Try it out! 
 You can download the Ballerina distributions, try samples, and read the documentation at [ballerina.io](https://ballerina.io). You can also visit the [Quick Tour](https://ballerina.io/learn/quick-tour/) to get started. We encourage you to report issues, improvements, and suggestions at the [Ballerina Github Repository](https://github.com/ballerina-platform/ballerina-lang).
 
