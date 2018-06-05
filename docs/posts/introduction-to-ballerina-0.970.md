@@ -38,7 +38,7 @@ Ballerina defines these behavioral basic types: Function, Future, Object, Stream
 Other Types includes: Union Type, Optional, Any, JSON. 
 
 
-##Expressions 
+## Expressions 
 ### Field access
 Field access is the syntax of accessing child elements inside structural typed values, such as objects, records, JSON, XML, etc. Fields can be accessed using two operators; Dot operator - Name of the field precedes by a dot, e.g., foo.bar, Index operator - Name of the field comes within two brackets. 
 
@@ -108,7 +108,6 @@ Lambdas are a syntactic shortcut for defining inline functions. In comparison to
 
 
 # Syntax
-
 Ballerina’s underlying language semantics were designed by modeling how independent parties communicate via structured interactions. Subsequently, every Ballerina program can be displayed as a sequence diagram of its flow with endpoints, including synchronous and asynchronous calls. Ballerina’s syntax has both textual and graphical representation designed around sequence diagrams,therefore, the way a developer thinks when writing Ballerina code encourages strong interaction best practices.
 
 ## Textual Syntax
