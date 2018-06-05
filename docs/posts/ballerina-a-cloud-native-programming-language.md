@@ -21,7 +21,7 @@ Both Ballerina code and the graphical syntax are inspired from how the independe
 
 In the graphical syntax, Ballerina represents clients, workers and remote systems as different actors in the sequence diagram. For example, as shown in figure 1, the interaction between the client/caller, service, worker and external endpoint can be represented using a sequence diagram. Each endpoint is represented as an actor in the sequence diagram and actions are represented as interactions between them. 
 
-![Sequence Diagram](./images/seq_diagram_fig1.png) 
+![Sequence Diagram](images/figure_2.1.png) 
 *Figure 1*
 
 In code, remote endpoints are interfaced via endpoints, which offer type safe actions and worker’s logic is written as sequential code inside either a resource or a function. You can define a service and bind it to a server endpoint (for example, HTTP server endpoint can listen on a given HTTP port). Each service contains one or more resource which has the sequential code related to a worker and runs by a dedicated worker thread. 
@@ -353,7 +353,7 @@ Ballerina empowers the developers with IDE support with VS Code and IntelliJ. Ba
 ### Build
 The code you write using the development tools can go through the build process. The build process can have multiple phases including, building from source, unit and integration testing with Testerina; the test framework of Ballerina, generate deployment artifacts for the deployment platform (Docker or Kubernetes), generate executables (.balx) or libraries (.balo). 
 
-![Development Lifecycle](./images/dev_lc_figure_2.2.png) 
+![Development Lifecycle](images/figure_2.2.png) 
 *Figure 2*
 
 Therefore, Ballerina natively supports every aspect of the development lifecycle. The Docker and Kubernetes annotations make the deployment artifacts and docker image generation a brisk. 
