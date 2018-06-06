@@ -1,7 +1,7 @@
 ---
 title: Introduction to Ballerina 0.970 release
 author: Sameera Jayasoma
-date: 4 June 2018
+date: 4Expressions June 2018
 status: Published
 abstract: Release highlights of Ballerina 0.970 release.
 socialmediaimage: apple-black-and-white-brick-wall-169573.jpg
@@ -38,7 +38,7 @@ Ballerina defines these behavioral basic types: Function, Future, Object, Stream
 Other Types includes: Union Type, Optional, Any, JSON.
 
 
-##Expressions
+## Expressions
 ### Field access
 Field access is the syntax of accessing child elements inside structural typed values, such as objects, records, JSON, XML, etc. Fields can be accessed using two operators; Dot operator - Name of the field precedes by a dot, e.g., foo.bar, Index operator - Name of the field comes within two brackets.
 
