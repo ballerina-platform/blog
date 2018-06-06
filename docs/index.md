@@ -10,7 +10,7 @@
 ---
 * <div class="cBlogThumbnailContainer"><img src="img/blog-images/apple-black-and-white-brick-wall-169573.jpg"/></div> [Introduction to Ballerina 0.970 release](./posts/introduction-to-ballerina-0.970.md)
 * Sameera Jayasoma
-* 4 June 2018
+* 22 May 2018
 * Release highlights of Ballerina 0.970 release.
 * Published
 ---
