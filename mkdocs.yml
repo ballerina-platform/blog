@@ -5,18 +5,12 @@ site_author: WSO2, Inc.
 copyright: 2018 WSO2, Inc.
 pages:
 - Home: 'index.md'
-- Introducting Native Programming: 'posts/thinking-in-ballerina.md'
-- Quick Tour with Ballerina: 'posts/quick-tour with-ballerina.md'
-- Next geneation integration: 'posts/next-geneation-integration.md'
-- Thinking in Ballerina: 'posts/introducting-native-programming.md'
-- Post 1 title: 'posts/post_0001.md'
-- Post 2 title: 'posts/post_0002.md'
-- Post 3 title: 'posts/post_0003.md'
-- Post 4 title: 'posts/post_0004.md'
+- Introduction to Ballerina 0.970 release : 'posts/introduction-to-ballerina-0.970.md'
+- Ballerina - A cloud native programming language for integration : 'posts/ballerina-a-cloud-native-programming-language.md'
 
 
 theme: null
 theme_dir: ballerina.io-blog-theme
-base_common_resouce_url : 'https://stage.ballerina.io'
+base_common_resouce_url : 'https://ballerina.io'
 markdown_extensions:
  - meta
