@@ -11,7 +11,7 @@ socialmediaimage: codes-coding-computer-247791.jpg
 
 One of our technology partners, Hasura, has just rolled out their Ballerina integration.
 
-Hasura is a platform to build and deploy microservices-based apps easily. One of the main features of the platform is that once you have your microservices ready, a simple “git push” will deploy them to the cloud - this is the simplicity that Hasura brings in. Now pair this with Ballerina’s ability to rapidly write feature rich and resilient microservices and this becomes a combination that makes your microservices development, testing and deployment a much more effective and seamless experience.
+Hasura is a platform to build and deploy microservices-based apps easily. One of the main features of the platform is that once you have your microservices ready, a simple “git push” will deploy them to the cloud - this is the simplicity that Hasura brings in. Now pair this with Ballerina’s ability to rapidly write feature rich and resilient microservices, and this becomes a combination that makes your microservices development, testing and deployment a much more effective and seamless experience.
 
 Let me take you through a quick tour of my experience in using Hasura with Ballerina. The first place you need to look at is [Hasura Hub](https://hasura.io/hub). Hasura Hub contains lots of quick starts for different programming languages and frameworks, that serve as a starting point for working with Hasura. A quick start is similar to a template project, which you can generate in your local machine and work with. 
 
@@ -27,7 +27,7 @@ Clicking on the “Clone and Deploy” button gives you instructions on how to s
 
 The prerequisite of installing the Hasura CLI tool was completed with the instructions available [here](https://docs.hasura.io/0.15/manual/install-hasura-cli.html). It was just a matter of executing a single curl command to get it downloaded and installed in my Linux based OS.
 
-After this, I simply ran the “hasura quickstart hasura/hello-ballerina” command, which cloned a git project for a hello world Ballerina project to my local machine, and also set up a few other things such as a remote Hasura cluster to work on.
+After this, I simply ran the “hasura quickstart hasura/hello-ballerina” command, which cloned a git project for a hello world Ballerina project to my local machine, and also set up a few other things, such as a remote Hasura cluster to work on.
 
 ![Hasura Quickstart Command](images/figure_3.3.png) 
 *Figure 3*
