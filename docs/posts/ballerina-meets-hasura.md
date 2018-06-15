@@ -32,7 +32,7 @@ After this, I simply ran the `hasura quickstart hasura/hello-ballerina` command,
 ![Hasura Quickstart Command](images/figure_3.3.png) 
 *Figure 3*
 
-Here, another key operation Hasura performs is generating a custom git remote location and adding it to my git repository. Now, if we do a push to this remote’s master branch, the project will automatically be built again from the source, and deployed automatically to the Hasura cluster that was set up earlier.
+Here, another key operation Hasura performs is generating a custom git remote location and adding it to my git repository. Now, if we do a push to the master branch of this git remote location, the project will automatically be built again from the source, and deployed automatically to the Hasura cluster that was set up earlier.
 
 For my first deployment, I updated the hello-world Ballerina service, which is available at “microservices/app/src/hello_service.bal” in the project directory, to show a different output. Afterwards, I committed the changes, and did a git push to “hasura master”.
 
@@ -49,6 +49,6 @@ The response is shown below:
 ![Browser Show](images/figure_3.6.png) 
 *Figure 6*
 
-That’s it! It was a very pleasant experience from the beginning of the project to deploying it. You do not have to worry about your infra, tools and technologies to drive your CI/CD requirements as Hasura takes care of these things in a seamless manner. All I’ve to do to release a new app is change the source code, do a git commit and push. This automatically builds and deploys the new app instantly. 
+That’s it! It was a very pleasant experience from the beginning of the project to deploying it. You do not have to worry about your infra, tools and technologies to drive your CI/CD requirements as Hasura takes care of these things in a seamless manner. All I’ve to do to release a new app is change the source code, do a git commit, and push. This automatically builds and deploys the new app instantly. 
 
 Underneath, Hasura uses Docker & Kubernetes to make this magic work. So if you want more fine grained control, you can go ahead and edit the Docker/Kubernetes related configuration files in your repo for extended functionality. For example, the [QuickStart](https://hasura.io/hub/projects/hasura/hello-ballerina/adding-dependencies) contains instructions to add system and Ballerina related dependencies to your application.
