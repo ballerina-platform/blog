@@ -53,7 +53,7 @@ for date in ordered_data:
         # print('<a href="(' + current[KEY_FILENAME] + ')"><img src="('+ current[KEY_IMG] +')"/></a>')
         # print('* __![xx]('+ current[KEY_IMG] +')__[' + title + '](' + current[KEY_FILENAME] + ')')
         # print('* [' + title + '](' + current[KEY_FILENAME] + ')')
-        print('* <div class="cBlogThumbnailContainer"><img src="img/blog-images/'+ current[KEY_IMG] +'"/></div> [' + title + '](' + current[KEY_FILENAME] + ') ')
+        print('* <div class="cBlogThumbnailContainer"><a href="'+ current[KEY_FILENAME] +'"><img src="img/blog-images/'+ current[KEY_IMG] +'"/></a></div> [' + title + '](' + current[KEY_FILENAME] + ') ')
         print('* ' + current[KEY_AUTHOR])
         print('* ' + current[KEY_DATE])
         print('* ' + current[KEY_ABSTRACT])

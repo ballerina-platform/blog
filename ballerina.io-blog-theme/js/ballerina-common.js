@@ -16,7 +16,7 @@ function subscribeUser(email) {
         $("#emailUser").attr("placeholder", "Please enter a valid email.");
 
     } else {
-        $(".pdframe").html("<iframe src='https://go.pardot.com/l/142131/2018-03-26/4yl9799e?email=" + email + "'></iframe>");
+        $(".pdframe").html("<iframe src='https://go.pardot.com/l/142131/2018-03-26/4yl9799?email=" + email + "'></iframe>");
         $("#emailUser").val("");
         $("#emailUser").attr("placeholder", "Your email address has been added.");
     }
@@ -212,11 +212,11 @@ $(document).ready(function() {
         '<div class="cSocialmedia">' +
         '<ul>' +
         '<li>' +
-        '<a class="cBioFooterLink" href="https://github.com/ballerina-platform" target="_blank"><img src="/img/github.svg"/></a>' +
+        '<a class="cBioFooterLink" href="https://github.com/ballerina-platform" target="_blank"><img src="https://ballerina.io/img/github.svg"/></a>' +
         '</li>' +
-        '<li><a class="cBioFooterLink" href="https://stackoverflow.com/questions/tagged/ballerina" target="_blank"><img src="/img/stackoverflow.svg"/></a></li>' +
-        '<li><a class="cBioFooterLink" href="https://twitter.com/ballerinaplat" target="_blank"><img src="/img/twitter.svg"/></a></li>' +
-        '<li><a class="cBioFooterLink" href="/open-source/slack/"><img src="/img/slack.svg"/></a></li>' +
+        '<li><a class="cBioFooterLink" href="https://stackoverflow.com/questions/tagged/ballerina" target="_blank"><img src="https://ballerina.io/img/stackoverflow.svg"/></a></li>' +
+        '<li><a class="cBioFooterLink" href="https://twitter.com/ballerinaplat" target="_blank"><img src="https://ballerina.io/img/twitter.svg"/></a></li>' +
+        '<li><a class="cBioFooterLink" href="/open-source/slack/"><img src="https://ballerina.io/img/slack.svg"/></a></li>' +
         '</ul>' +
         '<div class="pdframe"></div>' +
         '</div>' +
