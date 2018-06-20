@@ -11,7 +11,11 @@ socialmediaimage: codes-coding-computer-247791.jpg
 
 One of our technology partners, Hasura, has just rolled out their Ballerina integration.
 
+## A Perfect Match
+
 Hasura is a platform to build and deploy microservices-based apps easily. One of the main features of the platform is that once you have your microservices ready, a simple “git push” will deploy them to the cloud - this is the simplicity that Hasura brings in. Now pair this with Ballerina’s ability to rapidly write feature rich and resilient microservices, and this becomes a combination that makes your microservices development, testing, and deployment a much more effective and seamless experience.
+
+## Quick Tour
 
 Let me take you through a quick tour of my experience in using Hasura with Ballerina. The first place you need to look at is [Hasura Hub](https://hasura.io/hub). Hasura Hub contains lots of quick starts for different programming languages and frameworks, that serve as a starting point for working with Hasura. A quick start is similar to a template project, which you can generate in your local machine and work with. 
 
