@@ -12,7 +12,7 @@ Ballerina 0.980.0 release includes some type system improvements and new feature
 
 ## Object Syntax Change
 
-Object type descriptor syntax now supports visibility modifiers for both object fields and functions. There are three type of access modifiers (public, private, default/no-modifier) as explained below.
+Object type descriptor syntax now supports visibility modifiers for both object fields and functions. There are three type of access modifiers (public, private, no-modifier) as explained below.
 
 
 ```ballerina(){show=true}
