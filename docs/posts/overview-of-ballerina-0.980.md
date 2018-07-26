@@ -12,7 +12,7 @@ Ballerina 0.980.0 release includes some type system improvements and new feature
 
 ## Object Syntax Change
 
-Object type descriptor syntax now supports visibility modifiers for both object fields and functions. There are three type of access modifiers as below.
+Object type descriptor syntax now supports visibility modifiers for both object fields and functions. There are three type of access modifiers (public, private, default/no-modifier) as explained below.
 
 
 ```ballerina(){show=true}
@@ -26,8 +26,7 @@ public type Person object {
 
 ## Closed and Open Records
 
-An `open` record can contain extra fields, that is, fields other than those named by individual type descriptors in the record type definition.
-By default, records can contain extra fields with `any` value without any changes to record definition.
+An `open` record can contain extra fields, that is, fields other than those named by individual type descriptors in the record type definition. By default, records can contain extra fields with `any` value without any changes to record definition as explained below.
 
 ```ballerina
 type Person record {
@@ -40,7 +39,7 @@ type Person record {
 Person tom = { name : "tom", age : 20, country : "USA"};
 
 // You can access the "country" field similar to other fields, but the return type will be `any`.
-any country = tom.country; // or use tom["country"]
+any country = tom.country; // Or use tom["country"]
 ```
 
 Additional fields can be defined by using an optional `RecordRestType...` at end of the record definition. In the above example, the Person record definition is equivalent to the definition with `any...`.
@@ -52,7 +51,7 @@ type Person record {
     any...
 };
 ```
-The “rest fields” can also be constrained to other types as below, where it is constrained to `string` type.
+The “rest fields” can also be constrained to other types. Below example shows how it is constrained to `string` type.
 
 ```ballerina(){show=true}
 type Person record {
@@ -66,7 +65,7 @@ Person tom = { name : "tom", age : 20, country : "USA"};
 string country = tom.country;
 ```
 
-A closed record can not contain any extra fields other than what is defined. A closed record can be defined with RecordRestType being `!` as below
+A `closed` record can not contain any extra fields other than what is defined. A closed record can be defined with RecordRestType being `!` as below
 
 ```ballerina(){show=true}
 type Person record {
@@ -76,7 +75,7 @@ type Person record {
 };
 ...
 
-Person tom = { name : "tom", age : 20, country : "USA"}; // This is a compile time error.
+Person tom = { name : "tom", age : 20, country : "USA"}; // This will result in a compile time error.
 ```
 
 
@@ -168,7 +167,7 @@ string? middleName = m["mname"];     // returns null
 ```
 
 ## Ballerina Observability
-- New API's have been introduced such that developers can define their own trace blocks and metrics.
+- New API's have been introduced with ballerina observability functionality, such that developers can define their own trace blocks and metrics.
 - Developers can attach the trace information of their code block to the default Ballerina traces, or a new trace as below.
 
 ```ballerina(){show=true}
