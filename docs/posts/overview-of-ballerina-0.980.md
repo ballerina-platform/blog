@@ -150,8 +150,7 @@ table<Person> t1 = table {
 ```
 
 ## Map Access
-Values of a map can be accessed using index-based syntax as well as field-access syntax. These two syntax's now behave differently. Getting a value using field-access syntax returns the value if the key exists. Otherwise a runtime error is thrown. Index-based syntax also will return the value if the key exists. However, it will return a null value if the key does not exist.
-This would also mean that, for a constrained map, the type of the return value for the index-based syntax is always the `constraint_type|()`.
+Values of a map can be accessed using index-based syntax as well as field-access syntax. Accessing a value using field-based syntax returns the value if the key exists. Otherwise a runtime error is thrown. Index-based syntax also will return the value if the key exists. However, it will return a null value if the key does not exist. This would also mean that, for a constrained map, the type of the return value for the index-based syntax is always the `constraint_type|()` as explained below.
 
 
 ```ballerina(){show=true}
@@ -167,7 +166,7 @@ string? middleName = m["mname"];     // returns null
 ```
 
 ## Ballerina Observability
-- New API's have been introduced with ballerina observability functionality, such that developers can define their own trace blocks and metrics.
+- New API's have been introduced with ballerina observability functionality, such that developers can define their own trace blocks and metrics as explained below.
 - Developers can attach the trace information of their code block to the default Ballerina traces, or a new trace as below.
 
 ```ballerina(){show=true}
@@ -212,7 +211,7 @@ observe:Gauge gaugeWithStats = new ("GaugeWithTags", desc = "Some description",
 //Get All Metrics
 observe:Metric[] metrics = observe:getAllMetrics();
 foreach metric in metrics {
-   //do something.
+    //do something.
 }
 
 //Look up a registered metric.
@@ -238,9 +237,9 @@ match metric {
 
 ```ballerina(){show=true}
 rollingWindow : {
-          timeWindowMillis: 10000,
-          bucketSizeMillis: 2000,
-          requestVolumeThreshold: 10
+      timeWindowMillis: 10000,
+      bucketSizeMillis: 2000,
+      requestVolumeThreshold: 10
 }
 ```
 
