@@ -10,7 +10,7 @@ socialmediaimage: ballet-sneaker-dress-ballet-dancer-163379.jpeg
 # Improvements and New Features
 Ballerina 0.980.0 release includes some type system improvements and new features additions. This release also focused on stabilizing the platform with lot of bug fixes and improvements. Following are the new changes and improvements added with the 0.980.0 release.
 
-## Object Syntax Change.
+## Object Syntax Change
 
 Object type descriptor syntax now supports visibility modifiers for both object fields and functions. There are three type of access modifiers as below.
 
