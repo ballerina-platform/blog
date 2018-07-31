@@ -139,7 +139,7 @@ byte e = a ^ b;
 
 ## Table Expression
 
-A table is intended to be similar to the table of relational database table. A table value contains an immutable set of column names and a set of data rows. Syntax for defining a table and adding data rows is as below.
+A table is intended to be similar to a relational database table. A table value contains an immutable set of column names and a set of data rows. Syntax for defining a table and adding data rows is as below.
 
 ```ballerina(){show=true}
 table<Person> t1 = table {
