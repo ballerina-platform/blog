@@ -8,18 +8,22 @@ socialmediaimage: ballet-sneaker-dress-ballet-dancer-163379.jpeg
 ---
 
 # Improvements and New Features
-Ballerina 0.980.0 release includes some type system improvements and new features additions. This release also focused on stabilizing the platform with lot of bug fixes and improvements. Following are the new changes and improvements added with the 0.980.0 release.
+Ballerina 0.980.0 release included some type system improvements and new features. This release also focused on stabilizing the platform with lot of bug fixes and improvements.
 
 ## Object Syntax Change
 
-Object type descriptor syntax now supports visibility modifiers for both object fields and functions. There are three type of access modifiers (public, private, no-modifier) as explained below.
-
+Object type descriptor syntax now supports visibility modifiers for both object fields and functions. There are three types of access modifiers (public, private, no-modifier) as explained below.
 
 ```ballerina(){show=true}
 public type Person object {
-    public string name;     //visible everywhere
-    private int age;        //visible only within object and its member functions
-    string email;           //visible only within same package
+    // public - visible everywhere
+    public string name;
+
+    // private - visible only within object and its member functions
+    private int age;
+
+    // no-modifier - visible only within same package
+    string email;
 };
 ```
 
@@ -35,14 +39,16 @@ type Person record {
 };
 
 ...
-// The "country" is an extra field, which is not defined in the person type descriptor.
+// The "country" is an extra field, which is not defined in the person
+// type descriptor.
 Person tom = { name : "tom", age : 20, country : "USA"};
 
-// You can access the "country" field similar to other fields, but the return type will be `any`.
-any country = tom.country; // Or use tom["country"]
+// You can access the "country" field similar to other fields, but the
+// return type will be `any`.
+any country = tom.country;
 ```
 
-Additional fields can be defined by using an optional `RecordRestType...` at end of the record definition. In the above example, the Person record definition is equivalent to the definition with `any...`.
+Additional fields can be defined by using an optional `RecordRestType...` at the end of the record definition. In the above example, the Person record definition is equivalent to the definition with `any...`.
 
 ```ballerina(){show=true}
 type Person record {
@@ -57,7 +63,7 @@ The “rest fields” can also be constrained to other types. Below example show
 type Person record {
     string name,
     int age = 10,
-    string… // the rest descriptor
+    string…
 };
 
 ...
@@ -65,17 +71,18 @@ Person tom = { name : "tom", age : 20, country : "USA"};
 string country = tom.country;
 ```
 
-A `closed` record can not contain any extra fields other than what is defined. A closed record can be defined with RecordRestType being `!` as below
+A `closed` record cannot contain any extra fields other than what is defined. A closed record can be defined with `RecordRestType` being `!` as below.
 
 ```ballerina(){show=true}
 type Person record {
     string name,
     int age = 10,
-    !... // indicates that additional fields are not allowed
+    !...
 };
-...
 
-Person tom = { name : "tom", age : 20, country : "USA"}; // This will result in a compile time error.
+
+// Following will result in a compile time error.
+Person tom = { name : "tom", age : 20, country : "USA"};
 ```
 
 
@@ -85,12 +92,16 @@ The length of an array can be fixed by providing the array length with the array
 
 ```ballerina(){show=true}
 int[5] array1 = [2, 15, 200, 1500, 5000];
-int[5] array2; // Creates an integer array of size five, filled with default integer values
+
+// Following creates an integer array of size five, filled with
+// default integer values
+int[5] array2;
 ```
 An array length of `!...` means that the length of the array is to be implied from the context; as shown below:
 
 ```ballerina
-int[!...] sealedArray = [1, 3, 5]; // Creates a sealed integer array of size 3.
+// Following creates a sealed integer array of size 3.
+int[!...] sealedArray = [1, 3, 5];
 ```
 
 
@@ -139,7 +150,8 @@ table<Person> t1 = table {
 	]
 };
 
-// Or we can create the row records seperately and then use it with table definition
+// We can also create the row records seperately and then use it with
+// table definition
 Person p1 = { id: 1, age: 30, salary: 300.50, name: "jane", married: true };
 Person p2 = { id: 1, age: 30, salary: 300.50, name: "jane", married: true };
 
@@ -158,11 +170,15 @@ map<string> m = {"fname" : "John", "lname" : "Doe"}
 
 // Field based access
 string firstName = m.fname;
-string middleName = m.mname;     // runtime error
+
+// Following will result in a runtime error
+string middleName = m.mname;
 
 // Index based access
 string? firstName = m["fname"];
-string? middleName = m["mname"];     // returns null
+
+// Following will return null
+string? middleName = m["mname"];
 ```
 
 ## Ballerina Observability
@@ -170,37 +186,37 @@ string? middleName = m["mname"];     // returns null
 - Developers can attach the trace information of their code block to the default Ballerina traces, or a new trace as below.
 
 ```ballerina(){show=true}
-//Create and attach span to the default Ballerina request trace.
+// Create and attach span to the default Ballerina request trace.
 int spanId = check observe:startSpan("Child Span");
-   // Do Something
+    // Do Something
 _ = observe:finishSpan(spanId);
 
-//Create a completely new trace.
+// Create a completely new trace.
 int spanId = observe:startRootSpan("Parent Span");
-   //Do Something
+    //Do Something
 int spanId2 = check observe:startSpan("Child Span", parentSpanId = spanId);
-   // Do Something
+    // Do Something
 _ = observe:finishSpan(spanId2);
-   // Do Something
+    // Do Something
 _ = observe:finishSpan(spanId);
 ```
 
 - Developers can create a metric (counter or gauge) and have have their own measurements. The created metric can be registered in order to include its measurements to reporters such as Prometheus as below.
 
 ```ballerina(){show=true}
-//Create counter and register.
+// Create counter and register.
 map<string> counterTags = { "method": "GET" };
 observe:Counter counterWithTags = new ("CounterWithTags", desc = "Some description", tags = counterTags);
 counterWithTags.register() but {
    error e => log:printError("Cannot register the counter", err = e)
 };
 
-//Create gauge and register.
-//Create statistics config to enable statistics calculation.
+// Create statistics config to enable statistics calculation.
 observe:StatisticConfig[] statsConfigs = [];
 observe:StatisticConfig config = {timeWindow:30000, percentiles:[0.33, 0.5, 0.9, 0.99], buckets:3};
 statsConfigs[0]=config;
 
+// Create gauge and register.
 observe:Gauge gaugeWithStats = new ("GaugeWithTags", desc = "Some description",
                                        tags = gaugeTags, statisticConfig = statsConfigs);
 ```
@@ -208,13 +224,13 @@ observe:Gauge gaugeWithStats = new ("GaugeWithTags", desc = "Some description",
 - All metrics registered can be retrieved and looked up individually as below.
 
 ```ballerina(){show=true}
-//Get All Metrics
+// Get All Metrics
 observe:Metric[] metrics = observe:getAllMetrics();
 foreach metric in metrics {
-    //do something.
+    // Do something.
 }
 
-//Look up a registered metric.
+// Look up a registered metric.
 map<string> tags = { "method": "GET" };
 observe:Counter|observe:Gauge|() metric = observe:lookupMetric("MetricName", tags = tags);
 match metric {
@@ -231,7 +247,7 @@ match metric {
 ```
 
 ## Standard Library Improvements
-- With the inclusion of byte[], websocket related signatures of resources such as `onBinary`, `onPing`, and `onPong` and functions such as `pushBinary()`, `ping()`, and `pong()` now have `byte[]` in their signature instead of a blob.
+- With the inclusion of byte[], WebSocket related signatures of resources such as `onBinary`, `onPing`, and `onPong` and functions such as `pushBinary()`, `ping()`, and `pong()` now have `byte[]` in their signature instead of a blob.
 - The HTTP transport error handler has been improved so that it recovers execution from inbound/outbound failures such as idle socket timeout and abrupt connection closure.
 - The circuit breaker now supports request volume threshold parameter. This parameter sets the minimum number of requests in a `RollingWindow` that will trip the circuit. So the rollingWindow configurations can be specified as below.
 
@@ -244,8 +260,8 @@ rollingWindow : {
 ```
 
 ## Build & Package Management
-- The ballerina build command output has been enhanced with more details about the build. Also by default, the test module will now be executed with the build command.
-- Ballerina push command now mandate the ballerina build also along with it, which make sure that packages are built before it is pushed to the central.
+- The ballerina `build` command output has been enhanced with more details about the build. Also by default, the test module will now be executed with the `build` command.
+- Ballerina `push` command now mandate the ballerina `build` also along with it, which make sure that packages are built before it is pushed to the central.
 - Ballerina central now supports to view previous versions of a package. It also now shows ballerina version compatibility section.
 
 ## IDEs & Language Server
