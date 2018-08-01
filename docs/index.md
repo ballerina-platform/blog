@@ -11,7 +11,7 @@
 * <div class="cBlogThumbnailContainer"><a href="./posts/ballerina-a-cloud-native-programming-language.md"><img src="img/blog-images/drone-innovation-technology-57544.jpg"/></a></div> [Ballerina - A cloud native programming language for integration](./posts/ballerina-a-cloud-native-programming-language.md) 
 * Kasun Indrasiri
 * 5 June 2018
-* Ballerina is a cloud-native programming language that aims to fill the gap between integration products and general purpose programming languages by making it easy to write programs that integrate and orchestrate across distributed microservices and endpoints in a type-safe and resilient manner.
+* Ballerina is a cloud-native programming language which aims to fill the gap between integration products and general purpose programming languages by making it easy to write programs that integrate and orchestrate across distributed microservice and endpoints in type-safe and resilient manner.
 * Published
 ---
 ---
