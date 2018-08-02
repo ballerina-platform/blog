@@ -235,19 +235,22 @@ _ = observe:finishSpan(spanId);
 
 // Create counter and register.
 map<string> counterTags = { "method": "GET" };
-observe:Counter counterWithTags = new ("CounterWithTags", desc = "Some description", tags = counterTags);
+observe:Counter counterWithTags = new ("CounterWithTags",
+    desc = "Some description", tags = counterTags);
 counterWithTags.register() but {
    error e => log:printError("Cannot register the counter", err = e)
 };
 
 // Create statistics config to enable statistics calculation.
 observe:StatisticConfig[] statsConfigs = [];
-observe:StatisticConfig config = {timeWindow:30000, percentiles:[0.33, 0.5, 0.9, 0.99], buckets:3};
+observe:StatisticConfig config =
+    {timeWindow:30000, percentiles:[0.33, 0.5, 0.9, 0.99], buckets:3};
 statsConfigs[0]=config;
 
 // Create gauge and register.
-observe:Gauge gaugeWithStats = new ("GaugeWithTags", desc = "Some description",
-                                       tags = gaugeTags, statisticConfig = statsConfigs);
+observe:Gauge gaugeWithStats = new ("GaugeWithTags",
+    desc = "Some description", tags = gaugeTags,
+    statisticConfig = statsConfigs);
 
 ```
 
@@ -263,7 +266,8 @@ foreach metric in metrics {
 
 // Look up a registered metric.
 map<string> tags = { "method": "GET" };
-observe:Counter|observe:Gauge|() metric = observe:lookupMetric("MetricName", tags = tags);
+observe:Counter|observe:Gauge|() metric =
+    observe:lookupMetric("MetricName", tags = tags);
 match metric {
     observe:Counter counter => {
             counter.increment(amount=10);
