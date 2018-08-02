@@ -14,7 +14,8 @@ Ballerina 0.980.0 release included some type system improvements and new feature
 
 Object type descriptor syntax now supports visibility modifiers for both object fields and functions. There are three types of access modifiers (public, private, no-modifier) as explained below.
 
-```ballerina(){show=true}
+```ballerina
+
 public type Person object {
     // public - visible everywhere
     public string name;
@@ -33,6 +34,7 @@ public type Person object {
 An `open` record can contain extra fields, that is, fields other than those named by individual type descriptors in the record type definition. By default, records can contain extra fields with `any` value without any changes to record definition as explained below.
 
 ```ballerina
+
 type Person record {
     string name,
     int age = 10,
@@ -46,20 +48,25 @@ Person tom = { name : "tom", age : 20, country : "USA"};
 // You can access the "country" field similar to other fields, but the
 // return type will be `any`.
 any country = tom.country;
+
 ```
 
 Additional fields can be defined by using an optional `RecordRestType...` at the end of the record definition. In the above example, the Person record definition is equivalent to the definition with `any...`.
 
-```ballerina(){show=true}
+```ballerina
+
 type Person record {
     string name,
     int age = 10,
     any...
 };
+
 ```
+
 The “rest fields” can also be constrained to other types. Below example shows how it is constrained to `string` type.
 
-```ballerina(){show=true}
+```ballerina
+
 type Person record {
     string name,
     int age = 10,
@@ -67,13 +74,16 @@ type Person record {
 };
 
 ...
+
 Person tom = { name : "tom", age : 20, country : "USA"};
 string country = tom.country;
+
 ```
 
 A `closed` record cannot contain any extra fields other than what is defined. A closed record can be defined with `RecordRestType` being `!` as below.
 
-```ballerina(){show=true}
+```ballerina
+
 type Person record {
     string name,
     int age = 10,
@@ -83,6 +93,7 @@ type Person record {
 
 // Following will result in a compile time error.
 Person tom = { name : "tom", age : 20, country : "USA"};
+
 ```
 
 
@@ -90,18 +101,23 @@ Person tom = { name : "tom", age : 20, country : "USA"};
 
 The length of an array can be fixed by providing the array length with the array type descriptor.
 
-```ballerina(){show=true}
+```ballerina
+
 int[5] array1 = [2, 15, 200, 1500, 5000];
 
 // Following creates an integer array of size five, filled with
 // default integer values
 int[5] array2;
+
 ```
+
 An array length of `!...` means that the length of the array is to be implied from the context; as shown below:
 
 ```ballerina
+
 // Following creates a sealed integer array of size 3.
 int[!...] sealedArray = [1, 3, 5];
+
 ```
 
 
@@ -111,16 +127,20 @@ The `byte` type represents the set of 8-bit unsigned integers. The implicit init
 
 The following is an example of byte definition.
 
-```ballerina(){show=true}
+```ballerina
+
 byte c = 23;
+
 ```
 
 Along with general byte array type, there is also a special syntax for defining base64 and base16 based array of bytes. With this, `blob` type is removed and replaced by byte array.
 
-```ballerina(){show=true}
+```ballerina
+
 byte[] arr1 = [5, 24, 56, 243];
 byte[] arr2 = base16 `aeeecdefabcd12345567888822`;
 byte[] arr3 = base64 `aGVsbG8gYmFsbGVyaW5hICEhIQ==`;
+
 ```
 
 ## Bitwise AND (&), OR (|), XOR (^)
@@ -129,19 +149,22 @@ Bitwise operations AND (&), OR (|), XOR (^) have been added for `byte` type and 
 Both the right-hand-side and left-hand-side of the expression should be of the same type (`byte` or `int`), and the expected type will be also of the same type. If this is not the case, it will result in a compilation error.
 An explicit conversion operation should be applied if the type of one side is not the same as the other side.
 
-```ballerina(){show=true}
+```ballerina
+
 byte a = 13;
 byte b = 45;
 byte c = a & b;
 byte d = a | b;
 byte e = a ^ b;
+
 ```
 
 ## Table Expression
 
 A table is intended to be similar to a relational database table. A table value contains an immutable set of column names and a set of data rows. Syntax for defining a table and adding data rows is as below.
 
-```ballerina(){show=true}
+```ballerina
+
 table<Person> t1 = table {
 	{ primarykey id, primarykey salary, name, age, married }, [
 		 {1, 300.5, "jane",  30, true},
@@ -159,13 +182,15 @@ table<Person> t1 = table {
 	{ primarykey id, salary, name, age, married },
 	[p1, p2]
 };
+
 ```
 
 ## Map Access
 Values of a map can be accessed using index-based syntax as well as field-access syntax. Accessing a value using field-based syntax returns the value if the key exists. Otherwise a runtime error is thrown. Index-based syntax also will return the value if the key exists. However, it will return a null value if the key does not exist. This would also mean that, for a constrained map, the type of the return value for the index-based syntax is always the `constraint_type|()` as explained below.
 
 
-```ballerina(){show=true}
+```ballerina
+
 map<string> m = {"fname" : "John", "lname" : "Doe"}
 
 // Field based access
@@ -179,13 +204,15 @@ string? firstName = m["fname"];
 
 // Following will return null
 string? middleName = m["mname"];
+
 ```
 
 ## Ballerina Observability
 - New API's have been introduced with ballerina observability functionality, such that developers can define their own trace blocks and metrics as explained below.
 - Developers can attach the trace information of their code block to the default Ballerina traces, or a new trace as below.
 
-```ballerina(){show=true}
+```ballerina
+
 // Create and attach span to the default Ballerina request trace.
 int spanId = check observe:startSpan("Child Span");
     // Do Something
@@ -199,11 +226,13 @@ int spanId2 = check observe:startSpan("Child Span", parentSpanId = spanId);
 _ = observe:finishSpan(spanId2);
     // Do Something
 _ = observe:finishSpan(spanId);
+
 ```
 
 - Developers can create a metric (counter or gauge) and have have their own measurements. The created metric can be registered in order to include its measurements to reporters such as Prometheus as below.
 
-```ballerina(){show=true}
+```ballerina
+
 // Create counter and register.
 map<string> counterTags = { "method": "GET" };
 observe:Counter counterWithTags = new ("CounterWithTags", desc = "Some description", tags = counterTags);
@@ -219,11 +248,13 @@ statsConfigs[0]=config;
 // Create gauge and register.
 observe:Gauge gaugeWithStats = new ("GaugeWithTags", desc = "Some description",
                                        tags = gaugeTags, statisticConfig = statsConfigs);
+
 ```
 
 - All metrics registered can be retrieved and looked up individually as below.
 
-```ballerina(){show=true}
+```ballerina
+
 // Get All Metrics
 observe:Metric[] metrics = observe:getAllMetrics();
 foreach metric in metrics {
@@ -244,27 +275,33 @@ match metric {
            io:println("No Metric Found!");
     }
 }
+
 ```
 
 ## Standard Library Improvements
+
 - With the inclusion of byte[], WebSocket related signatures of resources such as `onBinary`, `onPing`, and `onPong` and functions such as `pushBinary()`, `ping()`, and `pong()` now have `byte[]` in their signature instead of a blob.
 - The HTTP transport error handler has been improved so that it recovers execution from inbound/outbound failures such as idle socket timeout and abrupt connection closure.
 - The circuit breaker now supports request volume threshold parameter. This parameter sets the minimum number of requests in a `RollingWindow` that will trip the circuit. So the rollingWindow configurations can be specified as below.
 
-```ballerina(){show=true}
+```ballerina
+
 rollingWindow : {
       timeWindowMillis: 10000,
       bucketSizeMillis: 2000,
       requestVolumeThreshold: 10
 }
+
 ```
 
 ## Build & Package Management
-- The ballerina `build` command output has been enhanced with more details about the build. Also by default, the test module will now be executed with the `build` command.
-- Ballerina `push` command now mandate the ballerina `build` also along with it, which make sure that packages are built before it is pushed to the central.
-- Ballerina central now supports to view previous versions of a package. It also now shows ballerina version compatibility section.
+
+- The Ballerina `build` command output has been enhanced with more details about the build. Also by default, the test module will now be executed with the `build` command.
+- Ballerina `push` command now mandates the Ballerina `build` also along with it, which make sure that packages are built before it is pushed to the Central.
+- Ballerina Central now supports to view previous versions of a package. It also now shows Ballerina version compatibility section.
 
 ## IDEs & Language Server
+
 - Composer is now shipped as a native Electron App.
 - Language server now includes source code formatting and also supports finding all symbols in a document and in the workspace.
-- IntelliJ IDEA Ballerina Plugin has added improvements for the ballerina source code debugger.
+- IntelliJ IDEA Ballerina Plugin has added improvements for the Ballerina source code debugger.
