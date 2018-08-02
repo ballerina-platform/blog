@@ -7,7 +7,8 @@ pages:
 - Home: 'index.md'
 - Introduction to Ballerina 0.970 release : 'posts/introduction-to-ballerina-0.970.md'
 - Ballerina - A cloud native programming language for integration : 'posts/ballerina-a-cloud-native-programming-language.md'
-- How Hasura added Ballerina support to their platform : 'posts/how-hasura-added-ballerina-support-to-their-platform.md'
+- Ballerina Meets Hasura : 'posts/ballerina-meets-hasura.md'
+- Overview of Ballerina 0.980 : 'posts/overview-of-ballerina-0.980.md'
 
 
 

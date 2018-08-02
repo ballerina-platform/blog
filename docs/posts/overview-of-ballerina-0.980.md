@@ -4,7 +4,7 @@ author: Kishanthan Thangarajah
 date: 26 July 2018
 status: Published
 abstract: Overview of new features and improvements added in ballerina 0.980.0 release
-socialmediaimage: ballet-sneaker-dress-ballet-dancer-163379.jpeg
+socialmediaimage: ballet-sneaker-dress-ballet-dancer-163379.jpg
 ---
 
 # Improvements and New Features
