@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/css/blog-home-page.css"></link>
 <script src="/js/blog-home-page.js"></script>
 ---
-* <div class="cBlogThumbnailContainer"><a href="./posts/overview-of-ballerina-0.980"><img src="img/blog-images/ballet-sneaker-dress-ballet-dancer-163379.jpg"/></a></div> [Improvements and New Features](./posts/improvements-and-new-features)
+* <div class="cBlogThumbnailContainer"><a href="./posts/overview-of-ballerina-0.980"><img src="img/blog-images/ballet-sneaker-dress-ballet-dancer-163379.jpg"/></a></div> [Improvements and New Features in Ballerina 0.981 Release](./posts/improvements-and-new-features-in-ballerina-0.981-release)
 * Kishanthan Thangarajah
 * 26 July 2018
 * Overview of new features and improvements added in ballerina 0.980.0 release

@@ -3,7 +3,7 @@ title: Improvements and New Features in Ballerina 0.981 Release
 author: Kishanthan Thangarajah
 date: 26 July 2018
 status: Published
-abstract: Overview of new features and improvements added in ballerina 0.980.0 release
+abstract: Improvements and New Features in Ballerina 0.981 Release
 socialmediaimage: ballet-sneaker-dress-ballet-dancer-163379.jpeg
 ---
 
