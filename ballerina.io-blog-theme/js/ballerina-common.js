@@ -222,7 +222,7 @@ $(document).ready(function() {
         '</div>' +
         '</div>' +
         '<div class="col-xs-12 col-sm-10 col-md-6 col-lg-6 cBallerina-io-right-col">' +
-        '<div class="cFooterBanner"><a href="https://con.ballerina.io/?utm_source=bio&utm_medium=banner&utm_campaign=bio_footer_banner" class="cFooterBanner-link" target="_blank"><img src="https://con.ballerina.io/wp-content/themes/ballerinacon/images/bcon-logo.png"/></a></div>' +
+        //'<div class="cFooterBanner"><a href="https://con.ballerina.io/?utm_source=bio&utm_medium=banner&utm_campaign=bio_footer_banner" class="cFooterBanner-link" target="_blank"><img src="https://con.ballerina.io/wp-content/themes/ballerinacon/images/bcon-logo.png"/></a></div>' +
         '<p>In the creation of Ballerina, we were inspired by so many technologies. Thank you to all that have come before us (and forgive us if we missed one): Java, Go, C, C++, Rust, Haskell, Kotlin, Dart, TypeScript, JavaScript, Flow, Swift, Elm, RelaxNG, NPM, Crates, Maven, Gradle, Kubernetes, Docker, Envoy, Markdown, GitHub and WSO2.</p></div>' +
         '</div>';
 
