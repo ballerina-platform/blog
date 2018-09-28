@@ -8,26 +8,26 @@ socialmediaimage: //todo
 ---
 
 # Improvements and New Features
-The Ballerina 0.982.0 release included new features along with improvements and bug fixes.
+The Ballerina 0.982.0 release includes new features along with improvements and bug fixes.
 
 ## Language & Runtime
 
 ### Introduction of the `channel` Type
 
-A new constrained type `channel`, that can be defined only as a top level node, has been introduced for communication 
-between parallel processes in Ballerina programs. Channels can be used for message correlation by sending and receiving 
-messages via different resources to the same channel and can also be used for inter-worker communication and worker 
-synchronization.
+The `channel` constrained type is introduced for communication between parallel processes in Ballerina programs. 
+A `channel` can be defined only as a top level node. Channels can be used for message correlation by sending and 
+receiving messages via different resources to the same channel. Channels can also be used for inter-worker 
+communication and worker synchronization.
 
 Defining a channel constrained by the `JSON` type
-```ballerinalerina
+```ballerina
 channel<json> jsonChannel; 
 ```
 
 Sending a message to the channel
     
 ```ballerina
-# One of the receivers waiting on the key `key` receives the message.
+# One of the receivers waiting on `key` receives the message.
 # If there is no receiver, the message is stored and execution continues.
 # A receiver can arrive later and fetch the message.
 message -> jsonChannel, key; 
@@ -42,9 +42,10 @@ json result <- jsonChannel, key;
 
 ### Introduction of `abstract` Objects
 
-An abstract object is identified by the `abstract` keyword. It describes the type of each field and each method, but 
-not the implementation of the methods. An abstract object type must not have an object constructor method and does not 
-have an implicit initial value. An abstract object type cannot  be initialized using the object initializer.
+An abstract object is identified by the `abstract` keyword. An abstract object only describes the type of each field 
+and method. It does not describe the implementation of methods. An abstract object type should not have an object 
+constructor method and does not have an implicit initial value. An abstract object type cannot be initialized using the 
+object initializer.
 
 ```ballerina
 public type Foo abstract object {
@@ -59,9 +60,9 @@ public type Foo abstract object {
 
 ### Introduction of Record Iteration Support
 
-Records are now an iterable type. With this change, the `foreach` statement and iterable operations can now be used 
-with records. When iterating a record, one can iterate either over the fields (i.e., field name and value pair) or only 
-over the field values.
+Records are now an iterable type. Therefore, the `foreach` statement and iterable operations can now be used
+with records. When iterating a record, one can either iterate over the fields (i.e., field name and value pair) or 
+iterate only over the field values.
 
 ```ballerina
 type Person record {
@@ -71,7 +72,7 @@ type Person record {
 };
 ```
 
-The `foreach` statement can be used on an instance of this record as follows:
+The `foreach` statement can be used with an instance of this record as follows:
 
 ```ballerina
     foreach field, value in person {
@@ -88,32 +89,33 @@ Or if iterating only through the field values:
 
 ### Changes to the `main` function
 
-The `main` function now needs to marked `public` and the `main` function could now return an int.
- 
-Any public function in the entry package could now be invoked via `ballerina run`.
-For example, the public function `add` in the `calculator` package could be invoke, with the integer arguments `4` and 
-`5`, via `ballerina run` as follows:
+Based on the latest changes, the `main` function has to be marked `public` and can return an int.
+
+Now it is also possible to execute ballerina `run` to invoke any `public` function in the entry package.
+For example, if you want to invoke the public function `add` in the `calculator` package, you can execute ballerina 
+`run` and specify the integer arguments `4` and `5` as follows:
 
 ```cmd
 ballerina run calculator:add 4 5
 ```
-If no function is specified, the name of the function to run is considered `main`.
 
-The function invoked via `ballerina run` (including the `main` function) would be data-binding and could have zero or 
+If a function is not specified, `main` is considered as the function to run.
+
+The function invoked via `ballerina run` (including the `main` function) will be data-binding and can have zero or 
 more parameters of any supported type, including any number of required/defaultable parameters and a single rest 
-parameter. This function could also return a value.
+parameter. This function can also return a value.
 
-For example, given the following public function in the package `currency`:
+For example, consider the following public function in the package `currency`:
 ```ballerina
 function queryChanges(string host, int port = 8080, string… params) returns float {
 
 }
 ```
-Invoking this function via `ballerina run` as follows:
+Invoke the function using ballerina `run` as follows:
 ```cmd
 ballerina run --printreturn currency:queryChanges localhost -port=8181 high day
 ```
-would result in the following value assignments
+The function invocation results in a value assignment as follows:
     - `host` ← `"localhost"`
     - `port` ← `8181`
     - `params` ← `["high", "day"]`
@@ -142,7 +144,7 @@ New syntax:
 function add(int x, int y) returns int { return x + y; }
 ```
 
-Note: With this change the previous documentation syntax is no longer supported. 
+Note: Ballerina does not support the old documentation syntax with the new release. 
 
 ### Reorder Documentation in Resources
 
