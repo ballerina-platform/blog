@@ -273,6 +273,8 @@ ballerina run calculator --config myConfig.conf 4 5
 - Support for HTTP 1.1 pipelining
 - Enhanced support for compression/decompression
 - Status code and reason are now optional parameters for the `close` action of the WebSocket connector
+- Support for direct configuration of SSL certificates and keys without keystores
+- Support for defining enum type in gRPC request/response messages
 
 ## Build & Package Management
 
