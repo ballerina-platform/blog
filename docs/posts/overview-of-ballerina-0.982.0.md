@@ -270,7 +270,9 @@ ballerina run calculator --config myConfig.conf 4 5
 
 ## Standard Library
 
-- Support is now introduced for HTTP 1.1 pipelining
+- Support for HTTP 1.1 pipelining
+- Enhanced support for compression/decompression
+- Status code and reason are now optional parameters for the `close` action of the WebSocket connector
 
 ## Build & Package Management
 
