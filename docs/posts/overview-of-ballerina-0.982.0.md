@@ -1,7 +1,7 @@
 ---
 title: Overview of Ballerina 0.982.0
 author: Maryam Ziyad Mohamed
-date: 28 September 2018
+date: 01 October 2018
 status: Published
 abstract: Introduction to New Features and Changes introduced with Ballerina 0.982.0
 socialmediaimage: //todo
@@ -9,6 +9,9 @@ socialmediaimage: //todo
 
 # Improvements and New Features
 The Ballerina 0.982.0 release includes new features along with improvements and bug fixes.
+
+An initial version of the Ballerina Native feature that allows simple Ballerina programs with the `main` function to be 
+compiled into native executables, is also being introduced with this release.
 
 ## Language & Runtime
 
@@ -148,7 +151,7 @@ Note: Ballerina does not support the old documentation syntax with the new relea
 
 ### Reorder Documentation in Resources
 
-Earlier, documentation was added after annotation attachments. Now the documentation needs to be added before the 
+In previous versions, documentation was added after annotation attachments. Now documentation should be added before the
 annotation attachment.
 
 Old syntax:
@@ -239,7 +242,7 @@ function (int, string) returns string lambdaVar = (param1, param2) => param2.toU
 
 ### Removal of Implicit Cast from `int` to `float`
 
-We need to explicitly define a `float` with a decimal point now.
+Now it is necessary to explicitly define a float with a decimal point.
 ```ballerina
 float x = 0; // Compile Error
 float x = 0.0; // Working Code
@@ -259,7 +262,7 @@ file/package to run.
 Any arguments (even if they match an option recognized by the run command) specified after the file/package are now 
 considered program arguments.
 
-A config file could be specified with `run` as follows:
+A config file can be specified with the `run` command as follows:
 ```cmd
 ballerina run --config myConfig.conf calculator 4 5
 ```
@@ -270,13 +273,44 @@ Specifying the `--config` argument as follows, after the package `calculator` wo
 ballerina run calculator --config myConfig.conf 4 5
 ```
 
+### Ballerina Native
+
+The Ballerina Native feature is the introduction of an LLVM based backend for the Ballerina compiler. It allows 
+Ballerina programs to be compiled into native executables.
+
+#### Prerequisites
+- Unix based (Linux/MacOS) operating system to run the initial version. Other operating systems will be supported in 
+future versions.
+- Be sure you have the GCC compiler installed. (It is possible to use `clang` or `ld` . But the current recommended 
+option is `gcc`)
+
+#### Supported language constructs
+- `main` function (args are ignored)
+- `int` and `boolean` types
+- `if` condition
+- `while` loop
+- Function calls and return values
+- Partial support for `println` for `int` values
+
+#### How to run
+- build a Ballerina program with the native flag
+`ballerina build --native -o myballerinamain  myballerinamain.bal`
+
+- Run the created executable
+`./myballerinamain`
+
+#### Command line flags
+Following additional flags are valid when the `--native` flag is provided:
+`--dump-bir` prints the Ballerina intermediate representation
+`--dump-llvm-ir` prints the LLVM intermediate representation assembly code
+
 ## Standard Library
 
 - Support for HTTP 1.1 pipelining
 - Enhanced support for compression/decompression
-- Status code and reason are now optional parameters for the `close` action of the WebSocket connector
-- Support for direct configuration of SSL certificates and keys without keystores
-- Support for defining enum type in gRPC request/response messages
+- Change of status code and reason to be optional parameters for the `close` action of the WebSocket endpoint
+- Support to directly configurate SSL certificates and keys without keystores
+- Support to define enum type in gRPC request/response messages
 
 ## Build & Package Management
 
@@ -304,8 +338,8 @@ ballerina uninstall <org-name>/<package-name>:<version>
 ## IDE Plugins
 
 - Diagram editing support in VSCode
-- Language Server Integration support in IDEA plugin: with this change, all the language intellisense support will be 
-provided through Language Server
+- Language Server integration support in IDEA plugin: this results in providing all language intellisense support 
+through the Language Server
 - Variable definition auto generation code action
 - Attached function’s implementation snippet
 - Object constructor auto generation code action
