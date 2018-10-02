@@ -8,10 +8,12 @@ socialmediaimage: //todo
 ---
 
 # Improvements and New Features
-The Ballerina 0.982.0 release includes new features along with improvements and bug fixes.
+The Ballerina 0.982.0 release includes new features, improvements and bug fixes including changes to the `main` 
+function, introduction of the new `channel` type, improvements to records and objects and support for HTTP 1.1 
+piplelining.
 
 An initial version of the Ballerina Native feature that allows simple Ballerina programs with the `main` function to be 
-compiled into native executables, is also being introduced with this release.
+compiled into native executables, is also introduced with this release.
 
 ## Language & Runtime
 
@@ -22,7 +24,7 @@ A `channel` can be defined only as a top level node. Channels can be used for me
 receiving messages via different resources to the same channel. Channels can also be used for inter-worker 
 communication and worker synchronization.
 
-Defining a channel constrained by the `JSON` type
+Defining a channel constrained by the `json` type
 ```ballerina
 channel<json> jsonChannel; 
 ```
@@ -45,10 +47,10 @@ json result <- jsonChannel, key;
 
 ### Introduction of `abstract` Objects
 
-An abstract object is identified by the `abstract` keyword. An abstract object only describes the type of each field 
-and method. It does not describe the implementation of methods. An abstract object type should not have an object 
-constructor method and does not have an implicit initial value. An abstract object type cannot be initialized using the 
-object initializer.
+An abstract object is identified by the `abstract` keyword. Abstract objects only describe the type of each field 
+and method, they do not describe the implementation of methods. An abstract object type should not have an object 
+constructor method and cannot be initialized using the object initializer. Abstract objects do not have an implicit 
+initial value. 
 
 ```ballerina
 public type Foo abstract object {
@@ -63,9 +65,9 @@ public type Foo abstract object {
 
 ### Introduction of Record Iteration Support
 
-Records are now an iterable type. Therefore, the `foreach` statement and iterable operations can now be used
-with records. When iterating a record, one can either iterate over the fields (i.e., field name and value pair) or 
-iterate only over the field values.
+Records are now iterable, and the `foreach` statement and iterable operations can now be used with records. 
+When iterating a record, one can either iterate over the fields (i.e., field name and value) or iterate only over the 
+field values.
 
 ```ballerina
 type Person record {
@@ -76,18 +78,17 @@ type Person record {
 ```
 
 The `foreach` statement can be used with an instance of this record as follows:
-
 ```ballerina
-    foreach field, value in person {
-        io:println(field + " : " + <string>value);
-    }
+foreach field, value in person {
+    io:println(field + " : " + <string>value);
+}
 ```
 
-Or if iterating only through the field values:
+The `foreach` statement can be used to iterate only over the field values as follows:
 ```ballerina
-    foreach value in person {
-        io:println(value);
-    }
+foreach value in person {
+    io:println(value);
+}
 ```
 
 ### Changes to the `main` function
@@ -110,7 +111,7 @@ parameter. This function can also return a value.
 
 For example, consider the following public function in the package `currency`:
 ```ballerina
-function queryChanges(string host, int port = 8080, string… params) returns float {
+public function queryChanges(string host, int port = 8080, string… params) returns float {
 
 }
 ```
@@ -147,12 +148,10 @@ New syntax:
 function add(int x, int y) returns int { return x + y; }
 ```
 
-Note: Ballerina does not support the old documentation syntax with the new release. 
-
 ### Reorder Documentation in Resources
 
-In previous versions, documentation was added after annotation attachments. Now documentation should be added before the
-annotation attachment.
+In previous versions, documentation was added after annotation attachments of resources. Now documentation should be 
+added before the annotation attachment.
 
 Old syntax:
 ```ballerina
@@ -234,8 +233,8 @@ var lambda = function (int b) returns int {
 };
 ```
 
-A new “Arrow Function Expression” is introduced as a simple alternative to anonymous functions that only have a return 
-statement in the body block. Syntax is as follows:
+A new "Arrow Function Expression" is introduced as a simple alternative to anonymous functions that only have a return 
+statement as the body:
 ```ballerina
 function (int, string) returns string lambdaVar = (param1, param2) => param2.toUpper();
 ```
@@ -250,17 +249,17 @@ float x = 0.0; // Working Code
 
 ### Tracking Tainted State Changes of Function Parameters
 
-Tht taint analyzer will keep track of the tainted state of parameters in different execution conditions. This 
-information will be used to updated the tainted state of the arguments used in a function invocation, to make sure 
-the tainted state of arguments are propagated correctly when the parameter is an out parameter or an in-out parameter.
+The taint analyzer has been improved to keep track of the tainted state of parameters in different execution 
+conditions. This information will be used to updated the tainted state of the arguments used in a function invocation, 
+to make sure the tainted state of arguments are propagated correctly when the parameter is an out parameter or an 
+in-out parameter.
  
 ### Option/Param Order Enforcement with the Run Command
 
-Option vs parameter ordering is enforced with the run command, and all options need to be specified before the 
-file/package to run. 
+Option vs parameter ordering has been enforced with the Ballerina `run` command. All options now need to be specified 
+before the file or package to run.
 
-Any arguments (even if they match an option recognized by the run command) specified after the file/package are now 
-considered program arguments.
+Any and all arguments specified after the file or package are now considered program arguments.
 
 A config file can be specified with the `run` command as follows:
 ```cmd
@@ -281,11 +280,10 @@ Ballerina programs to be compiled into native executables.
 #### Prerequisites
 - Unix based (Linux/MacOS) operating system to run the initial version. Other operating systems will be supported in 
 future versions.
-- Be sure you have the GCC compiler installed. (It is possible to use `clang` or `ld` . But the current recommended 
-option is `gcc`)
+- GCC compiler (It is possible to use `clang` or `ld` . But the current recommended option is `gcc`)
 
 #### Supported language constructs
-- `main` function (args are ignored)
+- `main` function (arguments are ignored)
 - `int` and `boolean` types
 - `if` condition
 - `while` loop
@@ -293,14 +291,14 @@ option is `gcc`)
 - Partial support for `println` for `int` values
 
 #### How to run
-- build a Ballerina program with the native flag
+- Build a Ballerina program with the native option
 `ballerina build --native -o myballerinamain  myballerinamain.bal`
 
 - Run the created executable
 `./myballerinamain`
 
 #### Command line flags
-Following additional flags are valid when the `--native` flag is provided:
+The following additional options are valid when the `--native` option is provided:
 `--dump-bir` prints the Ballerina intermediate representation
 `--dump-llvm-ir` prints the LLVM intermediate representation assembly code
 
@@ -309,16 +307,17 @@ Following additional flags are valid when the `--native` flag is provided:
 - Support for HTTP 1.1 pipelining
 - Enhanced support for compression/decompression
 - Change of status code and reason to be optional parameters for the `close` action of the WebSocket endpoint
-- Support to directly configurate SSL certificates and keys without keystores
+- Support to directly configure SSL certificates and keys without keystores
 - Support to define enum type in gRPC request/response messages
 
 ## Build & Package Management
 
-### Mandating Build on ballerina `push` and `install`
+### Mandating Build on Ballerina `push` and `install`
 
-By default the sources will be built before pushing the package to Ballerina Central and before installing the package 
-to the home repository. The `--no-build` flag could be used to skip building before pushing or installing.
+By default, the sources will now be built before pushing the package to Ballerina Central and before installing the 
+package to the home repository. 
 
+The `--no-build` flag could be used to skip building before pushing or installing.
 ```cmd
 ballerina push <package-name> --no-build
 ```
@@ -329,8 +328,7 @@ ballerina install <package-name> --no-build
 
 ### Introduction of the `uninstall` command
 
-Packages that are installed to the home repository which are shared across other projects can be uninstalled or removed.
-The uninstall command takes the following options: 
+Packages that are installed to the home repository can now be uninstalled or removed using the `uninstall` command.
 ```cmd
 ballerina uninstall <org-name>/<package-name>:<version>
 ```
@@ -347,8 +345,10 @@ through the Language Server
 ## Extensions
 
 ### Kubernetes
-
 - Support is now introduced for Helm Chart generation
+
+## Performance Results
+From Ballerina 0.982.0 onward, [a performance test result summary](https://github.com/ballerina-platform/ballerina-lang/blob/v0.982.0/performance/benchmarks/summary.md) would also be made available with each release. 
 
 ## Bug Fixes 
 
