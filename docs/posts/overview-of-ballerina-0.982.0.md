@@ -252,8 +252,8 @@ float x = 0.0; // Working Code
 
 ### Tracking Tainted State Changes of Function Parameters
 
-The taint analyzer has been improved to keep track of the tainted state of parameters in different execution conditions. 
-This information will be used to updated the tainted state of the arguments used in a function invocation, to make sure the tainted state of arguments are propagated correctly when the parameter is an out parameter or an in-out parameter.
+The taint analyzer keeps track of the tainted state of parameters in different execution conditions. 
+This information is used to update the tainted state of the arguments used in a function invocation, and to make sure that the tainted state is propagated correctly when the parameter is an out parameter or an in-out parameter.
  
 ### Option/Param Order Enforcement with the Run Command
 
@@ -273,11 +273,11 @@ ballerina run calculator --config myConfig.conf 4 5
 
 ### Ballerina Native
 
-The Ballerina Native feature is the introduction of an LLVM based backend for the Ballerina compiler. It allows Ballerina programs to be compiled into native executables.
+The Ballerina Native feature is the introduction of an LLVM-based backend for the Ballerina compiler. It allows Ballerina programs to be compiled into native executables.
 
 #### Prerequisites
 - Unix based (Linux/MacOS) operating system to run the initial version. Other operating systems will be supported in future versions.
-- GCC compiler (It is possible to use `clang` or `ld` . But the current recommended option is `gcc`)
+- GCC compiler (it is possible to use `clang` or `ld`. However, the current recommended option is `gcc`)
 
 #### Supported language constructs
 - `main` function (arguments are ignored)
@@ -311,8 +311,7 @@ The following additional options are valid when the `--native` option is provide
 
 ### Mandating Build on Ballerina Push and Install
 
-By default, the sources will now be built before pushing the package to Ballerina Central and before installing the 
-package to the home repository. 
+By default, the sources are built before pushing the package to Ballerina Central and before installing the package in the home repository. 
 
 The `--no-build` flag could be used to skip building before pushing or installing.
 ```cmd
@@ -325,7 +324,7 @@ ballerina install <package-name> --no-build
 
 ### Introduction of the Uninstall Command
 
-Packages that are installed to the home repository can now be uninstalled or removed using the `uninstall` command.
+Packages that are installed in the home repository can now be uninstalled or removed using the `uninstall` command.
 ```cmd
 ballerina uninstall <org-name>/<package-name>:<version>
 ```
