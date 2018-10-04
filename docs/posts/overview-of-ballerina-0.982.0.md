@@ -3,34 +3,31 @@ title: Overview of Ballerina 0.982.0
 author: Maryam Ziyad Mohamed
 date: 01 October 2018
 status: Published
-abstract: Introduction to New Features and Changes introduced with Ballerina 0.982.0
+abstract: Introduction to New Features and Changes Introduced with Ballerina 0.982.0
 socialmediaimage: pexels-photo-206274.jpeg
 ---
 
 # Improvements and New Features
-The Ballerina 0.982.0 release includes new features, improvements and bug fixes including changes to the `main` 
-function, introduction of the new `channel` type, improvements to records and objects and support for HTTP 1.1 
-piplelining.
+The Ballerina 0.982.0 release includes new features, improvements and bug fixes including introduction of the new `channel` type, changes to the `main` function, improvements to records and objects, and support for HTTP 1.1 piplelining.
 
-An initial version of the Ballerina Native feature that allows simple Ballerina programs with the `main` function to be 
-compiled into native executables, is also introduced with this release.
+An initial version of the Ballerina Native feature that allows simple Ballerina programs with the `main` function to be compiled into native executables, is also introduced with this release.
 
 ## Language & Runtime
 
-### Introduction of the `channel` Type
+### Introduction of the Channel Type
 
 The `channel` constrained type is introduced for communication between parallel processes in Ballerina programs. 
-A `channel` can be defined only as a top level node. Channels can be used for message correlation by sending and 
-receiving messages via different resources to the same channel. Channels can also be used for inter-worker 
-communication and worker synchronization.
+A `channel` can be defined only as a top level node. Channels can be used for message correlation by sending and receiving messages via different resources to the same channel. 
+Channels can also be used for inter-worker communication and worker synchronization.
 
-Defining a channel constrained by the `json` type
+**Defining a channel constrained by the `json` type**
+
 ```ballerina
 channel<json> jsonChannel; 
 ```
 
-Sending a message to the channel
-    
+**Sending a message to the channel**
+
 ```ballerina
 # One of the receivers waiting on `key` receives the message.
 # If there is no receiver, the message is stored and execution continues.
@@ -38,19 +35,17 @@ Sending a message to the channel
 message -> jsonChannel, key; 
 ```
 
-Receive a message from the channel with the given key
-   
+**Receiving a message from the channel with the given key** 
+
 ```ballerina
 # Execution waits here if the message is not available.
 json result <- jsonChannel, key;
 ```
 
-### Introduction of `abstract` Objects
+### Introduction of Abstract Objects
 
-An abstract object is identified by the `abstract` keyword. Abstract objects only describe the type of each field 
-and method, they do not describe the implementation of methods. An abstract object type should not have an object 
-constructor method and cannot be initialized using the object initializer. Abstract objects do not have an implicit 
-initial value. 
+An abstract object is identified by the `abstract` keyword. Abstract objects only describe the type of each field and method, they do not describe the implementation of methods. 
+An abstract object type should not have an object constructor method and cannot be initialized using the object initializer. Abstract objects do not have an implicit initial value. 
 
 ```ballerina
 public type Foo abstract object {
@@ -66,8 +61,7 @@ public type Foo abstract object {
 ### Introduction of Record Iteration Support
 
 Records are now iterable, and the `foreach` statement and iterable operations can now be used with records. 
-When iterating a record, one can either iterate over the fields (i.e., field name and value) or iterate only over the 
-field values.
+When iterating a record, one can either iterate over the fields (i.e., field name and value) or iterate only over the field values.
 
 ```ballerina
 type Person record {
@@ -78,6 +72,7 @@ type Person record {
 ```
 
 The `foreach` statement can be used with an instance of this record as follows:
+
 ```ballerina
 foreach field, value in person {
     io:println(field + " : " + <string>value);
@@ -85,19 +80,19 @@ foreach field, value in person {
 ```
 
 The `foreach` statement can be used to iterate only over the field values as follows:
+
 ```ballerina
 foreach value in person {
     io:println(value);
 }
 ```
 
-### Changes to the `main` function
+### Changes to the "main" Function
 
 Based on the latest changes, the `main` function has to be marked `public` and can return an int.
 
 Now it is also possible to execute ballerina `run` to invoke any `public` function in the entry package.
-For example, if you want to invoke the public function `add` in the `calculator` package, you can execute ballerina 
-`run` and specify the integer arguments `4` and `5` as follows:
+For example, if you want to invoke the public function `add` in the `calculator` package, you can execute ballerina `run` and specify the integer arguments `4` and `5` as follows:
 
 ```cmd
 ballerina run calculator:add 4 5
@@ -105,30 +100,31 @@ ballerina run calculator:add 4 5
 
 If a function is not specified, `main` is considered as the function to run.
 
-The function invoked via `ballerina run` (including the `main` function) will be data-binding and can have zero or 
-more parameters of any supported type, including any number of required/defaultable parameters and a single rest 
-parameter. This function can also return a value.
+The function invoked via `ballerina run` (including the `main` function) will be data-binding and can have zero or more parameters of any supported type, including any number of required/defaultable parameters and a single rest parameter. 
+This function can also return a value.
 
 For example, consider the following public function in the package `currency`:
+
 ```ballerina
 public function queryChanges(string host, int port = 8080, string… params) returns float {
 
 }
 ```
-Invoke the function using ballerina `run` as follows:
+Invoke the function using Ballerina `run` as follows:
 ```cmd
 ballerina run --printreturn currency:queryChanges localhost -port=8181 high day
 ```
 The function invocation results in a value assignment as follows:
-    - `host` ← `"localhost"`
-    - `port` ← `8181`
-    - `params` ← `["high", "day"]`
+- `host` ← `"localhost"`
+- `port` ← `8181`
+- `params` ← `["high", "day"]`
 
 When the `--printreturn` flag is set, the return value is printed to the standard out stream.
 
 ### New Documentation Syntax
 
 Old syntax:
+
 ```ballerina
 documentation {
     Adds parameter `x` and parameter `y`.
@@ -140,6 +136,7 @@ function add(int x, int y) returns int { return x + y; }
 ```
 
 New syntax:
+
 ```ballerina
 # Adds parameter `x` and parameter `y`.
 # + x - one thing to be added
@@ -150,10 +147,10 @@ function add(int x, int y) returns int { return x + y; }
 
 ### Reorder Documentation in Resources
 
-In previous versions, documentation was added after annotation attachments of resources. Now documentation should be 
-added before the annotation attachment.
+In previous versions, documentation was added after annotation attachments of resources. Now documentation should be added before the annotation attachment.
 
 Old syntax:
+
 ```ballerina
 service<http:Service> update_token bind { port: 9295 } {
 
@@ -170,6 +167,7 @@ service<http:Service> update_token bind { port: 9295 } {
 ```
 
 New syntax:
+
 ```ballerina
 service<http:Service> update_token bind { port: 9295 } {
 
@@ -188,6 +186,7 @@ service<http:Service> update_token bind { port: 9295 } {
 ### Changes to Record/Object Field Syntax
 
 Old syntax:
+
 ```ballerina
 type foo record {
     string a,
@@ -201,6 +200,7 @@ type bar object {
 ```
 
 New syntax:
+
 ```ballerina
 type foo record {
     string a;
@@ -218,6 +218,7 @@ type bar object {
 The syntax of anonymous functions has been changed to resemble normal function definitions.
 
 Old syntax:
+
 ```ballerina
 var lambda = (int b) => (int) {
     int x = b * b;
@@ -226,6 +227,7 @@ var lambda = (int b) => (int) {
 ```
 
 New syntax:
+
 ```ballerina
 var lambda = function (int b) returns int {
     int x = b * b;
@@ -233,15 +235,16 @@ var lambda = function (int b) returns int {
 };
 ```
 
-A new "Arrow Function Expression" is introduced as a simple alternative to anonymous functions that only have a return 
-statement as the body:
+A new "Arrow Function Expression" is introduced as a simple alternative to anonymous functions that only have a return statement as the body:
+
 ```ballerina
 function (int, string) returns string lambdaVar = (param1, param2) => param2.toUpper();
 ```
 
-### Removal of Implicit Cast from `int` to `float`
+### Removal of Implicit Cast from int to float
 
 Now it is necessary to explicitly define a float with a decimal point.
+
 ```ballerina
 float x = 0; // Compile Error
 float x = 0.0; // Working Code
@@ -249,15 +252,12 @@ float x = 0.0; // Working Code
 
 ### Tracking Tainted State Changes of Function Parameters
 
-The taint analyzer has been improved to keep track of the tainted state of parameters in different execution 
-conditions. This information will be used to updated the tainted state of the arguments used in a function invocation, 
-to make sure the tainted state of arguments are propagated correctly when the parameter is an out parameter or an 
-in-out parameter.
+The taint analyzer has been improved to keep track of the tainted state of parameters in different execution conditions. 
+This information will be used to updated the tainted state of the arguments used in a function invocation, to make sure the tainted state of arguments are propagated correctly when the parameter is an out parameter or an in-out parameter.
  
 ### Option/Param Order Enforcement with the Run Command
 
-Option vs parameter ordering has been enforced with the Ballerina `run` command. All options now need to be specified 
-before the file or package to run.
+Option vs parameter ordering has been enforced with the Ballerina `run` command. All options now need to be specified before the file or package to run.
 
 Any and all arguments specified after the file or package are now considered program arguments.
 
@@ -266,20 +266,17 @@ A config file can be specified with the `run` command as follows:
 ballerina run --config myConfig.conf calculator 4 5
 ```
 
-Specifying the `--config` argument as follows, after the package `calculator` would not result in it being identified as
- an option:
+Specifying the `--config` argument as follows, after the package `calculator` would not result in it being identified as an option:
 ```cmd
 ballerina run calculator --config myConfig.conf 4 5
 ```
 
 ### Ballerina Native
 
-The Ballerina Native feature is the introduction of an LLVM based backend for the Ballerina compiler. It allows 
-Ballerina programs to be compiled into native executables.
+The Ballerina Native feature is the introduction of an LLVM based backend for the Ballerina compiler. It allows Ballerina programs to be compiled into native executables.
 
 #### Prerequisites
-- Unix based (Linux/MacOS) operating system to run the initial version. Other operating systems will be supported in 
-future versions.
+- Unix based (Linux/MacOS) operating system to run the initial version. Other operating systems will be supported in future versions.
 - GCC compiler (It is possible to use `clang` or `ld` . But the current recommended option is `gcc`)
 
 #### Supported language constructs
@@ -312,7 +309,7 @@ The following additional options are valid when the `--native` option is provide
 
 ## Build & Package Management
 
-### Mandating Build on Ballerina `push` and `install`
+### Mandating Build on Ballerina Push and Install
 
 By default, the sources will now be built before pushing the package to Ballerina Central and before installing the 
 package to the home repository. 
@@ -326,7 +323,7 @@ ballerina push <package-name> --no-build
 ballerina install <package-name> --no-build
 ```
 
-### Introduction of the `uninstall` command
+### Introduction of the Uninstall Command
 
 Packages that are installed to the home repository can now be uninstalled or removed using the `uninstall` command.
 ```cmd
