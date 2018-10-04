@@ -4,7 +4,7 @@ author: Maryam Ziyad Mohamed
 date: 01 October 2018
 status: Published
 abstract: Introduction to New Features and Changes introduced with Ballerina 0.982.0
-socialmediaimage: //todo
+socialmediaimage: pexels-photo-206274.jpeg
 ---
 
 # Improvements and New Features
