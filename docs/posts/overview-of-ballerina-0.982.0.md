@@ -1,7 +1,7 @@
 ---
 title: Overview of Ballerina 0.982.0
 author: Maryam Ziyad Mohamed
-date: 01 October 2018
+date: 05 October 2018
 status: Published
 abstract: Introduction to New Features and Changes Introduced with Ballerina 0.982.0
 socialmediaimage: pexels-photo-206274.jpeg
