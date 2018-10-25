@@ -9,8 +9,7 @@ pages:
 - Ballerina - A cloud native programming language for integration : 'posts/ballerina-a-cloud-native-programming-language.md'
 - Ballerina Meets Hasura : 'posts/ballerina-meets-hasura.md'
 - Improvements and New Features in Ballerina 0.980.0 Release : 'posts/improvements-and-new-features-in-ballerina-0.980.0-release.md'
-
-
+- Introduction to New Features and Changes Introduced with Ballerina 0.982.0 : 'posts/introduction-to-new-features-and-changes-introduced-with-ballerina-0.982.0.md'
 
 
 theme: null

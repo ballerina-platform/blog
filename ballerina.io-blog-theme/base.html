@@ -6,6 +6,31 @@
    <html class="no-js" lang="en">
       <!--<![endif]-->
       <head>
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5X2J7KJ');</script>
+        <!-- End Google Tag Manager -->
+        
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92163714-7"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'UA-92163714-7');
+        </script>
+
+
+
+
+
          {%- block site_meta %}
          <meta charset="utf-8">
          <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,6 +47,18 @@
          <title>{% if page and page.title and not page.is_hompage %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
          {%- endblock %} {%- block styles %}
          
+
+         <!-- Hotjar Tracking Code for https://blog.ballerina.io/ -->
+<script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:909326,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
          
          
 <!--         SOCIAL MEDIA-->
@@ -87,6 +124,12 @@
          {% endif %} {%- endblock %} {%- block extrahead %} {% endblock %} {%- block analytics %} {% if config.google_analytics %} {% endif %} {%- endblock %}
       </head>
       <body class="cBallerina-io" role="document">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X2J7KJ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+
          {% include "navigation.html" %}
          <div class="row cBallerina-io-Gray-row">
             <div class="container">
