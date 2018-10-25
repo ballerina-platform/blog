@@ -174,11 +174,11 @@ $(document).ready(function() {
         '</div>' +
         '<div id="navbar" class="collapse navbar-collapse">' +
         '<ul class="nav navbar-nav cTopNav">' +
-        '<li class="active toctree-l1" id="learnli"><a class="cBioTopLink" href="/learn">Learn</a></li>' +
-        '<li class="toctree-l1" id="philosophyli"><a class="cBioTopLink" href="/philosophy">Philosophy</a></li>' +
+        '<li class="active toctree-l1" id="learnli"><a class="cBioTopLink" href="https://ballerina.io/learn">Learn</a></li>' +
+        '<li class="toctree-l1" id="philosophyli"><a class="cBioTopLink" href="https://ballerina.io/philosophy">Philosophy</a></li>' +
         '<li class="toctree-l1"><a class="cBioTopLink" href="https://central.ballerina.io/" target="_blank">Central</a></li>' +
-        '<li class="toctree-l1" id="openli"><a class="cBioTopLink" href="/open-source">Open Source</a></li>' +
-        '<li class="toctree-l1" id="helpli"><a class="cBioTopLink" href="/help">Help </a></li>' +
+        '<li class="toctree-l1" id="openli"><a class="cBioTopLink" href="https://ballerina.io/open-source">Open Source</a></li>' +
+        '<li class="toctree-l1" id="helpli"><a class="cBioTopLink" href="https://ballerina.io/help">Help </a></li>' +
         '<li class="toctree-l1" id="helpli"><a class="cBioTopLink" href="https://blog.ballerina.io/" target="_blank">Blog</a></li>' +
         '</ul>' +
         '</div>' +
@@ -192,9 +192,9 @@ $(document).ready(function() {
         '<ul>' +
         '<li><a class="cBioFooterLink" href="/downloads">Download</a></li>' +
         '<li><a class="cBioFooterLink" href="https://github.com/ballerina-lang/ballerina/blob/master/LICENSE">Code License</a></li>' +
-        '<li><a class="cBioFooterLink" href="/license-of-site">Site License</a></li>' +
-        '<li><a class="cBioFooterLink" href="/terms-of-service">TERMS OF SERVICE</a></li>' +
-        '<li><a class="cBioFooterLink" href="/privacy-policy">PRIVACY POLICY</a></li>' +
+        '<li><a class="cBioFooterLink" href="https://ballerina.io/license-of-site">Site License</a></li>' +
+        '<li><a class="cBioFooterLink" href="https://ballerina.io/terms-of-service">TERMS OF SERVICE</a></li>' +
+        '<li><a class="cBioFooterLink" href="https://ballerina.io/privacy-policy">PRIVACY POLICY</a></li>' +
         '</ul>' +
         '</div>' +
         '<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-middle-col cBallerinaFooterSignUp">' +
@@ -216,13 +216,13 @@ $(document).ready(function() {
         '</li>' +
         '<li><a class="cBioFooterLink" href="https://stackoverflow.com/questions/tagged/ballerina" target="_blank"><img src="https://ballerina.io/img/stackoverflow.svg"/></a></li>' +
         '<li><a class="cBioFooterLink" href="https://twitter.com/ballerinaplat" target="_blank"><img src="https://ballerina.io/img/twitter.svg"/></a></li>' +
-        '<li><a class="cBioFooterLink" href="/open-source/slack/"><img src="https://ballerina.io/img/slack.svg"/></a></li>' +
+        '<li><a class="cBioFooterLink" href="https://ballerina.io/open-source/slack/"><img src="https://ballerina.io/img/slack.svg"/></a></li>' +
         '</ul>' +
         '<div class="pdframe"></div>' +
         '</div>' +
         '</div>' +
         '<div class="col-xs-12 col-sm-10 col-md-6 col-lg-6 cBallerina-io-right-col">' +
-        '<div class="cFooterBanner"><a href="https://con.ballerina.io/?utm_source=bio&utm_medium=banner&utm_campaign=bio_footer_banner" class="cFooterBanner-link" target="_blank"><img src="https://con.ballerina.io/wp-content/themes/ballerinacon/images/bcon-logo.png"/></a></div>' +
+        //'<div class="cFooterBanner"><a href="https://con.ballerina.io/?utm_source=bio&utm_medium=banner&utm_campaign=bio_footer_banner" class="cFooterBanner-link" target="_blank"><img src="https://con.ballerina.io/wp-content/themes/ballerinacon/images/bcon-logo.png"/></a></div>' +
         '<p>In the creation of Ballerina, we were inspired by so many technologies. Thank you to all that have come before us (and forgive us if we missed one): Java, Go, C, C++, Rust, Haskell, Kotlin, Dart, TypeScript, JavaScript, Flow, Swift, Elm, RelaxNG, NPM, Crates, Maven, Gradle, Kubernetes, Docker, Envoy, Markdown, GitHub and WSO2.</p></div>' +
         '</div>';
 

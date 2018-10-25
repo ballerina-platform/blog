@@ -11,7 +11,7 @@
 /*    margin: 0;*/
 margin-top: 10px;
     font-weight: 800;
-    
+
 }
 
 .cBallerina-io-Gray-row {
@@ -49,7 +49,7 @@ ul.cBlogPostContainer {
     padding: 30px;
 
     background: #ffffff;
- 
+
     display: inline-block;
 /*    min-height: 400px;*/
     float: left;
@@ -58,7 +58,7 @@ ul.cBlogPostContainer {
 ul.cBlogPostContainer li , .rst-content .section ul li, .rst-content .toctree-wrapper ul li, .wy-plain-list-disc li, article ul li {
     list-style: none;
     margin-left: 0;
-    
+
 }
 .cBlogPostContainer ul li:nth-child(2) p {
     font-weight: 800;
@@ -79,15 +79,15 @@ ul.cBlogPostContainer li , .rst-content .section ul li, .rst-content .toctree-wr
     display: inline-block;
     height: 200px;
 /*    background: red;*/
-    overflow: hidden;  
+    overflow: hidden;
     margin-bottom: 20px;
-    
+
 }
 .cBlogPostContainer .cBlogThumbnailContainer img {
-    max-width: 200% !important;
+    max-width: 168% !important;
     width: auto;
     margin-top: 0;
- 
+
 }
 
 
@@ -105,7 +105,7 @@ ul.cBlogPostContainer li , .rst-content .section ul li, .rst-content .toctree-wr
      float: left;
      margin-bottom: 30px;
      border-top: 5px solid #ffffff;
-     
+
 }
 
 
@@ -123,7 +123,7 @@ ul.cBlogPostContainer li , .rst-content .section ul li, .rst-content .toctree-wr
    font-size: 14px;
    font-weight: 400;
    margin-bottom: 5px;
-   
+
 }
 .section ul li:nth-child(3) {
     font-size: 14px;
@@ -135,13 +135,13 @@ ul.cBlogPostContainer li , .rst-content .section ul li, .rst-content .toctree-wr
 .section ul li:nth-child(4) {
  font-size: 14px;
  line-height: 20px;
- 
+
  height: 60px;
  overflow: hidden;
  padding-bottom: 20px;
  margin-bottom: 20px;
  color: #959595;
-    
+
 }
 
 .section ul li:nth-child(5) {
@@ -149,11 +149,11 @@ display: none;
 }
 
 
-/* styles for '...' */ 
+/* styles for '...' */
 .section ul li:nth-child(4) {
   overflow: hidden;
-  position: relative; 
-  max-height: 100px; 
+  position: relative;
+  max-height: 100px;
 
 }
 .section ul li:nth-child(4):before {
@@ -164,11 +164,11 @@ right: 0;
 bottom: 0;
 }
 /*.section ul li:nth-child(4):after {
-   points in the end 
+   points in the end
   content: '';
-   absolute position 
+   absolute position
   position: absolute;
-   set position to right bottom corner of text 
+   set position to right bottom corner of text
   right: 0;
   width: 1em;
 
