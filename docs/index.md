@@ -1,6 +1,13 @@
 <link rel="stylesheet" href="/css/blog-home-page.css"></link>
 <script src="/js/blog-home-page.js"></script>
 ---
+* <div class="cBlogThumbnailContainer"><a href="./posts/ballerina-now-includes-support-for-aws-lambda"><img src="img/blog-images/aws-blog.jpg"/></a></div> [Ballerina now includes support for AWS Lambda](./posts/ballerina-now-includes-support-for-aws-lambda) 
+* Anjana Fernando
+* 13 March 2019
+* Learn how to quickly deploy Ballerina functions as AWS Lambda functions.
+* Published
+---
+---
 * <div class="cBlogThumbnailContainer"><a href="./posts/introduction-to-new-features-and-changes-introduced-with-ballerina-0.982.0"><img src="img/blog-images/pexels-photo-206274.jpeg"/></a></div> [Overview of Ballerina 0.982.0](./posts/introduction-to-new-features-and-changes-introduced-with-ballerina-0.982.0) 
 * Maryam Ziyad Mohamed
 * 08 October 2018
@@ -35,3 +42,4 @@
 * Release highlights of Ballerina 0.970 release.
 * Published
 ---
+
