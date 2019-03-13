@@ -19,7 +19,9 @@ Starting with Ballerina [0.990.3](https://ballerina.io/downloads/), we have incl
 
 ## Resources
 
-To learn more about a complete scenario that utilises Ballerina and AWS Lambda functions, refer to this [Ballerina by Guide](https://ballerina.io/learn/by-guide/ballerina-awslambda-deployment/) (BBG). The guide discusses how to build a Ballerina-based AWS Lambda function, which picks up events for uploading new images to an S3 bucket, and integrate specific cloud services for further processing. In addition, refer to the new [Ballerina by Example](https://ballerina.io/learn/by-example/awslambda-deployment.html) (BBE), which includes commented examples that cover every nuance of the syntax, as well our [documentation](https://ballerina.io/learn/api-docs/ballerinax/awslambda.html).
+To learn more about a complete scenario that utilises Ballerina and AWS Lambda functions, refer to this [Ballerina by Guide](https://ballerina.io/learn/by-guide/ballerina-awslambda-deployment/) (BBG). The guide discusses how to build a Ballerina-based AWS Lambda function, which picks up events for uploading new images to an S3 bucket, and integrate specific cloud services for further processing. 
+
+The new [Ballerina by Example](https://ballerina.io/learn/by-example/awslambda-deployment.html) (BBE) includes commented examples that cover every nuance of the syntax, as well our [documentation](https://ballerina.io/learn/api-docs/ballerinax/awslambda.html).
 
 As the language is still being improved, feedback on [Stack Overflow](https://stackoverflow.com/tags/ballerina/info), [Slack](https://ballerina.io/open-source/slack/), the mailing list, or [GitHub](https://github.com/ballerina-platform/ballerina-lang) is most welcome. To learn more about the language and growing Ballerina community, visit [Learn](https://ballerina.io/learn/) and [exercism.io](https://exercism.io/tracks/ballerina). 
 
