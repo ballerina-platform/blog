@@ -6,10 +6,13 @@ copyright: 2018 WSO2, Inc.
 pages:
 - Home: 'index.md'
 - Introduction to Ballerina 0.970 release : 'posts/introduction-to-ballerina-0.970.md'
-- Ballerina - A cloud native programming language for integration : 'posts/ballerina-a-cloud-native-programming-language.md'
-- Ballerina Meets Hasura : 'posts/ballerina-meets-hasura.md'
+# - Ballerina - A cloud native programming language for integration : 'posts/ballerina-a-cloud-native-programming-language.md'
+# - Ballerina Meets Hasura : 'posts/ballerina-meets-hasura.md'
 - Improvements and New Features in Ballerina 0.980.0 Release : 'posts/improvements-and-new-features-in-ballerina-0.980.0-release.md'
 - Introduction to New Features and Changes Introduced with Ballerina 0.982.0 : 'posts/introduction-to-new-features-and-changes-introduced-with-ballerina-0.982.0.md'
+- Announcing Ballerina 1.0 : 'posts/annoucing-1.0.0.md'
+- Announcing Ballerina 1.1.0: 'posts/ballerina-1.1.0-released.md'
+
 
 
 theme: null
