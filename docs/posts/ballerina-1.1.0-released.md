@@ -9,11 +9,9 @@ socialmediaimage: nihal-demirci-dVtnD1aV2QU-unsplash.jpg
 
 # Ballerina 1.1.0 Released!
 
-We’re glad to announce the release of Ballerina 1.1.0 today. You can download it [here](https://ballerina.io/downloads/). There are significant improvements to the developer tooling, standard library modules, compiler, and runtime. 
+<p>We’re glad to announce the release of Ballerina 1.1.0 today. You can download it [here](https://ballerina.io/downloads/). There are significant improvements to the developer tooling, standard library modules, compiler, and runtime.</p>
 
-The following are some feature additions and improvements:
-
-
+<p>The following are some feature additions and improvements:</p>
 
 <ul>
 <li>The Ballerina tool — a command-line utility that manages Ballerina source code — now helps to keep your Ballerina installation up to date with the latest patch and minor releases. With 1.1.0, you can now install, update, and easily switch among Ballerina distributions. Read [how to keep Ballerina up to date](https://ballerina.io/learn/how-to-keep-ballerina-up-to-date/) for more details.</li>
@@ -25,8 +23,8 @@ The following are some feature additions and improvements:
 </ul>
 
 
-If you’d like to see a more detailed list of changes, you can check out the [Ballerina 1.1.0 release note](https://ballerina.io/downloads/release-notes/#110notes).
+<p>If you’d like to see a more detailed list of changes, you can check out the [Ballerina 1.1.0 release note](https://ballerina.io/downloads/release-notes/#110notes).</p>
 
-Your contribution helps! If you see any problems or future improvements in the language, don’t hesitate to [file an issue](https://github.com/ballerina-platform/ballerina-lang/issues). We are grateful to all those who contributed, by writing code or documentation, reporting issues, or giving feedback.
+<p>Your contribution helps! If you see any problems or future improvements in the language, don’t hesitate to [file an issue](https://github.com/ballerina-platform/ballerina-lang/issues). We are grateful to all those who contributed, by writing code or documentation, reporting issues, or giving feedback.</p>
 
-Happy coding!
+<p>Happy coding!</p>
