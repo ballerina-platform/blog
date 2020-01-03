@@ -168,18 +168,19 @@ $(document).ready(function() {
         '<span class="icon-bar"></span>' +
         '<span class="icon-bar"></span>' +
         '</button>' +
-        '<p class="navbar-brand cTagLine" href="#">Cloud Native Programming Language' +
+        // '<p class="navbar-brand cTagLine" href="#">Cloud Native Programming Language' +
         '<a class="cMobileLogo" href="." ><img src="/img/ballerina-logo.svg" alt="Ballerina"/></a>' +
         '</p>' +
         '</div>' +
         '<div id="navbar" class="collapse navbar-collapse">' +
         '<ul class="nav navbar-nav cTopNav">' +
         '<li class="active toctree-l1" id="learnli"><a class="cBioTopLink" href="https://ballerina.io/learn">Learn</a></li>' +
-        '<li class="toctree-l1" id="philosophyli"><a class="cBioTopLink" href="https://ballerina.io/philosophy">Philosophy</a></li>' +
+        '<li class="toctree-l1" id="helpli"><a class="cBioTopLink" href="https://ballerina.io/events" target="_blank">Events</a></li>' +
+        // '<li class="toctree-l1" id="philosophyli"><a class="cBioTopLink" href="https://ballerina.io/philosophy">Philosophy</a></li>' +
         '<li class="toctree-l1"><a class="cBioTopLink" href="https://central.ballerina.io/" target="_blank">Central</a></li>' +
-        '<li class="toctree-l1" id="openli"><a class="cBioTopLink" href="https://ballerina.io/open-source">Open Source</a></li>' +
-        '<li class="toctree-l1" id="helpli"><a class="cBioTopLink" href="https://ballerina.io/help">Help </a></li>' +
-        '<li class="toctree-l1" id="helpli"><a class="cBioTopLink" href="https://blog.ballerina.io/" target="_blank">Blog</a></li>' +
+        '<li class="toctree-l1" id="openli"><a class="cBioTopLink" href="https://ballerina.io/community/">Community</a></li>' +
+        // '<li class="toctree-l1" id="helpli"><a class="cBioTopLink" href="https://ballerina.io/help">Help </a></li>' +
+        
         '</ul>' +
         '</div>' +
         '</div>' +

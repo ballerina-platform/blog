@@ -1,10 +1,20 @@
 <link rel="stylesheet" href="/css/blog-home-page.css"></link>
 <script src="/js/blog-home-page.js"></script>
+
+
 ---
-* <div class="cBlogThumbnailContainer"><a href="./posts/ballerina-now-includes-support-for-aws-lambda"><img src="img/blog-images/aws-blog.jpg"/></a></div> [Ballerina now includes support for AWS Lambda](./posts/ballerina-now-includes-support-for-aws-lambda) 
-* Anjana Fernando
-* 13 March 2019
-* Learn how to quickly deploy Ballerina functions as AWS Lambda functions.
+* <div class="cBlogThumbnailContainer"><a href="./posts/ballerina-1.1.0-released"><img src="img/blog-images/nihal-demirci-dVtnD1aV2QU-unsplash.jpg"/></a></div> [Ballerina 1.1.0 Released!](./posts/ballerina-1.1.0-released) 
+* Sameera Jayasoma
+* 20 December 2019
+* Announcing Ballerina 1.1.0
+* Published
+---
+
+---
+* <div class="cBlogThumbnailContainer"><a href="./posts/annoucing-1.0.0"><img src="img/blog-images/ballerina-logo-shoes.jpg"/></a></div> [Annoucing 1.0.0](./posts/annoucing-1.0.0) 
+* Sanjiva Weerawarana
+* 9 September 2019
+* Announcing Ballerina 1.0
 * Published
 ---
 ---
@@ -19,20 +29,6 @@
 * Kishanthan Thangarajah
 * 26 July 2018
 * Overview of new features and improvements added in ballerina 0.980.0 release
-* Published
----
----
-* <div class="cBlogThumbnailContainer"><a href="./posts/ballerina-meets-hasura"><img src="img/blog-images/codes-coding-computer-247791.jpg"/></a></div> [Ballerina Meets Hasura](./posts/ballerina-meets-hasura) 
-* Anjana Fernando
-* 15 June 2018
-* How Hasura added Ballerina support to their platform
-* Published
----
----
-* <div class="cBlogThumbnailContainer"><a href="./posts/ballerina-a-cloud-native-programming-language"><img src="img/blog-images/drone-innovation-technology-57544.jpg"/></a></div> [Ballerina - A cloud native programming language for integration](./posts/ballerina-a-cloud-native-programming-language) 
-* Kasun Indrasiri
-* 5 June 2018
-* Ballerina is a cloud-native programming language that aims to fill the gap between integration products and general purpose programming languages by making it easy to write programs that integrate and orchestrate across distributed microservices and endpoints in a type-safe and resilient manner.
 * Published
 ---
 ---
