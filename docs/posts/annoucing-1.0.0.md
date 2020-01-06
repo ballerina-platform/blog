@@ -25,13 +25,16 @@ That is an excellent question because it has a slightly complicated answer!
 
 The name “Ballerina” actually refers to a collection of things that collectively define what we refer to as the “Ballerina platform.” The key components and their respective version numbers are as follows:
 
-- The Ballerina Language (2019R3 revision). This is the centerpiece of everything and is what ends middleware as we knew it. While the language had its origin with the limited vision of “let’s make integration programming better”, it has evolved into a unique, powerful, flexible, beautiful programming language that has the potential to be far far more than that. We have a long way to go to get there, but the seeds are awesome and the little plant looks damned good!
-- The “language library” (or langlib for short) which is the core built-in library of functionality defined by the language specification itself.
-- The jBallerina implementation (1.0.0 version) which provides a compiler that produces Java bytecodes as well as an implementation of the language library and the standard library.
-- The “Batteries-included” Standard library that gives Ballerina programmers a flying start in writing network applications by giving them connectors to most widely used protocols, APIs and data formats. Each module has its own version number (!) - we will explain more about the versioning strategy in a future blog.
-- Ballerina Central, the web service for publishing and sharing Ballerina modules over the Internet. This release is effectively version 2.0 of Ballerina Central.
-- Fantastic plugins for VSCode and IntelliJ IDEA that allow developers to write Ballerina code in normal textual syntax and/or graphically as sequence diagrams. Both are hitting  version 1.0.0.
-- A collection of tools to help developers organize and manage source code, to work with OpenAPI and gRPC and more. All of these will be part of the SDK which is version 1.0.0.
+<ul>
+<li>The Ballerina Language (2019R3 revision). This is the centerpiece of everything and is what ends middleware as we knew it. While the language had its origin with the limited vision of “let’s make integration programming better”, it has evolved into a unique, powerful, flexible, beautiful programming language that has the potential to be far far more than that. We have a long way to go to get there, but the seeds are awesome and the little plant looks </li>
+<li>damned good!</li>
+<li>The “language library” (or langlib for short) which is the core built-in library of functionality defined by the language specification itself.</li>
+<li>The jBallerina implementation (1.0.0 version) which provides a compiler that produces Java bytecodes as well as an implementation of the language library and the standard library.</li>
+<li>The “Batteries-included” Standard library that gives Ballerina programmers a flying start in writing network applications by giving them connectors to most widely used protocols, APIs and data formats. Each module has its own version number (!) - we will explain more about the versioning strategy in a future blog.</li>
+<li>Ballerina Central, the web service for publishing and sharing Ballerina modules over the Internet. This release is effectively version 2.0 of Ballerina Central.</li>
+<li>Fantastic plugins for VSCode and IntelliJ IDEA that allow developers to write Ballerina code in normal textual syntax and/or graphically as sequence diagrams. Both are hitting  version 1.0.0.</li>
+<li>A collection of tools to help developers organize and manage source code, to work with OpenAPI and gRPC and more. All of these will be part of the SDK which is version 1.0.0.</li>
+</ul>
 
 So in other words, “Ballerina 1.0” is a flock of components that are all being released together to become the first production quality release of the Ballerina platform!
 

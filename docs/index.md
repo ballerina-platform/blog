@@ -5,7 +5,7 @@
 ---
 * <div class="cBlogThumbnailContainer"><a href="./posts/ballerina-1.1.0-released"><img src="img/blog-images/nihal-demirci-dVtnD1aV2QU-unsplash.jpg"/></a></div> [Ballerina 1.1.0 Released!](./posts/ballerina-1.1.0-released) 
 * Sameera Jayasoma
-* 20 December 2019
+* 6 January 2020
 * Announcing Ballerina 1.1.0
 * Published
 ---
