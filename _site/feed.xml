@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-17T11:57:04+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Ballerina 1.1.0 Released!</title><link href="http://localhost:4000/posts/ballerina-1.1.0-released/" rel="alternate" type="text/html" title="Ballerina 1.1.0 Released!" /><published>2020-01-02T00:00:00+05:30</published><updated>2020-01-02T00:00:00+05:30</updated><id>http://localhost:4000/posts/ballerina-1.1.0-released</id><content type="html" xml:base="http://localhost:4000/posts/ballerina-1.1.0-released/">&lt;p&gt;We’re glad to announce the release of Ballerina 1.1.0 today. You can download it &lt;a href=&quot;https://ballerina.io/downloads/&quot;&gt;here&lt;/a&gt;. There are significant improvements to the developer tooling, standard library modules, compiler, and runtime.&lt;/p&gt;
+
+&lt;p&gt;The following are some feature additions and improvements:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The Ballerina tool — a command-line utility that manages Ballerina source code — now helps to keep your Ballerina installation up to date with the latest patch and minor releases. With 1.1.0, you can now install, update, and easily switch among Ballerina distributions. Read &lt;a href=&quot;https://ballerina.io/learn/how-to-keep-ballerina-up-to-date/&quot;&gt;how to keep Ballerina up to date&lt;/a&gt; for more details.&lt;/li&gt;
+  &lt;li&gt;An enhanced IDE experience for decent-sized Ballerina projects. We’ve optimized the Ballerina language server and the compiler front-end by introducing caches at various levels to avoid repeatedly building untouched code. Moreover, these optimizations significantly reduce the response time for language intelligence features such as diagnostics and code completion in both VSCode and IntelliJ plugins.&lt;/li&gt;
+  &lt;li&gt;Code navigation capability is now available in both the VSCode and the IntelliJ plugins. A function, method, constant, or type definition anywhere in your Ballerina project is a jump away.&lt;/li&gt;
+  &lt;li&gt;The gRPC and WebSocket services and clients are now observable by default. This capability was only available in HTTP/HTTPS and SQL connectors in 1.0.0. The NATS connector has also been improved with observability support.&lt;/li&gt;
+  &lt;li&gt;We have improved the runtime performance of Ballerina programs with an optimized runtime type checker and by introducing significant changes to Ballerina values such as maps, arrays, and records.&lt;/li&gt;
+  &lt;li&gt;The Ballerina 1.1.0 release is based on the &lt;a href=&quot;https://ballerina.io/spec/lang/2019R3/&quot;&gt;2019R3&lt;/a&gt; language spec. We’ve closed many deviations from this spec that were in Ballerina 1.0.0. Some of you may come across errors when compiling your code (written with 1.0.x versions) with Ballerina 1.1.0, but they are minor changes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you’d like to see a more detailed list of changes, you can check out the &lt;a href=&quot;https://ballerina.io/downloads/release-notes/#110notes&quot;&gt;Ballerina 1.1.0 release note&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Your contribution helps! If you see any problems or future improvements in the language, don’t hesitate to &lt;a href=&quot;https://github.com/ballerina-platform/ballerina-lang/issues&quot;&gt;file an issue&lt;/a&gt;. We are grateful to all those who contributed, by writing code or documentation, reporting issues, or giving feedback.&lt;/p&gt;
+
+&lt;p&gt;Happy coding!&lt;/p&gt;</content><author><name>Sameera Jayasoma</name></author><summary type="html">We’re glad to announce the release of Ballerina 1.1.0 today. You can download it here. There are significant improvements to the developer tooling, standard library modules, compiler, and runtime.</summary></entry><entry><title type="html">Announcing Ballerina 1.0</title><link href="http://localhost:4000/posts/annoucing-1.0.0/" rel="alternate" type="text/html" title="Announcing Ballerina 1.0" /><published>2019-09-09T00:00:00+05:30</published><updated>2019-09-09T00:00:00+05:30</updated><id>http://localhost:4000/posts/annoucing-1.0.0</id><content type="html" xml:base="http://localhost:4000/posts/annoucing-1.0.0/">&lt;p&gt;Ballerina is an open source programming language and platform for cloud-era application programmers to easily write software that &lt;em&gt;just works&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;After more than 3 years of hard work by an incredible team, I am thrilled to announce the general availability of Ballerina 1.0!&lt;/p&gt;
+
+&lt;p&gt;You can read more about the language at https://ballerina.io/, download the release from https://ballerina.io/download and read the Release Notes for 1.0 &lt;a href=&quot;https://v1-0.ballerina.io/downloads/release-notes/#100notes&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-bit-of-history&quot;&gt;A bit of History&lt;/h2&gt;
+
+&lt;p&gt;We in WSO2 started down a journey of “let’s make the ESB better” about 10 years ago. After many false starts, finally in 2016 we decided that the only real way to make integration programming dramatically better was to invent a full programming language. We figured, oh, it should take maybe 6-8 months and we’d be done.&lt;/p&gt;
+
+&lt;p&gt;We did &lt;a href=&quot;https://wso2.com/library/conference/2017/2/wso2con-usa-2017-introducing-ballerina/&quot;&gt;preview Ballerina at WSO2Con US in February 2017&lt;/a&gt; - 6 months after the project started. We had promising stuff, working code and a cool story. We knew we’d be done in another 3-6 months.&lt;/p&gt;
+
+&lt;p&gt;LOL!&lt;/p&gt;
+
+&lt;p&gt;Here we are about two and a half years later finally getting to release a GA 1.0 version of Ballerina! And boy, has it taken an effort. And time.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-exactly-is-ballerina-10&quot;&gt;What exactly is “Ballerina 1.0”?&lt;/h2&gt;
+
+&lt;p&gt;That is an excellent question because it has a slightly complicated answer!&lt;/p&gt;
+
+&lt;p&gt;The name “Ballerina” actually refers to a collection of things that collectively define what we refer to as the “Ballerina platform.” The key components and their respective version numbers are as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The Ballerina Language (2019R3 revision). This is the centerpiece of everything and is what ends middleware as we knew it. While the language had its origin with the limited vision of “let’s make integration programming better”, it has evolved into a unique, powerful, flexible, beautiful programming language that has the potential to be far far more than that. We have a long way to go to get there, but the seeds are awesome and the little plant looks damned good!&lt;/li&gt;
+  &lt;li&gt;The “language library” (or langlib for short) which is the core built-in library of functionality defined by the language specification itself.&lt;/li&gt;
+  &lt;li&gt;The jBallerina implementation (1.0.0 version) which provides a compiler that produces Java bytecodes as well as an implementation of the language library and the standard library.&lt;/li&gt;
+  &lt;li&gt;The “Batteries-included” Standard library that gives Ballerina programmers a flying start in writing network applications by giving them connectors to most widely used protocols, APIs and data formats. Each module has its own version number (!) - we will explain more about the versioning strategy in a future blog.&lt;/li&gt;
+  &lt;li&gt;Ballerina Central, the web service for publishing and sharing Ballerina modules over the Internet. This release is effectively version 2.0 of Ballerina Central.&lt;/li&gt;
+  &lt;li&gt;Fantastic plugins for VSCode and IntelliJ IDEA that allow developers to write Ballerina code in normal textual syntax and/or graphically as sequence diagrams. Both are hitting  version 1.0.0.&lt;/li&gt;
+  &lt;li&gt;A collection of tools to help developers organize and manage source code, to work with OpenAPI and gRPC and more. All of these will be part of the SDK which is version 1.0.0.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So in other words, “Ballerina 1.0” is a flock of components that are all being released together to become the first production quality release of the Ballerina platform!&lt;/p&gt;
+
+&lt;h2 id=&quot;what-a-team&quot;&gt;What a team!&lt;/h2&gt;
+
+&lt;p&gt;We started on the focused Ballerina journey in 2016. Since then, the internal WSO2 team dedicated to Ballerina has easily &lt;em&gt;averaged&lt;/em&gt; more than 50 people in engineering and other parts of the company who have rallied together to make Ballerina 1.0 a reality. There have been times when we “cloud bursted” the team to hundreds of people. There have been many many (really, FAR too many) times when the core team had to burn the midnight oil (and the weekend oil) to see this release to fruition.&lt;/p&gt;
+
+&lt;p&gt;Then there are all the WSO2 product teams who put their brains, heart and soul into contributing their knowledge to Ballerina. That obviously starts with the Enterprise Integrator team as that is where this baby was flirted with, dated and then conceived; the Stream Processor team and of course the Identity Server &amp;amp; Platform Security Teams who taught us that being secure means feeling insecure!&lt;/p&gt;
+
+&lt;p&gt;Ballerina was not just an effort from WSO2 engineering. The marketing team did amazing hard work to create an awesome website, create great branding and help promote the language all over the world even while it was still being developed.&lt;/p&gt;
+
+&lt;p&gt;All parts of WSO2 contributed to make Ballerina happen.&lt;/p&gt;
+
+&lt;p&gt;There are no words to express the respect, the gratitude, the appreciation and the love I have for this incredible group of people who made this happen.&lt;/p&gt;
+
+&lt;p&gt;WSO2 has always had crazy goals - and Ballerina is nothing less than our craziest effort. You guys make the impossible, possible.&lt;/p&gt;
+
+&lt;p&gt;Thank you guys: YOU made Ballerina happen.&lt;/p&gt;
+
+&lt;h2 id=&quot;and-to-our-early-adopter-users-&quot;&gt;And to our early adopter users ..&lt;/h2&gt;
+
+&lt;p&gt;Complex technology cannot become real until it gets battle tested. Ballerina has been lucky and incredibly blessed to have had an amazing group of people who came early to it and dove right in. Some of these (in particular those who are mentioned in the press release) went way beyond “taking it for a spin” and wrote real enterprise applications with it.&lt;/p&gt;
+
+&lt;p&gt;And then there’s one special group of people inside WSO2 who have been just fabulous: our own API Manager team. They willingly committed to rewriting our production API gateway in Ballerina in 2017 and took it to market in 2018! Thus Ballerina has been in production with many customers (often unbeknownst to them!) because of our fantastic API manager team that wrote it, rewrote it, and rewrote it as we kept changing the language on them!&lt;/p&gt;
+
+&lt;p&gt;And recently the Cellery team too has become a key early adopter and has pushed us to make things better in so many ways.&lt;/p&gt;
+
+&lt;p&gt;Thank you guys: YOU made Ballerina possible.&lt;/p&gt;
+
+&lt;h2 id=&quot;only-the-beginning-&quot;&gt;Only the beginning ..&lt;/h2&gt;
+
+&lt;p&gt;This is &lt;em&gt;just&lt;/em&gt; 1.0. We set out with grand plans to bring pretty much all enterprise middleware into a programming language and we’re not there yet - so far we’ve pretty much wrestled down just the ESB. It is all coming though- so if you are in that space, be scared. It’s coming.&lt;/p&gt;
+
+&lt;p&gt;This also gives me the opportunity to comment on my own personal journey while working with Ballerina. I started it while I was the founding CEO of WSO2. Later I relinquished my CEO job and took on the role of Chief Architect (and Chairman) mostly so I could focus on Ballerina. Along the way James Clark, WSO2’s angel investor, creator of XML, XPath, XSLT, RelaxNG and various other things, joined the Ballerina effort and is now leading the design of the language. Earlier this year I stepped down from being the chairman and recently also from the WSO2 Board. I write this blog as a consultant to WSO2 as the Product Manager of Ballerina.&lt;/p&gt;
+
+&lt;p&gt;Ballerina is big. It is going to be huge. Not just for WSO2 but for the industry. It will take time. We have a fantastic multi-generation team working on it and committed to seeing it through to fruition over the next several decades. This is &lt;em&gt;only&lt;/em&gt; the beginning.&lt;/p&gt;
+
+&lt;p&gt;I could not be more proud of being in a position to lead this team in the first phase of Ballerina and to have the honor to write this blog.&lt;/p&gt;
+
+&lt;p&gt;In the coming months and years, we will all blog a lot more about various technical aspects of Ballerina and also various non-technical things that made it, and make it possible. Stay tuned for more!&lt;/p&gt;
+
+&lt;p&gt;Sanjiva Weerawarana, Ph.D.&lt;br /&gt;
+Product Manager, Ballerina&lt;br /&gt;
+Consultant to WSO2&lt;br /&gt;
+Founder of WSO2 and formerly CEO, Chairman, Chief Architect, Board Member.&lt;/p&gt;</content><author><name>Sanjiva Weerawarana</name></author><summary type="html">Ballerina is an open source programming language and platform for cloud-era application programmers to easily write software that just works.</summary></entry><entry><title type="html">Introduction to New Features and Changes Introduced with Ballerina 0.982.0</title><link href="http://localhost:4000/posts/introduction-to-new-features-and-changes-introduced-with-ballerina-0.982.0/" rel="alternate" type="text/html" title="Introduction to New Features and Changes Introduced with Ballerina 0.982.0" /><published>2018-10-08T00:00:00+05:30</published><updated>2018-10-08T00:00:00+05:30</updated><id>http://localhost:4000/posts/introduction-to-new-features-and-changes-introduced-with-ballerina-0.982.0</id><content type="html" xml:base="http://localhost:4000/posts/introduction-to-new-features-and-changes-introduced-with-ballerina-0.982.0/">&lt;p&gt;The Ballerina 0.982.0 release includes new features, improvements and bug fixes including introduction of the new &lt;code class=&quot;highlighter-rouge&quot;&gt;channel&lt;/code&gt; type, changes to the &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt; function, improvements to records and objects, and support for HTTP 1.1 piplelining.&lt;/p&gt;
+
+&lt;p&gt;An initial version of the Ballerina Native feature that allows simple Ballerina programs with the &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt; function to be compiled into native executables, is also introduced with this release.&lt;/p&gt;
+
+&lt;h2 id=&quot;language--runtime&quot;&gt;Language &amp;amp; Runtime&lt;/h2&gt;
+
+&lt;h3 id=&quot;introduction-of-the-channel-type&quot;&gt;Introduction of the Channel Type&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;channel&lt;/code&gt; constrained type is introduced for communication between parallel processes in Ballerina programs. 
+A &lt;code class=&quot;highlighter-rouge&quot;&gt;channel&lt;/code&gt; can be defined only as a top level node. Channels can be used for message correlation by sending and receiving messages via different resources to the same channel. 
+Channels can also be used for inter-worker communication and worker synchronization.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Defining a channel constrained by the &lt;code class=&quot;highlighter-rouge&quot;&gt;json&lt;/code&gt; type&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;channel&amp;lt;json&amp;gt; jsonChannel; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Sending a message to the channel&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;# One of the receivers waiting on `key` receives the message.
+# If there is no receiver, the message is stored and execution continues.
+# A receiver can arrive later and fetch the message.
+message -&amp;gt; jsonChannel, key; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Receiving a message from the channel with the given key&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;# Execution waits here if the message is not available.
+json result &amp;lt;- jsonChannel, key;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;introduction-of-abstract-objects&quot;&gt;Introduction of Abstract Objects&lt;/h3&gt;
+
+&lt;p&gt;An abstract object is identified by the &lt;code class=&quot;highlighter-rouge&quot;&gt;abstract&lt;/code&gt; keyword. Abstract objects only describe the type of each field and method, they do not describe the implementation of methods. 
+An abstract object type should not have an object constructor method and cannot be initialized using the object initializer. Abstract objects do not have an implicit initial value.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;public type Foo abstract object {
+    public string name;
+    public int id;
+
+    function getName() returns string;
+
+    function getID() returns int;
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;introduction-of-record-iteration-support&quot;&gt;Introduction of Record Iteration Support&lt;/h3&gt;
+
+&lt;p&gt;Records are now iterable, and the &lt;code class=&quot;highlighter-rouge&quot;&gt;foreach&lt;/code&gt; statement and iterable operations can now be used with records. 
+When iterating a record, one can either iterate over the fields (i.e., field name and value) or iterate only over the field values.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;type Person record {
+    string name;
+    int age;
+    string address;
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;foreach&lt;/code&gt; statement can be used with an instance of this record as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;foreach field, value in person {
+    io:println(field + &quot; : &quot; + &amp;lt;string&amp;gt;value);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;foreach&lt;/code&gt; statement can be used to iterate only over the field values as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;foreach value in person {
+    io:println(value);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;changes-to-the-main-function&quot;&gt;Changes to the “main” Function&lt;/h3&gt;
+
+&lt;p&gt;Based on the latest changes, the &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt; function has to be marked &lt;code class=&quot;highlighter-rouge&quot;&gt;public&lt;/code&gt; and can return an int.&lt;/p&gt;
+
+&lt;p&gt;Now it is also possible to execute ballerina &lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt; to invoke any &lt;code class=&quot;highlighter-rouge&quot;&gt;public&lt;/code&gt; function in the entry package.
+For example, if you want to invoke the public function &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt; in the &lt;code class=&quot;highlighter-rouge&quot;&gt;calculator&lt;/code&gt; package, you can execute ballerina &lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt; and specify the integer arguments &lt;code class=&quot;highlighter-rouge&quot;&gt;4&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;5&lt;/code&gt; as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;ballerina run calculator:add 4 5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If a function is not specified, &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt; is considered as the function to run.&lt;/p&gt;
+
+&lt;p&gt;The function invoked via &lt;code class=&quot;highlighter-rouge&quot;&gt;ballerina run&lt;/code&gt; (including the &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt; function) will be data-binding and can have zero or more parameters of any supported type, including any number of required/defaultable parameters and a single rest parameter. 
+This function can also return a value.&lt;/p&gt;
+
+&lt;p&gt;For example, consider the following public function in the package &lt;code class=&quot;highlighter-rouge&quot;&gt;currency&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;public function queryChanges(string host, int port = 8080, string… params) returns float {
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Invoke the function using Ballerina &lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt; as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;ballerina run --printreturn currency:queryChanges localhost -port=8181 high day
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The function invocation results in a value assignment as follows:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;host&lt;/code&gt; ← &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;localhost&quot;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;port&lt;/code&gt; ← &lt;code class=&quot;highlighter-rouge&quot;&gt;8181&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;params&lt;/code&gt; ← &lt;code class=&quot;highlighter-rouge&quot;&gt;[&quot;high&quot;, &quot;day&quot;]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When the &lt;code class=&quot;highlighter-rouge&quot;&gt;--printreturn&lt;/code&gt; flag is set, the return value is printed to the standard out stream.&lt;/p&gt;
+
+&lt;h3 id=&quot;new-documentation-syntax&quot;&gt;New Documentation Syntax&lt;/h3&gt;
+
+&lt;p&gt;Old syntax:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;documentation {
+    Adds parameter `x` and parameter `y`.
+    P one thing to be added
+    P another thing to be added
+    R the sum of them
+}
+function add(int x, int y) returns int { return x + y; }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;New syntax:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;# Adds parameter `x` and parameter `y`.
+# + x - one thing to be added
+# + y - another thing to be added
+# + return - the sum of them
+function add(int x, int y) returns int { return x + y; }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;reorder-documentation-in-resources&quot;&gt;Reorder Documentation in Resources&lt;/h3&gt;
+
+&lt;p&gt;In previous versions, documentation was added after annotation attachments of resources. Now documentation should be added before the annotation attachment.&lt;/p&gt;
+
+&lt;p&gt;Old syntax:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;service&amp;lt;http:Service&amp;gt; update_token bind { port: 9295 } {
+
+    @http:ResourceConfig {
+        methods:[&quot;GET&quot;]
+    }
+    # Updates the access token.
+    #
+    # + caller - Endpoint
+    one_px_image(endpoint caller) {
+
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;New syntax:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;service&amp;lt;http:Service&amp;gt; update_token bind { port: 9295 } {
+
+    # Updates the access token.
+    #
+    # + caller - Endpoint
+    @http:ResourceConfig {
+        methods:[&quot;GET&quot;]
+    }
+    one_px_image(endpoint caller) {
+
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;changes-to-recordobject-field-syntax&quot;&gt;Changes to Record/Object Field Syntax&lt;/h3&gt;
+
+&lt;p&gt;Old syntax:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;type foo record {
+    string a,
+    string b,
+};
+
+type bar object {
+    string a,
+    string b,
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;New syntax:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;type foo record {
+    string a;
+    string b;
+};
+
+type bar object {
+    string a;
+    string b;
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;new-anonymous-functions-syntax&quot;&gt;New Anonymous Functions Syntax&lt;/h3&gt;
+
+&lt;p&gt;The syntax of anonymous functions has been changed to resemble normal function definitions.&lt;/p&gt;
+
+&lt;p&gt;Old syntax:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;var lambda = (int b) =&amp;gt; (int) {
+    int x = b * b;
+    return x;
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;New syntax:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;var lambda = function (int b) returns int {
+    int x = b * b;
+    return x;
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A new “Arrow Function Expression” is introduced as a simple alternative to anonymous functions that only have a return statement as the body:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;function (int, string) returns string lambdaVar = (param1, param2) =&amp;gt; param2.toUpper();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;removal-of-implicit-cast-from-int-to-float&quot;&gt;Removal of Implicit Cast from int to float&lt;/h3&gt;
+
+&lt;p&gt;Now it is necessary to explicitly define a float with a decimal point.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;float x = 0; // Compile Error
+float x = 0.0; // Working Code
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;tracking-tainted-state-changes-of-function-parameters&quot;&gt;Tracking Tainted State Changes of Function Parameters&lt;/h3&gt;
+
+&lt;p&gt;The taint analyzer keeps track of the tainted state of parameters in different execution conditions. 
+This information is used to update the tainted state of the arguments used in a function invocation, and to make sure that the tainted state is propagated correctly when the parameter is an out parameter or an in-out parameter.&lt;/p&gt;
+
+&lt;h3 id=&quot;optionparam-order-enforcement-with-the-run-command&quot;&gt;Option/Param Order Enforcement with the Run Command&lt;/h3&gt;
+
+&lt;p&gt;Option vs parameter ordering has been enforced with the Ballerina &lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt; command. All options now need to be specified before the file or package to run.&lt;/p&gt;
+
+&lt;p&gt;Any and all arguments specified after the file or package are now considered program arguments.&lt;/p&gt;
+
+&lt;p&gt;A config file can be specified with the &lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt; command as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;ballerina run --config myConfig.conf calculator 4 5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Specifying the &lt;code class=&quot;highlighter-rouge&quot;&gt;--config&lt;/code&gt; argument as follows, after the package &lt;code class=&quot;highlighter-rouge&quot;&gt;calculator&lt;/code&gt; would not result in it being identified as an option:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;ballerina run calculator --config myConfig.conf 4 5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;ballerina-native&quot;&gt;Ballerina Native&lt;/h3&gt;
+
+&lt;p&gt;The Ballerina Native feature is the introduction of an LLVM-based backend for the Ballerina compiler. It allows Ballerina programs to be compiled into native executables.&lt;/p&gt;
+
+&lt;h4 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Unix based (Linux/MacOS) operating system to run the initial version. Other operating systems will be supported in future versions.&lt;/li&gt;
+  &lt;li&gt;GCC compiler (it is possible to use &lt;code class=&quot;highlighter-rouge&quot;&gt;clang&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;ld&lt;/code&gt;. However, the current recommended option is &lt;code class=&quot;highlighter-rouge&quot;&gt;gcc&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;supported-language-constructs&quot;&gt;Supported language constructs&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt; function (arguments are ignored)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean&lt;/code&gt; types&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; condition&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;while&lt;/code&gt; loop&lt;/li&gt;
+  &lt;li&gt;Function calls and return values&lt;/li&gt;
+  &lt;li&gt;Partial support for &lt;code class=&quot;highlighter-rouge&quot;&gt;println&lt;/code&gt; for &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt; values&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;how-to-run&quot;&gt;How to run&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Build a Ballerina program with the native option
+&lt;code class=&quot;highlighter-rouge&quot;&gt;ballerina build --native -o myballerinamain  myballerinamain.bal&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Run the created executable
+&lt;code class=&quot;highlighter-rouge&quot;&gt;./myballerinamain&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;command-line-flags&quot;&gt;Command line flags&lt;/h4&gt;
+&lt;p&gt;The following additional options are valid when the &lt;code class=&quot;highlighter-rouge&quot;&gt;--native&lt;/code&gt; option is provided:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;--dump-bir&lt;/code&gt; prints the Ballerina intermediate representation
+&lt;code class=&quot;highlighter-rouge&quot;&gt;--dump-llvm-ir&lt;/code&gt; prints the LLVM intermediate representation assembly code&lt;/p&gt;
+
+&lt;h2 id=&quot;standard-library&quot;&gt;Standard Library&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Support for HTTP 1.1 pipelining&lt;/li&gt;
+  &lt;li&gt;Enhanced support for compression/decompression&lt;/li&gt;
+  &lt;li&gt;Change of status code and reason to be optional parameters for the &lt;code class=&quot;highlighter-rouge&quot;&gt;close&lt;/code&gt; action of the WebSocket endpoint&lt;/li&gt;
+  &lt;li&gt;Support to directly configure SSL certificates and keys without keystores&lt;/li&gt;
+  &lt;li&gt;Support to define enum type in gRPC request/response messages&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;build--package-management&quot;&gt;Build &amp;amp; Package Management&lt;/h2&gt;
+
+&lt;h3 id=&quot;mandating-build-on-ballerina-push-and-install&quot;&gt;Mandating Build on Ballerina Push and Install&lt;/h3&gt;
+
+&lt;p&gt;By default, the sources are built before pushing the package to Ballerina Central and before installing the package in the home repository.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;--no-build&lt;/code&gt; flag could be used to skip building before pushing or installing.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;ballerina push &amp;lt;package-name&amp;gt; --no-build
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;ballerina install &amp;lt;package-name&amp;gt; --no-build
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;introduction-of-the-uninstall-command&quot;&gt;Introduction of the Uninstall Command&lt;/h3&gt;
+
+&lt;p&gt;Packages that are installed in the home repository can now be uninstalled or removed using the &lt;code class=&quot;highlighter-rouge&quot;&gt;uninstall&lt;/code&gt; command.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cmd&quot;&gt;ballerina uninstall &amp;lt;org-name&amp;gt;/&amp;lt;package-name&amp;gt;:&amp;lt;version&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;ide-plugins&quot;&gt;IDE Plugins&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Diagram editing support in VSCode&lt;/li&gt;
+  &lt;li&gt;Language Server integration support in IDEA plugin: this results in providing all language intellisense support 
+through the Language Server&lt;/li&gt;
+  &lt;li&gt;Variable definition auto generation code action&lt;/li&gt;
+  &lt;li&gt;Attached function’s implementation snippet&lt;/li&gt;
+  &lt;li&gt;Object constructor auto generation code action&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;extensions&quot;&gt;Extensions&lt;/h2&gt;
+
+&lt;h3 id=&quot;kubernetes&quot;&gt;Kubernetes&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Support is now introduced for Helm Chart generation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;performance-results&quot;&gt;Performance Results&lt;/h2&gt;
+&lt;p&gt;From Ballerina 0.982.0 onward, &lt;a href=&quot;https://github.com/ballerina-platform/ballerina-lang/blob/v0.982.0/performance/benchmarks/summary.md&quot;&gt;a performance test result summary&lt;/a&gt; would also be made available with each release.&lt;/p&gt;
+
+&lt;h2 id=&quot;bug-fixes&quot;&gt;Bug Fixes&lt;/h2&gt;
+
+&lt;p&gt;Please refer the &lt;a href=&quot;https://github.com/ballerina-platform/ballerina-lang/issues?q=is%3Aissue+milestone%3A0.982.0+is%3Aclosed+label%3AType%2FBug&quot;&gt;GitHub milestone&lt;/a&gt; to view bug fixes.&lt;/p&gt;
+
+&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h2&gt;
+
+&lt;p&gt;You can download the Ballerina distributions, try samples, and read the documentation at https://ballerina.io. 
+You can also visit the [Quick Tour] (https://ballerina.io/learn/quick-tour/) to get started. 
+We encourage you to report issues, improvements, and suggestions at the &lt;a href=&quot;https://github.com/ballerina-platform/ballerina-lang&quot;&gt;Ballerina Github Repository&lt;/a&gt;.&lt;/p&gt;</content><author><name>Maryam Ziyad Mohamed</name></author><summary type="html">The Ballerina 0.982.0 release includes new features, improvements and bug fixes including introduction of the new channel type, changes to the main function, improvements to records and objects, and support for HTTP 1.1 piplelining.</summary></entry><entry><title type="html">Overview of Ballerina 0.980</title><link href="http://localhost:4000/posts/improvements-and-new-features-in-ballerina-0.980.0-release/" rel="alternate" type="text/html" title="Overview of Ballerina 0.980" /><published>2018-06-26T00:00:00+05:30</published><updated>2018-06-26T00:00:00+05:30</updated><id>http://localhost:4000/posts/improvements-and-new-features-in-ballerina-0.980.0-release</id><content type="html" xml:base="http://localhost:4000/posts/improvements-and-new-features-in-ballerina-0.980.0-release/">&lt;p&gt;Ballerina 0.980.0 release included some type system improvements and new features. This release also focused on stabilizing the platform with lot of bug fixes and improvements.&lt;/p&gt;
+
+&lt;h2 id=&quot;object-syntax-change&quot;&gt;Object Syntax Change&lt;/h2&gt;
+
+&lt;p&gt;Object type descriptor syntax now supports visibility modifiers for both object fields and functions. There are three types of access modifiers (public, private, no-modifier) as explained below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;
+public type Person object {
+    // public - visible everywhere
+    public string name;
+
+    // private - visible only within object and its member functions
+    private int age;
+
+    // no-modifier - visible only within same package
+    string email;
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;closed-and-open-records&quot;&gt;Closed and Open Records&lt;/h2&gt;
+
+&lt;p&gt;An &lt;code class=&quot;highlighter-rouge&quot;&gt;open&lt;/code&gt; record can contain extra fields, that is, fields other than those named by individual type descriptors in the record type definition. By default, records can contain extra fields with &lt;code class=&quot;highlighter-rouge&quot;&gt;any&lt;/code&gt; value without any changes to record definition as explained below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;
+type Person record {
+    string name,
+    int age = 10,
+};
+
+...
+// The &quot;country&quot; is an extra field, which is not defined in the person
+// type descriptor.
+Person tom = { name : &quot;tom&quot;, age : 20, country : &quot;USA&quot;};
+
+// You can access the &quot;country&quot; field similar to other fields, but the
+// return type will be `any`.
+any country = tom.country;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Additional fields can be defined by using an optional &lt;code class=&quot;highlighter-rouge&quot;&gt;RecordRestType...&lt;/code&gt; at the end of the record definition. In the above example, the Person record definition is equivalent to the definition with &lt;code class=&quot;highlighter-rouge&quot;&gt;any...&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;
+type Person record {
+    string name,
+    int age = 10,
+    any...
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The “rest fields” can also be constrained to other types. Below example shows how it is constrained to &lt;code class=&quot;highlighter-rouge&quot;&gt;string&lt;/code&gt; type.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;
+type Person record {
+    string name,
+    int age = 10,
+    string…
+};
+
+...
+
+Person tom = { name : &quot;tom&quot;, age : 20, country : &quot;USA&quot;};
+string country = tom.country;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A &lt;code class=&quot;highlighter-rouge&quot;&gt;closed&lt;/code&gt; record cannot contain any extra fields other than what is defined. A closed record can be defined with &lt;code class=&quot;highlighter-rouge&quot;&gt;RecordRestType&lt;/code&gt; being &lt;code class=&quot;highlighter-rouge&quot;&gt;!&lt;/code&gt; as below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;
+type Person record {
+    string name,
+    int age = 10,
+    !...
+};
+
+
+// Following will result in a compile time error.
+Person tom = { name : &quot;tom&quot;, age : 20, country : &quot;USA&quot;};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;fixed-length-arrays&quot;&gt;Fixed Length Arrays&lt;/h2&gt;
+
+&lt;p&gt;The length of an array can be fixed by providing the array length with the array type descriptor.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;
+int[5] array1 = [2, 15, 200, 1500, 5000];
+
+// Following creates an integer array of size five, filled with
+// default integer values
+int[5] array2;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;An array length of &lt;code class=&quot;highlighter-rouge&quot;&gt;!...&lt;/code&gt; means that the length of the array is to be implied from the context; as shown below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;
+// Following creates a sealed integer array of size 3.
+int[!...] sealedArray = [1, 3, 5];
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;byte-type&quot;&gt;Byte Type&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;byte&lt;/code&gt; type represents the set of 8-bit unsigned integers. The implicit initial value of the &lt;code class=&quot;highlighter-rouge&quot;&gt;byte&lt;/code&gt; type is &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;. Value space for &lt;code class=&quot;highlighter-rouge&quot;&gt;byte&lt;/code&gt; is 0-255 both inclusive.&lt;/p&gt;
+
+&lt;p&gt;The following is an example of byte definition.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;
+byte c = 23;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Along with general byte array type, there is also a special syntax for defining base64 and base16 based array of bytes. With this, &lt;code class=&quot;highlighter-rouge&quot;&gt;blob&lt;/code&gt; type is removed and replaced by byte array.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;
+byte[] arr1 = [5, 24, 56, 243];
+byte[] arr2 = base16 `aeeecdefabcd12345567888822`;
+byte[] arr3 = base64 `aGVsbG8gYmFsbGVyaW5hICEhIQ==`;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;bitwise-and--or--xor-&quot;&gt;Bitwise AND (&amp;amp;), OR (|), XOR (^)&lt;/h2&gt;
+&lt;p&gt;Bitwise operations AND (&amp;amp;), OR (|), XOR (^) have been added for &lt;code class=&quot;highlighter-rouge&quot;&gt;byte&lt;/code&gt; type and &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt; type with the following rules.&lt;/p&gt;
+
+&lt;p&gt;Both the right-hand-side and left-hand-side of the expression should be of the same type (&lt;code class=&quot;highlighter-rouge&quot;&gt;byte&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt;), and the expected type will be also of the same type. If this is not the case, it will result in a compilation error.
+An explicit conversion operation should be applied if the type of one side is not the same as the other side.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;
+byte a = 13;
+byte b = 45;
+byte c = a &amp;amp; b;
+byte d = a | b;
+byte e = a ^ b;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;table-expression&quot;&gt;Table Expression&lt;/h2&gt;
+
+&lt;p&gt;A table is intended to be similar to a relational database table. A table value contains an immutable set of column names and a set of data rows. Syntax for defining a table and adding data rows is as below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;
+table&amp;lt;Person&amp;gt; t1 = table {
+	{ primarykey id, primarykey salary, name, age, married }, [
+		 {1, 300.5, &quot;jane&quot;,  30, true},
+		 {2, 302.5, &quot;anne&quot;,  23, false},
+		 {3, 320.5, &quot;john&quot;,  33, true}
+	]
+};
+
+// We can also create the row records seperately and then use it with
+// table definition
+Person p1 = { id: 1, age: 30, salary: 300.50, name: &quot;jane&quot;, married: true };
+Person p2 = { id: 1, age: 30, salary: 300.50, name: &quot;jane&quot;, married: true };
+
+table&amp;lt;Person&amp;gt; t1 = table {
+	{ primarykey id, salary, name, age, married },
+	[p1, p2]
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;map-access&quot;&gt;Map Access&lt;/h2&gt;
+&lt;p&gt;Values of a map can be accessed using index-based syntax as well as field-access syntax. Accessing a value using field-based syntax returns the value if the key exists. Otherwise a runtime error is thrown. Index-based syntax also will return the value if the key exists. However, it will return a null value if the key does not exist. This would also mean that, for a constrained map, the type of the return value for the index-based syntax is always the &lt;code class=&quot;highlighter-rouge&quot;&gt;constraint_type|()&lt;/code&gt; as explained below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;
+map&amp;lt;string&amp;gt; m = {&quot;fname&quot; : &quot;John&quot;, &quot;lname&quot; : &quot;Doe&quot;}
+
+// Field based access
+string firstName = m.fname;
+
+// Following will result in a runtime error
+string middleName = m.mname;
+
+// Index based access
+string? firstName = m[&quot;fname&quot;];
+
+// Following will return null
+string? middleName = m[&quot;mname&quot;];
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;ballerina-observability&quot;&gt;Ballerina Observability&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;New API’s have been introduced with ballerina observability functionality, such that developers can define their own trace blocks and metrics as explained below.&lt;/li&gt;
+  &lt;li&gt;Developers can attach the trace information of their code block to the default Ballerina traces, or a new trace as below.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;
+// Create and attach span to the default Ballerina request trace.
+int spanId = check observe:startSpan(&quot;Child Span&quot;);
+    // Do Something
+_ = observe:finishSpan(spanId);
+
+// Create a completely new trace.
+int spanId = observe:startRootSpan(&quot;Parent Span&quot;);
+    //Do Something
+int spanId2 = check observe:startSpan(&quot;Child Span&quot;, parentSpanId = spanId);
+    // Do Something
+_ = observe:finishSpan(spanId2);
+    // Do Something
+_ = observe:finishSpan(spanId);
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Developers can create a metric (counter or gauge) and have have their own measurements. The created metric can be registered in order to include its measurements to reporters such as Prometheus as below.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;
+// Create counter and register.
+map&amp;lt;string&amp;gt; counterTags = { &quot;method&quot;: &quot;GET&quot; };
+observe:Counter counterWithTags = new (&quot;CounterWithTags&quot;,
+    desc = &quot;Some description&quot;, tags = counterTags);
+counterWithTags.register() but {
+   error e =&amp;gt; log:printError(&quot;Cannot register the counter&quot;, err = e)
+};
+
+// Create statistics config to enable statistics calculation.
+observe:StatisticConfig[] statsConfigs = [];
+observe:StatisticConfig config =
+    {timeWindow:30000, percentiles:[0.33, 0.5, 0.9, 0.99], buckets:3};
+statsConfigs[0]=config;
+
+// Create gauge and register.
+observe:Gauge gaugeWithStats = new (&quot;GaugeWithTags&quot;,
+    desc = &quot;Some description&quot;, tags = gaugeTags,
+    statisticConfig = statsConfigs);
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;All metrics registered can be retrieved and looked up individually as below.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;
+// Get All Metrics
+observe:Metric[] metrics = observe:getAllMetrics();
+foreach metric in metrics {
+    // Do something.
+}
+
+// Look up a registered metric.
+map&amp;lt;string&amp;gt; tags = { &quot;method&quot;: &quot;GET&quot; };
+observe:Counter|observe:Gauge|() metric =
+    observe:lookupMetric(&quot;MetricName&quot;, tags = tags);
+match metric {
+    observe:Counter counter =&amp;gt; {
+            counter.increment(amount=10);
+    }
+    observe:Gauge gauge =&amp;gt; {
+            gauge.increment(amount = 10.0);
+    }
+    () =&amp;gt; {
+           io:println(&quot;No Metric Found!&quot;);
+    }
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;standard-library-improvements&quot;&gt;Standard Library Improvements&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;With the inclusion of byte[], WebSocket related signatures of resources such as &lt;code class=&quot;highlighter-rouge&quot;&gt;onBinary&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;onPing&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;onPong&lt;/code&gt; and functions such as &lt;code class=&quot;highlighter-rouge&quot;&gt;pushBinary()&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;ping()&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;pong()&lt;/code&gt; now have &lt;code class=&quot;highlighter-rouge&quot;&gt;byte[]&lt;/code&gt; in their signature instead of a blob.&lt;/li&gt;
+  &lt;li&gt;The HTTP transport error handler has been improved so that it recovers execution from inbound/outbound failures such as idle socket timeout and abrupt connection closure.&lt;/li&gt;
+  &lt;li&gt;The circuit breaker now supports request volume threshold parameter. This parameter sets the minimum number of requests in a &lt;code class=&quot;highlighter-rouge&quot;&gt;RollingWindow&lt;/code&gt; that will trip the circuit. So the rollingWindow configurations can be specified as below.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-ballerina&quot;&gt;
+rollingWindow : {
+      timeWindowMillis: 10000,
+      bucketSizeMillis: 2000,
+      requestVolumeThreshold: 10
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;build--package-management&quot;&gt;Build &amp;amp; Package Management&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The Ballerina &lt;code class=&quot;highlighter-rouge&quot;&gt;build&lt;/code&gt; command output has been enhanced with more details about the build. Also by default, the test module will now be executed with the &lt;code class=&quot;highlighter-rouge&quot;&gt;build&lt;/code&gt; command.&lt;/li&gt;
+  &lt;li&gt;Ballerina &lt;code class=&quot;highlighter-rouge&quot;&gt;push&lt;/code&gt; command now mandates the Ballerina &lt;code class=&quot;highlighter-rouge&quot;&gt;build&lt;/code&gt; also along with it, which make sure that packages are built before it is pushed to the Central.&lt;/li&gt;
+  &lt;li&gt;Ballerina Central now supports to view previous versions of a package. It also now shows Ballerina version compatibility section.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ides--language-server&quot;&gt;IDEs &amp;amp; Language Server&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Composer is now shipped as a native Electron App.&lt;/li&gt;
+  &lt;li&gt;Language server now includes source code formatting and also supports finding all symbols in a document and in the workspace.&lt;/li&gt;
+  &lt;li&gt;IntelliJ IDEA Ballerina Plugin has added improvements for the Ballerina source code debugger.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Kishanthan Thangarajah</name></author><summary type="html">Ballerina 0.980.0 release included some type system improvements and new features. This release also focused on stabilizing the platform with lot of bug fixes and improvements.</summary></entry><entry><title type="html">Introduction to Ballerina 0.970 release</title><link href="http://localhost:4000/posts/introduction-to-ballerina-0.970/" rel="alternate" type="text/html" title="Introduction to Ballerina 0.970 release" /><published>2018-06-04T00:00:00+05:30</published><updated>2018-06-04T00:00:00+05:30</updated><id>http://localhost:4000/posts/introduction-to-ballerina-0.970</id><content type="html" xml:base="http://localhost:4000/posts/introduction-to-ballerina-0.970/">&lt;p&gt;We proudly announce General Availability of Ballerina 0.970.0. Ballerina 0.970.0 is an exciting new release of the programming language.&lt;/p&gt;
+
+&lt;p&gt;Key highlights of Ballerina capabilities included into this release are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Concurrent&lt;/strong&gt;: Worker support for defining parallel execution units with fork/join semantics, and asynchronous function invocations, which contains improved BVM scheduler functionality.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Transactional&lt;/strong&gt;: First class support for transaction semantics, including distributed transactions.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Textual and graphical syntaxes&lt;/strong&gt;: Sequence diagrams focused on showing worker and endpoint interactions. Endpoints represent network services. Each worker is sequential code, that can zoom in graphically yet represents textual code. The design is meant to make it easier to understand complex distributed interactions&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Integration specialization&lt;/strong&gt;: Brings fundamental concepts, ideas, and tools of distributed system integration into the programming language and offers a type safe, concurrent environment to implement such applications. These include distributed transactions, reliable messaging, stream processing, workflows, and container management platforms.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this post, we will provide a high level overview of the features of Ballerina 0.970.0 release.&lt;/p&gt;
+
+&lt;h2 id=&quot;language&quot;&gt;Language&lt;/h2&gt;
+&lt;h3 id=&quot;values-and-types&quot;&gt;Values and Types&lt;/h3&gt;
+&lt;p&gt;Ballerina programs operate on a universe of values, and each value belongs to only one basic type such as &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;map&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;record&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;function&lt;/code&gt;, etc. There are three kinds of values corresponding to three kinds of basic types. They are simple values (e.g., &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;string&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean&lt;/code&gt;), structured values (e.g., &lt;code class=&quot;highlighter-rouge&quot;&gt;record&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;map&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;array&lt;/code&gt;), and behavioral values (e.g., &lt;code class=&quot;highlighter-rouge&quot;&gt;function&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;object&lt;/code&gt;).&lt;/p&gt;
+
+&lt;h3 id=&quot;simple-basic-types&quot;&gt;Simple Basic Types&lt;/h3&gt;
+&lt;p&gt;The types &lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;float&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;string&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;blob&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; are called simple basic types because they are basic types with only simple values. Simple values are always immutable.&lt;/p&gt;
+
+&lt;h3 id=&quot;structured-basic-types&quot;&gt;Structured Basic Types&lt;/h3&gt;
+&lt;p&gt;Structured basic values create structures from other values. A structured value belongs to exactly one of the these basic types: &lt;code class=&quot;highlighter-rouge&quot;&gt;tuple&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;array&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;map&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;record&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;table&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;XML&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;behavioural-basic-types&quot;&gt;Behavioural Basic Types&lt;/h3&gt;
+&lt;p&gt;Ballerina defines these behavioral basic types: &lt;code class=&quot;highlighter-rouge&quot;&gt;function&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;future&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;object&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;stream&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;other-types&quot;&gt;Other Types&lt;/h3&gt;
+&lt;p&gt;Other types include: &lt;code class=&quot;highlighter-rouge&quot;&gt;union type&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;optional&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;any&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;JSON&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;expressions&quot;&gt;Expressions&lt;/h2&gt;
+&lt;h3 id=&quot;field-access&quot;&gt;Field Access&lt;/h3&gt;
+&lt;p&gt;Field access is the syntax of accessing child elements inside structural typed values, such as &lt;code class=&quot;highlighter-rouge&quot;&gt;objects&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;records&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;JSON&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;XML&lt;/code&gt;, etc. Fields can be accessed using two operators; Dot operator - Name of the field precedes by a dot, e.g., foo.bar, Index operator - Name of the field comes within two brackets.&lt;/p&gt;
+
+&lt;h3 id=&quot;array-access&quot;&gt;Array Access&lt;/h3&gt;
+&lt;p&gt;Array elements can be accessed by the index using the index operator. The index always has to be an integer valued expression. Similar to accessing fields, accessing arrays also performs the nil-lifting default&lt;/p&gt;
+
+&lt;h3 id=&quot;match-expression&quot;&gt;Match Expression&lt;/h3&gt;
+&lt;p&gt;Match expression is a way of checking the type of an expression and executing some other expression based on the type of the first expression. It is a form of a type switch. Match expression contains patterns inside, with a type associated to it. Type of each pattern should be matched to at-least one of the types of the expression that is being tested.&lt;/p&gt;
+
+&lt;h3 id=&quot;elvis-operator&quot;&gt;Elvis Operator&lt;/h3&gt;
+&lt;p&gt;Elvis operator is a conditional operator that can be used to handle null values. It evaluates an expression and if the value is null, executes the second expression. The elvis operator takes two operands and uses the ‘?:’ symbol to form it.&lt;/p&gt;
+
+&lt;h2 id=&quot;control-flow-statements&quot;&gt;Control Flow Statements&lt;/h2&gt;
+
+&lt;h3 id=&quot;ifelse-statement&quot;&gt;If/Else Statement&lt;/h3&gt;
+&lt;p&gt;An if/else statement provides a way to perform conditional execution. It contains three sections: an if block, followed by multiple else if blocks, and finally a single else block. All the else if blocks and the else blocks are optional. Any number of statements can be defined inside each of these blocks.&lt;/p&gt;
+
+&lt;h3 id=&quot;match-statement&quot;&gt;Match Statement&lt;/h3&gt;
+&lt;p&gt;A &lt;code class=&quot;highlighter-rouge&quot;&gt;match&lt;/code&gt; statement is a type switching construct that allows selective code execution based on the type of the expression that is being tested. The &lt;code class=&quot;highlighter-rouge&quot;&gt;match&lt;/code&gt; statement can have one or more patterns with a type associated to it. Each pattern has statements that get executed if that type is matched.&lt;/p&gt;
+
+&lt;h3 id=&quot;while&quot;&gt;While&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;while&lt;/code&gt; looping construct iterates and executes the code block within the &lt;code class=&quot;highlighter-rouge&quot;&gt;while&lt;/code&gt; block continuously, until the condition for the &lt;code class=&quot;highlighter-rouge&quot;&gt;while&lt;/code&gt; loop is true.&lt;/p&gt;
+
+&lt;h3 id=&quot;foreach&quot;&gt;Foreach&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;foreach&lt;/code&gt; looping construct traverses through the items of a collection of data such as &lt;code class=&quot;highlighter-rouge&quot;&gt;arrays&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;maps&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;JSON&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;XML&lt;/code&gt; and execute the given code block.&lt;/p&gt;
+
+&lt;p&gt;With the above two looping constructs, statements such as &lt;code class=&quot;highlighter-rouge&quot;&gt;break&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;next&lt;/code&gt; can also be used, where the &lt;code class=&quot;highlighter-rouge&quot;&gt;break&lt;/code&gt; statement would end the loop and the &lt;code class=&quot;highlighter-rouge&quot;&gt;next&lt;/code&gt; statement would go to the next iteration in the loop.&lt;/p&gt;
+
+&lt;h3 id=&quot;iterable-operations&quot;&gt;Iterable Operations&lt;/h3&gt;
+&lt;p&gt;Iterable operations can be used with types such as &lt;code class=&quot;highlighter-rouge&quot;&gt;array&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;map&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;JSON&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;table&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;XML&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;transaction&quot;&gt;Transaction&lt;/h2&gt;
+&lt;p&gt;A Ballerina transaction is a series of data manipulation statements that must either fully complete or fully fail, and thereby leave the system in a consistent state. The transaction block is used handle Ballerina transactions. Any transaction aware operations performed within the transaction block are automatically committed or rolled back at the end of the block. Within the transaction block, &lt;code class=&quot;highlighter-rouge&quot;&gt;abort&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;retry&lt;/code&gt; statements can be used to explicitly force to abort the transaction or retry the transaction.&lt;/p&gt;
+
+&lt;p&gt;Ballerina supports Local Transactions, XA Transactions, and Distributed Transactions.&lt;/p&gt;
+
+&lt;h2 id=&quot;error-handling&quot;&gt;Error Handling&lt;/h2&gt;
+&lt;p&gt;The Ballerina approach of error handling is to introduce a first-class error concept that can both be returned as yet another return value (and thereby processed by the caller as it deems fit) or be thrown.&lt;/p&gt;
+
+&lt;p&gt;The try-catch-finally blocks are basically used for catching and handling exceptions thrown during execution. The error lifting operator allows to walk down a set of fields of an object or tuple, without worrying whether there will be a error or null along the way.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;check&lt;/code&gt; is a unary expression that is used to handle errors. The &lt;code class=&quot;highlighter-rouge&quot;&gt;check&lt;/code&gt; expression removes the error type from the result of the sub expression and handles the error case separately.&lt;/p&gt;
+
+&lt;h2 id=&quot;concurrency-constructs&quot;&gt;Concurrency Constructs&lt;/h2&gt;
+&lt;p&gt;The concurrency model is based on workers, which are the fundamental execution units defined in Ballerina. The worker model is designed to be very light-weight constructs, which follows a fully non-blocking approach in its executions, which in-turn makes sure it has optimal utilization of the CPU.&lt;/p&gt;
+
+&lt;h3 id=&quot;workers&quot;&gt;Workers&lt;/h3&gt;
+&lt;p&gt;In Ballerina, every callable unit, that is, a function, action or a resource is made up of one or more workers. A worker is a concurrent execution unit, which is independently run when a function call is made.&lt;/p&gt;
+
+&lt;h3 id=&quot;asynchronous-functions&quot;&gt;Asynchronous Functions&lt;/h3&gt;
+&lt;p&gt;Any function or action can be invoked in an asynchronous mode by prefixing the call with the start keyword and the result is accessible via a future.&lt;/p&gt;
+
+&lt;h3 id=&quot;forkjoin&quot;&gt;Fork/Join&lt;/h3&gt;
+&lt;p&gt;The fork/join construct in Ballerina is used in order to split (fork) the current function execution to multiple workers, do some processing in parallel, and join together the results of the workers to a single execution again.&lt;/p&gt;
+
+&lt;h3 id=&quot;lock&quot;&gt;Lock&lt;/h3&gt;
+&lt;p&gt;Ballerina locks are used for concurrency management, encapsulating a block of statements will acquire the locks for each global or service level variable reference used within those block of statements.&lt;/p&gt;
+
+&lt;h2 id=&quot;functions&quot;&gt;Functions&lt;/h2&gt;
+&lt;p&gt;Ballerina functions operate the same way as any other language. It is a mechanism to create a reusable unit of functionality within a program.&lt;/p&gt;
+
+&lt;p&gt;A function pointer is a Ballerina type that allows you to use functions as variables, arguments to functions, and function return values.
+Lambdas are a syntactic shortcut for defining inline functions. In comparison to a normal function definition, the only missing part is the name.&lt;/p&gt;
+
+&lt;h1 id=&quot;syntax&quot;&gt;Syntax&lt;/h1&gt;
+
+&lt;p&gt;Ballerina’s underlying language semantics were designed by modeling how independent parties communicate via structured interactions. Subsequently, every Ballerina program can be displayed as a sequence diagram of its flow with endpoints, including synchronous and asynchronous calls. Ballerina’s syntax has both textual and graphical representation designed around sequence diagrams,therefore, the way a developer thinks when writing Ballerina code encourages strong interaction best practices.&lt;/p&gt;
+
+&lt;h2 id=&quot;textual-syntax&quot;&gt;Textual Syntax&lt;/h2&gt;
+&lt;p&gt;Ballerina’s textual syntax is largely inspired by C, Java, and Go languages. The key language constructs in Ballerina are Function, Worker and Service.&lt;/p&gt;
+
+&lt;h2 id=&quot;graphical-syntax&quot;&gt;Graphical Syntax&lt;/h2&gt;
+&lt;p&gt;Ballerina’s graphical syntax resembles a sequence diagram. The control flow within a worker is represented with flow diagram based elements. Graphical representation of a service is represented with network interactions.&lt;/p&gt;
+
+&lt;p&gt;Ballerina platform comes with the Composer IDE, which allows you to edit and view Ballerina programs graphically and textually. VS Code plugin can be also used to view Ballerina programs graphically.&lt;/p&gt;
+
+&lt;h1 id=&quot;integration-specialization&quot;&gt;Integration Specialization&lt;/h1&gt;
+&lt;p&gt;Ballerina has first class support for services and endpoints. HTTP/HTTP2, WebSockets, WebSub, gRPC, and JMS are some of the available service types. These services are exposed via listener endpoints, which can be secured and monitored. Client endpoints connect to different types of external endpoints and they are inherently resilient. Additionally, commonly used integration message formats, such as XML and JSON, are built-in to the type system of the language.&lt;/p&gt;
+
+&lt;p&gt;In the context of integration specialization, the following are the released features.&lt;/p&gt;
+
+&lt;h2 id=&quot;http-1x2-support&quot;&gt;HTTP 1.x/2 support&lt;/h2&gt;
+&lt;p&gt;Ballerina includes HTTP 1 and 2 support with server and client endpoints.&lt;/p&gt;
+
+&lt;h2 id=&quot;websockets&quot;&gt;WebSockets&lt;/h2&gt;
+&lt;p&gt;WebSocket client/server endpoints.&lt;/p&gt;
+
+&lt;h2 id=&quot;resiliency&quot;&gt;Resiliency&lt;/h2&gt;
+&lt;p&gt;Support for network resiliency with circuit breaker, retry, timeout, load balancing and failover.&lt;/p&gt;
+
+&lt;h2 id=&quot;mime&quot;&gt;MIME&lt;/h2&gt;
+&lt;p&gt;Ballerina provides built-in implementation of the MIME specification.&lt;/p&gt;
+
+&lt;h2 id=&quot;grpc&quot;&gt;gRPC&lt;/h2&gt;
+&lt;p&gt;Ballerina based gRPC server/client supports interacting with a server and client written either in Ballerina or any other supported languages.&lt;/p&gt;
+
+&lt;h2 id=&quot;database-client-endpoints&quot;&gt;Database client endpoints&lt;/h2&gt;
+&lt;p&gt;Ballerina Database client endpoints allow you to connect to SQL-based relational database systems and perform data definition, data access, and data manipulation operations on the database. These database client endpoints are supported: JDBC for any JDBC supported database, MySQL, H2.&lt;/p&gt;
+
+&lt;h2 id=&quot;messaging-endpoints&quot;&gt;Messaging endpoints&lt;/h2&gt;
+&lt;p&gt;Messaging connectors enable the services and programs written in Ballerina to communicate with messaging backends like Ballerina Message Broker and ActiveMQ. The messaging connector API provides features like transactions, message headers, properties, and different acknowledgement mode support to address the common requirements of a modern integration engineer when integrating with a messaging system.&lt;/p&gt;
+
+&lt;h2 id=&quot;websub&quot;&gt;WebSub&lt;/h2&gt;
+&lt;p&gt;Implementation of the WebSub recommendation that facilitates push-based content delivery/notification mechanism between publishers and subscribers.&lt;/p&gt;
+
+&lt;h1 id=&quot;standard-library&quot;&gt;Standard Library&lt;/h1&gt;
+&lt;p&gt;The Ballerina standard library provides a set of commonly used functionalities. The following packages are available as a part of the standard library:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;ballerina/auth&lt;/strong&gt;: Provides an interface for looking up user data for authentication and authorization purposes. Also it contains a sample implementation that uses a Ballerina configuration file as user registry.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;ballerina/cache&lt;/strong&gt;: Provides a configurable in-memory caching solution that supports both time-based eviction and size-based eviction.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ballerina/config&lt;/strong&gt;: Provides a configuration lookup and resolve mechanism, with the option for securing configurations, and an API for reading these configurations.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ballerina/crypto&lt;/strong&gt;: Provides a set of functions for some of the commonly used hashing algorithms.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ballerina/file&lt;/strong&gt;: Provides a directory listener that can be used to listen to directory events.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ballerina/io&lt;/strong&gt;: Provides an asynchronous I/O framework to source/sink that reads/writes as bytes, characters, and records.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ballerina/log&lt;/strong&gt;: Provides an API for logging.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ballerina/sql&lt;/strong&gt;: Provides the common types and constants used across all the database client endpoints.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ballerina/math&lt;/strong&gt;: Provides a set of functions for performing commonly used mathematical calculations and operations.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ballerina/reflect&lt;/strong&gt;: Provides utility functions for reading annotations and deep equality checks.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ballerina/runtime&lt;/strong&gt;: Provides utility functions and records related to the runtime.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ballerina/system&lt;/strong&gt;: Provides a set of functions for retrieving details related to the system.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ballerina/task&lt;/strong&gt;: Provides an API for managing task timers and task appointments.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ballerina/time&lt;/strong&gt;: Provides a set of functions for handling, parsing and formatting date and time.&lt;/p&gt;
+
+&lt;h1 id=&quot;ides-and-language-server&quot;&gt;IDEs and Language Server&lt;/h1&gt;
+
+&lt;h2 id=&quot;language-server&quot;&gt;Language Server&lt;/h2&gt;
+&lt;p&gt;Ballerina Language Server provides the code intelligence for Ballerina programming. Ballerina Language Server can be integrated with any Language Server Protocol (LSP) supported development tool to provide consistent code intelligence throughout.&lt;/p&gt;
+
+&lt;h2 id=&quot;vscode-plugin&quot;&gt;VSCode Plugin&lt;/h2&gt;
+&lt;p&gt;The Ballerina VSCode plugin includes the following features:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Syntax highlighting&lt;/li&gt;
+  &lt;li&gt;Intellisense for Ballerina language via Ballerina Language Server&lt;/li&gt;
+  &lt;li&gt;Diagramming (view Ballerina programs graphically)&lt;/li&gt;
+  &lt;li&gt;Debugging&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;intellij-idea&quot;&gt;IntelliJ IDEA&lt;/h2&gt;
+&lt;p&gt;The Ballerina IDEA plugin includes the following features:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Syntax highlighting&lt;/li&gt;
+  &lt;li&gt;Code completion and suggestions&lt;/li&gt;
+  &lt;li&gt;Code formatting&lt;/li&gt;
+  &lt;li&gt;Go to definitions&lt;/li&gt;
+  &lt;li&gt;Find usages&lt;/li&gt;
+  &lt;li&gt;Code diagnostics&lt;/li&gt;
+  &lt;li&gt;Ballerina program running and debugging&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;composer&quot;&gt;Composer&lt;/h2&gt;
+&lt;p&gt;Composer is an IDE included with the Ballerina platform that allows you to design and write Ballerina programs textually as well as graphically. It also comes with a set of features targeted for integration development; graphical interaction flow designing, textual editing support for Ballerina, intelligent code completion via Ballerina Language Server, run and debug support for Ballerina programs, design-first API development with Open API Specification, try-it client, dev time service tracing.&lt;/p&gt;
+
+&lt;h1 id=&quot;observability&quot;&gt;Observability&lt;/h1&gt;
+&lt;p&gt;Ballerina observability enables developers to understand the execution and performance impact introduced by the Ballerina program. For example, by enabling the metrics monitoring and distributed tracing, developers can identify slow services and can drill down from the services to the actual request hop that is causing the delay in the overall request flow. Similarly, by log monitoring and analysis, the additional debug information regarding any unfavorable situations can be revealed to pinpoint the root cause.&lt;/p&gt;
+
+&lt;p&gt;Developers can enable a Ballerina program to collect the data to observe by simply using the &lt;code class=&quot;highlighter-rouge&quot;&gt;--observe&lt;/code&gt; flag (with default configurations) or passing specific Ballerina configurations when running the Ballerina program. The external systems, such as Prometheus and Jaeger, need to be used to analyze and graphically represent the collected data from a Ballerina program.&lt;/p&gt;
+
+&lt;h1 id=&quot;try-it-out&quot;&gt;Try it Out!&lt;/h1&gt;
+&lt;p&gt;You can download the Ballerina distributions, try samples, and read the documentation in the &lt;a href=&quot;https://ballerina.io/learn/&quot;&gt;Learn page&lt;/a&gt;. You can also visit the &lt;a href=&quot;https://ballerina.io/learn/quick-tour/&quot;&gt;Quick Tour&lt;/a&gt; to get started. We encourage you to report issues, improvements, and suggestions at the &lt;a href=&quot;https://github.com/ballerina-platform/ballerina-lang&quot;&gt;Ballerina Github Repository&lt;/a&gt;.&lt;/p&gt;</content><author><name>Sameera Jayasoma</name></author><summary type="html">We proudly announce General Availability of Ballerina 0.970.0. Ballerina 0.970.0 is an exciting new release of the programming language.</summary></entry></feed>
