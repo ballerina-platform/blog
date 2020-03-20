@@ -1,0 +1,301 @@
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Bootstrap CSS -->
+
+
+   <title>Ballerina Blog - Announcing Ballerina 1.0</title>
+
+   
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="WSO2, Inc.">
+<meta name="keywords" content="" />
+<link rel="shortcut icon" href="/img/favicon.ico">
+<title>Announcing Ballerina 1.0</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92163714-2"></script>
+<!--FB-->
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content="Ballerina - Announcing Ballerina 1.0" />
+<meta property="og:description"        content="" />
+<meta property="og:image"              content="/blog-images/" />
+<!--TWITTER-->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@ballerinalang">
+<meta name="twitter:creator" content="@ballerinalang">
+<meta name="twitter:title" content="Ballerina">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="/img/">
+<meta name="twitter:text:description" content="">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:width" content="610">
+<!--LINKED IN  -->
+<meta property='og:title' content="Ballerina"/>
+<meta property='og:image' content="/blog-images/"/>
+<meta property='og:description' content=""/>
+<script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag() {
+       dataLayer.push(arguments);
+   }
+   gtag('js', new Date());
+   gtag('config', 'UA-92163714-2');
+</script>
+<!-- Google Tag Manager -->
+<script>
+   (function(w, d, s, l, i) {
+       w[l] = w[l] || [];
+       w[l].push({
+           'gtm.start': new Date().getTime(),
+           event: 'gtm.js'
+       });
+       var f = d.getElementsByTagName(s)[0],
+           j = d.createElement(s),
+           dl = l != 'dataLayer' ? '&l=' + l : '';
+       j.async = true;
+       j.src =
+           'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+       f.parentNode.insertBefore(j, f);
+   })(window, document, 'script', 'dataLayer', 'GTM-PSL2TX4');
+</script>
+<!-- End Google Tag Manager -->
+<script src="/js/moment-2.22.0/moment.min.js"></script>
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+
+
+
+
+
+
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+<link rel="stylesheet" href="/css/ballerina-blog.css" >
+
+
+
+
+
+
+</head>
+
+<body>
+<section>
+   <div class="container">
+      <div class="row ">
+         <div class="col-sm-12 col-md-12">
+            
+
+<nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="https://ballerina.io/"><img src="/img/ballerina-logo.svg"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarNavDropdown" class="navbar-collapse collapse">
+            <ul class="navbar-nav mr-auto">
+                <!-- <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li> -->
+
+            </ul>
+            <ul class="navbar-nav">
+           
+                <li class="nav-item " id="learnli">
+                    <a class="nav-link" href="https://ballerina.io/learn">Learn </a>
+                </li>
+                <li class="nav-item" id="Eventsli">
+                    <a class="nav-link" href="https://ballerina.io/learn/events">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://central.ballerina.io/" target="_blank">Central</a>
+                </li>
+                <li class="nav-item" id="openli">
+                    <a class="nav-link" href="https://ballerina.io/community">Community</a>
+                </li>
+                <li class="nav-item active" id="helpli">
+                    <a class="nav-link" href="/">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+         </div>
+        
+      </div>
+   </div>
+</section>
+
+
+<section class="cPageContent">
+   <div class="container">
+      <div class="row cBallerinaBlogBody">
+         <div class="col-sm-12 col-md-8">
+            <div class="cBlogInfo">
+               <p class="cDate">09 September 2019</p>
+               <h1>Announcing Ballerina 1.0</h1>
+               <p class="cAuthor">Sanjiva Weerawarana</p>
+            </div>
+             </div>
+             <div class="col-sm-12 col-md-8 cBlogContent">
+               <p>Ballerina is an open source programming language and platform for cloud-era application programmers to easily write software that <em>just works</em>.</p>
+
+<p>After more than 3 years of hard work by an incredible team, I am thrilled to announce the general availability of Ballerina 1.0!</p>
+
+<p>You can read more about the language at https://ballerina.io/, download the release from https://ballerina.io/download and read the Release Notes for 1.0 <a href="https://v1-0.ballerina.io/downloads/release-notes/#100notes">here</a>.</p>
+
+<h2 id="a-bit-of-history">A bit of History</h2>
+
+<p>We in WSO2 started down a journey of “let’s make the ESB better” about 10 years ago. After many false starts, finally in 2016 we decided that the only real way to make integration programming dramatically better was to invent a full programming language. We figured, oh, it should take maybe 6-8 months and we’d be done.</p>
+
+<p>We did <a href="https://wso2.com/library/conference/2017/2/wso2con-usa-2017-introducing-ballerina/">preview Ballerina at WSO2Con US in February 2017</a> - 6 months after the project started. We had promising stuff, working code and a cool story. We knew we’d be done in another 3-6 months.</p>
+
+<p>LOL!</p>
+
+<p>Here we are about two and a half years later finally getting to release a GA 1.0 version of Ballerina! And boy, has it taken an effort. And time.</p>
+
+<h2 id="what-exactly-is-ballerina-10">What exactly is “Ballerina 1.0”?</h2>
+
+<p>That is an excellent question because it has a slightly complicated answer!</p>
+
+<p>The name “Ballerina” actually refers to a collection of things that collectively define what we refer to as the “Ballerina platform.” The key components and their respective version numbers are as follows:</p>
+
+<ul>
+  <li>The Ballerina Language (2019R3 revision). This is the centerpiece of everything and is what ends middleware as we knew it. While the language had its origin with the limited vision of “let’s make integration programming better”, it has evolved into a unique, powerful, flexible, beautiful programming language that has the potential to be far far more than that. We have a long way to go to get there, but the seeds are awesome and the little plant looks damned good!</li>
+  <li>The “language library” (or langlib for short) which is the core built-in library of functionality defined by the language specification itself.</li>
+  <li>The jBallerina implementation (1.0.0 version) which provides a compiler that produces Java bytecodes as well as an implementation of the language library and the standard library.</li>
+  <li>The “Batteries-included” Standard library that gives Ballerina programmers a flying start in writing network applications by giving them connectors to most widely used protocols, APIs and data formats. Each module has its own version number (!) - we will explain more about the versioning strategy in a future blog.</li>
+  <li>Ballerina Central, the web service for publishing and sharing Ballerina modules over the Internet. This release is effectively version 2.0 of Ballerina Central.</li>
+  <li>Fantastic plugins for VSCode and IntelliJ IDEA that allow developers to write Ballerina code in normal textual syntax and/or graphically as sequence diagrams. Both are hitting  version 1.0.0.</li>
+  <li>A collection of tools to help developers organize and manage source code, to work with OpenAPI and gRPC and more. All of these will be part of the SDK which is version 1.0.0.</li>
+</ul>
+
+<p>So in other words, “Ballerina 1.0” is a flock of components that are all being released together to become the first production quality release of the Ballerina platform!</p>
+
+<h2 id="what-a-team">What a team!</h2>
+
+<p>We started on the focused Ballerina journey in 2016. Since then, the internal WSO2 team dedicated to Ballerina has easily <em>averaged</em> more than 50 people in engineering and other parts of the company who have rallied together to make Ballerina 1.0 a reality. There have been times when we “cloud bursted” the team to hundreds of people. There have been many many (really, FAR too many) times when the core team had to burn the midnight oil (and the weekend oil) to see this release to fruition.</p>
+
+<p>Then there are all the WSO2 product teams who put their brains, heart and soul into contributing their knowledge to Ballerina. That obviously starts with the Enterprise Integrator team as that is where this baby was flirted with, dated and then conceived; the Stream Processor team and of course the Identity Server &amp; Platform Security Teams who taught us that being secure means feeling insecure!</p>
+
+<p>Ballerina was not just an effort from WSO2 engineering. The marketing team did amazing hard work to create an awesome website, create great branding and help promote the language all over the world even while it was still being developed.</p>
+
+<p>All parts of WSO2 contributed to make Ballerina happen.</p>
+
+<p>There are no words to express the respect, the gratitude, the appreciation and the love I have for this incredible group of people who made this happen.</p>
+
+<p>WSO2 has always had crazy goals - and Ballerina is nothing less than our craziest effort. You guys make the impossible, possible.</p>
+
+<p>Thank you guys: YOU made Ballerina happen.</p>
+
+<h2 id="and-to-our-early-adopter-users-">And to our early adopter users ..</h2>
+
+<p>Complex technology cannot become real until it gets battle tested. Ballerina has been lucky and incredibly blessed to have had an amazing group of people who came early to it and dove right in. Some of these (in particular those who are mentioned in the press release) went way beyond “taking it for a spin” and wrote real enterprise applications with it.</p>
+
+<p>And then there’s one special group of people inside WSO2 who have been just fabulous: our own API Manager team. They willingly committed to rewriting our production API gateway in Ballerina in 2017 and took it to market in 2018! Thus Ballerina has been in production with many customers (often unbeknownst to them!) because of our fantastic API manager team that wrote it, rewrote it, and rewrote it as we kept changing the language on them!</p>
+
+<p>And recently the Cellery team too has become a key early adopter and has pushed us to make things better in so many ways.</p>
+
+<p>Thank you guys: YOU made Ballerina possible.</p>
+
+<h2 id="only-the-beginning-">Only the beginning ..</h2>
+
+<p>This is <em>just</em> 1.0. We set out with grand plans to bring pretty much all enterprise middleware into a programming language and we’re not there yet - so far we’ve pretty much wrestled down just the ESB. It is all coming though- so if you are in that space, be scared. It’s coming.</p>
+
+<p>This also gives me the opportunity to comment on my own personal journey while working with Ballerina. I started it while I was the founding CEO of WSO2. Later I relinquished my CEO job and took on the role of Chief Architect (and Chairman) mostly so I could focus on Ballerina. Along the way James Clark, WSO2’s angel investor, creator of XML, XPath, XSLT, RelaxNG and various other things, joined the Ballerina effort and is now leading the design of the language. Earlier this year I stepped down from being the chairman and recently also from the WSO2 Board. I write this blog as a consultant to WSO2 as the Product Manager of Ballerina.</p>
+
+<p>Ballerina is big. It is going to be huge. Not just for WSO2 but for the industry. It will take time. We have a fantastic multi-generation team working on it and committed to seeing it through to fruition over the next several decades. This is <em>only</em> the beginning.</p>
+
+<p>I could not be more proud of being in a position to lead this team in the first phase of Ballerina and to have the honor to write this blog.</p>
+
+<p>In the coming months and years, we will all blog a lot more about various technical aspects of Ballerina and also various non-technical things that made it, and make it possible. Stay tuned for more!</p>
+
+<p>Sanjiva Weerawarana, Ph.D.<br />
+Product Manager, Ballerina<br />
+Consultant to WSO2<br />
+Founder of WSO2 and formerly CEO, Chairman, Chief Architect, Board Member.</p>
+
+     </div>
+</section>
+
+<section class="cFooter">
+   <div class="container ">
+      <div class="row">
+         
+            
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-left-col cBallerinaFooterLinks">
+        <ul>
+            <li><a class="cBioFooterLink" href="/downloads">Download</a></li>
+            <li><a class="cBioFooterLink" href="https://github.com/ballerina-lang/ballerina/blob/master/LICENSE">Code License</a></li>
+            <li><a class="cBioFooterLink" href="/license-of-site">Site License</a></li>
+            <li><a class="cBioFooterLink" href="/terms-of-service">TERMS OF SERVICE</a></li>
+            <li><a class="cBioFooterLink" href="/privacy-policy">PRIVACY POLICY</a></li>
+            </ul>
+        </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-middle-col cBallerinaFooterSignUp">
+        <div class="cSocialmedia">
+            <ul>
+                <li>
+                    <a class="cBioFooterLink" href="https://github.com/ballerina-platform" target="_blank"><img src="https://ballerina.io/img/github.svg"></a>
+                    </li>
+                <li><a class="cBioFooterLink" href="https://stackoverflow.com/questions/tagged/ballerina" target="_blank"><img src="https://ballerina.io/img/stackoverflow.svg"></a></li>
+                <li><a class="cBioFooterLink" href="https://twitter.com/ballerinalang" target="_blank"><img src="https://ballerina.io/img/twitter.svg"></a></li>
+                <li><a class="cBioFooterLink" href="/community/slack/"><img src="https://ballerina.io/img/slack.svg"></a></li>
+                </ul>
+            <div class="pdframe"></div>
+            </div>
+        </div>
+    <div class="col-xs-12 col-sm-10 col-md-6 col-lg-6 cBallerina-io-right-col">
+        <p>In the creation of Ballerina, we were inspired by so many technologies. Thank you to all that have come before us (and forgive us if we missed one): Java, Go, C, C++, D, Rust, Haskell, Kotlin, Dart, TypeScript, JavaScript, Python, Perl, Flow, Swift, Elm, RelaxNG, NPM, Crates, Maven, Gradle, Kubernetes, Docker, Envoy, Markdown, GitHub and WSO2.</p></div>
+    </div>
+
+        
+         
+      </div>
+   </div>
+</section>
+         
+       
+        
+
+    
+         
+      </div>
+   </div>
+
+
+
+
+
+
+
+   
+
+</body>
+
+</html>
