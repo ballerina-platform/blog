@@ -4,7 +4,7 @@ title: Blog
 ---
 <h1>Ballerina Blog</h1>
 
-> This is the Ballerina corporate blog, which brings you announcements and information on Ballerina releases. Also, you can find more blogs on Ballerina in our [community-driven Tech Blog](https://medium.com/ballerina-techblog).
+> This is the Ballerina corporate blog, which brings you announcements and information on Ballerina releases. You can find more blogs on Ballerina in our [community-driven Tech Blog](https://medium.com/ballerina-techblog).
 
 <ul class="cBlogList">
   {% for post in site.posts %}
