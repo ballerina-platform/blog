@@ -1,6 +1,9 @@
 ---
 layout: blog-home
-title: Blog
+title: Ballerina Blog
+description: This is the Ballerina blog which will give regular updates on the programming language releases and other significant announcements.
+keywords: ballerina, blog, programming lanaguage, ballerina blog
+
 ---
 <h1>Ballerina Blog</h1>
 
