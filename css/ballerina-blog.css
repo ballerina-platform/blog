@@ -158,3 +158,23 @@ pre {
 .cPageContent {
     padding-bottom: 40px;
 }
+
+.cRSS {
+	/* border: 1px solid #20b6b0; */
+	padding: 8px 20px 8px 50px;
+	margin-bottom: 2px;
+	display: inline-block;
+	background-image: url(/img/rss.svg);
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: 20px;
+	background-color: #20b6b0;
+	color: #fff !important;
+	font-weight: 500;
+}
+
+a.cRSS:hover {
+    background-color: #464646;
+    color:#fff !important;
+    text-decoration: none;
+}
