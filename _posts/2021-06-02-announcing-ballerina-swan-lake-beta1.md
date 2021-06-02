@@ -5,7 +5,7 @@ author: Ballerina Team
 published-date: 2 June 2021
 status: Published
 abstract: This blog will highlight the Ballerina Swan Lake Beta1 release features.
-socialmediaimage: 
+socialmediaimage: SwanLake-04.jpeg
 permalink: /posts/announcing-ballerina-swan-lake-beta1/
 ---
 
