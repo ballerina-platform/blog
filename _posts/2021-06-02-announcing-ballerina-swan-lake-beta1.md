@@ -52,7 +52,7 @@ __Implementation Improvements__
 - We have also redesigned the Ballerina compiler to expose the syntactic and semantic information about the source code as APIs. Additionally, we have refreshed the language server implementation, compiler extension design, build tool, etc., with these APIs. 
 - This release also comes with a new compiler extension design that leverages the new compiler APIs.
 
-To see a detailed list of what has changed since Swan Lake Alpha5, please see the [release note]().
+To see a detailed list of what has changed since Swan Lake Alpha5, please see the [release note](https://ballerina.io/downloads/swan-lake-release-notes/swan-lake-beta1/).
 
 To recap, the Ballerina project began in 2016 and our goal has been to create a modern programming language that combines the best of programming languages, integration technology, and cloud-native computing into a textual and graphical language optimized for integration. With more than 16,500 downloads in total and over 1,000 [Slack](https://ballerina-platform.slack.com/) users, the Ballerina ecosystem continues to grow. As we move on to bigger and better things, we want to extend our sincerest thanks to every one of you in the Ballerina community for your valuable feedback and support. Swan Lake Beta1 is our best release yet and we couldn't have done it without all of you!
 
