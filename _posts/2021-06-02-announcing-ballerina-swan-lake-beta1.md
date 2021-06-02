@@ -9,8 +9,6 @@ socialmediaimage: SwanLake-04.jpeg
 permalink: /posts/announcing-ballerina-swan-lake-beta1/
 ---
 
-#### Announcing Ballerina Swan Lake Beta1
-<br/>
 Today, we’re thrilled to announce the release of [Ballerina Swan Lake Beta1](https://ballerina.io/downloads)! This marks the Ballerina language, standard library, and tooling as “feature complete” on the road to the Swan Lake general availability (GA) release and includes several major redesigns. This beta represents a full preview of what Swan Lake will include and builds on the existing work that was done for the alpha releases.
 
 From now on, we expect to put most of our effort into fixing bugs, improving documentation, and making many usability improvements through a few more releases before the final release. We need your feedback to shape Swan Lake to hit the mark and deliver the programming experience it’s meant to provide. We’ll be keeping a close eye on our issue tracker to iron out issues with Beta1, so download it today and let us know how it works!
