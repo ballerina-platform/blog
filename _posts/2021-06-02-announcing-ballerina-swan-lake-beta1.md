@@ -56,7 +56,7 @@ To see a detailed list of what has changed since Swan Lake Alpha5, please see th
 
 To recap, the Ballerina project began in 2016 and our goal has been to create a modern programming language that combines the best of programming languages, integration technology, and cloud-native computing into a textual and graphical language optimized for integration. With more than 16,500 downloads in total and over 1,000 [Slack](https://ballerina-platform.slack.com/) users, the Ballerina ecosystem continues to grow. As we move on to bigger and better things, we want to extend our sincerest thanks to every one of you in the Ballerina community for your valuable feedback and support. Swan Lake Beta1 is our best release yet and we couldn't have done it without all of you!
 
-Cheers,
+Cheers,<br/>
 The Ballerina Team
 
 [^bignote]: To download Ballerina Swan Lake Beta1, go to [Downloads](https://ballerina.io/downloads/). 
