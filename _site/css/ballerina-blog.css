@@ -25,9 +25,21 @@ color: #585A5E;
 .cBlogContent a {
     color: #20b6b0 !important;
 }
-
-.cNLButton{
-
+.subscribeButton{
+    background-color: #20b6b0;
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;  
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none; 
+}
+.subscribeButton:hover{ 
+    background-color: #464646;
+    color: #fff !important;
+    text-decoration: none;
+}
+.cNLButton{ 
     background-color: #20b6b0;
     color: #fff;
     padding: 10px 20px;
