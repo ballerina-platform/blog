@@ -256,7 +256,9 @@ ul.wy-breadcrumbs {
 .cSearchButton {
     margin-left: 10px;
 }
-
+.cSearchMenu.d-none{
+    display: none;
+}
 .cSearch-form-inline { 
     display: flex;
     /* align-items: center; */
