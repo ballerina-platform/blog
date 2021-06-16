@@ -68,14 +68,13 @@ color: #585A5E;
     padding-right: 0;
 }
 
-.cBallerina-io-breadcrumbs {
-    padding: 15px 0px 5px 0px;
+.cBallerina-io-breadcrumbs { 
     margin-bottom: 20px;
 }
 
 
 .cBallerinaBlogBody {
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 ul.cBlogList li {
@@ -232,4 +231,21 @@ a.cRSS:hover {
     background-color: #464646;
     color:#fff !important;
     text-decoration: none;
+}
+
+ 
+.cBallerina-io-breadcrumbs ul li {
+    display: inline-block;
+    list-style: none !important;
+}
+.wy-breadcrumbs li,
+.wy-breadcrumbs li a,
+ul.wy-breadcrumbs {
+    color: #22b7b1 !important;
+    font-size: 11px !important;
+    text-transform: uppercase;
+}
+
+ul.wy-breadcrumbs {
+    color: #57595d !important;
 }

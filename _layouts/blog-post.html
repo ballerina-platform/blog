@@ -15,7 +15,7 @@
 </head>
 
 <body>
-   <!-- {% include nav-breadcrumbs.html %} -->
+
 <section>
    <div class="container">
       <div class="row ">
@@ -26,11 +26,13 @@
       </div>
    </div>
 </section>
-
-
+ 
 <section class="cPageContent">
    <div class="container">
       <div class="row cBallerinaBlogBody">
+         <div class="col-sm-12 col-md-12 cBallerina-io-breadcrumbs">
+            {% include nav-breadcrumbs.html %}
+          </div>
          <div class="col-sm-12 col-md-8">
             <div class="cBlogInfo">
                <p class="cDate">{{ page.published-date }}</p>
