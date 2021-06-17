@@ -274,8 +274,7 @@ ul.wy-breadcrumbs {
     display: none;
 }
 .cSearch-form-inline { 
-    display: flex;
-    /* align-items: center; */
+    display: flex; 
     margin-left: 20px;
 }
 .form-control-field { 
