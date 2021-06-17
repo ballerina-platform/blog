@@ -25,9 +25,21 @@ color: #585A5E;
 .cBlogContent a {
     color: #20b6b0 !important;
 }
-
-.cNLButton{
-
+.subscribeButton{
+    background-color: #20b6b0;
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;  
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none; 
+}
+.subscribeButton:hover{ 
+    background-color: #464646;
+    color: #fff !important;
+    text-decoration: none;
+}
+.cNLButton{ 
     background-color: #20b6b0;
     color: #fff;
     padding: 10px 20px;
@@ -56,14 +68,13 @@ color: #585A5E;
     padding-right: 0;
 }
 
-.cBallerina-io-breadcrumbs {
-    padding: 15px 0px 5px 0px;
+.cBallerina-io-breadcrumbs { 
     margin-bottom: 20px;
 }
 
 
 .cBallerinaBlogBody {
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 ul.cBlogList li {
@@ -222,9 +233,7 @@ a.cRSS:hover {
     text-decoration: none;
 }
 
-
-.subscribeButton {
-	/* border: 1px solid #20b6b0; */
+.subscribeButton { 
 	padding: 8px 15px 8px 15px;
 	margin-bottom: 2px;
 	display: inline-block;  
@@ -237,4 +246,44 @@ a.subscribeButton:hover {
     background-color: #464646;
     color:#fff !important;
     text-decoration: none;
+}
+ 
+.cBallerina-io-breadcrumbs ul li {
+    display: inline-block;
+    list-style: none !important;
+}
+.wy-breadcrumbs li,
+.wy-breadcrumbs li a,
+ul.wy-breadcrumbs {
+    color: #22b7b1 !important;
+    font-size: 11px !important;
+    text-transform: uppercase;
+}
+
+ul.wy-breadcrumbs {
+    color: #57595d !important;
+}
+
+.cSearchButton img {
+    width: 20px;
+}
+.cSearchButton {
+    margin-left: 10px;
+}
+.cSearchMenu.d-none{
+    display: none;
+}
+.cSearch-form-inline { 
+    display: flex;
+    /* align-items: center; */
+    margin-left: 20px;
+}
+.form-control-field { 
+    border: 1px solid #e6e9ea; 
+    padding: 5px 8px; 
+    height: 30px;
+    width: 130px; 
+    border-radius: 0; 
+    padding-right: 30px;
+    font-weight: 300;
 }
