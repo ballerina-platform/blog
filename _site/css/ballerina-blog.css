@@ -233,6 +233,20 @@ a.cRSS:hover {
     text-decoration: none;
 }
 
+.subscribeButton { 
+	padding: 8px 15px 8px 15px;
+	margin-bottom: 2px;
+	display: inline-block;  
+	background-color: #20b6b0;
+	color: #fff !important;
+	font-weight: 500;
+}
+
+a.subscribeButton:hover {
+    background-color: #464646;
+    color:#fff !important;
+    text-decoration: none;
+}
  
 .cBallerina-io-breadcrumbs ul li {
     display: inline-block;

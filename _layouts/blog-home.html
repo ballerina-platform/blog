@@ -1,49 +1,64 @@
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Ballerina Blog - {{ title }}</title>
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    {% include ballerina-head.html %}
-  </head>
+   <title>Ballerina Blog - {{ title }}</title>
 
-  <body>
-    <section>
+
+
+   {% include ballerina-head.html %}
+
+</head>
+
+<body>
+   <!-- {% include nav-breadcrumbs.html %} -->
+   <section>
       <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12">{% include nav.html %}</div>
-        </div>
+         <div class="row">
+            <div class="col-sm-12 col-md-12">
+               {% include nav.html %}
+            </div>
+           
+         </div>
       </div>
-    </section>
+   </section>
 
-    <section class="cPageContent">
-      <div class="container">
-        <div class="row cBallerinaBlogBody cBlogContent">
-          <div class="col-sm-12 col-md-12 cBallerina-io-breadcrumbs">
-            {% include nav-breadcrumbs.html %}
-          </div>
-          <div class="col-sm-12 col-md-12">{{ content }}</div>
-        </div>
-      </div>
-    </section>
 
-    <section class="cFooter">
+   <section class="cPageContent">
       <div class="container">
-        <div class="row">{% include footer.html %}</div>
+         <div class="row cBallerinaBlogBody cBlogContent">
+            <div class="col-sm-12 col-md-12">
+              
+                  {{ content }}
+             
+            
+            </div>
+            
+         </div>
       </div>
-    </section>
-  </body>
+   </section>
+
+   <section class="cFooter">
+      <div class="container ">
+         <div class="row">
+     
+               {% include footer.html %}
+          
+         </div>
+      </div>
+   </section>
+
+
+
+
+
+</body>
+
 </html>
