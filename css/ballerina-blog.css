@@ -219,3 +219,67 @@ a.cRSS:hover {
     color:#fff !important;
     text-decoration: none;
 }
+
+
+.subscribeButton { 
+	padding: 8px 15px 8px 15px;
+	margin-bottom: 2px;
+	display: inline-block;  
+	background-color: #20b6b0;
+	color: #fff !important;
+	font-weight: 500;
+}
+
+a.subscribeButton:hover {
+    background-color: #464646;
+    color:#fff !important;
+    text-decoration: none;
+}
+ 
+.cBallerina-io-breadcrumbs ul li {
+    display: inline-block;
+    list-style: none !important;
+}
+.wy-breadcrumbs li,
+.wy-breadcrumbs li a,
+ul.wy-breadcrumbs {
+    color: #22b7b1 !important;
+    font-size: 11px !important;
+    text-transform: uppercase;
+} 
+ul.wy-breadcrumbs {
+    color: #57595d !important;
+}
+
+.cSearchButton img {
+    width: 20px;
+}
+.cSearchButton {
+    margin-left: 10px;
+}
+.cSearchMenu.d-none{
+    display: none;
+}
+.cSearch-form-inline { 
+    display: flex; 
+    margin-left: 20px;
+}
+.form-control-field { 
+    border: 1px solid #e6e9ea; 
+    padding: 5px 8px; 
+    height: 30px;
+    width: 130px; 
+    border-radius: 0; 
+    padding-right: 30px;
+    font-weight: 300;
+}
+
+.wy-breadcrumbs li,
+.wy-breadcrumbs li a {
+    color: #22b7b1 !important;
+    font-size: 16px;
+}
+
+.wy-breadcrumbs li a {
+    padding-right: 0;
+}
