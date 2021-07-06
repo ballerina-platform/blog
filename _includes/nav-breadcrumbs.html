@@ -10,16 +10,20 @@
     {% if forloop.last %}
     <li>/</li> {{ page.title }}
     {% else %}
-    <li>/</li>
+    <!-- <li>/</li>
     <li><a
+      class="link"
         href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
-    </li>
+    </li> -->
     {% endif %}
     {% endfor %}
 
   </ul>
 </nav>
 <style type="text/css">
+.cBalleinaBreadcrumbs{
+  display: flex;
+}
   .cBalleinaBreadcrumbs li {
     margin-right: 10px;
   }
