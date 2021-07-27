@@ -30,9 +30,9 @@ theme: minima
 plugins:
   - jekyll-feed
 algolia:
-  application_id: 1UGB2K5V0K
-  index_name: jekyll wso2_bbe_dev_sameeral
-  search_only_api_key: fbb148c3fb14152176aec9976c0f425d
+  application_id: VEFFNV19B3
+  index_name: jekyll wso2-ballerina-blog
+  search_only_api_key: 737b0009164fdf533343caa89c328667
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
