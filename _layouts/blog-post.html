@@ -1,76 +1,53 @@
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-   <!-- Required meta tags -->
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
 
-   <!-- Bootstrap CSS -->
+    <title>Ballerina Blog - {{ page.title }}</title>
 
+    {% include ballerina-head.html %}
+  </head>
 
-   <title>Ballerina Blog - {{ page.title }}</title>
-
-   {% include ballerina-head.html %}
-
-</head>
-
-<body> 
-<section>
-   <div class="container">
-      <div class="row ">
-         <div class="col-sm-12 col-md-12">
-            {% include nav.html %}
-         </div>
-        
+  <body>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">{% include nav.html %}</div>
+        </div>
       </div>
-   </div>
-</section>
+    </section>
 
-
-<section class="cPageContent">
-   <div class="container">
-      <div class="row cBallerinaBlogBody">
-         <div class="col-12">{% include nav-breadcrumbs.html %}</div>
-
-         <div class="col-sm-12 col-md-8">
+    <section class="cPageContent">
+      <div class="container">
+        <div class="row cBallerinaBlogBody">
+          <div class="col-12">{% include nav-breadcrumbs.html %}</div>
+          <div class="col-sm-12 col-md-8">
             <div class="cBlogInfo">
-               <p class="cDate">{{ page.published-date }}</p>
-               <h1>{{ page.title }}</h1>
-               <p class="cAuthor">{{ page.author }}</p>
+              <p class="cDate">{{ page.published-date }}</p>
+              <h1>{{ page.title }}</h1>
+              <p class="cAuthor">{{ page.author }}</p>
             </div>
-             </div>
-             <div class="col-sm-12 col-md-8 cBlogContent">
-               {{ content }}
-     </div>
-</section>
-
-<section class="cFooter">
-   <div class="container ">
-      <div class="row">
-         
-            {% include footer.html %}
-        
-         
+          </div>
+          <div class="col-sm-12 col-md-8 cBlogContent">{{ content }}</div>
+        </div>
       </div>
-   </div>
-</section>
-         
-       
-        
-
-    
-         
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-12">{% include post-comments.html %}</div>
+        </div>
       </div>
-   </div>
+    </section>
 
-
-
-
-
-
-
-   
-
-</body>
-
+    <section class="cFooter">
+      <div class="container">
+        <div class="row">{% include footer.html %}</div>
+      </div>
+    </section>
+  </body>
 </html>
