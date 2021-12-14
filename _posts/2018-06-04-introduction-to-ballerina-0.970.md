@@ -4,11 +4,9 @@ title: Introduction to Ballerina 0.970 release
 author: Sameera Jayasoma
 published-date: 04 June 2018
 status: Published
-abstract: Release highlights of Ballerina 0.970 release.
 socialmediaimage: apple-black-and-white-brick-wall-169573.jpg
 permalink: /posts/introduction-to-ballerina-0.970/
 ---
-
 
 We proudly announce General Availability of Ballerina 0.970.0. Ballerina 0.970.0 is an exciting new release of the programming language.
 
