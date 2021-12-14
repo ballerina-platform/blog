@@ -5,7 +5,7 @@ author: Sameera Jayasoma
 published-date: 14 December 2021
 status: Published
 socialmediaimage: SwanLake-04.jpeg
-permalink: /posts/announcing-ballerina-swan-lake-beta6/
+permalink: /posts/ballerina-swan-lake-is-on-the-horizon/
 ---
 
 Two years ago, we started incorporating key integration features on top of the language specification [2019-R3](https://ballerina.io/spec/lang/2019R3/). As Sanjiva pointed out in this [blog](https://blog.ballerina.io/posts/announcing-the-first-preview-of-ballerina-swan-lake/), the 2019-R3 specification provided a solid foundation, but new integration features triggered us to introduce a few changes to make the foundation better. 
