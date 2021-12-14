@@ -4,6 +4,7 @@ title: Introduction to New Features and Changes Introduced with Ballerina 0.982.
 author: Maryam Ziyad Mohamed
 published-date: 08 October 2018
 status: Published
+abstract: Introduction to New Features and Changes Introduced with Ballerina 0.982.0
 socialmediaimage: pexels-photo-206274.jpeg
 permalink: /posts/introduction-to-new-features-and-changes-introduced-with-ballerina-0.982.0/
 ---

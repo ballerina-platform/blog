@@ -4,9 +4,11 @@ title: Overview of Ballerina 0.980
 author: Kishanthan Thangarajah
 published-date: 26 July 2018
 status: Published
+abstract: Overview of new features and improvements added in ballerina 0.980.0 release
 socialmediaimage: ballet-sneaker-dress-ballet-dancer-163379.jpeg
 permalink: /posts/improvements-and-new-features-in-ballerina-0.980.0-release/
 ---
+
 
 Ballerina 0.980.0 release included some type system improvements and new features. This release also focused on stabilizing the platform with lot of bug fixes and improvements.
 

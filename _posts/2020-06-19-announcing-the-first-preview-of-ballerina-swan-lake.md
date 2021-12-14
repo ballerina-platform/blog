@@ -4,6 +4,7 @@ title: Announcing the first preview of Ballerina Swan Lake
 author: Sanjiva Weerawarana
 published-date: 19 June 2020
 status: Published
+abstract: This blog will highlight the Ballerina Swan Lake preview release features.
 socialmediaimage: ballerina-358010.jpg
 permalink: /posts/announcing-the-first-preview-of-ballerina-swan-lake/
 ---
