@@ -22,7 +22,7 @@ __Introducing the New Ballerina Version-String Scheme__
 
 Swan Lake is the code name of this major release, and we plan to use the name of a popular ballet as the code name for each major release, such as Nutcracker, Giselle, and so on—you get the idea. 
 
-Along with the code name, we’ll adopt a new time-based versioning scheme to precisely communicate version-specific information, such as the release time, compatibility, and significance,  of a given release. This new versioning scheme will take the following format:
+Along with the code name, we’ll adopt a new time-based versioning scheme to precisely communicate version-specific information, such as the release time, compatibility, and significance, of a given release. This new versioning scheme will take the following format:
 
 >`$YYMM.$UPDATE.$PATCH ($CODE_NAME)`
 
@@ -31,7 +31,7 @@ Along with the code name, we’ll adopt a new time-based versioning scheme to pr
 - `$PATCH` - A number starting from 0 and incremented with each emergency release (to fix critical issues) of an update release.
 - `$CODE_NAME` - The name of a famous ballet. Neither the update releases nor the patch releases affect the code name. 
 
-Here are some examples.
+Here are some examples:
 
 The Swan Lake GA release, which is scheduled to be released in January 2022 will be versioned as: 
     `2201.0.0 (Swan Lake)`
@@ -42,8 +42,8 @@ The first patch release of Swan Lake GA:
 The first update release of Swan Lake GA: 
     `2201.1.0 (Swan Lake Update 1)`
 
-The second update release of Swan Lake GA:  
-    `2201.2.0 (Swan Lake Update 2)`
+The second update release of Swan Lake GA: 
+    `2201.1.0 (Swan Lake Update 2)`
 
 The first patch release of the second update release of Swan Lake GA: 
     `2201.2.1 (Swan Lake Update 2)` 
