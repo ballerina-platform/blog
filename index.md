@@ -14,7 +14,7 @@ keywords: ballerina, blog, programming lanaguage, ballerina blog
       <p class="cDate">{{ post.published-date }}</p>
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <p class="cAuthor">{{ post.author }}</p>
-      <p>{{ post.abstract }}</p>
+      <!-- <p>{{ post.abstract }}</p> -->
       <!-- {{ post.excerpt }} -->
     </li>
   {% endfor %}
