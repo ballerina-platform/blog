@@ -10,7 +10,7 @@ permalink: /posts/ballerina-swan-lake-is-on-the-horizon/
 
 <style>p{white-space: break-spaces !important;}</style>
 
-Two years ago, we started incorporating key integration features on top of the language specification [2019-R3](https://ballerina.io/spec/lang/2019R3/). As Sanjiva pointed out in this [blog](https://blog.ballerina.io/posts/announcing-the-first-preview-of-ballerina-swan-lake/), the 2019-R3 specification provided a solid foundation, but new integration features triggered us to introduce a few changes to make the foundation better. 
+Two years ago, we started incorporating key integration features on top of the language specification [2019-R3](https://ballerina.io/spec/lang/2019R3/). As Sanjiva pointed out in this [blog post](https://blog.ballerina.io/posts/announcing-the-first-preview-of-ballerina-swan-lake/), the 2019-R3 specification provided a solid foundation, but new integration features triggered us to introduce a few changes to make the foundation better. 
 
 We announced the first preview of this major new version—Ballerina Swan Lake—in June 2020, the [first beta](https://blog.ballerina.io/posts/announcing-ballerina-swan-lake-beta1/) in June 2021, and then five more beta releases. The continuous feedback we received from the community helped us uncover bugs and identify usability issues to shape Swan Lake into what it should be.
 
