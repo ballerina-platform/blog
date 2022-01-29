@@ -43,7 +43,7 @@ The first update release of Swan Lake GA:
     `2201.1.0 (Swan Lake Update 1)`
 
 The second update release of Swan Lake GA: 
-    `2201.1.0 (Swan Lake Update 2)`
+    `2201.2.0 (Swan Lake Update 2)`
 
 The first patch release of the second update release of Swan Lake GA: 
     `2201.2.1 (Swan Lake Update 2)` 
