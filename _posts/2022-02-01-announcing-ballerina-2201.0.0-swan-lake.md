@@ -21,6 +21,7 @@ So, Ballerina went through a major overhaul. The end result is Swan Lake, the fi
 Since Beta1, we have closely engaged with our community, gathering valuable feedback from various channels to help us add and enrich various capabilities towards GA. Over the past few months post Beta1, we released several beta versions of Swan Lake, the most recent being [Beta6](https://ballerina.io/downloads/swan-lake-release-notes/swan-lake-beta6/). Most of our recent efforts focused on fixing bugs, making many usability improvements, and improving documentation. Likewise, the GA release also contains more improvements that are expected to improve how Ballerina feels in practice.
 
 
+
 __Changes and Additions__
 
 We talked about [all the important features and improvements brought to you by Ballerina Swan Lake](https://blog.ballerina.io/posts/announcing-ballerina-swan-lake-beta1/) when we announced Beta1 in June. 
@@ -35,7 +36,8 @@ We further simplified the development and deployment of Ballerina code in the cl
 
 With Swan Lake GA, we have revamped our website too. Our [learn](https://ballerina.io/learn/) tab contains brand new content, including comprehensive guides to the language. The section now has an optimized structure for an easier learning and reference experience, with pages being categorized under headings such as getting started, guides, and reference material. 
 
-Our community page got a makeover to make it easier to find information easily, particularly on events and contributed content. Additionally, we have simplified ways to allow community members to submit content, report issues, seek help, subscribe to our newsletter, and help us grow. 
+Our [community](https://ballerina.io/community) page got a makeover to make it easier to find information easily, particularly on events and contributed content. Additionally, we have simplified ways to allow community members to submit content, report issues, seek help, subscribe to our newsletter, and help us grow. 
+
 
  
 __What's Next__
@@ -43,6 +45,7 @@ __What's Next__
 Ballerina won’t stop evolving. We’ll continue to update and patch Swan Lake on a regular, frequent basis. Its stability will remain our priority, which means that we’ll ensure upgrading Ballerina is painless for you. 
 
 Furthermore, we will work on implementing nBallerina, which will be Ballerina's compiler written in Ballerina and will enable cross-compilation to native binaries via LLVM. More on this in a future blog post. 
+
 
 
 __We are Grateful to Our Community__
