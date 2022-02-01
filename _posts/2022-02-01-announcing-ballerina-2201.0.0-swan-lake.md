@@ -2,10 +2,10 @@
 layout: blog-post
 title: Announcing Ballerina 2201.0.0 (Swan Lake)
 author: Ballerina Team
-published-date: 09 February 2022
+published-date: 1 February 2022
 status: Published
 socialmediaimage: SwanLake-04.jpeg
-permalink: /posts/2022-02-09-announcing-ballerina-2201.0.0-swan-lake/
+permalink: /posts/2022-02-01-announcing-ballerina-2201.0.0-swan-lake/
 ---
 
 <style>p{white-space: break-spaces !important;}</style>
