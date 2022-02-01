@@ -8,7 +8,7 @@ socialmediaimage: SwanLake-04.jpeg
 permalink: /posts/2022-02-01-announcing-ballerina-2201.0.0-swan-lake/
 ---
 
-<style>p{white-space: break-spaces !important;}</style>
+<style>.cBlogContent p{white-space: break-spaces !important;}</style>
 
 Today we are thrilled to announce the much-anticipated General Availability (GA) of [Ballerina 2201.0.0 (Swan Lake)](https://ballerina.io/downloads/)!
 
