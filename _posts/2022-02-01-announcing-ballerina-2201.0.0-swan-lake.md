@@ -36,7 +36,7 @@ We further simplified the development and deployment of Ballerina code in the cl
 
 With Swan Lake GA, we have revamped our website too. Our [learn](https://ballerina.io/learn/) tab contains brand new content, including comprehensive guides to the language. The section now has an optimized structure for an easier learning and reference experience, with pages being categorized under headings such as getting started, guides, and reference material. 
 
-Our [community](https://ballerina.io/community) page got a makeover to make it easier to find information easily, particularly on events and contributed content. Additionally, we have simplified ways to allow community members to submit content, report issues, seek help, subscribe to our newsletter, and help us grow. 
+Our [community page](https://ballerina.io/community) got a makeover to make it easier to find information easily, particularly on events and contributed content. Additionally, we have simplified ways to allow community members to submit content, report issues, seek help, subscribe to our newsletter, and help us grow. 
 
 
  
