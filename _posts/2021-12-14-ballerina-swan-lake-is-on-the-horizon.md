@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-title: Ballerina Swan Lake is on the Horizon
+title: Ballerina Swan Lake is on the horizon
 author: Sameera Jayasoma
 published-date: 14 December 2021
 status: Published
@@ -18,7 +18,7 @@ Phew, it’s been a long journey!
 
 Now, we’re excited to announce that Swan Lake is nearly done, and we’ll be releasing the GA in January 2022. We’ll take the rest of the year to smooth out the remaining rough edges.  
 
-__Introducing the New Ballerina Version-String Scheme__
+__Introducing the new Ballerina version-string scheme__
 
 Swan Lake is the code name of this major release, and we plan to use the name of a popular ballet as the code name for each major release, such as Nutcracker, Giselle, and so on—you get the idea. 
 
