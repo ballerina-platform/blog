@@ -1,10 +1,10 @@
 ---
 layout: blog-post
-title: Introduction to Ballerina 0.970 release
+title: Introduction to the Ballerina 0.970 release
 author: Sameera Jayasoma
 published-date: 04 June 2018
 status: Published
-abstract: Release highlights of Ballerina 0.970 release.
+abstract: Release highlights of the Ballerina 0.970 release.
 socialmediaimage: apple-black-and-white-brick-wall-169573.jpg
 permalink: /posts/introduction-to-ballerina-0.970/
 ---
@@ -22,40 +22,40 @@ Key highlights of Ballerina capabilities included into this release are:
 In this post, we will provide a high level overview of the features of Ballerina 0.970.0 release.  
 
 ## Language
-### Values and Types
+### Values and types
 Ballerina programs operate on a universe of values, and each value belongs to only one basic type such as `int`, `boolean`, `map`, `record`, `function`, etc. There are three kinds of values corresponding to three kinds of basic types. They are simple values (e.g., `int`, `string`, `boolean`), structured values (e.g., `record`, `map`, `array`), and behavioral values (e.g., `function`, `object`).
 
-### Simple Basic Types
+### Simple basic types
 The types `int`, `float`, `string`, `boolean`, `blob`, and `nil` are called simple basic types because they are basic types with only simple values. Simple values are always immutable.
 
-### Structured Basic Types
+### Structured basic types
 Structured basic values create structures from other values. A structured value belongs to exactly one of the these basic types: `tuple`, `array`, `map`, `record`, `table`, `XML`.
 
-### Behavioural Basic Types
+### Behavioural basic types
 Ballerina defines these behavioral basic types: `function`, `future`, `object`, `stream`.
 
-### Other Types
+### Other types
 Other types include: `union type`, `optional`, `any`, `JSON`.
 
 ## Expressions
-### Field Access
+### Field access
 Field access is the syntax of accessing child elements inside structural typed values, such as `objects`, `records`, `JSON`, `XML`, etc. Fields can be accessed using two operators; Dot operator - Name of the field precedes by a dot, e.g., foo.bar, Index operator - Name of the field comes within two brackets.
 
-### Array Access
+### Array access
 Array elements can be accessed by the index using the index operator. The index always has to be an integer valued expression. Similar to accessing fields, accessing arrays also performs the nil-lifting default
 
-### Match Expression
+### Match expression
 Match expression is a way of checking the type of an expression and executing some other expression based on the type of the first expression. It is a form of a type switch. Match expression contains patterns inside, with a type associated to it. Type of each pattern should be matched to at-least one of the types of the expression that is being tested.
 
-### Elvis Operator
+### Elvis operator
 Elvis operator is a conditional operator that can be used to handle null values. It evaluates an expression and if the value is null, executes the second expression. The elvis operator takes two operands and uses the ‘?:’ symbol to form it.
 
-## Control Flow Statements
+## Control flow statements
 
-### If/Else Statement
+### If/Else statement
 An if/else statement provides a way to perform conditional execution. It contains three sections: an if block, followed by multiple else if blocks, and finally a single else block. All the else if blocks and the else blocks are optional. Any number of statements can be defined inside each of these blocks.
 
-### Match Statement
+### Match statement
 A `match` statement is a type switching construct that allows selective code execution based on the type of the expression that is being tested. The `match` statement can have one or more patterns with a type associated to it. Each pattern has statements that get executed if that type is matched.
 
 ### While
@@ -66,7 +66,7 @@ The `foreach` looping construct traverses through the items of a collection of d
 
 With the above two looping constructs, statements such as `break` and `next` can also be used, where the `break` statement would end the loop and the `next` statement would go to the next iteration in the loop.
 
-### Iterable Operations
+### Iterable operations
 Iterable operations can be used with types such as `array`, `map`, `JSON`, `table`, and `XML`.
 
 ## Transaction
@@ -74,19 +74,19 @@ A Ballerina transaction is a series of data manipulation statements that must ei
 
 Ballerina supports Local Transactions, XA Transactions, and Distributed Transactions.
 
-## Error Handling
+## Error handling
 The Ballerina approach of error handling is to introduce a first-class error concept that can both be returned as yet another return value (and thereby processed by the caller as it deems fit) or be thrown.
 
 The try-catch-finally blocks are basically used for catching and handling exceptions thrown during execution. The error lifting operator allows to walk down a set of fields of an object or tuple, without worrying whether there will be a error or null along the way.
 `check` is a unary expression that is used to handle errors. The `check` expression removes the error type from the result of the sub expression and handles the error case separately.
 
-## Concurrency Constructs
+## Concurrency constructs
 The concurrency model is based on workers, which are the fundamental execution units defined in Ballerina. The worker model is designed to be very light-weight constructs, which follows a fully non-blocking approach in its executions, which in-turn makes sure it has optimal utilization of the CPU.
 
 ### Workers
 In Ballerina, every callable unit, that is, a function, action or a resource is made up of one or more workers. A worker is a concurrent execution unit, which is independently run when a function call is made.
 
-### Asynchronous Functions
+### Asynchronous functions
 Any function or action can be invoked in an asynchronous mode by prefixing the call with the start keyword and the result is accessible via a future.
 
 ### Fork/Join
@@ -106,15 +106,15 @@ Lambdas are a syntactic shortcut for defining inline functions. In comparison to
 
 Ballerina’s underlying language semantics were designed by modeling how independent parties communicate via structured interactions. Subsequently, every Ballerina program can be displayed as a sequence diagram of its flow with endpoints, including synchronous and asynchronous calls. Ballerina’s syntax has both textual and graphical representation designed around sequence diagrams,therefore, the way a developer thinks when writing Ballerina code encourages strong interaction best practices.
 
-## Textual Syntax
+## Textual syntax
 Ballerina’s textual syntax is largely inspired by C, Java, and Go languages. The key language constructs in Ballerina are Function, Worker and Service.
 
-## Graphical Syntax
+## Graphical syntax
 Ballerina’s graphical syntax resembles a sequence diagram. The control flow within a worker is represented with flow diagram based elements. Graphical representation of a service is represented with network interactions.
 
 Ballerina platform comes with the Composer IDE, which allows you to edit and view Ballerina programs graphically and textually. VS Code plugin can be also used to view Ballerina programs graphically.
 
-# Integration Specialization
+# Integration specialization
 Ballerina has first class support for services and endpoints. HTTP/HTTP2, WebSockets, WebSub, gRPC, and JMS are some of the available service types. These services are exposed via listener endpoints, which can be secured and monitored. Client endpoints connect to different types of external endpoints and they are inherently resilient. Additionally, commonly used integration message formats, such as XML and JSON, are built-in to the type system of the language.
 
 In the context of integration specialization, the following are the released features.
@@ -143,7 +143,7 @@ Messaging connectors enable the services and programs written in Ballerina to co
 ## WebSub
 Implementation of the WebSub recommendation that facilitates push-based content delivery/notification mechanism between publishers and subscribers.
 
-# Standard Library
+# Standard library
 The Ballerina standard library provides a set of commonly used functionalities. The following packages are available as a part of the standard library:
 
 - **ballerina/auth**: Provides an interface for looking up user data for authentication and authorization purposes. Also it contains a sample implementation that uses a Ballerina configuration file as user registry.
@@ -175,12 +175,12 @@ The Ballerina standard library provides a set of commonly used functionalities. 
 **ballerina/time**: Provides a set of functions for handling, parsing and formatting date and time.
 
 
-# IDEs and Language Server
+# IDEs and language server
 
-## Language Server
+## Language server
 Ballerina Language Server provides the code intelligence for Ballerina programming. Ballerina Language Server can be integrated with any Language Server Protocol (LSP) supported development tool to provide consistent code intelligence throughout.
 
-## VSCode Plugin
+## VS Code plugin
 The Ballerina VSCode plugin includes the following features: 
 * Syntax highlighting 
 * Intellisense for Ballerina language via Ballerina Language Server 
@@ -206,5 +206,5 @@ Ballerina observability enables developers to understand the execution and perfo
 
 Developers can enable a Ballerina program to collect the data to observe by simply using the `--observe` flag (with default configurations) or passing specific Ballerina configurations when running the Ballerina program. The external systems, such as Prometheus and Jaeger, need to be used to analyze and graphically represent the collected data from a Ballerina program.
 
-# Try it Out!
+# Try it out!
 You can download the Ballerina distributions, try samples, and read the documentation in the [Learn page](https://ballerina.io/learn/). You can also visit the [Quick Tour](https://ballerina.io/learn/quick-tour/) to get started. We encourage you to report issues, improvements, and suggestions at the [Ballerina Github Repository](https://github.com/ballerina-platform/ballerina-lang).

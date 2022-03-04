@@ -4,7 +4,7 @@ title: Overview of Ballerina 0.980
 author: Kishanthan Thangarajah
 published-date: 26 July 2018
 status: Published
-abstract: Overview of new features and improvements added in ballerina 0.980.0 release
+abstract: Overview of new features and improvements added in the ballerina 0.980.0 release.
 socialmediaimage: ballet-sneaker-dress-ballet-dancer-163379.jpeg
 permalink: /posts/improvements-and-new-features-in-ballerina-0.980.0-release/
 ---
@@ -12,7 +12,7 @@ permalink: /posts/improvements-and-new-features-in-ballerina-0.980.0-release/
 
 Ballerina 0.980.0 release included some type system improvements and new features. This release also focused on stabilizing the platform with lot of bug fixes and improvements.
 
-## Object Syntax Change
+## Object syntax change
 
 Object type descriptor syntax now supports visibility modifiers for both object fields and functions. There are three types of access modifiers (public, private, no-modifier) as explained below.
 
@@ -31,7 +31,7 @@ public type Person object {
 ```
 
 
-## Closed and Open Records
+## Closed and open records
 
 An `open` record can contain extra fields, that is, fields other than those named by individual type descriptors in the record type definition. By default, records can contain extra fields with `any` value without any changes to record definition as explained below.
 
@@ -99,7 +99,7 @@ Person tom = { name : "tom", age : 20, country : "USA"};
 ```
 
 
-## Fixed Length Arrays
+## Fixed length arrays
 
 The length of an array can be fixed by providing the array length with the array type descriptor.
 
@@ -123,7 +123,7 @@ int[!...] sealedArray = [1, 3, 5];
 ```
 
 
-## Byte Type
+## Byte type
 
 The `byte` type represents the set of 8-bit unsigned integers. The implicit initial value of the `byte` type is `0`. Value space for `byte` is 0-255 both inclusive.
 
@@ -161,7 +161,7 @@ byte e = a ^ b;
 
 ```
 
-## Table Expression
+## Table expression
 
 A table is intended to be similar to a relational database table. A table value contains an immutable set of column names and a set of data rows. Syntax for defining a table and adding data rows is as below.
 
@@ -187,7 +187,7 @@ table<Person> t1 = table {
 
 ```
 
-## Map Access
+## Map access
 Values of a map can be accessed using index-based syntax as well as field-access syntax. Accessing a value using field-based syntax returns the value if the key exists. Otherwise a runtime error is thrown. Index-based syntax also will return the value if the key exists. However, it will return a null value if the key does not exist. This would also mean that, for a constrained map, the type of the return value for the index-based syntax is always the `constraint_type|()` as explained below.
 
 
@@ -209,7 +209,7 @@ string? middleName = m["mname"];
 
 ```
 
-## Ballerina Observability
+## Ballerina observability
 - New API's have been introduced with ballerina observability functionality, such that developers can define their own trace blocks and metrics as explained below.
 - Developers can attach the trace information of their code block to the default Ballerina traces, or a new trace as below.
 
@@ -284,7 +284,7 @@ match metric {
 
 ```
 
-## Standard Library Improvements
+## Standard library improvements
 
 - With the inclusion of byte[], WebSocket related signatures of resources such as `onBinary`, `onPing`, and `onPong` and functions such as `pushBinary()`, `ping()`, and `pong()` now have `byte[]` in their signature instead of a blob.
 - The HTTP transport error handler has been improved so that it recovers execution from inbound/outbound failures such as idle socket timeout and abrupt connection closure.
@@ -300,13 +300,13 @@ rollingWindow : {
 
 ```
 
-## Build & Package Management
+## Build and package management
 
 - The Ballerina `build` command output has been enhanced with more details about the build. Also by default, the test module will now be executed with the `build` command.
 - Ballerina `push` command now mandates the Ballerina `build` also along with it, which make sure that packages are built before it is pushed to the Central.
 - Ballerina Central now supports to view previous versions of a package. It also now shows Ballerina version compatibility section.
 
-## IDEs & Language Server
+## IDEs and language server
 
 - Composer is now shipped as a native Electron App.
 - Language server now includes source code formatting and also supports finding all symbols in a document and in the workspace.

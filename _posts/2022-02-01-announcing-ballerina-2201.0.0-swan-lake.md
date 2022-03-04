@@ -22,7 +22,7 @@ Since Beta1, we have closely engaged with our community, gathering valuable feed
 
 
 
-__Changes and Additions__
+__Changes and additions__
 
 We talked about [all the important features and improvements brought to you by Ballerina Swan Lake](https://blog.ballerina.io/posts/announcing-ballerina-swan-lake-beta1/) when we announced Beta1 in June. 
 
@@ -40,7 +40,7 @@ Our [community page](https://ballerina.io/community) got a makeover to make it e
 
 
  
-__What's Next__
+__What's next__
 
 Ballerina won’t stop evolving. We’ll continue to update and patch Swan Lake on a regular, frequent basis. Its stability will remain our priority, which means that we’ll ensure upgrading Ballerina is painless for you. 
 
@@ -48,7 +48,7 @@ Furthermore, we will work on implementing nBallerina, which will be Ballerina's 
 
 
 
-__We are Grateful to Our Community__
+__We are grateful to our community__
 
 As we celebrate this monumental milestone, we want to thank everyone in the community for your support in making Ballerina what it is today. We look forward to your continued contribution to get closer to our goal in making Ballerina the #1 programming language for microservices and integrations. 
 
