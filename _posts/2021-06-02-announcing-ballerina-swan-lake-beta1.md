@@ -15,7 +15,7 @@ From now on, we expect to put most of our effort into fixing bugs, improving doc
 
 The Swan Lake release comes with significant improvements in multiple areas.
 
-__Language Improvements__
+__Language improvements__
 
 - We have redesigned Ballerina services to support RESTful services in a first-class way.  Services have become service objects that work uniformly with client objects. Service objects can have both remote methods, which support RPC-style protocols, and resource methods, which support data-oriented protocols such as HTTP and GraphQL.
 - Objects work in a more familiar and ergonomic way because we have introduced __class__ definitions. Object type descriptors are now used purely to describe the type of an object, independent of its implementation. We have also introduced object constructor expressions to allow objects to be constructed without defining a class; these provide the semantic foundation for service declarations.
@@ -31,7 +31,7 @@ __Language Improvements__
 - We have redesigned language support for transactions, which makes interacting with a transaction manager more reliable and convenient. This replaces the previous experimental transactions feature.
 - We have also added a new kind of template called a raw template, which allows a library to control how expressions within the template are handled. The SQL module uses this to provide better support for SQL parameters.
 
-__Platform Improvements__
+__Platform improvements__
 
 - We have redesigned how you structure your Ballerina code with the introduction of __[packages](https://ballerina.io/learn/user-guide/ballerina-packages/creating-your-first-ballerina-package/)__, which is a collection of logically related Ballerina modules. We have also made the package the unit of code sharing. As a result, Ballerina Central has been improved to work with packages.  
 - We have improved Ballerina package builds to be __repeatable by default__, without requiring an explicit lock file. We have redesigned package versioning to ensure that a program that you build today builds with the same set of dependency versions tomorrow. This behavior does not change even if there are newer versions of dependencies available in Ballerina Central. Package versions and their compatibility ranges strictly follow semantic versioning. 
@@ -46,7 +46,7 @@ __Platform Improvements__
 - We have redesigned the __command-line argument processing__ to be more ergonomic and also to support the standard POSIX [command-line syntax](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html#tag_12_02) like [getopt](https://pubs.opengroup.org/onlinepubs/9699919799/functions/getopt.html), plus long option names like C [getopt_long](https://www.gnu.org/software/libc/manual/html_node/Getopt-Long-Options.html). 
 - We have also updated the __[bindgen](https://ballerina.io/learn/user-guide/calling-java-code-from-ballerina/)__ tool to leverage new language features such as distinct objects and classes. The bindgen is a CLI tool that generates Ballerina bindings for Java APIs.
 
-__Implementation Improvements__
+__Implementation improvements__
 
 - We have entirely replaced the ANTLR4-generated lexer and parser with a hand-written lexer and recursive-descent parser. Generated lexer/parsers have limitations, and we have faced most of them. It is hard to get meaningful error messages from the generated ones. The new parser is resilient (generates a valid syntax tree even with syntax errors), provides better syntax errors, and supports incremental parsing (creates the syntax tree with only the updated nodes while reusing unchanged tree nodes).
 - We have also redesigned the Ballerina compiler to expose the syntactic and semantic information about the source code as APIs. Additionally, we have refreshed the language server implementation, compiler extension design, build tool, etc., with these APIs. 
