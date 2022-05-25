@@ -215,6 +215,10 @@ a.cRSS:hover {
     background-color: #20b6b0;
     color: #fff !important;
     font-weight: 500;
+    width: 100%;
+    max-width: 265px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 a.subscribeButton:hover {
