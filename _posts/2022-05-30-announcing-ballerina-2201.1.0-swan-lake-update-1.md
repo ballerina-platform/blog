@@ -34,7 +34,7 @@ The extended library went through the following changes:
 
 - Data binding support was introduced to `ballerinax/kafka`, `ballerinax/nats`, `ballerinax/rabbitmq`, and `ballerinax/websocket` modules to improve the user experience by allowing the user to access the incoming and outgoing message data in the user's desired type. Similar to the `lang.http` module, subtypes of anydata will be the supported types.
 
-- The [`ballerinax/awslambda`](https://central.ballerina.io/ballerinax/awslambda) and `ballerinax/azure_function` modules have been added to Ballerina Central.
+- The [`ballerinax/awslambda`](https://central.ballerina.io/ballerinax/awslambda) and [`ballerinax/azure_function`](https://central.ballerina.io/ballerinax/azure_functions) modules have been added to Ballerina Central.
 
 With improvements to the language server, code completion and code action capabilities are now available for the modules pulled from Ballerina Central, thus improving the user experience when working with external modules. Code action improvements were done to further support Ballerina language constructs—`document this code` action to support module-level variables, `create function` code action to handle named arguments, and `create function` code action to add an isolated qualifier. Displaying the function or method signature was extended for record parameters and union-typed expressions. Other improvements were done to provide context-sensitive code suggestions.
 
