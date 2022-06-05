@@ -42,7 +42,7 @@ Another notable upgrade in developer tools is that the debugger now comes with s
 
 Concerning runtime improvements, configurable variables are now improved such that values can be provided via in-line tables, and tuple types are supported in configurable variables through TOML syntax. The configurable variables also support union types through CLI arguments.
 
-We made more changes in this release, including many bug fixes to the compiler, runtime, standard library, and developer tools. See the [release note](http://dev.ballerina.io/downloads/swan-lake-release-notes/2201.1.0/) for all the details of this release. 
+We made more changes in this release, including many bug fixes to the compiler, runtime, standard library, and developer tools. See the [release note](http://ballerina.io/downloads/swan-lake-release-notes/2201.1.0/) for all the details of this release. 
 
 We want to extend our sincerest thanks to the Ballerina community for your valuable feedback and support in making Ballerina what it is today. We hope you enjoy this release. 
 
