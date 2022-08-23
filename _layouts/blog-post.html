@@ -14,52 +14,59 @@
 
 </head>
 
-<body> 
-<section>
-   <div class="container">
-      <div class="row ">
-         <div class="col-sm-12 col-md-12">
-            {% include nav.html %}
-         </div>
-        
-      </div>
-   </div>
-</section>
-
-
-<section class="cPageContent">
-   <div class="container">
-      <div class="row cBallerinaBlogBody">
-
-         <div class="col-sm-12 col-md-8">
-            <div class="cBlogInfo">
-               <p class="cDate">{{ page.published-date }}</p>
-               <h1>{{ page.title }}</h1>
-               <p class="cAuthor">{{ page.author }}</p>
+<body>
+   <section>
+      <div class="container">
+         <div class="row ">
+            <div class="col-sm-12 col-md-12">
+               {% include nav.html %}
             </div>
-             </div>
-             <div class="col-sm-12 col-md-8 cBlogContent">
+
+         </div>
+      </div>
+   </section>
+
+
+   <section class="cPageContent">
+      <div class="container">
+         <div class="row cBallerinaBlogBody">
+            <div class="col-12">
+               <nav class="breadcrumbs bootstrap hidden-sm-down">
+                  <ul id="breadcrumb-list" class=" cBalleinaBreadcrumbs list-unstyled  wy-breadcrumbs"
+                     vocab="http://schema.org/" typeof="BreadcrumbList">
+                     <li><a href="/">Back to Blogs</a></li>
+                  </ul>
+               </nav>
+            </div>
+            <div class="col-sm-12 col-md-8">
+               <div class="cBlogInfo">
+                  <p class="cDate">{{ page.published-date }}</p>
+                  <h1>{{ page.title }}</h1>
+                  <p class="cAuthor">{{ page.author }}</p>
+               </div>
+            </div>
+            <div class="col-sm-12 col-md-8 cBlogContent">
                {{ content }}
-     </div>
-</section>
+            </div>
+   </section>
 
-<section class="cFooter">
-   <div class="container ">
-      <div class="row">
-         
+   <section class="cFooter">
+      <div class="container ">
+         <div class="row">
+
             {% include footer.html %}
-        
-         
+
+
+         </div>
       </div>
+   </section>
+
+
+
+
+
+
    </div>
-</section>
-         
-       
-        
-
-    
-         
-      </div>
    </div>
 
 
@@ -68,7 +75,7 @@
 
 
 
-   
+
 
 </body>
 
