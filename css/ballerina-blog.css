@@ -282,3 +282,22 @@ ul.wy-breadcrumbs {
         margin-left: 15px;
     }
 }
+
+.hackathonBanner {
+    text-align: center;
+    color: #fff;
+    background-color: #20b6b0 !important;
+    padding: 10px 0 10px 0;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.hackathonBanner a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.hackathonBanner a:hover{
+    color: #545454 !important;
+    text-decoration: underline !important;
+}
