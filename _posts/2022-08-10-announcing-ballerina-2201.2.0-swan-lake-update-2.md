@@ -34,6 +34,8 @@ This update release comes with multiple new features and improvements in the run
 - You can also register a function that will be called during a graceful shutdown. A call to `onGracefulStop` will result in one call to the handler function that was passed as an argument; the handler functions will be called after calling `gracefulStop` on all registered listeners in the reverse order of the corresponding calls to `onGracefulStop` (e.g., the function foo can be called during the graceful shutdown by registering it as follows: `runtime:onGracefulStop(foo);`).
 - In terms of improvements, when a type is defined referring to another type, it will now be passed to the runtime as a `BTypeReferenceType` instance. A few existing runtime APIs have been modified to return the `BTypeReferenceType` instances.
 
+## Improvements to the standard library
+
 The following standard library and extended library modules now come with new features and improvements: 
 
 ## `io`
@@ -101,6 +103,8 @@ The following standard library and extended library modules now come with new fe
 ## `nats`
 
 - Added constraint validation support for payload binding
+
+## Improvements to the developer tools
 
 Here are the major new features and improvements you can find in the developer tools:  
 
