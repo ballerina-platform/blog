@@ -23,6 +23,10 @@ h1 {
     color: #20b6b0 !important;
 }
 
+.cBlogContent ul li {
+    list-style: disc;
+}
+
 .cNLButton {
     background-color: #20b6b0;
     color: #fff;
