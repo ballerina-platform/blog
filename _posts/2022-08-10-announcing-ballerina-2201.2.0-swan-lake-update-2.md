@@ -38,15 +38,15 @@ This update release comes with multiple new features and improvements in the run
 
 The following standard library and extended library modules now come with new features and improvements: 
 
-## `io`
+### `io`
 
 - Added support for data mapping between Ballerina Records and CSV in CSV read/write APIs
 
-## `constraint`
+### `constraint`
 
 - Introduced the `constraint` standard library package, which provides features to validate the values that have been assigned to Ballerina types
 
-## `http`
+### `http`
 
 - Added the initial support for HATEOAS
 - Added support for client resource methods in the HTTP client
@@ -56,51 +56,51 @@ The following standard library and extended library modules now come with new fe
 - Updated the default response status as `HTTP 201` for POST resources
 - Implemented the `immediateStop()` function for the HTTP listener
 
-## `websocket`
+### `websocket`
 
 - Added constraint validation to WebSocket payload binding
 
-## `graphql`
+### `graphql`
 
 - Added the support for deprecation of fields and enum values
 - Added the support for GraphQL interceptors
 
-## `serdes`
+### `serdes`
 
 - Introduced the `serdes` standard library module for serializing and deserializing Ballerina `anydata` subtypes
 - Proto3 is the initial serialization/deserialization format supported by this module
 
-## `os`
+### `os`
 
 - Introduced the `exec()` function to support OS command execution in Ballerina
 
-## `xmldata`
+### `xmldata`
 
 - Introduced new APIs such as `fromXml` and `toXml` to perform conversions between XML and `map<anydata>`. The `toRecord` API is being deprecated by introducing this `fromXml` API
 - Introduced a new config named `rootTag` in the `JsonOptions` to configure the name of the XML root element tag
 
- ## `random`
+### `random`
 
 - Updated the `createDecimal()` function to be cryptographically secure
 
-## `sql`
+### `sql`
 
 - Added schema client abstraction to support metadata retrieval from SQL databases. The implementation for the connectors will be added soon
 
-## `grpc`
+### `grpc`
 
 - Introduced a message-level annotation for the proto descriptor instead of a centralized proto descriptor
 - Introduced a new service-level annotation (`grpc:Descriptor`) as a replacement for the existing (`grpc:ServiceDescriptor`) annotation. Both annotations are supported now to maintain backward compatibility. The `grpc:ServiceDescriptor` will be removed in the future. (Please update the service annotation if stub files are regenerated for the existing gRPC services)
 
-## `kafka`
+### `kafka`
 
 - Added constraint validation support for payload binding
 
-## `rabbitmq` 
+### `rabbitmq` 
 
 - Added constraint validation support for payload binding
 
-## `nats`
+### `nats`
 
 - Added constraint validation support for payload binding
 
