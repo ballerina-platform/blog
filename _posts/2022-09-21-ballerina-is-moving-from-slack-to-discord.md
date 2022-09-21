@@ -14,7 +14,7 @@ We will be moving from Slack to [Discord](https://discord.com/invite/wAJYFbMrG2)
 
 We love Slack, but it's not built for large online communities. It lacks moderation features such as spam filtering, complete message histories, unlimited file sharing, and more. This makes sense after all as Slack was built for corporate teams.
 
-[Discord](https://discord.com/invite/wAJYFbMrG2){:target="_blank"}, on the other hand, was built specifically for large online communities. Many large communities, including development communities like Reactiflux, Python, and Java have already moved to Discord. It allows for an unlimited number of users, unlimited file uploads (with a per-file size limit), unlimited message histories, and great moderation and spam filtering features. Discord also includes voice and video chat, which will give our users a more immersive community experience.
+[Discord](https://discord.com/invite/wAJYFbMrG2){:target="_blank"}, on the other hand, was built specifically for large online communities. Many large communities, including development communities like Reactiflux, Python, and Java have already moved to Discord. It allows an unlimited number of users, unlimited file uploads (with a per-file size limit), unlimited message histories, and great moderation and spam filtering features. Discord also includes voice and video chat, which will give our users a more immersive community experience.
 
 The whole idea is to deliver a better experience for our community members, and we feel Discord will be the ideal solution to deliver that.
 
