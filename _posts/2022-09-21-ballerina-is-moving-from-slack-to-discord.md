@@ -10,7 +10,7 @@ permalink: /posts/2022-09-21-ballerina-is-moving-from-slack-to-discord/
 
 <style>.cBlogContent p{white-space: break-spaces !important;}</style>
 
-We will be moving from Slack to [Discord](https://discord.com/invite/wAJYFbMrG2){:target="_blank"} from 1st October 2022. Our Slack community has grown to over 1,500 users, and we are excited to have them meet our 1000+ users who are currently on Discord! Join the [Ballerina Discord server](https://discord.com/invite/wAJYFbMrG2){:target="_blank"}.
+We will be moving from Slack to [Discord](https://discord.com/invite/wAJYFbMrG2){:target="_blank"} from October 1, 2022. Our Slack community has grown to over 1,500 users, and we are excited to have them meet our 1000+ users who are currently on Discord! Join the [Ballerina Discord server](https://discord.com/invite/wAJYFbMrG2){:target="_blank"}.
 
 We love Slack, but it's not built for large online communities. It lacks moderation features such as spam filtering, complete message histories, unlimited file sharing, and more. This makes sense after all as Slack was built mainly for corporate teams.
 
@@ -18,7 +18,7 @@ We love Slack, but it's not built for large online communities. It lacks moderat
 
 The whole idea is to deliver a better experience for our community members and we feel Discord will be the ideal solution to deliver that.
 
-We will continue to keep Slack active in the interim and ensure a smooth migration and in the meantime, all Ballerina team members and mods will be waiting for you on Discord from 1st October 2022.
+We will continue to keep Slack active in the interim and ensure a smooth migration and in the meantime, all Ballerina team members and mods will be waiting for you on Discord from October 1, 2022.
 
 We look forward to seeing you as part of our new community. Join the [Ballerina’s Discord server](https://discord.com/invite/wAJYFbMrG2){:target="_blank"} today! 
 
