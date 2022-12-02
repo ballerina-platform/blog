@@ -24,7 +24,7 @@ The other significant new additions and improvements belonging to multiple areas
 
 ## Runtime updates
 
-- The configuration of `nil`, `json`, and array of table values are now supported by configurable variables through the TOML syntax. It is also improved to add filler values when configuring array values.
+- The configuration of nil, JSON, and array of table values are now supported by configurable variables through the TOML syntax. It is also improved to add filler values when configuring array values.
 - The `fromJsonWithType` and `cloneWithType` functions of the `lang.value` module are improved to return the value with the first matching type of the union members when cloning with a union type if multiple matching types are found. Previously, those were panicked with ambiguous errors.
 
  ## Standard Library updates
