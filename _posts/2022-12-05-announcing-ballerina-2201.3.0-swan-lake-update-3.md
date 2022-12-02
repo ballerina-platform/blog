@@ -29,8 +29,7 @@ The other significant new additions and improvements belonging to multiple areas
 
  ## Standard Library updates
 
-- Support was added in the `graphql` module for disabling introspection queries, and also for GraphQL interfaces including interfaces implementing interfaces. 
-- The `graphql` module is improved with added support for the service-level interceptor execution.
+- Disabling introspection queries support and GraphQL interfaces support are added to the `graphql` module. Also, the `graphql` module is improved with the support for the service-level interceptor execution.
 - Additions were done to the `http` module for having a grace period for the graceful stop of the listener. The application will exit when a resource function panics. 
 - Now, the HTTP resource functions support defaultable query parameters.
 - Server reflection support was added for gRPC services in the `grpc` module and the Protocol Buffers version was updated to 3.21.7.
