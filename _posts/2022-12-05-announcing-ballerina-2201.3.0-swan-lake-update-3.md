@@ -27,7 +27,7 @@ The other significant new additions and improvements belonging to multiple areas
 - The configuration of nil, JSON, and array of table values are now supported by configurable variables through the TOML syntax. It is also improved to add filler values when configuring array values.
 - The `fromJsonWithType` and `cloneWithType` functions of the `lang.value` module are improved to return the value with the first matching type of the union members when cloning with a union type if multiple matching types are found. Previously, those were panicked with ambiguous errors.
 
- ## Standard Library updates
+## Standard library updates
 
 - Disabling introspection queries support and GraphQL interfaces support are added to the `graphql` module. Also, the `graphql` module is improved with the support for the service-level interceptor execution.
 - Additions were done to the `http` module for having a grace period for the graceful stop of the listener. The application will exit when a resource function panics. 
