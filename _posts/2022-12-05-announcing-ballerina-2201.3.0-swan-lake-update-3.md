@@ -42,7 +42,7 @@ The rest of the significant additions and improvements are described below.
 
 For a detailed list of what’s new in Swan Lake Update 3, see the [release note](https://ballerina.io/downloads/swan-lake-release-notes/swan-lake-2201.3.0).
 
-We want to extend our sincerest thanks to the Ballerina community for your valuable feedback and support in making Ballerina what it is today. We hope you enjoy this release.
+We extend our sincerest thanks to the Ballerina community for your valuable feedback and support in making Ballerina what it is today. We hope you enjoy this release.
 
 Cheers,
 The Ballerina Team
