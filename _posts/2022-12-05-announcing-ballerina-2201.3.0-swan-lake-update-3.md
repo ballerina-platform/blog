@@ -14,7 +14,7 @@ We are happy to announce a new release, [Ballerina 2201.3.0 (Swan Lake Update 3)
 
 The main highlight of this release is the support for generating native executables with GraalVM. This introduces a new `--native` option to the `bal build` CLI command (i.e., `bal build --native`) to generate the GraalVM native executable. Also, the `--native` and `--cloud=docker` or `--cloud=k8s` can be combined to build a Docker image with the native executable. See [Build a native executable](https://ballerina.io/learn/build-a-native-executable/).
 
-The other significant new additions and improvements belonging to multiple areas that are done in this release include the below.
+The rest of the significant additions and improvements are described below.
 
 ## Compiler updates
 
