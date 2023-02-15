@@ -18,7 +18,7 @@ The rest of the significant additions and improvements are described below.
 
 ## Runtime updates
 
-Now, you can obtain the strand dump when running the tests in a Ballerina package or a file using the bal test command by sending the `SIGTRAP` signal to that process. The `FiniteType` runtime class is updated to return a user-defined type name if available when the `getName()` method is called on it. Also, runtime APIs are now modified to return the type-reference type instances according to the type definitions.
+Now, you can obtain the strand dump when running the tests in a Ballerina package or a file using the `bal test` command and sending the `SIGTRAP` signal to that process. The `FiniteType` runtime class is updated to return a user-defined type name if available when the `getName()` method is called on it. Also, runtime APIs are now modified to return the type-reference type instances according to the type definitions.
 
 ## Standard library updates
 
