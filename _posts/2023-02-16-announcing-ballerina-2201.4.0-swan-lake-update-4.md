@@ -10,7 +10,7 @@ permalink: /posts/2023-02-16-announcing-ballerina-2201.4.0-swan-lake-update-4/
 
 <style>.cBlogContent p{white-space: break-spaces !important;}</style>
 
-We are happy to announce a new [Ballerina 2201.4.0 (Swan Lake Update 4)]((https://ballerina.io/downloads/),) release, which is the fourth update release of Ballerina Swan Lake.
+We are happy to announce a new [Ballerina 2201.4.0 (Swan Lake Update 4)](https://ballerina.io/downloads/) release, which is the fourth update release of Ballerina Swan Lake.
 
 The main highlight of this release is to support creating multiple output bindings when using Azure Functions. From this release onwards, you can define a tuple as a return type and annotate each member of the tuple using an output binding. This requirement is facilitated from the compiler level by the introduction of the ability for tuple members to be annotated via `field` attachment point declarations.
 
