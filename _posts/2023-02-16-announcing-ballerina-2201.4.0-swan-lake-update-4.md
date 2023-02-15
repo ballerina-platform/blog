@@ -22,7 +22,7 @@ Now, you can obtain the strand dump when running the tests in a Ballerina packag
 
 ## Standard library updates
 
-- The Update 4 release introduces the `persist package`, which provides the Ballerina persistent layer functionality of conveniently storing and querying data in a data store. New persist CLI tooling is also introduced along with this to enable the Ballerina persistence layer in a Ballerina project to generate types and clients based on the data model. This is an experimental feature. The APIs and tooling experience might change in future releases.
+- The Update 4 release introduces the `ballerina/persist` package, which provides the Ballerina persistence layer functionality of conveniently storing and querying data in a data store. New persist CLI tooling is also introduced to enable the Ballerina persistence layer in a Ballerina project to generate types and clients based on the data model. This is an experimental feature. The APIs and tooling experience might change in future releases.
 - The `graphql` package is improved such that now, a single client can have multiple subscriptions (multiplexing), and if additional information about a particular field of a GraphQL document (e.g., subfields of a field) is required, that information can be accessed inside a resolver or an interceptor method.
 - A new JetStream client is introduced to the `nats` package to carry out the publishing and subscribing streaming functionalities related to the NATS JetStreams feature.
 - The `constraint` package is enhanced by adding constraint validation support for read-only types.
