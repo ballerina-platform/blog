@@ -34,7 +34,7 @@ Now, you can disable creating thin JAR files when generating the Docker image in
 
 ## Developer tools updates
 
-- This Update 4 release introduces a new `Create variable with Type` code action along with `Quick Pick` support for selecting expressions in the `Extract to constant` code action. Additionally, the `Rename popup` feature was added to the `Extract to constant`, `Extract to local variable`, and 'Extract to function' code actions. 
+- This Update 4 release introduces a new `Create variable with Type` code action along with `Quick Pick` support for selecting expressions in the `Extract to constant` code action. Additionally, the `Rename popup` feature was added to the `Extract to constant`, `Extract to local variable`, and `Extract to function` code actions. 
 - From this release onwards, you can generate Ballerina client and service declarations from Swagger 2.0 (i.e., OpenAPI 2.0) definitions along with a few other improvements done for OpenAPI object schema attributes and the default request and response types of the generated Ballerina resource/remote methods.
 - New options are introduced to the `bal format` command to format modules or single files selectively with a provided Ballerina package. Also, the `--native` flag is introduced to the `bal test` command for executing tests using a GraalVM native executable image. This is an experimental feature.
 - The GraphQL tool can now generate GraphQL SDL schema files from GraphQL services for users to share those files for documentation or any other purpose as required.
