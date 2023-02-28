@@ -96,7 +96,7 @@ function appendPRs(sheets:Client gsheets, PR[] pullRequests) returns error? {
 }
 ```
 
-We added several new features to the standard library, including an experimental new feature that simplifies data persistence in Ballerina.  We believe this feature can potentially enhance your overall development experience. The concept is to declare the domain data model using Ballerina record types that serves as the definitive source of truth. This record type definition generates a client API to access and modify the data stored in MySQL, the currently supported data store. We will publish more information about this feature in a future blog post. See the [release note](https://ballerina.io/downloads/swan-lake-release-notes/swan-lake-2201.4.0) for more details of other standard library features. 
+We added several new features to the standard library, including an experimental new feature that simplifies data persistence in Ballerina.  We believe this feature can potentially enhance your overall development experience. The concept is to declare the domain data model using Ballerina record types that serves as the definitive source of truth. This record type definition generates a client API to access and modify the data stored in MySQL, the currently supported data store. We will publish more information about this feature in a future blog post. See the [release note](https://ballerina.io/downloads/swan-lake-release-notes/swan-lake-2201.4.0#standard-library-updates) for more details of other standard library features. 
 
 We also introduced several new features and improvements to the developer tools in the platform.
 
