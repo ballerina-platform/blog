@@ -28,14 +28,12 @@ With this nice addition to the language, you can now write an Azure function wit
 import ballerina/http;
 import ballerinax/azure_functions as af;
 
-
 type Album record {|
     string id;
     string title;
     string artist;
     decimal price;
 |};
-
 
 service / on new af:HttpListener() {
     resource function post queue(@http:Payload Album album) returns [@af:HttpOutput http:Created, @af:QueueOutput {queueName: "albums"} string] {
