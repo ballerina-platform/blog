@@ -135,6 +135,12 @@ text-shadow: 0 1px 0 rgba(255,255,255,.25); */
     /* color: #20b6b0 !important; */
     color: #57595d !important;
 }
+
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: #20b6b0 !important;
+    color: #ffffff !important;
+}
+
 pre {
     background: #f5f5f5;
     padding: 20px;
@@ -305,3 +311,4 @@ ul.wy-breadcrumbs {
     color: #545454 !important;
     text-decoration: underline !important;
 }
+
