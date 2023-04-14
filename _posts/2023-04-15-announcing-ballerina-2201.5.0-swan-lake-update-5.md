@@ -67,7 +67,7 @@ Beyond these highlights, the release includes numerous other notable additions a
 
 - The `main` function of a Ballerina program now accepts function parameters of built-in subtypes, which can be passed as command-line arguments.
 - The way how you can select a value for a configurable variable of a union type that includes more than one type descriptor is improved. 
-- The `http` standard library now supports specifying a tuple type as the return type and having basic types as path parameters.
+- The `http` standard library now supports specifying a tuple type as the return type and having basic types as client resource path parameters.
 - The `@http:Payload` annotation is now made optional for the basic structured anydata types in HTTP resource functions. 
     ```ballerina
     import ballerina/http;
