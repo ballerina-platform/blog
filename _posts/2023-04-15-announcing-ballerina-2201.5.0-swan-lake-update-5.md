@@ -61,7 +61,7 @@ Similarly, you can undeprecate a version of a package with the `--undo` option.
 $ bal deprecate ballerina/io:1.1.1 –undo
 ```
 
-The BindGen tool is also enhanced to support handling Java null values via providing command options to the `bal bindgen` command.
+The BindGen tool is also enhanced to support handling Java `null` values via providing command options to the `bal bindgen` command.
 
 Beyond these highlights, the release includes numerous other notable additions and improvements to the language, runtime, standard library, and tooling. Further details about these enhancements are provided below.
 
