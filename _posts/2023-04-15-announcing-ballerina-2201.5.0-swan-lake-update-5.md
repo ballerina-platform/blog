@@ -25,7 +25,7 @@ public function main() {
 
     regexp:RegExp commaSeparator = re `,`;
     string[] names = commaSeparator.split("Bob,Frank,Will,Jack");
-    io:println(names); // ["Bob","Frank","Will","Jack"]
+    io:println(names); // Prints “["Bob","Frank","Will","Jack"]”.
 
     int patternCount = re `[bB].tt[a-z]*`.findAll("Butter was bought by Betty but the butter was bitter.").length();
     io:println(patternCount); // Prints “4”.
