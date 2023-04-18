@@ -21,7 +21,7 @@ import ballerina/io;
 public function main() {
     string:RegExp emailRegex = re `[A-Za-z]+@[A-Za-z]+\.[A-Za-z]{2,}`;
     boolean validEmail = emailRegex.isFullMatch("bob@example.com");
-    io:println(validEmail); // True.
+    io:println(validEmail); // Prints “true”.
 
     regexp:RegExp commaSeparator = re `,`;
     string[] names = commaSeparator.split("Bob,Frank,Will,Jack");
