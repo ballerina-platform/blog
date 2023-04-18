@@ -66,7 +66,7 @@ The BindGen tool is also enhanced to support handling Java null values via provi
 Beyond these highlights, the release includes numerous other notable additions and improvements to the language, runtime, standard library, and tooling. Further details about these enhancements are provided below.
 
 - The `main` function of a Ballerina program now accepts function parameters of built-in subtypes, which can be passed as command-line arguments.
-- The way how you can select a value for a configurable variable of a union type that includes more than one type descriptor is improved. 
+- Configurable variables of union types now accept structural values with ambiguous inherent types.
 - The `http` standard library now supports specifying a tuple type as the return type and having basic types as client resource path parameters.
 - The `@http:Payload` annotation is now made optional for the basic structured anydata types in HTTP resource functions. 
     ```ballerina
