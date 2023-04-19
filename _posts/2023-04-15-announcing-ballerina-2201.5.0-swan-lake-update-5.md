@@ -67,7 +67,7 @@ Beyond these highlights, the release includes numerous other notable additions a
 
 - The `main` function of a Ballerina program now accepts function parameters of built-in subtypes, which can be passed as command-line arguments.
 - Configurable variables of union types now accept structural values with ambiguous inherent types.
-- The `http` standard library now supports specifying a tuple type as the return type and having basic types as client resource path parameters.
+- The `http` standard library now supports specifying a tuple type as the return type of service resource methods and having subtypes of `string|int|float|decimal|boolean` as client resource path parameter types.
 - The `@http:Payload` annotation is now optional for basic structured subtypes of `anydata` in HTTP resource methods. 
     ```ballerina
     import ballerina/http;
