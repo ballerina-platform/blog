@@ -10,7 +10,7 @@ permalink: /posts/2023-04-15-announcing-ballerina-2201.5.0-swan-lake-update-5/
 
 <style>.cBlogContent p{white-space: break-spaces !important;}</style>
 
-We are excited to announce that Ballerina Swan Lake has just released its fifth update release, [Ballerina 2201.5.0 (Swan Lake Update 5)](https://ballerina.io/downloads/). In addition to the existing macOS installer, this release includes a [new installer](https://dist.ballerina.io/downloads/2201.5.0/ballerina-2201.5.0-swan-lake-macos-arm-x64.pkg) specifically designed for installing Ballerina on your macOS-ARM platforms.
+We are excited to announce the fifth update release of Ballerina Swan Lake, [Ballerina 2201.5.0 (Swan Lake Update 5)](https://ballerina.io/downloads/). In addition to the existing macOS installer, this release includes a [new installer](https://dist.ballerina.io/downloads/2201.5.0/ballerina-2201.5.0-swan-lake-macos-arm-x64.pkg) specifically designed for installing Ballerina on your macOS-ARM platforms.
 
 As the key highlight of this release, now, you can use regular expressions in Ballerina code via the new `lang.regexp` library as shown in the example below.
 
