@@ -58,7 +58,7 @@ $ bal deprecate ballerina/io:1.1.1 –message=”This package is deprecated due 
 Similarly, you can undeprecate a version of a package with the `--undo` option.
 
 ```bash
-$ bal deprecate ballerina/io:1.1.1 –undo
+$ bal deprecate ballerina/io:1.1.1 --undo
 ```
 
 The BindGen tool is also enhanced to support handling Java `null` values via providing command options to the `bal bindgen` command.
