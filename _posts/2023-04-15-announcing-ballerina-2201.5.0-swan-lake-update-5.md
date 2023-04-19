@@ -52,7 +52,7 @@ public function main() {
 Furthermore, now, you can mark a specific version of a package as deprecated in Ballerina Central with the new `bal deprecate` command.
 
 ```bash
-$ bal deprecate ballerina/io:1.1.1 –message=”This package is deprecated due to a security vulnerability.”
+$ bal deprecate ballerina/io:1.1.1 --message="This package is deprecated due to a security vulnerability."
 ```
 
 Similarly, you can undeprecate a version of a package with the `--undo` option.
