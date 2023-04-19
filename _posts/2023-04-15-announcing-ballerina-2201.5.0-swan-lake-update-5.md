@@ -68,7 +68,7 @@ Beyond these highlights, the release includes numerous other notable additions a
 - The `main` function of a Ballerina program now accepts function parameters of built-in subtypes, which can be passed as command-line arguments.
 - Configurable variables of union types now accept structural values with ambiguous inherent types.
 - The `http` standard library now supports specifying a tuple type as the return type and having basic types as client resource path parameters.
-- The `@http:Payload` annotation is now made optional for the basic structured anydata types in HTTP resource functions. 
+- The `@http:Payload` annotation is now optional for basic structured subtypes of `anydata` in HTTP resource methods. 
     ```ballerina
     import ballerina/http;
 
@@ -81,7 +81,7 @@ Beyond these highlights, the release includes numerous other notable additions a
 
     service / on new http:Listener(9090) {
 
-        // No need to have the payload annotation here.
+        // No need to have the `http:Payload` annotation here.
         resource function post albums(Album album) returns Album {
             albums.add(album);
             return album;
