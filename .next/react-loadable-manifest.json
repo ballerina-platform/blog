@@ -1,0 +1,50 @@
+{
+  "../layouts/Layout404.js -> ../components/common/meta/Meta": {
+    "id": 9332,
+    "files": [
+      "static/chunks/332.e90864b96cf06b5b.js"
+    ]
+  },
+  "../layouts/Layout404.js -> ../components/common/top-nav/TopNav": {
+    "id": 9075,
+    "files": [
+      "static/chunks/232.a10161b1cf344c7a.js",
+      "static/css/1afaa6327217c8d5.css",
+      "static/chunks/491.d46043ad7d39d17c.js"
+    ]
+  },
+  "../layouts/LayoutDocs.js -> ../components/common/meta/Meta": {
+    "id": 9332,
+    "files": [
+      "static/chunks/332.e90864b96cf06b5b.js"
+    ]
+  },
+  "../layouts/LayoutDocs.js -> ../components/common/top-nav/TopNav": {
+    "id": 9075,
+    "files": [
+      "static/chunks/232.a10161b1cf344c7a.js",
+      "static/css/1afaa6327217c8d5.css",
+      "static/chunks/75.2a2272fe09f6ce28.js"
+    ]
+  },
+  "../layouts/LayoutHome.js -> ../components/common/meta/Meta": {
+    "id": 9332,
+    "files": [
+      "static/chunks/332.e90864b96cf06b5b.js"
+    ]
+  },
+  "../layouts/LayoutHome.js -> ../components/common/top-nav/TopNav": {
+    "id": 9075,
+    "files": [
+      "static/chunks/232.a10161b1cf344c7a.js",
+      "static/css/1afaa6327217c8d5.css",
+      "static/chunks/491.d46043ad7d39d17c.js"
+    ]
+  },
+  "404.js -> ../components/common/redirect-message/RedirectMessage": {
+    "id": 5830,
+    "files": [
+      "static/chunks/830.d2e64168b5698e06.js"
+    ]
+  }
+}
