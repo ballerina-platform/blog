@@ -496,7 +496,7 @@ h2.cMainH2Title {
 
 
 /* NEW FOOTER */
-.cFooter ul {
+#iBallerinaFooter ul {
     list-style: none;
     padding-left: 0;
     display: flex;
@@ -603,6 +603,9 @@ h2.cMainH2Title {
     line-height: 16px !important;
 }
 
+.inspire p {
+    font-size: 12px !important;
+}
 
 .nav-search-icon {
     font-size: 18px;
@@ -1988,18 +1991,6 @@ ul.wy-breadcrumbs {
     text-decoration: underline !important;
 }
 
-.cIUnderstand {
-    background-color: #57595d;
-    color: #fff;
-    padding: 10px 20px;
-    display: inline-block;
-    font-size: 16px;
-}
-.cIUnderstand:hover{
-    background-color: #eeeeee;
-    color: #57595d ;
-}
-
 .cBlallerina-io-docs-content-container ul li {
     list-style: square;
 }
@@ -2162,4 +2153,10 @@ ul li.line-numbers pre code span.line-numbers-rows span:before {
         padding-left: 10px;
         padding-right: 10px;
     }
+}
+
+
+/*---------------Old versions-----------*/
+.wy-breadcrumbs-aside .icon-github {
+    display: none;
 }

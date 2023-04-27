@@ -74,4 +74,58 @@ Prism.languages.javascript=Prism.languages.extend("clike",{"class-name":[Prism.l
 		Array.prototype.forEach.call(document.querySelectorAll('pre.' + PLUGIN_CLASS), _resizeElement);
 	});
 
+	Prism.hooks.add('complete', function (env) {
+		if (!env.code) {
+			return;
+		}
+
+		// works only for <code> wrapped inside <pre> (not inline)
+		var pre = env.element.parentNode;
+		// Original regex check for class, leaving it here 
+		// for its redundancy check
+		var clsReg = /\s*\bline-numbers\b\s*/;
+		// New regex check for opt-out class
+		var clsRegB = /\s*\bno-line-numbers\b\s*/;
+
+		if (env.element.querySelector(".line-numbers-rows")) {
+			// Abort if line numbers already exists
+			return;
+		}
+		
+		// Added to facilitate opting out
+		if (clsRegB.test(pre.className)) {
+			// Respect the opt-out
+			return;
+		}
+
+		if (clsReg.test(env.element.className)) {
+			// Remove the class "line-numbers" from the <code>
+			env.element.className = env.element.className.replace(clsReg, ' ');
+		}
+		if (!clsReg.test(pre.className)) {
+			// Add the class "line-numbers" to the <pre>
+			pre.className += ' line-numbers';
+		}
+
+		var match = env.code.match(/\n(?!$)/g);
+		var linesNum = match ? match.length + 1 : 1;
+		var lineNumbersWrapper;
+
+		var lines = new Array(linesNum + 1);
+		lines = lines.join('<span></span>');
+
+		lineNumbersWrapper = document.createElement('span');
+		lineNumbersWrapper.setAttribute('aria-hidden', 'true');
+		lineNumbersWrapper.className = 'line-numbers-rows';
+		lineNumbersWrapper.innerHTML = lines;
+
+		if (pre.hasAttribute('data-start')) {
+			pre.style.counterReset = 'linenumber ' + (parseInt(pre.getAttribute('data-start'), 10) - 1);
+		}
+
+		env.element.appendChild(lineNumbersWrapper);
+
+		_resizeElement(pre);
+	});
+
 }());
