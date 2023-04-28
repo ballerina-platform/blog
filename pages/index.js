@@ -47,6 +47,8 @@ export async function getStaticProps() {
 
 export default function Blog({ allPostsData }) {
 
+  const [blogs, setBlogs] = React.useState(allPostsData.reverse());
+
   return (
     <>
       <Head>
@@ -145,7 +147,7 @@ export default function Blog({ allPostsData }) {
             <Col xs={12} md={12}>
               <Container>
 
-                {allPostsData.reverse().map(({ slug, frontmatter }, index) => (
+                {blogs.map(({ slug, frontmatter }, index) => (
                   <>
 
                     <div key={index} className='blogInfo'>
