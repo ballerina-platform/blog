@@ -38,17 +38,16 @@ export async function getStaticProps() {
     };
   });
 
+  const blogs = allPostsData.reverse();
+
   return {
     props: {
-      allPostsData,
+      blogs
     },
   };
 }
 
-export default function Blog({ allPostsData }) {
-
-  const [blogs, setBlogs] = React.useState(allPostsData);
-  React.useEffect(() => setBlogs(allPostsData.reverse()), []);
+export default function Blog({ blogs }) {
 
   return (
     <>
