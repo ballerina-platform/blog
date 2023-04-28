@@ -56,7 +56,7 @@ const TopNav = (props) => {
               <Nav.Link className={(launcher === 'docs-learn') ? `${styles.active} ${styles.navItem}` : `${styles.navItem}`} href={`https://ballerina.io/learn`}>Learn</Nav.Link>
               <Nav.Link className={styles.navItem} href="https://central.ballerina.io/" target='_blank' rel="noreferrer">Central</Nav.Link>
               <Nav.Link className={(launcher === 'community') ? `${styles.active} ${styles.navItem}` : `${styles.navItem}`} href={`https://ballerina.io/community`}>Community</Nav.Link>
-              <Nav.Link className={styles.navItem} href="https://blog.ballerina.io/" target='_blank' rel="noreferrer">Blog</Nav.Link>
+              <Nav.Link className={`${styles.active} ${styles.navItem}`} href="https://blog.ballerina.io/" target='_blank' rel="noreferrer">Blog</Nav.Link>
               {(launcher === 'docs-learn') ?
                 <NavDropdown title={versionPicker} id={styles.navbarScrollingDropdown}>
                   <NavDropdown.Item href={`https://ballerina.io/learn/`} className={styles.dropDownItem}>Swan Lake</NavDropdown.Item>
