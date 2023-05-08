@@ -50,7 +50,7 @@ export default async function generateRssFeed() {
         title: 'Blog posts | RSS Feed',
         description: 'Welcome to this blog posts!',
         site_url: site_url,
-        feed_url: `${site_url}rss.xml`,
+        feed_url: `${site_url}feed.xml`,
         image_url: `${site_url}logo.png`,
         pubDate: new Date(),
         copyright: `2018-2023 WSO2 LLC`,
