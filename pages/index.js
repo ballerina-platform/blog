@@ -21,10 +21,12 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import { Row, Col, Container } from "react-bootstrap";
 import Head from "next/head";
+import generateRssFeed from "../utils/generateRSSFeed";
 
 import Layout from "../layouts/LayoutHome";
 
 export async function getStaticProps() {
+  await generateRssFeed();
   const files = fs.readdirSync('_posts');
 
   const allPostsData = files.map((fileName) => {
