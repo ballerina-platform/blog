@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Blog posts | RSS Feed]]></title>
+        <description><![CDATA[Welcome to this blog posts!]]></description>
+        <link>https://blog.ballerina.io/</link>
+        <image>
+            <url>https://blog.ballerina.io/logo.png</url>
+            <title>Blog posts | RSS Feed</title>
+            <link>https://blog.ballerina.io/</link>
+        </image>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Mon, 08 May 2023 08:16:03 GMT</lastBuildDate>
+        <atom:link href="https://blog.ballerina.io/rss.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Mon, 08 May 2023 08:16:03 GMT</pubDate>
+        <copyright><![CDATA[2018-2023 WSO2 LLC]]></copyright>
+        <item>
+            <title><![CDATA[Introduction to the Ballerina 0.970 release]]></title>
+            <description><![CDATA[Release highlights of the Ballerina 0.970 release.]]></description>
+            <link>https://blog.ballerina.io/posts/2018-06-04-introduction-to-ballerina-0.970</link>
+            <guid isPermaLink="true">https://blog.ballerina.io/posts/2018-06-04-introduction-to-ballerina-0.970</guid>
+        </item>
+        <item>
+            <title><![CDATA[Overview of Ballerina 0.980]]></title>
+            <description><![CDATA[Overview of new features and improvements added in the ballerina 0.980.0 release.]]></description>
+            <link>https://blog.ballerina.io/posts/2018-06-26-improvements-and-new-features-in-ballerina-0.980.0-release</link>
+            <guid isPermaLink="true">https://blog.ballerina.io/posts/2018-06-26-improvements-and-new-features-in-ballerina-0.980.0-release</guid>
+        </item>
+        <item>
+            <title><![CDATA[Introduction to the new features and changes introduced with Ballerina 0.982.0]]></title>
+            <description><![CDATA[Introduction to the new features and changes introduced with Ballerina 0.982.0.]]></description>
+            <link>https://blog.ballerina.io/posts/2018-10-08-introduction-to-new-features-and-changes-introduced-with-ballerina-0.982.0</link>
+            <guid isPermaLink="true">https://blog.ballerina.io/posts/2018-10-08-introduction-to-new-features-and-changes-introduced-with-ballerina-0.982.0</guid>
+        </item>
+        <item>
+            <title><![CDATA[Announcing Ballerina 1.0]]></title>
+            <link>https://blog.ballerina.io/posts/2019-09-09-annoucing-1.0.0</link>
+            <guid isPermaLink="true">https://blog.ballerina.io/posts/2019-09-09-annoucing-1.0.0</guid>
+        </item>
+        <item>
+            <title><![CDATA[Ballerina 1.1.0 released!]]></title>
+            <description><![CDATA[This blog outlines the improvements and feature additions to the Ballerina language introduced in the 1.1.0 release.]]></description>
+            <link>https://blog.ballerina.io/posts/2020-01-02-ballerina-1.1.0-released</link>
+            <guid isPermaLink="true">https://blog.ballerina.io/posts/2020-01-02-ballerina-1.1.0-released</guid>
+        </item>
+        <item>
+            <title><![CDATA[Ballerina 1.2.0 released!]]></title>
+            <description><![CDATA[This blog outlines the improvements and feature additions to the Ballerina language introduced in the 1.2.0 release.]]></description>
+            <link>https://blog.ballerina.io/posts/2020-03-20-ballerina-1.2.0-released</link>
+            <guid isPermaLink="true">https://blog.ballerina.io/posts/2020-03-20-ballerina-1.2.0-released</guid>
+        </item>
+        <item>
+            <title><![CDATA[Announcing the first preview of Ballerina Swan Lake]]></title>
+            <description><![CDATA[This blog will highlight the Ballerina Swan Lake preview release features.]]></description>
+            <link>https://blog.ballerina.io/posts/2020-06-19-announcing-the-first-preview-of-ballerina-swan-lake</link>
+            <guid isPermaLink="true">https://blog.ballerina.io/posts/2020-06-19-announcing-the-first-preview-of-ballerina-swan-lake</guid>
+        </item>
+        <item>
+            <title><![CDATA[Announcing Ballerina Swan Lake Beta1]]></title>
+            <description><![CDATA[This blog will highlight the Ballerina Swan Lake Beta1 release features.]]></description>
+            <link>https://blog.ballerina.io/posts/2021-06-02-announcing-ballerina-swan-lake-beta1</link>
+            <guid isPermaLink="true">https://blog.ballerina.io/posts/2021-06-02-announcing-ballerina-swan-lake-beta1</guid>
+        </item>
+        <item>
+            <title><![CDATA[Ballerina Swan Lake is on the horizon]]></title>
+            <link>https://blog.ballerina.io/posts/2021-12-14-ballerina-swan-lake-is-on-the-horizon</link>
+            <guid isPermaLink="true">https://blog.ballerina.io/posts/2021-12-14-ballerina-swan-lake-is-on-the-horizon</guid>
+        </item>
+        <item>
+            <title><![CDATA[Ballerina community update - the Log4j Log4Shell vulnerability]]></title>
+            <link>https://blog.ballerina.io/posts/2021-12-23-ballerina-log4shell-vulnerability-community-update</link>
+            <guid isPermaLink="true">https://blog.ballerina.io/posts/2021-12-23-ballerina-log4shell-vulnerability-community-update</guid>
+        </item>
+        <item>
+            <title><![CDATA[Announcing Ballerina 2201.0.0 (Swan Lake)]]></title>
+            <link>https://blog.ballerina.io/posts/2022-02-01-announcing-ballerina-2201.0.0-swan-lake</link>
+            <guid isPermaLink="true">https://blog.ballerina.io/posts/2022-02-01-announcing-ballerina-2201.0.0-swan-lake</guid>
+        </item>
+        <item>
+            <title><![CDATA[Announcing Ballerina 2201.1.0 (Swan Lake Update 1)]]></title>
+            <link>https://blog.ballerina.io/posts/2022-05-30-announcing-ballerina-2201.1.0-swan-lake-update-1</link>
+            <guid isPermaLink="true">https://blog.ballerina.io/posts/2022-05-30-announcing-ballerina-2201.1.0-swan-lake-update-1</guid>
+        </item>
+        <item>
+            <title><![CDATA[Announcing Ballerina 2201.2.0 (Swan Lake Update 2)]]></title>
+            <link>https://blog.ballerina.io/posts/2022-08-10-announcing-ballerina-2201.2.0-swan-lake-update-2</link>
+            <guid isPermaLink="true">https://blog.ballerina.io/posts/2022-08-10-announcing-ballerina-2201.2.0-swan-lake-update-2</guid>
+        </item>
+        <item>
+            <title><![CDATA[Ballerina is moving from Slack to Discord]]></title>
+            <link>https://blog.ballerina.io/posts/2022-09-21-ballerina-is-moving-from-slack-to-discord</link>
+            <guid isPermaLink="true">https://blog.ballerina.io/posts/2022-09-21-ballerina-is-moving-from-slack-to-discord</guid>
+        </item>
+        <item>
+            <title><![CDATA[Announcing Ballerina 2201.3.0 (Swan Lake Update 3)]]></title>
+            <link>https://blog.ballerina.io/posts/2022-12-05-announcing-ballerina-2201.3.0-swan-lake-update-3</link>
+            <guid isPermaLink="true">https://blog.ballerina.io/posts/2022-12-05-announcing-ballerina-2201.3.0-swan-lake-update-3</guid>
+        </item>
+        <item>
+            <title><![CDATA[Announcing Ballerina 2201.4.0 (Swan Lake Update 4)]]></title>
+            <link>https://blog.ballerina.io/posts/2023-02-28-announcing-ballerina-2201.4.0-swan-lake-update-4</link>
+            <guid isPermaLink="true">https://blog.ballerina.io/posts/2023-02-28-announcing-ballerina-2201.4.0-swan-lake-update-4</guid>
+        </item>
+        <item>
+            <title><![CDATA[Announcing Ballerina 2201.5.0 (Swan Lake Update 5)]]></title>
+            <link>https://blog.ballerina.io/posts/2023-04-15-announcing-ballerina-2201.5.0-swan-lake-update-5</link>
+            <guid isPermaLink="true">https://blog.ballerina.io/posts/2023-04-15-announcing-ballerina-2201.5.0-swan-lake-update-5</guid>
+        </item>
+    </channel>
+</rss>
