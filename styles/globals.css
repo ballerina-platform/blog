@@ -253,7 +253,7 @@ a {
 }
 
 .mdContent p,
-.mdContent li {
+.mdContent li, .policyContent p  {
   font-size: 16px;
   color: #57595d;
   line-height: 24px;
@@ -267,11 +267,11 @@ a {
   line-height: 18.375px !important;
 } 
 
-.mdContent a:hover {
+.mdContent a:hover, .policyContent a:hover {
   color: #464646 !important;
 }
 
-.mdContent a {
+.mdContent a, .policyContent a {
   color: #20b6b0 !important;
   text-decoration: none;
 }
