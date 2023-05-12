@@ -51,6 +51,7 @@ const TopNav = (props) => {
               <NavDropdown title='Use cases' id={styles.navbarScrollingDropdown} className={(launcher === 'usecases') ? `${styles.active}` : null} >
                 <NavDropdown.Item href={`https://ballerina.io/usecases/integration`} className={styles.dropDownItem}>Integration</NavDropdown.Item>
                 <NavDropdown.Item href={`https://ballerina.io/usecases/ai`} className={styles.dropDownItem}>AI</NavDropdown.Item>
+                <NavDropdown.Item href={`https://ballerina.io/usecases/healthcare`} className={styles.dropDownItem}>Healthcare</NavDropdown.Item>
               </NavDropdown>
               <Nav.Link className={styles.navItem} href="https://play.ballerina.io/" target='_blank' rel="noreferrer">Playground</Nav.Link>
               <Nav.Link className={(launcher === 'docs-learn') ? `${styles.active} ${styles.navItem}` : `${styles.navItem}`} href={`https://ballerina.io/learn`}>Learn</Nav.Link>
