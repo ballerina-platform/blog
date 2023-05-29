@@ -14,7 +14,7 @@ We are excited to announce the [Ballerina 2201.6.0 (Swan Lake Update 6)](https:/
 
 Out of those, the `Bal persist` feature revolutionizes data storage and retrieval, while other improvements, such as the inlay hint support, enhanced OpenAPI compatibility, and newly introduced standard library packages, further enrich the Ballerina development experience.
 
-**`Bal Persist` feature**
+**`Bal persist` feature**
 
 One of the major highlights of Ballerina Swan Lake Update 6 is the introduction of the Bal persist feature. With this feature, you can now easily store and retrieve data from various data stores, including in-memory tables, MySQL databases, and Google Sheets. The Bal persist feature comprises three primary components:
 
