@@ -32,10 +32,6 @@ In addition to the `Bal persist` feature, Swan Lake Update 6 brings a range of n
 
 - **GraphQL field interceptors and interceptor configurations:** Starting from this release, you can utilize GraphQL field interceptors to apply an interceptor specifically to a particular resolver (resource/remote) method. Also, the newly introduced interceptor configurations allow you to change the behavior of a GraphQL service interceptor.
 
-- **Inlay hint support in the Language Server:** The language server now offers inlay hint support providing information about the parameter names required by a function or method call. This enhancement improves the overall code readability and provides more context when passing arguments to function/method calls.
-
-- **The `yaml` and `toml` standard libraries:** Swan Lake Update 6 introduces new standard libraries for YAML and TOML. Now, you can easily convert YAML configuration files to JSON and vice versa, facilitating seamless integration with various systems. Additionally, the new TOML standard library allows smooth conversion of TOML configuration files to `map<json>` and vice versa.
-
 For a comprehensive overview of all the changes and improvements brought by Swan Lake Update 6, see the [release note](https://ballerina.io/downloads/swan-lake-release-notes/swan-lake-2201.6.0).
 
 We extend our sincere gratitude to the vibrant Ballerina community for their invaluable feedback and continuous support. It is through the community involvement that Ballerina continues to evolve and thrive. We invite you to explore Swan Lake Update 6, leverage the new features, and actively contribute to shaping the future of the Ballerina language.
