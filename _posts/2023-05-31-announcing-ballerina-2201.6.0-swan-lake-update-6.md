@@ -80,7 +80,7 @@ One of the major highlights of Ballerina Swan Lake Update 6 is the introduction 
 
 In addition to the `Bal persist` feature, Swan Lake Update 6 brings a range of notable additions and improvements as described below.
 
-- **Electronic Data Interchange (EDI) support:** Swan Lake Update 6 introduces EDI message processing support in Ballerina. This capability allows the conversion of EDI messages to Ballerina records and vice versa, leveraging a specified EDI schema. Furthermore, it enables the generation of Ballerina records for EDI schemas in handling EDI data.
+- **Electronic Data Interchange (EDI) support:** Swan Lake Update 6 introduces EDI message processing support in Ballerina. This capability allows the conversion of EDI messages to Ballerina records and vice versa, leveraging a specified EDI schema. 
     
     The example code below demonstrates how a simple EDI schema for sales order data can be converted to Ballerina records.
 
@@ -101,10 +101,10 @@ In addition to the `Bal persist` feature, Swan Lake Update 6 brings a range of n
 
 - **OpenAPI enum support:** Ballerina Open API tool now supports OpenAPI enums in both Ballerina client and service generation. The tool will generate Ballerina union types to represent the counterpart OpenAPI enum types.
 
-- **GraphQL field interceptors and interceptor configurations:** Starting from this release, you can utilize GraphQL field interceptors to apply an interceptor specifically to a particular resolver (resource/remote) method. Also, the newly introduced interceptor configurations allow you to change the behavior of a GraphQL service interceptor.
+- **GraphQL field interceptors and interceptor configurations:** Now, you can utilize GraphQL field interceptors to apply an interceptor specifically to a particular resolver (resource/remote) method. Also, the newly introduced interceptor configurations allow you to change the behavior of a GraphQL service interceptor.
 
 For a comprehensive overview of all the changes and improvements brought by Swan Lake Update 6, see the [release note](https://ballerina.io/downloads/swan-lake-release-notes/swan-lake-2201.6.0).
 
-We extend our sincere gratitude to the Ballerina community for their invaluable feedback and continuous support. It is through the community involvement that Ballerina continues to evolve and thrive. We invite you to explore Swan Lake Update 6, explore the new features, and actively contribute to shaping the future of the Ballerina language.
+We thank the Ballerina community for your invaluable support and feedback in shaping it into what it is today. We are excited to present this release and hope you enjoy it.
 
 Cheers to the Ballerina community and the bright future of it!
