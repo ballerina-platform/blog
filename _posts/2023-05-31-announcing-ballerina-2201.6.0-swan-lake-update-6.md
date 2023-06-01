@@ -45,8 +45,8 @@ One of the major highlights of Ballerina Swan Lake Update 6 is the introduction 
     ```ballerina
 
     import ballerina/io;
-    import rainier.store;
     import ballerina/persist;
+    import rainier.store;
 
     store:Client sClient = check new ();
 
