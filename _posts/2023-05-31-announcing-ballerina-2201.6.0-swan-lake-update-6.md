@@ -64,17 +64,19 @@ One of the major highlights of Ballerina Swan Lake Update 6 is the introduction 
         io:println(string `Inserted employee ids: ${employeeIds.toString()}`);
 
 
-    // Get the employee record with the ID: 16c6553a-373c-4b29-b1c8-c282f444248c.
-    Employee|error employee = sClient->/employee/16c6553a-373c-4b29-b1c8-c282f444248c;
+        // Get the employee record with the ID: 16c6553a-373c-4b29-b1c8-c282f444248c.
+        Employee|error employee = sClient->/employee/16c6553a-373c-4b29-b1c8-c282f444248c;
 
         // Update the employee record with the ID: 16c6553a-373c-4b29-b1c8-c282f444248c.
-        Employee|error updated = sClient->/employee/16 c6553a - 373 c - 4 b29 - b1c8 - c282f444248c.put({salary: 4000.0});
+        store:Employee employee = check sClient->/employees/[empId].put(
+        {hireDate: {year: 2014, month: 5, day: 1}}
+        );
 
         // Delete the employee record with the ID: 16c6553a-373c-4b29-b1c8-c282f444248c.
-        Employee|error deleted = sClient->/employee/16 c6553a - 373 c - 4 b29 - b1c8 - c282f444248c.delete();
+         store:Employee|error deleted = sClient->/employee/16c6553a-373c-4b29-b1c8-c282f444248c.delete();
 
         // Get all the employee records.
-        stream<Employee, error?> employee = sClient->/employee;
+        stream<store:Employee, error?> employee = sClient->/employee;
     }
     ```
 
