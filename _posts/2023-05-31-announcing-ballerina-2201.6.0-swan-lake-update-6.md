@@ -65,7 +65,7 @@ One of the major highlights of Ballerina Swan Lake Update 6 is the introduction 
 
 
     // Get the employee record with the ID: 16c6553a-373c-4b29-b1c8-c282f444248c.
-    Employee|error employee = sClient->/employee/16c6553a-373c-4b29-b1c8-c282f444248c;
+    store:Employee|error employee = sClient->/employee/16c6553a-373c-4b29-b1c8-c282f444248c;
 
         // Update the employee record with the ID: 16c6553a-373c-4b29-b1c8-c282f444248c.
         Employee|error updated = sClient->/employee/16 c6553a - 373 c - 4 b29 - b1c8 - c282f444248c.put({salary: 4000.0});
