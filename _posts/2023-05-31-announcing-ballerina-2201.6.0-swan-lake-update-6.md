@@ -56,16 +56,8 @@ One of the major highlights of Ballerina Swan Lake Update 6 is the introduction 
             firstName: "John",
             lastName: "Doe",
             gender: "Male",
-            birthDate: {
-                year: 1987,
-                month: 7,
-                day: 23
-            },
-            hireDate: {
-                year: 2020,
-                month: 10,
-                day: 10
-            }
+        birthDate: {year: 1987, month: 7, day: 23},
+        hireDate: {year: 2020, month: 10, day: 10}
         };
 
     // Create a new employee record.
