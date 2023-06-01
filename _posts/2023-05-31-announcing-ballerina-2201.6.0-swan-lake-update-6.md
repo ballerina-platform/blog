@@ -43,7 +43,6 @@ One of the major highlights of Ballerina Swan Lake Update 6 is the introduction 
     The example code below demonstrates how CRUD operations can be performed on the persist model via the client API.       
 
     ```ballerina
-
     import ballerina/io;
     import ballerina/persist;
     import rainier.store;
@@ -56,28 +55,26 @@ One of the major highlights of Ballerina Swan Lake Update 6 is the introduction 
             firstName: "John",
             lastName: "Doe",
             gender: "Male",
-        birthDate: {year: 1987, month: 7, day: 23},
-        hireDate: {year: 2020, month: 10, day: 10}
+            birthDate: {year: 1987, month: 7, day: 23},
+            hireDate: {year: 2020, month: 10, day: 10}
         };
 
-    // Create a new employee record.
-    string[] employeeIds = check sClient->/employees.post([employee1]);
+        // Create a new employee record.
+        string[] employeeIds = check sClient->/employees.post([employee1]);
+        io:println(string `Inserted employee ids: ${employeeIds.toString()}`);
 
 
     // Get the employee record with the ID: 16c6553a-373c-4b29-b1c8-c282f444248c.
     Employee|error employee = sClient->/employee/16c6553a-373c-4b29-b1c8-c282f444248c;
 
+        // Update the employee record with the ID: 16c6553a-373c-4b29-b1c8-c282f444248c.
+        Employee|error updated = sClient->/employee/16 c6553a - 373 c - 4 b29 - b1c8 - c282f444248c.put({salary: 4000.0});
 
-    // Update the employee record with the ID: 16c6553a-373c-4b29-b1c8-c282f444248c.
-    Employee|error updated = sClient->/employee/16c6553a-373c-4b29-b1c8-c282f444248c.put({salary: 4000.0});
+        // Delete the employee record with the ID: 16c6553a-373c-4b29-b1c8-c282f444248c.
+        Employee|error deleted = sClient->/employee/16 c6553a - 373 c - 4 b29 - b1c8 - c282f444248c.delete();
 
-
-    // Delete the employee record with the ID: 16c6553a-373c-4b29-b1c8-c282f444248c.
-    Employee|error deleted = sClient->/employee/16c6553a-373c-4b29-b1c8-c282f444248c.delete();
-
-
-    // Get all the employee records.
-    stream<Employee, error?> employee = sClient->/employee;
+        // Get all the employee records.
+        stream<Employee, error?> employee = sClient->/employee;
     }
     ```
 
@@ -88,7 +85,6 @@ In addition to the `Bal persist` feature, Swan Lake Update 6 brings a range of n
     The example code below demonstrates how a simple EDI schema for sales order data can be converted to Ballerina records.
 
     ```ballerina
-
     import ballerina/io;
     import edi_to_record.sorder;
 
