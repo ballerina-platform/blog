@@ -52,7 +52,7 @@ One of the major highlights of Ballerina Swan Lake Update 6 is the introduction 
 
     public function main() returns error? {
         store:EmployeeInsert employee1 = {
-            id: uuid:16c6553a-373c-4b29-b1c8-c282f444248c,
+            id: "EMP001",
             firstName: "John",
             lastName: "Doe",
             gender: "Male",
