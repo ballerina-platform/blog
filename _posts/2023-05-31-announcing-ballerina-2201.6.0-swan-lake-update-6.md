@@ -12,9 +12,9 @@ permalink: /posts/2023-05-31-announcing-ballerina-2201.6.0-swan-lake-update-6/
 
 We are excited to announce the [Ballerina 2201.6.0 (Swan Lake Update 6)](https://ballerina.io/downloads/) release. This latest update brings a host of features and improvements to the Ballerina programming language. 
 
-**`Bal persist` feature**
+**The `bal persist` feature**
 
-One of the major highlights of Ballerina Swan Lake Update 6 is the introduction of the `Bal persist` feature. With this feature, you can now store and retrieve data from various data stores, including in-memory tables, MySQL databases, and Google Sheets. The `Bal persist` feature comprises three primary components:
+One of the major highlights of Ballerina Swan Lake Update 6 is the introduction of the `bal persist` feature. With this feature, you can now store and retrieve data from various data stores, including in-memory tables, MySQL databases, and Google Sheets. The `bal persist` feature comprises three primary components:
 
 - **Persist model:** This allows you to define your data model by providing a structured representation of your data.
 
@@ -78,7 +78,7 @@ One of the major highlights of Ballerina Swan Lake Update 6 is the introduction 
     }
     ```
 
-In addition to the `Bal persist` feature, Swan Lake Update 6 brings a range of notable additions and improvements as described below.
+In addition to the `bal persist` feature, Swan Lake Update 6 brings a range of notable additions and improvements as described below.
 
 - **Electronic Data Interchange (EDI) support:** Swan Lake Update 6 introduces EDI message processing support in Ballerina. This capability allows the conversion of EDI messages to Ballerina records and vice versa, leveraging a specified EDI schema. 
     
