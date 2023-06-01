@@ -62,7 +62,6 @@ One of the major highlights of Ballerina Swan Lake Update 6 is the introduction 
 
     // Create a new employee record.
     string[] employeeIds = check sClient->/employees.post([employee1]);
-    io:println(string `Inserted employee ids: ${employeeIds.toString()}`);
 
 
     // Get the employee record with the ID: 16c6553a-373c-4b29-b1c8-c282f444248c.
