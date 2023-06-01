@@ -18,7 +18,7 @@ One of the major highlights of Ballerina Swan Lake Update 6 is the introduction 
 
 - **Persist model:** This allows you to define your data model by providing a structured representation of your data.
 
-    For example, consider the example model below.
+    For example, consider the sample model with a single entity below.
 
     ```ballerina
     import ballerina/persist as _;
