@@ -63,7 +63,7 @@ One of the major highlights of Ballerina Swan Lake Update 6 is the introduction 
 
 
         // Get the employee record with the ID: EMP001.
-        Employee|error employee = sClient->/employee/EMP001;
+        store:Employee|error employee = sClient->/employee/EMP001;
 
         // Update the employee record with the ID: EMP001.
         store:Employee employee = check sClient->/employees/[empId].put(
