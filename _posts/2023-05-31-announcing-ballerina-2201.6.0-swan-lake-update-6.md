@@ -38,7 +38,7 @@ One of the major highlights of Ballerina Swan Lake Update 6 is the introduction 
 
 - **Persist client API:** This provides an interface to access and manipulate the data stored in your chosen data store. Whether you need to fetch data, update records, or perform other data-related operations, the persist client API simplifies the process.
 
-    The example code below demonstrates how CRUD operations can be performed on the persist model via the client API.       
+    The example code below demonstrates how CRUD operations can be performed on the above model via the client API.       
 
     ```ballerina
     import ballerina/io;
