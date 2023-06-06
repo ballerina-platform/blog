@@ -12,69 +12,85 @@ permalink: /posts/2023-05-31-announcing-ballerina-2201.6.0-swan-lake-update-6/
 
 We are excited to announce the [Ballerina 2201.6.0 (Swan Lake Update 6)](https://ballerina.io/downloads/) release. This latest update brings a host of features and improvements to the Ballerina programming language. 
 
-**The `bal persist` feature**
+**`bal persist`**
 
-One of the major highlights of Ballerina Swan Lake Update 6 is the introduction of the `bal persist` feature. With this feature, you can now store and retrieve data from various data stores, including in-memory tables, MySQL databases, and Google Sheets. The `bal persist` feature comprises three primary components:
+One of the significant highlights of Ballerina Swan Lake Update 6 is the introduction of the `bal persist` feature. It offers a set of abstractions to make you productive when working with databases. Use `bal persist` to define your data model using the familiar Ballerina syntax and generate a type-safe client API just for your data model and the data store of your choice. `bal persist` supports three data stores with this release: in-memory, MySQL, and Google Sheets (experimental).  
 
-- **Persist model:** This allows you to define your data model by providing a structured representation of your data.
+`bal persist` comprises three primary components:
 
-    For example, consider the sample model with a single entity below.
+- **Data model:** Describe your entities and the relationships using familiar Ballerina types. This data model works as the single source of truth for the database schema and the application data model. 
+
+    Here is a sample data model with two entites .
 
     ```ballerina
     import ballerina/persist as _;
-    import ballerina/time;
+
+    type Department record {|
+        readonly string deptNo;
+        string deptName;
+        Employee[] employees;
+    |};
 
     type Employee record {|
-        readonly string id;
+        readonly string empNo;
         string firstName;
         string lastName;
-        time:Date birthDate;
-        string gender;
-        time:Date hireDate;
+        Department department;
     |};
     ``` 
 
-- **Persist CLI:** This generates a client API for your defined data model. 
+- **CLI tool:** Primary way to interact with `bal perist`. Use this tool to initialize your Ballerina package for persistence, generate custom client API for your data model, generate migrations, etc.  
 
-- **Persist client API:** This provides an interface to access and manipulate the data stored in your chosen data store. Whether you need to fetch data, update records, or perform other data-related operations, the persist client API simplifies the process.
+- **Type-safe client API:** Provides a type-safe interface to work with the data store.
 
-    The example code below demonstrates how CRUD operations can be performed on the above model via the client API.       
+The example code below demonstrates how CRUD operations can be performed on the above model via the client API.       
 
     ```ballerina
+    import rainier.db;
     import ballerina/io;
     import ballerina/persist;
-    import rainier.store;
-
-    store:Client sClient = check new ();
 
     public function main() returns error? {
-        store:EmployeeInsert employee1 = {
-            id: "EMP001",
+        // Create a new persist client to the database
+        db:Client rainierDb = check new ();
+
+        // Insert two new departments 
+        db:DepartmentInsert newDept1 = {
+            deptNo: "DEP00123",
+            deptName: "Engineering"
+        };
+        db:DepartmentInsert newDept2 = {
+            deptNo: "DEP00124",
+            deptName: "Sales"
+        };
+        _ = check rainierDb->/departments.post([newDept1, newDept2]);
+
+        // Insert a new employee
+        db:EmployeeInsert newEmp = {
+            empNo: "EMP00123",
             firstName: "John",
             lastName: "Doe",
-            gender: "Male",
-            birthDate: {year: 1987, month: 7, day: 23},
-            hireDate: {year: 2020, month: 10, day: 10}
+            departmentDeptNo: newDept1.deptNo
         };
+        _ = check rainierDb->/employees.post([newEmp]);
 
-        // Create a new employee record.
-        string[] employeeIds = check sClient->/employees.post([employee1]);
-        io:println(string `Inserted employee ids: ${employeeIds.toString()}`);
+        // Retrieve the employee with the empNo EMP00123
+        db:Employee employee = check rainierDb->/employees/EMP00123;
+        io:println(employee);
 
+        // Retrieve all the employees
+        stream<db:Employee, persist:Error?> empStream = rainierDb->/employees;
+        db:Employee[] employees = check from var e in empStream
+            select e;
+        io:println(employees);
 
-        // Get the employee record with the ID: EMP001.
-        store:Employee|error employee = sClient->/employee/EMP001;
+        // Update the employee's department
+        db:Employee updatedEmp = check rainierDb->/employees/EMP00123.put({departmentDeptNo: newDept2.deptNo});
+        io:println(string `Updated employee: ${updatedEmp.toString()}`);
 
-        // Update the employee record with the ID: EMP001.
-        store:Employee employee = check sClient->/employees/[empId].put(
-            {hireDate: {year: 2014, month: 5, day: 1}
-        });
-
-        // Delete the employee record with the ID: EMP001.
-        store:Employee|error deleted = sClient->/employee/EMP001.delete();
-
-        // Get all the employee records.
-        stream<store:Employee, error?> employee = sClient->/employee;
+        // Delete the employee with the empNo EMP00123
+        db:Employee deletedEmp = check rainierDb->/employees/EMP00123.delete();
+        io:println(string `Deleted employee: ${deletedEmp.toString()}`);
     }
     ```
 
