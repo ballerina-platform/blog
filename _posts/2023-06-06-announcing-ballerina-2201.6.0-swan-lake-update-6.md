@@ -2,10 +2,10 @@
 layout: blog-post
 title: Announcing Ballerina 2201.6.0 (Swan Lake Update 6)
 author: Ballerina Team
-published-date: 31 May 2023
+published-date: 6 June 2023
 status: Published
 socialmediaimage: Ballerina-Swan-Lake-GA-Release-banner-02-with-button.png
-permalink: /posts/2023-05-31-announcing-ballerina-2201.6.0-swan-lake-update-6/
+permalink: /posts/2023-06-06-announcing-ballerina-2201.6.0-swan-lake-update-6/
 ---
 
 <style>.cBlogContent p{white-space: break-spaces !important;}</style>
@@ -20,7 +20,7 @@ One of the significant highlights of Ballerina Swan Lake Update 6 is the introdu
 
 - **Data model:** Describe your entities and the relationships using familiar Ballerina types. This data model works as the single source of truth for the database schema and the application data model. 
 
-    Here is a sample data model with two entites .
+    Below is a sample data model with two entities.
 
     ```ballerina
     import ballerina/persist as _;
@@ -51,10 +51,10 @@ The example code below demonstrates how CRUD operations can be performed on the 
     import ballerina/persist;
 
     public function main() returns error? {
-        // Create a new persist client to the database
+        // Create a new persist client for the database.
         db:Client rainierDb = check new ();
 
-        // Insert two new departments 
+        // Insert two new departments. 
         db:DepartmentInsert newDept1 = {
             deptNo: "DEP00123",
             deptName: "Engineering"
@@ -65,7 +65,7 @@ The example code below demonstrates how CRUD operations can be performed on the 
         };
         _ = check rainierDb->/departments.post([newDept1, newDept2]);
 
-        // Insert a new employee
+        // Insert a new employee.
         db:EmployeeInsert newEmp = {
             empNo: "EMP00123",
             firstName: "John",
@@ -74,21 +74,21 @@ The example code below demonstrates how CRUD operations can be performed on the 
         };
         _ = check rainierDb->/employees.post([newEmp]);
 
-        // Retrieve the employee with the empNo EMP00123
+        // Retrieve the employee with the empNo EMP00123.
         db:Employee employee = check rainierDb->/employees/EMP00123;
         io:println(employee);
 
-        // Retrieve all the employees
+        // Retrieve all the employees.
         stream<db:Employee, persist:Error?> empStream = rainierDb->/employees;
         db:Employee[] employees = check from var e in empStream
             select e;
         io:println(employees);
 
-        // Update the employee's department
+        // Update the employee's department.
         db:Employee updatedEmp = check rainierDb->/employees/EMP00123.put({departmentDeptNo: newDept2.deptNo});
         io:println(string `Updated employee: ${updatedEmp.toString()}`);
 
-        // Delete the employee with the empNo EMP00123
+        // Delete the employee with the empNo EMP00123.
         db:Employee deletedEmp = check rainierDb->/employees/EMP00123.delete();
         io:println(string `Deleted employee: ${deletedEmp.toString()}`);
     }
