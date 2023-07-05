@@ -14,7 +14,7 @@ We are excited to announce the [Ballerina 2201.7.0 (Swan Lake Update 7)](https:/
 
 The two main highlights of this release are the support for generating GraalVM native executables and performing aggregation-related operations, which are described below.
 
-**Generation of GraalVM native executables**
+## Generation of GraalVM native executables
 
 The Swan Lake Update 7 release comes with official support for generating GraalVM native executables for Ballerina. This new feature allows you to compile Ballerina programs into standalone native executables.
 
@@ -29,13 +29,45 @@ The `--graalvm` flag triggers the GraalVM native image builder, which compiles t
 
 For more information on the necessary steps and additional considerations to ensure a successful compilation process of building a native executable with Ballerina and GraalVM, see [Build a GraalVM executable](https://ballerina.io/learn/graalvm-executable-overview/). 
 
-**Aggregation**
+## Aggregation and grouping
 
-The language now supports the `group by` and `collect` clauses to perform aggregation-related operations as shown in the example below. 
+The language now supports the `group by` and `collect` clauses to perform aggregation and grouping related operations as shown in the example below. 
 
-The `group by` clause groups a collection based on a `grouping-key`, which will be unique for each group. The `collect` clause categorizes a collection into one group based on the defined criteria. 
+### Aggregation
+
+The `collect` clause categorizes a collection into one group as shown in the example below.
 
 ```ballerina
+
+import ballerina/io;
+
+public function main() returns error? {
+    var orders = [
+        {orderId: 1, itemName: "A", price: 23.4, quantity: 2},
+        {orderId: 1, itemName: "A", price: 20.4, quantity: 1},
+        {orderId: 2, itemName: "B", price: 21.5, quantity: 3},
+        {orderId: 1, itemName: "B", price: 21.5, quantity: 3}
+    ];
+
+    var income = from var {price, quantity} in orders
+        let var totPrice = price*quantity
+        // The `collect` clause creates a single group and all variables become
+        // non-grouping keys.
+        collect sum(totPrice);
+
+    // Calculate the total income from all the orders.
+    io:println(income);
+}
+```
+
+For more information on the usage of aggregation, see [Aggregation](https://ballerina.io/learn/work-with-data-using-queries-in-ballerina/#aggregation).
+
+### Grouping
+
+The `group by` clause groups a collection based on a `grouping-key`, which will be unique for each group as shown in the example below.
+
+```ballerina
+
 import ballerina/io;
 
 public function main() returns error? {
@@ -47,42 +79,26 @@ public function main() returns error? {
     ];
 
     var items = from var {orderId, itemName} in orders
-        
         // The `group by` clause creates the groups for each `orderId`.
         // The `itemName` is a non-grouping key and it becomes a sequence variable.
-        group
-         by orderId
+        group by orderId
         select [itemName];
 
     // List of items per `orderId`.
     io:println(items);
 
     var quantities = from var {itemName, quantity} in orders
-        
         // The `group by` clause creates the groups for each `itemName`.
         // The `quantity` is a non-grouping key and it becomes a sequence variable.
-        group
-         by itemName
+        group by itemName
         select {itemName, quantity: sum(quantity)};
 
     // List of quantity per item.
-    io:println(quantities);
-
-    var income = from var {price, quantity} in orders
-        let var totPrice = price * quantity
-
-        // The `collect` clause creates a single group and all variables become
-        // non-grouping keys.
-        collect sum(totPrice) ;
-        
-        // Calculate the total income from all the orders.
-        io:println(
-        income)
-         ;
+    io:println(quantities); 
 }
 ```
 
-For more information on the usage of aggregation-related operations, see [Aggregation](https://ballerina.io/learn/work-with-data-using-queries-in-ballerina/#aggregation) and [Grouping](https://ballerina.io/learn/work-with-data-using-queries-in-ballerina/#grouping).
+For more information on the usage of grouping, see [Grouping](https://ballerina.io/learn/work-with-data-using-queries-in-ballerina/#grouping).
 
 Other than these new features, from this release onwards, you can [verify Ballerina artifacts using the Cosign CLI and Rekor APIs](https://ballerina.io/downloads/verify-ballerina-artifacts). Furthermore, this release brings a range of notable additions and improvements to the language, runtime, standard library, and developer tools.
 
