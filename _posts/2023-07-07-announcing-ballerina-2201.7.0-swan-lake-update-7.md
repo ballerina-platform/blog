@@ -38,7 +38,6 @@ The language now supports the `group by` and `collect` clauses to perform aggreg
 The `collect` clause categorizes a collection into one group as shown in the example below.
 
 ```ballerina
-
 import ballerina/io;
 
 public function main() returns error? {
@@ -50,13 +49,13 @@ public function main() returns error? {
     ];
 
     var income = from var {price, quantity} in orders
-        let var totPrice = price*quantity
+        let var totPrice = price * quantity
         // The `collect` clause creates a single group and all variables become
         // non-grouping keys.
         collect sum(totPrice);
 
     // Calculate the total income from all the orders.
-    io:println(income);
+    io:println(income); // 196.2
 }
 ```
 
@@ -67,7 +66,6 @@ For more information on the usage of aggregation, see [Aggregation](https://ball
 The `group by` clause groups a collection based on a `grouping-key`, which will be unique for each group as shown in the example below.
 
 ```ballerina
-
 import ballerina/io;
 
 public function main() returns error? {
@@ -85,7 +83,7 @@ public function main() returns error? {
         select [itemName];
 
     // List of items per `orderId`.
-    io:println(items);
+    io:println(items); // [["A","A","B"],["B"]]
 
     var quantities = from var {itemName, quantity} in orders
         // The `group by` clause creates the groups for each `itemName`.
@@ -94,7 +92,7 @@ public function main() returns error? {
         select {itemName, quantity: sum(quantity)};
 
     // List of quantity per item.
-    io:println(quantities); 
+    io:println(quantities); // [{"itemName":"A","quantity":3},{"itemName":"B","quantity":6}]
 }
 ```
 
