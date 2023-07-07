@@ -31,7 +31,7 @@ For more information on the necessary steps and additional considerations to ens
 
 ## Aggregation and grouping
 
-The language now supports the `group by` and `collect` clauses to perform aggregation and grouping related operations as shown in the example below. 
+The language now supports the `group by` and `collect` clauses to perform aggregation and grouping-related operations as shown in the example below. 
 
 ### Aggregation
 
@@ -42,10 +42,10 @@ import ballerina/io;
 
 public function main() returns error? {
     var orders = [
-        {orderId: 1, itemName: "A", price: 23.4, quantity: 2},
-        {orderId: 1, itemName: "A", price: 20.4, quantity: 1},
-        {orderId: 2, itemName: "B", price: 21.5, quantity: 3},
-        {orderId: 1, itemName: "B", price: 21.5, quantity: 3}
+        {orderId: 1, itemName: "Rich Dad Poor Dad", price: 23.4, quantity: 2},
+        {orderId: 1, itemName: "Rich Dad Poor Dad", price: 20.4, quantity: 1},
+        {orderId: 2, itemName: "Becoming", price: 21.5, quantity: 3},
+        {orderId: 1, itemName: "Becoming", price: 21.5, quantity: 3}
     ];
 
     var income = from var {price, quantity} in orders
@@ -70,10 +70,10 @@ import ballerina/io;
 
 public function main() returns error? {
     var orders = [
-        {orderId: 1, itemName: "A", price: 23.4, quantity: 2},
-        {orderId: 1, itemName: "A", price: 20.4, quantity: 1},
-        {orderId: 2, itemName: "B", price: 21.5, quantity: 3},
-        {orderId: 1, itemName: "B", price: 21.5, quantity: 3}
+        {orderId: 1, itemName: "Rich Dad Poor Dad", price: 23.4, quantity: 2},
+        {orderId: 1, itemName: "Rich Dad Poor Dad", price: 20.4, quantity: 1},
+        {orderId: 2, itemName: "Becoming", price: 21.5, quantity: 3},
+        {orderId: 1, itemName: "Becoming", price: 21.5, quantity: 3}
     ];
 
     var items = from var {orderId, itemName} in orders
@@ -83,7 +83,7 @@ public function main() returns error? {
         select [itemName];
 
     // List of items per `orderId`.
-    io:println(items); // [["A","A","B"],["B"]]
+    io:println(items); // [["Rich Dad Poor Dad","Rich Dad Poor Dad","Becoming"],["Becoming"]]
 
     var quantities = from var {itemName, quantity} in orders
         // The `group by` clause creates the groups for each `itemName`.
@@ -92,7 +92,7 @@ public function main() returns error? {
         select {itemName, quantity: sum(quantity)};
 
     // List of quantity per item.
-    io:println(quantities); // [{"itemName":"A","quantity":3},{"itemName":"B","quantity":6}]
+    io:println(quantities); // [{"itemName":"Rich Dad Poor Dad","quantity":3},{"itemName":"Becoming","quantity":6}]
 }
 ```
 
