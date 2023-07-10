@@ -12,7 +12,7 @@ permalink: /posts/2023-07-07-announcing-ballerina-2201.7.0-swan-lake-update-7/
 
 We are excited to announce the [Ballerina 2201.7.0 (Swan Lake Update 7)](https://ballerina.io/downloads/) release, which adds many new features and improvements to the Ballerina programming language. 
 
-The two main highlights of this release are the support for generating GraalVM native executables and performing aggregation-related operations, which are described below.
+The two main highlights of this release are the support for generating GraalVM native executables and adding aggregation and grouping capabilities to Ballerina query expressions, which are described below.
 
 ## Generation of GraalVM native executables
 
