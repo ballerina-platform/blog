@@ -40,15 +40,22 @@ The `collect` clause categorizes a collection into one group as shown in the exa
 ```ballerina
 import ballerina/io;
 
+type Order record {|
+    int orderId;
+    string itemName;
+    float price;
+    int quantity;
+|};
+
 public function main() returns error? {
-    var orders = [
+    Order[] orders = [
         {orderId: 1, itemName: "Rich Dad Poor Dad", price: 23.4, quantity: 2},
         {orderId: 1, itemName: "Rich Dad Poor Dad", price: 20.4, quantity: 1},
         {orderId: 2, itemName: "Becoming", price: 21.5, quantity: 3},
         {orderId: 1, itemName: "Becoming", price: 21.5, quantity: 3}
     ];
 
-    var income = from var {price, quantity} in orders
+    float income = from var {price, quantity} in orders
         let var totPrice = price * quantity
         // The `collect` clause creates a single group and all variables become
         // non-grouping keys.
@@ -68,15 +75,22 @@ The `group by` clause groups a collection based on a `grouping-key`, which will 
 ```ballerina
 import ballerina/io;
 
+type Order record {|
+    int orderId;
+    string itemName;
+    float price;
+    int quantity;
+|};
+
 public function main() returns error? {
-    var orders = [
+    Order[] orders = [
         {orderId: 1, itemName: "Rich Dad Poor Dad", price: 23.4, quantity: 2},
         {orderId: 1, itemName: "Rich Dad Poor Dad", price: 20.4, quantity: 1},
         {orderId: 2, itemName: "Becoming", price: 21.5, quantity: 3},
         {orderId: 1, itemName: "Becoming", price: 21.5, quantity: 3}
     ];
 
-    var items = from var {orderId, itemName} in orders
+    string[] items = from var {orderId, itemName} in orders
         // The `group by` clause creates the groups for each `orderId`.
         // The `itemName` is a non-grouping key and it becomes a sequence variable.
         group by orderId
@@ -85,7 +99,7 @@ public function main() returns error? {
     // List of items per `orderId`.
     io:println(items); // [["Rich Dad Poor Dad","Rich Dad Poor Dad","Becoming"],["Becoming"]]
 
-    var quantities = from var {itemName, quantity} in orders
+    record {| string itemName; int quantity;|}[] quantities = from var {itemName, quantity} in orders
         // The `group by` clause creates the groups for each `itemName`.
         // The `quantity` is a non-grouping key and it becomes a sequence variable.
         group by itemName
