@@ -90,7 +90,7 @@ public function main() returns error? {
         {orderId: 1, itemName: "Becoming", price: 21.5, quantity: 3}
     ];
 
-    string[] items = from var {orderId, itemName} in orders
+    string[][] items = from var {orderId, itemName} in orders
         // The `group by` clause creates the groups for each `orderId`.
         // The `itemName` is a non-grouping key and it becomes a sequence variable.
         group by orderId
