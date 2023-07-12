@@ -45,7 +45,7 @@ One of the significant highlights of Ballerina Swan Lake Update 6 is the introdu
 
 The example code below demonstrates how CRUD operations can be performed on the above model via the client API.       
 
-    ```ballerina
+```ballerina
     import rainier.db;
     import ballerina/io;
     import ballerina/persist;
@@ -92,7 +92,7 @@ The example code below demonstrates how CRUD operations can be performed on the 
         db:Employee deletedEmp = check rainierDb->/employees/EMP00123.delete();
         io:println(string `Deleted employee: ${deletedEmp.toString()}`);
     }
-    ```
+```
 
 In addition to the `bal persist` feature, Swan Lake Update 6 brings a range of notable additions and improvements as described below.
 
