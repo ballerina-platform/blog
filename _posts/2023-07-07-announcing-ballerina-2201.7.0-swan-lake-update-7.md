@@ -14,7 +14,7 @@ We are excited to announce the [Ballerina 2201.7.0 (Swan Lake Update 7)](https:/
 
 The two main highlights of this release are providing support for generating GraalVM native executables and adding aggregation and grouping capabilities to Ballerina query expressions and query actions, which are described below.
 
-## Generation of GraalVM native executables
+## Generating GraalVM native executables
 
 The Swan Lake Update 7 release comes with official support for generating GraalVM native executables for Ballerina. This feature allows you to compile Ballerina programs into standalone native executables.
 
@@ -29,11 +29,16 @@ The `--graalvm` flag triggers the GraalVM native image builder, which compiles t
 
 For more information on the necessary steps and additional considerations to ensure a successful compilation process of building a native executable with Ballerina and GraalVM, see [Build a GraalVM executable](https://ballerina.io/learn/graalvm-executable-overview/). 
 
-## Aggregation and grouping
+## Aggregating and grouping
 
-The language now supports the `group by` and `collect` clauses to perform aggregation and grouping-related operations as shown in the example below. 
+The language now supports the features below for query expressions and query actions.
 
-### Aggregation
+- the `collect` clause to perform aggregating-related operations
+- the `group by` clause to perform grouping-related operations
+
+For an example, see [Aggregation](https://ballerina.io/learn/by-example/aggregation/).
+
+### Aggregating
 
 The `collect` clause categorizes a collection into one group as shown in the example below.
 
@@ -65,7 +70,7 @@ public function main() returns error? {
 }
 ```
 
-For more information on the usage of aggregation, see [Aggregation](https://ballerina.io/learn/work-with-data-using-queries-in-ballerina/#aggregation).
+For an example on the usage of aggregating, see [Calculate the total number of deaths](https://ballerina.io/learn/work-with-data-using-queries-in-ballerina/#calculate-the-total-number-of-deaths).
 
 ### Grouping
 
@@ -107,7 +112,7 @@ public function main() returns error? {
 }
 ```
 
-For more information on the usage of grouping, see [Grouping](https://ballerina.io/learn/work-with-data-using-queries-in-ballerina/#grouping).
+For an example on the usage of grouping, see [Group the deaths by the continent](https://ballerina.io/learn/work-with-data-using-queries-in-ballerina/#group-the-deaths-by-the-continent).
 
 Other than these new features, from this release onwards, you can [verify Ballerina artifacts using the Cosign CLI and Rekor APIs](https://ballerina.io/downloads/verify-ballerina-artifacts). Furthermore, this release brings a range of notable additions and improvements to the language, runtime, standard library, and developer tools.
 
