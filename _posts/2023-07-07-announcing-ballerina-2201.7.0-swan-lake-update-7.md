@@ -16,7 +16,7 @@ The two main highlights of this release are providing support for generating Gra
 
 ## Generation of GraalVM native executables
 
-The Swan Lake Update 7 release comes with official support for generating GraalVM native executables for Ballerina. This new feature allows you to compile Ballerina programs into standalone native executables.
+The Swan Lake Update 7 release comes with official support for generating GraalVM native executables for Ballerina. This feature allows you to compile Ballerina programs into standalone native executables.
 
 By leveraging GraalVM native images, Ballerina programs can achieve performance improvements and reduced startup times compared to traditional Java Virtual Machine(JVM) execution. This is particularly beneficial for applications with strict latency requirements or resource-constrained environments.
 You can generate a GraalVM native executable for your Ballerina project by executing the command below.
