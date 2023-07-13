@@ -12,11 +12,11 @@ permalink: /posts/2023-07-07-announcing-ballerina-2201.7.0-swan-lake-update-7/
 
 We are excited to announce the [Ballerina 2201.7.0 (Swan Lake Update 7)](https://ballerina.io/downloads/) release, which adds many new features and improvements to the Ballerina programming language. 
 
-The two main highlights of this release are the support for generating GraalVM native executables and performing aggregation-related operations, which are described below.
+The two main highlights of this release are providing support for generating GraalVM native executables and adding aggregation and grouping capabilities to Ballerina query expressions and query actions, which are described below.
 
 ## Generation of GraalVM native executables
 
-The Swan Lake Update 7 release comes with official support for generating GraalVM native executables for Ballerina. This new feature allows you to compile Ballerina programs into standalone native executables.
+The Swan Lake Update 7 release comes with official support for generating GraalVM native executables for Ballerina. This feature allows you to compile Ballerina programs into standalone native executables.
 
 By leveraging GraalVM native images, Ballerina programs can achieve performance improvements and reduced startup times compared to traditional Java Virtual Machine(JVM) execution. This is particularly beneficial for applications with strict latency requirements or resource-constrained environments.
 You can generate a GraalVM native executable for your Ballerina project by executing the command below.
@@ -31,7 +31,7 @@ For more information on the necessary steps and additional considerations to ens
 
 ## Aggregation and grouping
 
-The language now supports the `group by` and `collect` clauses to perform aggregation and grouping related operations as shown in the example below. 
+The language now supports the `group by` and `collect` clauses to perform aggregation and grouping-related operations as shown in the example below. 
 
 ### Aggregation
 
@@ -40,15 +40,22 @@ The `collect` clause categorizes a collection into one group as shown in the exa
 ```ballerina
 import ballerina/io;
 
+type Order record {|
+    int orderId;
+    string itemName;
+    float price;
+    int quantity;
+|};
+
 public function main() returns error? {
-    var orders = [
-        {orderId: 1, itemName: "A", price: 23.4, quantity: 2},
-        {orderId: 1, itemName: "A", price: 20.4, quantity: 1},
-        {orderId: 2, itemName: "B", price: 21.5, quantity: 3},
-        {orderId: 1, itemName: "B", price: 21.5, quantity: 3}
+    Order[] orders = [
+        {orderId: 1, itemName: "Rich Dad Poor Dad", price: 23.4, quantity: 2},
+        {orderId: 1, itemName: "Rich Dad Poor Dad", price: 20.4, quantity: 1},
+        {orderId: 2, itemName: "Becoming", price: 21.5, quantity: 3},
+        {orderId: 1, itemName: "Becoming", price: 21.5, quantity: 3}
     ];
 
-    var income = from var {price, quantity} in orders
+    float income = from var {price, quantity} in orders
         let var totPrice = price * quantity
         collect sum(totPrice); // The `collect` clause creates a single group and all variables become
                                     // non-grouping keys.
@@ -67,31 +74,38 @@ The `group by` clause groups a collection based on a `grouping-key`, which will 
 ```ballerina
 import ballerina/io;
 
+type Order record {|
+    int orderId;
+    string itemName;
+    float price;
+    int quantity;
+|};
+
 public function main() returns error? {
-    var orders = [
-        {orderId: 1, itemName: "A", price: 23.4, quantity: 2},
-        {orderId: 1, itemName: "A", price: 20.4, quantity: 1},
-        {orderId: 2, itemName: "B", price: 21.5, quantity: 3},
-        {orderId: 1, itemName: "B", price: 21.5, quantity: 3}
+    Order[] orders = [
+        {orderId: 1, itemName: "Rich Dad Poor Dad", price: 23.4, quantity: 2},
+        {orderId: 1, itemName: "Rich Dad Poor Dad", price: 20.4, quantity: 1},
+        {orderId: 2, itemName: "Becoming", price: 21.5, quantity: 3},
+        {orderId: 1, itemName: "Becoming", price: 21.5, quantity: 3}
     ];
 
-    var items = from var {orderId, itemName} in orders
+    string[][] items = from var {orderId, itemName} in orders
         // The `group by` clause creates the groups for each `orderId`.
         // The `itemName` is a non-grouping key and it becomes a sequence variable.
         group by orderId
         select [itemName];
 
     // List of items per `orderId`.
-    io:println(items); // [["A","A","B"],["B"]]
+    io:println(items); // [["Rich Dad Poor Dad","Rich Dad Poor Dad","Becoming"],["Becoming"]]
 
-    var quantities = from var {itemName, quantity} in orders
+    record {| string itemName; int quantity;|}[] quantities = from var {itemName, quantity} in orders
         // The `group by` clause creates the groups for each `itemName`.
         // The `quantity` is a non-grouping key and it becomes a sequence variable.
         group by itemName
         select {itemName, quantity: sum(quantity)};
 
     // List of quantity per item.
-    io:println(quantities); // [{"itemName":"A","quantity":3},{"itemName":"B","quantity":6}]
+    io:println(quantities); // [{"itemName":"Rich Dad Poor Dad","quantity":3},{"itemName":"Becoming","quantity":6}]
 }
 ```
 
