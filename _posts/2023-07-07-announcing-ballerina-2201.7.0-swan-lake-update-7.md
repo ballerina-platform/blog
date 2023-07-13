@@ -43,7 +43,7 @@ import ballerina/io;
 type Order record {|
     int orderId;
     string itemName;
-    float price;
+    decimal price;
     int quantity;
 |};
 
@@ -55,13 +55,13 @@ public function main() returns error? {
         {orderId: 1, itemName: "Becoming", price: 21.5, quantity: 3}
     ];
 
-    float income = from var {price, quantity} in orders
-        let var totPrice = price * quantity
+    decimal income = from var {price, quantity} in orders
+        let decimal totPrice = price * quantity
         collect sum(totPrice); // The `collect` clause creates a single group and all variables become
                                     // non-grouping keys.
 
     // Calculate the total income from all the orders.
-    io:println(income); // 196.2
+    io:println(income); // 196.20
 }
 ```
 
@@ -77,7 +77,7 @@ import ballerina/io;
 type Order record {|
     int orderId;
     string itemName;
-    float price;
+    decimal price;
     int quantity;
 |};
 
@@ -90,18 +90,16 @@ public function main() returns error? {
     ];
 
     string[][] items = from var {orderId, itemName} in orders
-        // The `group by` clause creates the groups for each `orderId`.
-        // The `itemName` is a non-grouping key and it becomes a sequence variable.
-        group by orderId
+        group by orderId // The `group by` clause creates the groups for each `orderId`.
+                         // The `itemName` is a non-grouping key and it becomes a sequence variable.
         select [itemName];
 
     // List of items per `orderId`.
     io:println(items); // [["Rich Dad Poor Dad","Rich Dad Poor Dad","Becoming"],["Becoming"]]
 
     record {| string itemName; int quantity;|}[] quantities = from var {itemName, quantity} in orders
-        // The `group by` clause creates the groups for each `itemName`.
-        // The `quantity` is a non-grouping key and it becomes a sequence variable.
-        group by itemName
+        group by itemName // The `group by` clause creates the groups for each `itemName`.
+                          // The `quantity` is a non-grouping key and it becomes a sequence variable.
         select {itemName, quantity: sum(quantity)};
 
     // List of quantity per item.
