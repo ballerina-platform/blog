@@ -50,9 +50,8 @@ public function main() returns error? {
 
     var income = from var {price, quantity} in orders
         let var totPrice = price * quantity
-        // The `collect` clause creates a single group and all variables become
-        // non-grouping keys.
-        collect sum(totPrice);
+        collect sum(totPrice); // The `collect` clause creates a single group and all variables become
+                                    // non-grouping keys.
 
     // Calculate the total income from all the orders.
     io:println(income); // 196.2
