@@ -2,10 +2,10 @@
 layout: blog-post
 title: Announcing Ballerina 2201.7.0 (Swan Lake Update 7)
 author: Ballerina Team
-published-date: 7 July 2023
+published-date: 14 July 2023
 status: Published
 socialmediaimage: Ballerina-Swan-Lake-GA-Release-banner-02-with-button.png
-permalink: /posts/2023-07-07-announcing-ballerina-2201.7.0-swan-lake-update-7/
+permalink: /posts/2023-07-14-announcing-ballerina-2201.7.0-swan-lake-update-7/
 ---
 
 <style>.cBlogContent p{white-space: break-spaces !important;}</style>
