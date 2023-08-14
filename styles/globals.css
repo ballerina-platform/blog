@@ -19,6 +19,17 @@ a {
   min-height: 100vh;
 } */
 
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar-brand {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  font-size: 16px !important;
+  line-height: 0px;
+}
+
 .wrap-page-content {
   /* margin-top: 74px; */
   padding-bottom: 30px;
@@ -159,7 +170,7 @@ a {
   }
 }
 
-.contentRow {
+.community-wrap-row, .contentRow {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
@@ -220,7 +231,7 @@ a {
   /* margin-top: 20px; */
   color: #585a5e;
   font-size: 1.5rem;
-  scroll-margin-top: 60px;
+  scroll-margin-top: 65px;
 }
 
 .mdContent h3 {
@@ -228,7 +239,7 @@ a {
   /* margin-top: 20px; */
   color: #585a5e;
   font-size: 1.3rem;
-  scroll-margin-top: 60px;
+  scroll-margin-top: 65px;
 }
 
 .mdContent h4,
@@ -237,7 +248,7 @@ a {
   margin-top: 40px;
   /* margin-top: 20px; */
   color: #585a5e;
-  scroll-margin-top: 60px;
+  scroll-margin-top: 65px;
 }
 
 .mdContent h4 {
@@ -518,7 +529,7 @@ a.cGreenLinkArrow:hover {
 .pageContentRow h2 {
   color: #585a5e;
   font-size: 1.5rem;
-  scroll-margin-top: 60px;
+  scroll-margin-top: 65px;
 }
 
 .community .pageContentRow h2 {
