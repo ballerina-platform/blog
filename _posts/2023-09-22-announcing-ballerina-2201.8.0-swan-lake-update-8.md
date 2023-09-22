@@ -73,7 +73,7 @@ The `bal tool` command allows you to pull, remove, update, search tools, and swi
 For example, execute the command below to pull and install the <a href="https://ballerina.io/learn/health-tool/" target="_blank">Health tool</a>.
 
 ```
-bal tool pull health
+$ bal tool pull health
 ```
 
 For more information, see <a href="https://ballerina.io/learn/cli-commands/#tool-commands" target="_blank">Tool commands</a>.
