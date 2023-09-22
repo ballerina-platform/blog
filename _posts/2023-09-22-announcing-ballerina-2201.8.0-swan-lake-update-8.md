@@ -45,7 +45,7 @@ The steps below show an example of how you can publish a package to Github packa
 2. Execute the command below to publish the package.
 
     ```
-    bal push --repository myGitRepo
+    $ bal push --repository myGitRepo
     ```
 
 3. Specify the dependency in the `Ballerina.toml` file to retrieve the package.
