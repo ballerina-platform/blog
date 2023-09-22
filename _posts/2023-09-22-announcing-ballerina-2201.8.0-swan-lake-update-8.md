@@ -58,7 +58,7 @@ The steps below show an example of how you can publish a package to Github packa
     repository = “myGitRepo”
     ```
 
-For more information on the custom package repositories support, see <a href="https://ballerina.io/learn/manage-dependencies/#use-custom-repositories-for-package-management" target="_blank">Use custom repositories for package management</a>.
+For more information, see <a href="https://ballerina.io/learn/manage-dependencies/#use-custom-repositories-for-package-management" target="_blank">Use custom repositories for package management</a>.
 
 ## The `bal tool` and `bal profile` commands
 
@@ -166,7 +166,7 @@ The Ballerina `graphql` package provides the capability to batch and cache data 
 
 For an example of the usage of the `graphql.dataloader` submodule, see the <a href="https://ballerina.io/downloads/swan-lake-release-notes/swan-lake-2201.8.0#graphql-package" target="_blank">release note</a>.
 
-To learn more about the DataLoader feature, see the <a href="https://ballerina.io/spec/graphql/#106-dataloader" target="_blank">DataLoader specification</a>.
+For more information, see the <a href="https://ballerina.io/spec/graphql/#106-dataloader" target="_blank">DataLoader specification</a>.
 
 Furthermore, this release brings a range of notable additions and improvements to the language, runtime, Ballerina library, and developer tools. For a comprehensive overview of all the new features and improvements brought by Swan Lake Update 8, see the <a href="https://ballerina.io/downloads/swan-lake-release-notes/swan-lake-2201.8.0" target="_blank">release note</a>.
 
