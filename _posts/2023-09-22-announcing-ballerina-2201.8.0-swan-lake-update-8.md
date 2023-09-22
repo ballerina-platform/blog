@@ -28,7 +28,7 @@ For more information, see the <a href="https://www.oracle.com/java/technologies/
 
 ## Custom package repositories support 
 
-With Swan Lake Update 8 release, now, you can seamlessly integrate Maven repositories into the package build. This feature empowers you to publish and retrieve packages from multiple Maven repositories in addition to the Ballerina Central repository.
+With the Swan Lake Update 8 release, now, you can seamlessly integrate Maven repositories into the package build. This feature empowers you to publish and retrieve packages from multiple Maven repositories in addition to the Ballerina Central repository.
 
 The steps below show an example of how you can publish a package to Github packages and retrieve it.
 
