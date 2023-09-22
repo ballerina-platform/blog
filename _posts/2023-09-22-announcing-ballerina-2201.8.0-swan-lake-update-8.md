@@ -22,7 +22,7 @@ You will not have an impact on the Java version upgrade except for the following
 
 - The Ballerina interoperability implementation will have an impact on Java 17 support due to any incompatible changes. As an example, Java 17 will have some restrictions on using Java reflections with internal Java packages.
 
-- Ballerina Update 8 Docker images will run on Java17 JRE.
+- Ballerina Update 8 Docker images will run on Java 17 JRE.
 
 For more information, see the <a href="https://www.oracle.com/java/technologies/javase/17-relnote-issues.html" target="_blank">Java 17 release notes</a>.
 
