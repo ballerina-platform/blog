@@ -107,12 +107,12 @@ export default function Footer() {
           <Col xs={12} sm={10}>
             <ul>
               <li><a className="footerLink" target='_blank' rel="noreferrer" href="https://github.com/ballerina-lang/ballerina/blob/master/LICENSE">CODE LICENSE</a></li>
-              <li><Link className="footerLink" href={`https://ballerina.io/license-of-site`}>SITE LICENSE</Link></li>
-              <li><Link className="footerLink" href={`https://ballerina.io/terms-of-service`}>TERMS OF SERVICE</Link></li>
-              <li><Link className="footerLink" href={`https://ballerina.io/privacy-policy`}>PRIVACY POLICY</Link></li>
-              <li><Link className="footerLink" href={`https://ballerina.io/cookie-policy`}>COOKIE POLICY</Link></li>
-              <li><Link className="footerLink" href={`https://ballerina.io/security-policy`}>SECURITY POLICY</Link></li>
-              <li><Link className="footerLink" href={`https://ballerina.io/trademark-usage-policy/`}>TRADEMARK USAGE POLICY</Link></li>
+              <li><Link className="footerLink" target='_blank' href={`https://ballerina.io/license-of-site`}>SITE LICENSE</Link></li>
+              <li><Link className="footerLink" target='_blank' href={`https://ballerina.io/terms-of-service`}>TERMS OF SERVICE</Link></li>
+              <li><Link className="footerLink" target='_blank' href={`https://ballerina.io/privacy-policy`}>PRIVACY POLICY</Link></li>
+              <li><Link className="footerLink" target='_blank' href={`https://ballerina.io/cookie-policy`}>COOKIE POLICY</Link></li>
+              <li><Link className="footerLink" target='_blank' href={`https://ballerina.io/security-policy`}>SECURITY POLICY</Link></li>
+              <li><Link className="footerLink" target='_blank' href={`https://ballerina.io/trademark-usage-policy/`}>TRADEMARK USAGE POLICY</Link></li>
             </ul>
           </Col>
         </Row>
