@@ -46,11 +46,11 @@ $(document).ready(function () {
     let footer = '<div class="container">\n' +
         '    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-left-col cBallerinaFooterLinks">\n' +
         '        <ul>\n' +
-        '            <li><a class="cBioFooterLink" href="/downloads">Download</a></li>\n' +
-        '            <li><a class="cBioFooterLink" href="https://github.com/ballerina-lang/ballerina/blob/master/LICENSE">Code License</a></li>\n' +
-        '            <li><a class="cBioFooterLink" href="/license-of-site">Site License</a></li>\n' +
-        '            <li><a class="cBioFooterLink" href="/terms-of-service">TERMS OF SERVICE</a></li>\n' +
-        '            <li><a class="cBioFooterLink" href="/privacy-policy">PRIVACY POLICY</a></li>\n' +
+        '            <li><a class="cBioFooterLink" target="_blank" href="https://ballerina.io/downloads">Download</a></li>\n' +
+        '            <li><a class="cBioFooterLink" target="_blank" href="https://github.com/ballerina-lang/ballerina/blob/master/LICENSE">Code License</a></li>\n' +
+        '            <li><a class="cBioFooterLink" target="_blank" href="https://ballerina.io/license-of-site">Site License</a></li>\n' +
+        '            <li><a class="cBioFooterLink" target="_blank" href="https://ballerina.io/terms-of-service">TERMS OF SERVICE</a></li>\n' +
+        '            <li><a class="cBioFooterLink" target="_blank" href="https://ballerina.io/privacy-policy">PRIVACY POLICY</a></li>\n' +
         '            </ul>\n' +
         '        </div>\n' +
         '    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-middle-col cBallerinaFooterSignUp">\n' +
