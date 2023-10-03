@@ -4,7 +4,7 @@ title: Ballerina is moving from Slack to Discord
 author: Ballerina Team
 published-date: 21 September 2022
 status: Published
-socialmediaimage: Ballerina-Swan-Lake-GA-Release-banner-02-with-button.png
+socialmediaimage: ballerina-generic-social-media-image-2023.png
 permalink: /posts/2022-09-21-ballerina-is-moving-from-slack-to-discord/
 ---
 
