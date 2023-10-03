@@ -9,9 +9,9 @@
             <link>https://blog.ballerina.io/</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 02 Oct 2023 06:00:31 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 03 Oct 2023 09:43:53 GMT</lastBuildDate>
         <atom:link href="https://blog.ballerina.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 02 Oct 2023 06:00:31 GMT</pubDate>
+        <pubDate>Tue, 03 Oct 2023 09:43:53 GMT</pubDate>
         <copyright><![CDATA[2018-2023 WSO2 LLC]]></copyright>
         <item>
             <title><![CDATA[Introduction to the Ballerina 0.970 release]]></title>
