@@ -4,7 +4,7 @@ title: Announcing Ballerina 2201.4.0 (Swan Lake Update 4)
 author: Sameera Jayasoma
 published-date: 28 February 2023
 status: Published
-socialmediaimage: Ballerina-Swan-Lake-GA-Release-banner-02-with-button.png
+socialmediaimage: ballerina-generic-social-media-image-2023.png
 permalink: /posts/2023-02-28-announcing-ballerina-2201.4.0-swan-lake-update-4/
 ---
 

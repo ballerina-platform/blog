@@ -4,7 +4,7 @@ title: Announcing Ballerina 2201.3.0 (Swan Lake Update 3)
 author: Ballerina Team
 published-date: 06 December 2022
 status: Published
-socialmediaimage: Ballerina-Swan-Lake-GA-Release-banner-02-with-button.png
+socialmediaimage: ballerina-generic-social-media-image-2023.png
 permalink: /posts/2022-12-05-announcing-ballerina-2201.3.0-swan-lake-update-3/
 ---
 

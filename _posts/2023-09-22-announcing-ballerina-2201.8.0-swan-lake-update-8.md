@@ -4,7 +4,7 @@ title: Announcing Ballerina Swan Lake Update 8 (2201.8.0)
 author: Ballerina Team
 published-date: 22 September 2023
 status: Published
-socialmediaimage: Ballerina-Swan-Lake-GA-Release-banner-02-with-button.png
+socialmediaimage: ballerina-generic-social-media-image-2023.png
 permalink: /posts/2023-09-22-announcing-ballerina-2201.8.0-swan-lake-update-8/
 ---
 
