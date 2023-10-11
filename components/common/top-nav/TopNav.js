@@ -55,9 +55,23 @@ const TopNav = (props) => {
     <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/mosip`} className={styles.dropDownItem} key='11'>MOSIP</Dropdown.Item>
   ];
 
+  const now = new Date();
+  let showBanner = false;
+
+  if (now < Date.parse('2023-10-31T00:00:00.0000-00:00')) {
+    showBanner = true;
+  }
+
 
   return (
     <>
+      {
+        (showBanner) ?
+          <div className={styles.hackathonBanner}>
+            Ballerina Hacktoberfest is happening now. <a href="https://ballerina.io/hacktoberfest/" target="_blank" rel="noreferrer">Join us</a>!
+          </div>
+        : null
+      }
       <>
         <Navbar key={expand} expand={expand} className={(launcher === 'home') ? `${styles[launcher]} navbar-dark` : styles[launcher]} sticky='top'>
           <Container fluid>
