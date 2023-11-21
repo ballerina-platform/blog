@@ -92,13 +92,13 @@ export default function PostPage({ frontmatter, content, codes, slug }) {
                     content="ballerinalang, integration, microservices, programming language, cloud native, ballerina language"
                 />
 
-                <title>{frontmatter.title}</title>
+                <title>{`${frontmatter.title} - The Ballerina programming language`}</title>
 
                 {/* <!--FB--> */}
                 <meta property="og:type" content="article" />
                 <meta
                     property="og:title"
-                    content={`Ballerina - ${frontmatter.title}`}
+                    content={`${frontmatter.title} - The Ballerina programming language`}
                 />
                 <meta
                     property="og:description"
@@ -107,11 +107,11 @@ export default function PostPage({ frontmatter, content, codes, slug }) {
                 <meta property="og:image" content={`https://blog.ballerina.io/blog-images/${frontmatter.socialmediaimage}`} />
 
                 {/* <!--LINKED IN  --> */}
-                <meta property="og:title" content={`Ballerina - ${frontmatter.title}`} />
+                <meta property="og:title" content={`${frontmatter.title} - The Ballerina programming language`} />
                 <meta property="og:image" content={`https://blog.ballerina.io/blog-images/${frontmatter.socialmediaimage}`} />
 
                 {/* <!--TWITTER--> */}
-                <meta name="twitter:title" content={`Ballerina - ${frontmatter.title}`} />
+                <meta name="twitter:title" content={`${frontmatter.title} - The Ballerina programming language`} />
                 <meta
                     property="twitter:description"
                     content={frontmatter.abstract}
