@@ -58,7 +58,7 @@ export default function Blog({ blogs }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="This is the Ballerina Blog, which includes new announcements of it."
+          content="This is the official blog of Ballerina programming language, which includes new announcements of it."
         />
         <meta name="author" content="WSO2 LLC" />
         <meta
@@ -73,7 +73,7 @@ export default function Blog({ blogs }) {
         <meta property="og:title" content="Blog - The Ballerina programming language" />
         <meta
           property="og:description"
-          content="This is the Ballerina Blog, which includes new announcements of it."
+          content="This is the official blog of Ballerina programming language, which includes new announcements of it."
         />
         <meta
           property="og:image"
@@ -90,7 +90,7 @@ export default function Blog({ blogs }) {
         <meta
           property="og:description"
           itemProp="image"
-          content="This is the Ballerina Blog, which includes new announcements of it."
+          content="This is the official blog of Ballerina programming language, which includes new announcements of it."
         />
 
         {/* TWITTER */}
@@ -101,7 +101,7 @@ export default function Blog({ blogs }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:description"
-          content="This is the Ballerina Blog, which includes new announcements of it."
+          content="This is the official blog of Ballerina programming language, which includes new announcements of it."
         />
         <meta
           name="twitter:image"
@@ -109,7 +109,7 @@ export default function Blog({ blogs }) {
         />
         <meta
           property="twitter:text:description"
-          content="This is the Ballerina Blog, which includes new announcements of it."
+          content="This is the official blog of Ballerina programming language, which includes new announcements of it."
         />
         <meta
           property="twitter:image"
