@@ -58,7 +58,7 @@ export default function Blog({ blogs }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Ballerina is a comprehensive language that is easy to grasp for anyone with prior programming experience. Start learning with the material below."
+          content="This is the Ballerina Blog, which includes the announcements on its new releases."
         />
         <meta name="author" content="WSO2 LLC" />
         <meta
@@ -73,7 +73,7 @@ export default function Blog({ blogs }) {
         <meta property="og:title" content="Blog - The Ballerina programming language" />
         <meta
           property="og:description"
-          content="Ballerina is a comprehensive language that is easy to grasp for anyone with prior programming experience. Start learning with the material below."
+          content="This is the Ballerina Blog, which includes the announcements on its new releases."
         />
         <meta
           property="og:image"
@@ -90,7 +90,7 @@ export default function Blog({ blogs }) {
         <meta
           property="og:description"
           itemProp="image"
-          content="Ballerina is a comprehensive language that is easy to grasp for anyone with prior programming experience. Start learning with the material below."
+          content="This is the Ballerina Blog, which includes the announcements on its new releases."
         />
 
         {/* TWITTER */}
@@ -101,7 +101,7 @@ export default function Blog({ blogs }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:description"
-          content="Ballerina is a comprehensive language that is easy to grasp for anyone with prior programming experience. Start learning with the material below."
+          content="This is the Ballerina Blog, which includes the announcements on its new releases."
         />
         <meta
           name="twitter:image"
@@ -109,7 +109,7 @@ export default function Blog({ blogs }) {
         />
         <meta
           property="twitter:text:description"
-          content="Ballerina is a comprehensive language that is easy to grasp for anyone with prior programming experience. Start learning with the material below."
+          content="This is the Ballerina Blog, which includes the announcements on its new releases."
         />
         <meta
           property="twitter:image"
