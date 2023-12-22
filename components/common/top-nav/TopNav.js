@@ -54,7 +54,10 @@ const TopNav = (props) => {
     <Dropdown.Item category='usecases' href={`https://ballerina.io/usecases/bff`} className={styles.dropDownItem} key='11'>BFF</Dropdown.Item>,
     <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/wso2`} className={styles.dropDownItem} key='9'>WSO2</Dropdown.Item>,
     <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/mosip`} className={styles.dropDownItem} key='11'>MOSIP</Dropdown.Item>,
-    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/ballerina-central`} className={styles.dropDownItem} key='12'>Ballerina Central</Dropdown.Item>
+    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/ballerina-central`} className={styles.dropDownItem} key='12'>Ballerina Central</Dropdown.Item>,
+    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/redcross-elixir`} className={styles.dropDownItem} key='15'>Red Cross Elixir</Dropdown.Item>,
+    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/raapid-ai`} className={styles.dropDownItem} key='14'>RAAPID.AI</Dropdown.Item>,
+    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/avinya-foundation`} className={styles.dropDownItem} key='16'>Avinya Academy</Dropdown.Item>
   ];
 
   const now = new Date();
