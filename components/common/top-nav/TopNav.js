@@ -53,6 +53,7 @@ const TopNav = (props) => {
     <Dropdown.Item category='usecases' href={`https://ballerina.io/usecases/microservices`} className={styles.dropDownItem} key='10'>Microservices</Dropdown.Item>,
     <Dropdown.Item category='usecases' href={`https://ballerina.io/usecases/bff`} className={styles.dropDownItem} key='11'>BFF</Dropdown.Item>,
     <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/wso2`} className={styles.dropDownItem} key='9'>WSO2</Dropdown.Item>,
+    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/fat-tuesday`} className={styles.dropDownItem} key='17'>FAT Tuesday</Dropdown.Item>,
     <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/mosip`} className={styles.dropDownItem} key='11'>MOSIP</Dropdown.Item>,
     <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/ballerina-central`} className={styles.dropDownItem} key='12'>Ballerina Central</Dropdown.Item>,
     <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/redcross-elixir`} className={styles.dropDownItem} key='15'>Red Cross Elixir</Dropdown.Item>,
