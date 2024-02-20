@@ -17,7 +17,7 @@
  */
 
 import * as React from 'react';
-import { Accordion, Container, Nav, Navbar, NavDropdown, Dropdown, Offcanvas } from 'react-bootstrap';
+import { Accordion, Container, Nav, Navbar, Dropdown, Offcanvas } from 'react-bootstrap';
 import Image from 'next-image-export-optimizer';
 
 import Search from '../search/Search';
