@@ -17,7 +17,7 @@
  */
 
 import * as React from 'react';
-import { Accordion, Container, Nav, Navbar, NavDropdown, Dropdown, Offcanvas } from 'react-bootstrap';
+import { Accordion, Container, Nav, Navbar, Dropdown, Offcanvas } from 'react-bootstrap';
 import Image from 'next-image-export-optimizer';
 
 import Search from '../search/Search';
@@ -53,11 +53,12 @@ const TopNav = (props) => {
     <Dropdown.Item category='usecases' href={`https://ballerina.io/usecases/microservices`} className={styles.dropDownItem} key='10'>Microservices</Dropdown.Item>,
     <Dropdown.Item category='usecases' href={`https://ballerina.io/usecases/bff`} className={styles.dropDownItem} key='11'>BFF</Dropdown.Item>,
     <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/wso2`} className={styles.dropDownItem} key='9'>WSO2</Dropdown.Item>,
-    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/fat-tuesday`} className={styles.dropDownItem} key='17'>FAT Tuesday</Dropdown.Item>,
-    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/mosip`} className={styles.dropDownItem} key='11'>MOSIP</Dropdown.Item>,
-    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/ballerina-central`} className={styles.dropDownItem} key='12'>Ballerina Central</Dropdown.Item>,
+    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/fat-tuesday`} className={styles.dropDownItem} key='18'>FAT Tuesday</Dropdown.Item>,
+    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/mosip`} className={styles.dropDownItem} key='12'>MOSIP</Dropdown.Item>,
+    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/qhana`} className={styles.dropDownItem} key='13'>QHAna</Dropdown.Item>,
+    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/ballerina-central`} className={styles.dropDownItem} key='14'>Ballerina Central</Dropdown.Item>,
     <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/redcross-elixir`} className={styles.dropDownItem} key='15'>Red Cross Elixir</Dropdown.Item>,
-    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/raapid-ai`} className={styles.dropDownItem} key='14'>RAAPID.AI</Dropdown.Item>,
+    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/raapid-ai`} className={styles.dropDownItem} key='17'>RAAPID.AI</Dropdown.Item>,
     <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/avinya-foundation`} className={styles.dropDownItem} key='16'>Avinya Academy</Dropdown.Item>
   ];
 
