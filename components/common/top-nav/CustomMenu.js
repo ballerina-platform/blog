@@ -18,6 +18,7 @@
 
 import React, { useState } from "react";
 import { Accordion } from "react-bootstrap";
+import Link from "next/link";
 
 import styles from './TopNav.module.css';
 
@@ -51,6 +52,7 @@ const CustomMenu = React.forwardRef(
                                             }
                                         )
                                     }
+                                    <li className={styles.seeMoreMobile}><Link href="https://ballerina.io/use-cases">See more</Link></li>
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="case studies" className={styles.acItem}>
@@ -69,6 +71,7 @@ const CustomMenu = React.forwardRef(
                                             }
                                         )
                                     }
+                                    <li className={styles.seeMoreMobile}><Link href="https://ballerina.io/case-studies">See more</Link></li>
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="comparisons" className={styles.acItem}>
@@ -109,11 +112,12 @@ const CustomMenu = React.forwardRef(
                                             }
                                         )
                                     }
+                                    <li className={styles.seeMore}><Link href="https://ballerina.io/use-cases">See more</Link></li>
                                 </ul>
                             </div>
 
-                            <div className={styles.subSection} style={{marginRight:"20px"}}>
-                                <p style={{whiteSpace:"nowrap"}}>Case studies</p>
+                            <div className={styles.subSection} style={{ marginRight: "20px" }}>
+                                <p style={{ whiteSpace: "nowrap" }}>Case studies</p>
                                 <ul className="list-unstyled">
                                     {
                                         React.Children.toArray(children).filter(
@@ -126,10 +130,12 @@ const CustomMenu = React.forwardRef(
                                                     )
                                                 }
                                             }
-                                          )
+                                        )
                                     }
+                                    <li className={styles.seeMore}><Link href="https://ballerina.io/case-studies">See more</Link></li>
                                 </ul>
                             </div>
+
 
                             <div className={styles.subSection}>
                                 <p>Comparisons</p>
