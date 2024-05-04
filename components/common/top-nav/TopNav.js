@@ -42,25 +42,18 @@ const TopNav = (props) => {
   const handleShow = () => setShow(true);
 
   const MenuItems = [
-    <Dropdown.Item category='usecases' href={`https://ballerina.io/usecases/integration`} className={styles.dropDownItem} key='1'>Integration</Dropdown.Item>,
-    <Dropdown.Item category='comparisons' href={`https://ballerina.io/usecases/integration/ballerina-vs-apollo-for-graphql/`} className={`${styles.dropDownItem}`} key='2'><span>Ballerina vs. Apollo for GraphQL</span></Dropdown.Item>,
-    <Dropdown.Item category='comparisons' href={`https://ballerina.io/usecases/integration/ballerina-vs-java-for-data-oriented-programming/`} className={styles.dropDownItem} key='4'>Ballerina vs. Java for data-oriented programming</Dropdown.Item>,
-    <Dropdown.Item category='usecases' href={`https://ballerina.io/usecases/ai`} className={styles.dropDownItem} key='5'>AI</Dropdown.Item>,
-    <Dropdown.Item category='usecases' href={`https://ballerina.io/usecases/healthcare`} className={styles.dropDownItem} key='6'>Healthcare</Dropdown.Item>,
-    <Dropdown.Item category='usecases' href={`https://ballerina.io/usecases/data-oriented-programming`} className={`${styles.dropDownItem}`} key='3'><span>Data-oriented programming</span></Dropdown.Item>,
-    <Dropdown.Item category='usecases' href={`https://ballerina.io/usecases/eda`} className={styles.dropDownItem} key='7'>EDA</Dropdown.Item>,
-    <Dropdown.Item category='usecases' href={`https://ballerina.io/usecases/b2b`} className={styles.dropDownItem} key='8'>B2B</Dropdown.Item>,
-    <Dropdown.Item category='usecases' href={`https://ballerina.io/usecases/etl`} className={styles.dropDownItem} key='19'>ETL</Dropdown.Item>,
-    <Dropdown.Item category='usecases' href={`https://ballerina.io/usecases/microservices`} className={styles.dropDownItem} key='10'>Microservices</Dropdown.Item>,
-    <Dropdown.Item category='usecases' href={`https://ballerina.io/usecases/bff`} className={styles.dropDownItem} key='11'>BFF</Dropdown.Item>,
-    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/wso2`} className={styles.dropDownItem} key='9'>WSO2</Dropdown.Item>,
-    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/fat-tuesday`} className={styles.dropDownItem} key='18'>FAT Tuesday</Dropdown.Item>,
-    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/mosip`} className={styles.dropDownItem} key='12'>MOSIP</Dropdown.Item>,
-    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/qhana`} className={styles.dropDownItem} key='13'>QHAna</Dropdown.Item>,
-    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/ballerina-central`} className={styles.dropDownItem} key='14'>Ballerina Central</Dropdown.Item>,
-    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/redcross-elixir`} className={styles.dropDownItem} key='15'>Red Cross Elixir</Dropdown.Item>,
-    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/raapid-ai`} className={styles.dropDownItem} key='17'>RAAPID.AI</Dropdown.Item>,
-    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/avinya-foundation`} className={styles.dropDownItem} key='16'>Avinya Academy</Dropdown.Item>
+    <Dropdown.Item category='usecases' href={`https://ballerina.io/use-cases/integration`} className={styles.dropDownItem} key='1'>Integration</Dropdown.Item>,
+    <Dropdown.Item category='comparisons' href={`https://ballerina.io/use-cases/integration/ballerina-vs-apollo-for-graphql/`} className={`${styles.dropDownItem}`} key='2'><span>Ballerina vs. Apollo for GraphQL</span></Dropdown.Item>,
+    <Dropdown.Item category='comparisons' href={`https://ballerina.io/use-cases/integration/ballerina-vs-java-for-data-oriented-programming/`} className={styles.dropDownItem} key='4'>Ballerina vs. Java for data-oriented programming</Dropdown.Item>,
+    <Dropdown.Item category='usecases' href={`https://ballerina.io/use-cases/ai`} className={styles.dropDownItem} key='5'>AI</Dropdown.Item>,
+    <Dropdown.Item category='usecases' href={`https://ballerina.io/use-cases/healthcare`} className={styles.dropDownItem} key='6'>Healthcare</Dropdown.Item>,
+    <Dropdown.Item category='usecases' href={`https://ballerina.io/use-cases/data-oriented-programming`} className={`${styles.dropDownItem}`} key='3'><span>Data-oriented programming</span></Dropdown.Item>,
+    <Dropdown.Item category='usecases' href={`https://ballerina.io/use-cases/eda`} className={styles.dropDownItem} key='7'>EDA</Dropdown.Item>,
+    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/wso2`} className={styles.dropDownItem} key='11'>WSO2</Dropdown.Item>,
+    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/fat-tuesday`} className={styles.dropDownItem} key='12'>FAT Tuesday</Dropdown.Item>,
+    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/mosip`} className={styles.dropDownItem} key='13'>MOSIP</Dropdown.Item>,
+    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/qhana`} className={styles.dropDownItem} key='14'>QHAna</Dropdown.Item>,
+    <Dropdown.Item category='case studies' href={`https://ballerina.io/case-studies/ballerina-central`} className={styles.dropDownItem} key='15'>Ballerina Central</Dropdown.Item>
   ];
 
   const now = new Date();
