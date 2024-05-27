@@ -30,7 +30,7 @@ See Ballerina <a href="https://central.ballerina.io/ballerina/crypto/latest" tar
 
 With this release, it is possible to navigate JSON data in Ballerina using JSONPath expressions. Complex data retrievals can be performed within the Ballerina code using this feature as follows:
 
-```
+```ballerina
 // Use a JSONPath expression to extract the list of titles in the books array.
 json titles = check jsondata:read(books, `$..title`);
 io:println(titles);
