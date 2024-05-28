@@ -51,7 +51,7 @@ See <a href="https://ballerina.io/learn/by-example/jsonpath-expressions/" target
 
 ## SOAP support
 
-This release introduces support for invoking SOAP 1.1 and 1.2 endpoints with web services security policies. This enables Ballerina programs to communicate securely with SOAP services, and for example, expose SOAP services as REST endpoints.
+This release introduces support for invoking SOAP 1.1 and 1.2 endpoints with web services security policies. This enables Ballerina programs to communicate securely with SOAP services and, for example, expose SOAP services as REST endpoints.
 
 For more details, see <a href="https://ballerina.io/learn/by-example/soap-client-send-receive/" target="_blank">SOAP client examples</a>.
 
@@ -59,15 +59,7 @@ For more details, see <a href="https://ballerina.io/learn/by-example/soap-client
 
 Many integration technologies, such as OpenAPI, gRPC, data access, and EDI, rely on code generation from schemas. For example, when using Ballerina in an OpenAPI project, developers usually generate REST clients and records from the OpenAPI schema and then write the rest of the Ballerina code by using the generated code. 
 
-The problem with this approach is that developers either have to store the generated code in a version control system, or they have to manually generate code each time before a build. With this release, Ballerina developers can overcome this problem by using the code generation capabilities integrated with the build process. Information required for code generation can be specified in the `Ballerina.toml` file. For example, the following configuration will generate a REST client and Ballerina records for the OpenAPI schema given in a file named `openapi.yaml` in the current directory.
-
-```toml
-[[tool.openapi]]
-id = "client"
-filePath = "./openapi.yaml"
-targetModule = "delivery01"
-options.mode = "client"
-```
+The problem with this approach is that developers either have to store the generated code in a version control system, or they have to manually generate code each time before a build. With this release, Ballerina developers can overcome this problem by using the code generation capabilities integrated with the build process. Information required for code generation can be specified in the `Ballerina.toml` file. 
 
 See <a href="https://ballerina.io/learn/openapi-tool/#automate-client-generation" target="_blank">automated client generation in OpenAPI tool</a> for an example usage.
 
@@ -80,6 +72,3 @@ See <a href="https://ballerina.io/learn/persist-cli-tool/#generate-the-data-mode
 See the <a href="https://ballerina.io/downloads/swan-lake-release-notes/swan-lake-2201.9.0" target="_blank">release note</a> for a comprehensive overview of Swan Lake Update 9's new features and improvements. We encourage our community to explore these features and provide feedback. Your input is invaluable in shaping the future of Ballerina and ensuring it meets your needs.
 
 Cheers to the Ballerina community and the bright future of it!
-
-
-
