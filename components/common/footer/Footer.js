@@ -73,7 +73,7 @@ export default function Footer() {
 
                 <div className={styles.footerLinks}>
                   <ul>
-                    <li><Link className="footerLink" href={`https://ballerina.io/downloads`}>DOWNLOAD</Link></li>
+                    <li><a className="footerLink" target="_blank" rel="noreferrer" href={`https://ballerina.io/downloads`}>DOWNLOAD</a></li>
                     <li><a className="footerLink" target='_blank' rel="noreferrer" href="https://github.com/ballerina-platform/ballerina-lang/issues/new/choose">REPORT ISSUES</a></li>
                   </ul>
                 </div>
@@ -82,7 +82,7 @@ export default function Footer() {
               <Col xs={12} sm={12} md={12} lg={6}>
                 <div className={styles.subscription}>
                   <div className={styles.subscribe}>
-                    <Link className={styles.subscribeBtn} href={`https://ballerina.io/community/#subscribe-to-our-newsletter`}>Subscribe to our newsletter</Link>
+                    <a className={styles.subscribeBtn} target="_blank" rel="noreferrer" href={`https://ballerina.io/community/#subscribe-to-our-newsletter`}>Subscribe to our newsletter</a>
                   </div>
                   <div className={styles.subscribe}>
                     <a className={styles.subRss} href="https://blog.ballerina.io/feed.xml" target="_blank" rel="noreferrer">Subscribe via RSS</a>
@@ -105,12 +105,12 @@ export default function Footer() {
           <Col xs={12} sm={10}>
             <ul>
               <li><a className="footerLink" target='_blank' rel="noreferrer" href="https://github.com/ballerina-lang/ballerina/blob/master/LICENSE">CODE LICENSE</a></li>
-              <li><Link className="footerLink" href={`https://ballerina.io/license-of-site`}>SITE LICENSE</Link></li>
-              <li><Link className="footerLink" href={`https://ballerina.io/terms-of-service`}>TERMS OF SERVICE</Link></li>
-              <li><Link className="footerLink" href={`https://ballerina.io/privacy-policy`}>PRIVACY POLICY</Link></li>
-              <li><Link className="footerLink" href={`https://ballerina.io/cookie-policy`}>COOKIE POLICY</Link></li>
-              <li><Link className="footerLink" href={`https://ballerina.io/security-policy`}>SECURITY POLICY</Link></li>
-              <li><Link className="footerLink" href={`https://ballerina.io/trademark-usage-policy/`}>TRADEMARK USAGE POLICY</Link></li>
+              <li><a className="footerLink" target='_blank' rel="noreferrer" href={`https://ballerina.io/license-of-site`}>SITE LICENSE</a></li>
+              <li><a className="footerLink" target='_blank' rel="noreferrer" href={`https://ballerina.io/terms-of-service`}>TERMS OF SERVICE</a></li>
+              <li><a className="footerLink" target='_blank' rel="noreferrer" href={`https://ballerina.io/privacy-policy`}>PRIVACY POLICY</a></li>
+              <li><a className="footerLink" target='_blank' rel="noreferrer" href={`https://ballerina.io/cookie-policy`}>COOKIE POLICY</a></li>
+              <li><a className="footerLink" target='_blank' rel="noreferrer" href={`https://ballerina.io/security-policy`}>SECURITY POLICY</a></li>
+              <li><a className="footerLink" target='_blank' rel="noreferrer" href={`https://ballerina.io/trademark-usage-policy/`}>TRADEMARK USAGE POLICY</a></li>
             </ul>
           </Col>
         </Row>
