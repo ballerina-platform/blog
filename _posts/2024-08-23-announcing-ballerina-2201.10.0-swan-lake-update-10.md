@@ -40,7 +40,7 @@ The Salesforce package now includes a listener with streaming API support for re
 
 ## AI features 
 
-Ballerina Swan Lake Update 10 contains a new feature for Ballerina Copilot and significant improvements to the existing AI data mapper as well. These experimental features will greatly enhance developer productivity and streamline the integration development lifecycle. 
+Ballerina Swan Lake Update 10 contains an experimental test generator for Ballerina Copilot and significant improvements to the existing AI data mapper as well. These experimental features will greatly enhance developer productivity and streamline the integration development lifecycle. 
 - Test Generator 
 Automatically generates unit tests based on your code, reducing the time and effort required to ensure robust test coverage. You can focus on building your application without worrying about breaking other features.
 - Improved AI Data Mapper
