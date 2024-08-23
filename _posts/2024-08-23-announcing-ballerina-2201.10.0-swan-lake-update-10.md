@@ -10,7 +10,7 @@ permalink: /posts/2024-08-22-announcing-ballerina-2201.10.0-swan-lake-update-10/
 
 <style>.cBlogContent p{white-space: break-spaces !important;}</style>
 
-We are excited to announce that Ballerina has just released its tenth update release, Ballerina Swan Lake Update 10(2201.10.0). This update brings enhancements across various areas, with key highlights including a revamped OpenAPI tool, a series of new connectors, and innovative AI features.
+The Ballerina team is excited to announce the tenth update release, Ballerina Swan Lake Update 10(2201.10.0). This update brings enhancements across various areas, with key highlights including a revamped OpenAPI tool, a series of new connectors, and innovative AI features.
 
 ## OpenAPI Tool
 
@@ -31,12 +31,12 @@ The OpenAPI package allows developers to automatically generate and embed the Op
 ## New Connectors
 
 In this release, we’ve made substantial improvements to the functionality and usability of some connectors. Here are the key highlights:
-As part of the connector revamp initiative, several connectors have been significantly updated. The newly released `dayforce` and `discord` connectors now support interactions with their latest REST API versions. Additionally, the `asb`, `slack`, `stripe`, and `twitter` (X) connectors have undergone major updates, featuring significant API and functionality changes, along with enhanced documentation, making it easier to develop complex applications.
 
-For SAP integrations, the `sap` connector has been upgraded to support the invocation of any OData endpoint in S/4HANA and now offers automatic CSRF token authentication, enhancing both security and usability. Similarly, the `sap.jco` connector now supports the invocation of RFC modules with better type binding and allows the transmission and reception of iDocs. Additionally, the `sap.s4hana.sales` connector provides a high-level interface for Sales and Distribution (SD) APIs in S/4HANA, enabling streamlined sales order management, delivery processing, and billing operations.
+- As part of the connector revamp initiative, several connectors have been updated significantly. The newly released `dayforce` and `discord` connectors now support interaction with their latest REST API versions. Additionally, the `asb`, `slack`, `stripe`, and `twitter` (X) connectors have undergone major updates, featuring significant API and functionality changes, along with enhanced documentation, making it easier to develop complex applications.
 
-The Salesforce connector now includes a listener with streaming API support for real-time data synchronization and event-driven workflows. Additionally, the introduction of the `salesforce.types` submodule enables the use of base types, and the reorganization of Salesforce clients enhances usability.
+- For SAP integrations, the `sap` connector has been upgraded to support the invocation of any OData endpoint in S/4HANA and now offers automatic CSRF token authentication, enhancing both security and usability. Similarly, the `sap.jco` connector now supports the invocation of RFC modules with better type binding and allows the transmission and reception of iDocs. Additionally, the `sap.s4hana.sales` connector provides a high-level interface for Sales and Distribution (SD) APIs in S/4HANA, enabling streamlined sales order management, delivery processing, and billing operations.
 
+- The Salesforce connector now includes a listener with streaming API support for real-time data synchronization and event-driven workflows. Additionally, the introduction of the `salesforce.types` submodule enables the use of base types, and the reorganization of Salesforce clients enhances usability.
 
 ## AI features 
 
