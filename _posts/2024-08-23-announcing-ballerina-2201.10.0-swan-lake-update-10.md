@@ -16,9 +16,11 @@ The Ballerina team is excited to announce the tenth update release of Ballerina 
 
 A major highlight of Ballerina Swan Lake Update 10 is the introduction of extensive enhancements to the OpenAPI tool.
 
-Another important feature is the support for example annotations on Ballerina types, resource parameters, and record fields, which are now directly rendered into the OpenAPI example schema. This provides developers with clear, contextually relevant examples, making APIs easier to understand and implement. For more information, check [Export with examples](https://ballerina.io/learn/openapi-tool/#export-with-given-examples-information).
+A contract-first approach is introduced using the OpenAPI tool and the HTTP package. By generating a service contract type directly from the OpenAPI specification, you can design services that are contract-compliant from the outset. In addition, centralizing metadata within the service contract type results in a cleaner, more maintainable code base. 
 
 <img alt="Swagger UI" src="/images/swagger_ui.png">
+
+Another important feature is the support for example annotations on Ballerina types, resource parameters, and record fields, which are now directly rendered into the OpenAPI example schema. This provides developers with clear, contextually relevant examples, making APIs easier to understand and implement. For more information, check [Export with examples](https://ballerina.io/learn/openapi-tool/#export-with-given-examples-information).
 
 To further streamline development, this update introduces support for mock client generation using examples from the OpenAPI specification. Picture a developer tasked with integrating a new API: you can now effortlessly generate mock clients with examples that you documented in the OAS, test and validate integrations, and then seamlessly replace the mock client with the actual one when ready for production. For more information, see the section on [generating mock clients using OpenAPI examples](https://ballerina.io/learn/openapi-tool/#generate-mock-client-using-included-example-in-oas).
 
