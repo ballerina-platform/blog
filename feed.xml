@@ -9,9 +9,9 @@
             <link>https://blog.ballerina.io/</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 04 Jun 2024 08:41:04 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 27 Aug 2024 08:44:57 GMT</lastBuildDate>
         <atom:link href="https://blog.ballerina.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 04 Jun 2024 08:41:04 GMT</pubDate>
+        <pubDate>Tue, 27 Aug 2024 08:44:57 GMT</pubDate>
         <copyright><![CDATA[2018-2023 WSO2 LLC]]></copyright>
         <item>
             <title><![CDATA[Introduction to the Ballerina 0.970 release]]></title>
@@ -124,6 +124,11 @@
             <title><![CDATA[Announcing Ballerina Swan Lake Update 9 (2201.9.0)]]></title>
             <link>https://blog.ballerina.io/posts/2024-05-27-announcing-ballerina-2201.9.0-swan-lake-update-9</link>
             <guid isPermaLink="true">https://blog.ballerina.io/posts/2024-05-27-announcing-ballerina-2201.9.0-swan-lake-update-9</guid>
+        </item>
+        <item>
+            <title><![CDATA[Announcing Ballerina Swan Lake Update 10 (2201.10.0)]]></title>
+            <link>https://blog.ballerina.io/posts/2024-08-23-announcing-ballerina-2201.10.0-swan-lake-update-10</link>
+            <guid isPermaLink="true">https://blog.ballerina.io/posts/2024-08-23-announcing-ballerina-2201.10.0-swan-lake-update-10</guid>
         </item>
     </channel>
 </rss>
