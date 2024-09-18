@@ -151,7 +151,7 @@ export default function Blog({ blogs }) {
                 {blogs.map(({ slug, frontmatter }, index) => (
                   <div key={index} className='blogInfo'>
                     <p className='blogDate'>{frontmatter[`published-date`]}</p>
-                    <a className='blogLink' target="_blank" rel="noreferrer" href={`/posts/${slug}`} >
+                    <a className='blogLink' href={`/posts/${slug}`} >
                       <h4 className='blogTitle'>{frontmatter.title}</h4>
                     </a>
                     <p className='blogAuthor'>{frontmatter.author}</p>
