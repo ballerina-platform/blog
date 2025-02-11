@@ -102,84 +102,6 @@ The strand dump tool has been enhanced to support virtual threads. The report no
 
 In the updated concurrency model, every strand is directly mapped to a Java virtual thread, and the tool extracts strand-related details from the virtual thread dump. However, since the thread dump does not include virtual thread states, the current version of the strand dump report does not display strand states.
 
-### New Runtime APIs
-
-The Ballerina Runtime Java APIs have been redesigned to enhance seamless integration for Java-to-Ballerina interoperability.   
-Here’s an example of how to invoke a Ballerina function from Java code.
-
-**Ballerina**
-
-```ballerina
-public function main() returns error? {
-   boolean b = callIsEven(2);
-}
-
-
-function isEven(int n) returns boolean {
-   return n % 2 == 0;
-}
-
-
-public isolated function callIsEven(int n) returns boolean = @java:Method {
-   'class: "org.ballerinalang.examples.Test",
-   name: "callIsEven"
-} external;
-```
-
-**Java**
-
-```java
-class Test {
-   public static boolean callIsEven(Environment env, long arg) {
-       return env.getRuntime().callFunction(new Module("testOrg", "foo"), "isEven", null, arg);
-   }
-}
-```
-
-The following code shows an example of calling an object method using Java API.
-
-**Ballerina**
-
-```ballerina
-import ballerina/jballerina.java;
-
-public class Person {
-
-
-   public string name;
-   public int age;
-  
-   function init(string name, int age) {
-       self.name = name;
-       self.age = age;
-   }
-
-
-   public function play(string sport = "cricket") returns string {
-       return sport;
-   }
-      
-   public function callPlayWithArgs(string s) returns string = @java:Method {
-       'class: "org.ballerinalang.examples.Test"
-   } external;
-}
-
-
-public function main() {
-   Person p = new Person("John", 30);
-   string sport = p.callPlayWithArgs("football");
-}
-
-```
-
-```java
-class Test {
-   public static BString callPlayWithArgs(Environment env, BObject object, BString bString) {
-       return env.getRuntime().callMethod(object, "play", null, bString);
-   }
-}
-```
-
 ## Language updates
 
 ### Improved data.xmldata module
@@ -189,7 +111,7 @@ Please refer to the release note for further information on the data.xml module.
 
 ### New data.csv module
 
-The data.csv module has been introduced with Constraint validation support, enabling output validation against constraints defined in the target type. Additionally, the module now supports parsing CSV data with union types as expected types, enhancing data flexibility and accuracy.
+The data.csv module has been introduced with constraint validation support, enabling output validation against constraints defined in the target type. Additionally, the module supports parsing CSV data with union types as expected types, enhancing data flexibility and accuracy.
 
 ## Ballerina Library Features
 
