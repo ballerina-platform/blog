@@ -2,23 +2,33 @@
 layout: blog-post
 title: Announcing Ballerina Swan Lake Update 11 (2201.11.0)
 author: Waruna Jayaweera
-published-date: 10 Feb 2025
+published-date: 11 Feb 2025
 status: Published
 socialmediaimage: ballerina-generic-social-media-image-2023.png
-permalink: /posts/2025-02-10-announcing-ballerina-2201.11.0-swan-lake-update-11/
+permalink: /posts/2025-02-11-announcing-ballerina-2201.11.0-swan-lake-update-11/
 ---
 
 <style>.cBlogContent p{white-space: break-spaces !important;}</style>
 
-The Ballerina team is excited to announce the eleventh update release of Ballerina Swan Lake, Ballerina Swan Lake Update 11 (2201.11.0). This update introduces enhancements across multiple areas, including Java 21 support, performance improvements, a new CSV module, an upgraded XML data module, and improvements to the Ballerina library and developer tools.
+The Ballerina team is excited to announce the eleventh update release of Ballerina Swan Lake, Ballerina Swan Lake Update 11 (2201.11.0). This update adds support for Java 21, along with performance improvements and new features for the Ballerina library and developer tools.
 ## Runtime
 ### Java 21 Support
-The Ballerina runtime now supports Java 21, the latest long-term support release of the Java platform. When upgrading to Swan Lake Update 11, Java 21 is required to run Ballerina programs. Any incompatible changes in Java 21 may impact Ballerina’s interoperability implementation.
+The Ballerina runtime now supports Java 21, the latest long-term support (LTS) release of the Java platform. Ballerina's existing concurrency model has been implemented with Project Loom virtual threads and the newest concurrency features in Java 21.
+
+Ballerina models concurrency using the concept of "Strand". A new strand is created via a named worker, the 'start' action, or any entry point execution, such as the main function or a resource method. During execution, a strand can yield—for example, while waiting for a worker result or a network call—allowing the underlying platform thread to be shared with other strands.
+
+Java threads were mapped to platform threads, making it costly to create a Java thread for each strand. Therefore, strands could not be directly mapped to Java threads. Initially, Project Loom was in its early stages as well. So, Ballerina's own scheduler was implemented to manage strands, similar to Java 21 virtual threads. The Ballerina scheduler assigns a strand to an available Java thread from the Ballerina thread pool and manages yield points to prevent Java threads from being blocked.
+
+Additionally, the Ballerina scheduler maintains the state of strands to model their asynchronous behavior with yield points. Java switch cases are generated for each Ballerina function to manage these yield states, enabling execution to resume once the yield operation is complete.
+
+However, generating switch cases for each function causes significant performance degradation, especially in loops. Moreover, the complexity of handling asynchronous operations has made native runtime APIs more complicated. This complexity in the concurrency model also impacts other Ballerina concurrency features, such as worker integration and locks.
+
+With the official support for Java virtual threads in Java 21 LTS, transitioning to a virtual threads-based concurrency model will eliminate the need for switch case-based code generation to support asynchronous execution. Now, strand is mapped directly to virtual thread and Ballerina own scheduler has been no longer required. This change has enhanced the performance of the identified scenarios and provided a clearer set of APIs for native code developers.
 
 ### Performance Improvements
+By implementing the Ballerina concurrency model with Java Virtual Threads in Update 11, there have been substantial performance improvements. We have conducted performance tests and observed significant reductions in CPU-bound operations, memory usage, GraalVM execution time, and the size of the generated executables.
 
-The redesigned Ballerina concurrency model, now leveraging Java Virtual Threads, has brought substantial performance gains for CPU-bound operations in Update 11. Additionally, optimizations in the generated code have significantly reduced memory, GraalVM execution time, and the size of the generated executables.
-
+#### CPU Bound Operations
 Recent improvements, especially in array access and loop optimizations, have led to a substantial performance boost. For example, the following benchmark code segment runs over 20 times faster than in Ballerina Swan Lake Update 10.
 
 ```ballerina
@@ -34,6 +44,8 @@ public function main(string... args) returns error? {
    }
 }
 ```
+
+<img alt="Loops U10 Vs U11" src="/images/u11/loops-performance-u10-vs-u11.png">
 
 The following code computes the Fibonacci sequence for 𝑛 = 52. With the optimizations in Swan Lake Update 11, performance has doubled compared to Ballerina Swan Lake Update 10.
 
@@ -52,49 +64,29 @@ public function main() {
 }
 ```
 
-Here is a summary of improvements in CPU-bound operations, GraalVM execution time, file size, and memory usage.
+<img alt="Loops U10 Vs U11" src="/images/u11/fibonacci-u10-vs-u11.png">
 
-#### CPU Bound Operations
+Performance tests on query expressions involving loops have demonstrated up to a 2x improvement.
 
-<img alt="Loops U10 Vs U11" src="/images/u11/loops-performance-u10-vs-u11.png">
-<img alt="Loops U10 Vs U11" src="/images/u11/cpu-bound-performance-u10-vs-u11.png">
+<img alt="Loops U10 Vs U11" src="/images/u11/query-expressions-with-loops-u10-vs-u11.png">
 
-| Scenario | U10 (Seconds) | U11 (seconds) | Improvement |
-| :---- | :---- | :---- | :---- |
-| Nested Loops with array accessing | 21.87 | 1.04 | **21.03x** |
-| Query Expression with 1M loops | 35.17 | 15.49 | **2.27x** |
-| Fibonacci (n \= 52\) | 202.58 | 108.8 | **1.86x** |
-| Workers | 19.39 | 18.16 | **1.07x** |
+#### File Size
 
+Since generated executable codes have been reduced with Update 11, there is a notable reduction in module build files and final executable sizes.
+
+<img alt="Loops U10 Vs U11" src="/images/u11/file-size-u10-vs-u11.png">
 
 #### GraalVM Build Time
 
+The latest improvements have shown a 25% reduction in GraalVM build time as well.
+
 <img alt="Loops U10 Vs U11" src="/images/u11/graalvm-build-time-u10-vs-u11.png">
-
-
-| U10 (Seconds) | U11 (Seconds) | Improvement |
-| :---- | :---- | :---- |
-| 152.00 | 123.67 | **1.23x** |
-
-#### File Size
-<img alt="Loops U10 Vs U11" src="/images/u11/file-size-u10-vs-u11.png">
-
-|  | U10 (MB) | U11 (MB) | Improvement |
-| :---- | ----- | ----- | :---- |
-| HTTP Module Build File | 3.6 | 2.4 | **33.33%** |
-| Passthrough Executable | 37.7 | 35.4 | **6.10%** |
 
 #### Memory
 
-Performance tests were conducted to evaluate the heap memory usage of Ballerina Update 10 and Update 11. Since garbage collection causes fluctuations in memory usage during execution, this analysis focuses on the peak heap memory recorded for each test, demonstrating a significant reduction in memory consumption.  
+Performance tests were conducted to evaluate the heap memory usage of Ballerina Update 10 and Update 11. Since garbage collection causes fluctuations in memory usage during execution, this analysis focuses on the peak heap memory recorded for each test, demonstrating a significant reduction in memory consumption.
 
 <img alt="Loops U10 Vs U11" src="/images/u11/peak-heap-memory-u10-vs-u11.png">
-
-| Scenario | U10 Average(MB) | U11 Average (MB)  | Improvement |
-| :---- | :---- | :---- | :---- |
-| HTTP Service with Workers | 3020.8 | 1945.6 | **35.6% decrease** |
-| HTTP Passthrough | 437 | 359 | **18.0% decrease** |
-| JSON to XML Service | 145.7 | 99.3 | **31.8% decrease** |
 
 ### Strand Dump Tool
 
@@ -102,18 +94,16 @@ The strand dump tool has been enhanced to support virtual threads. The report no
 
 In the updated concurrency model, every strand is directly mapped to a Java virtual thread, and the tool extracts strand-related details from the virtual thread dump. However, since the thread dump does not include virtual thread states, the current version of the strand dump report does not display strand states.
 
-## Language updates
-
-### Improved data.xmldata module
-
-The data.xmldata module has been enhanced with support for XML Schema Definition (XSD) Sequence and Choice. It now also includes union-type support for XML operations, along with the ability to handle singleton types, unions of singletons, and enums, improving XML data processing flexibility.  
-Please refer to the release note for further information on the data.xml module.
+## Ballerina Library Features
 
 ### New data.csv module
 
 The data.csv module has been introduced with constraint validation support, enabling output validation against constraints defined in the target type. Additionally, the module supports parsing CSV data with union types as expected types, enhancing data flexibility and accuracy.
 
-## Ballerina Library Features
+### The data.xmldata module
+
+The data.xmldata module has been enhanced with support for XML Schema Definition (XSD) Sequence and Choice. It now also includes union-type support for XML operations, along with the ability to handle singleton types, unions of singletons, and enums, improving XML data processing flexibility.  
+Please refer to the release note for further information on the data.xml module.
 
 ### The Crypto package
 
