@@ -155,6 +155,12 @@ A new tool is introduced to generate Ballerina record types from an XSD file, si
   $ bal xsd <xsd-file-path> --module <output-module-name>
 ```
 
+## Ballerina packages
+### Package documentation
+Enhanced the developer experience in managing package and module documentation with a more streamlined approach. README.md is now the default package documentation file, eliminating redundancy between Package.md and Module.md. In single-module packages, Module.md is no longer required, reducing duplication and simplifying documentation management. For multi-module projects, README.md can still be added to non-default modules if necessary.
+
+Additionally, support for specifying a custom .md file in Ballerina.toml has been introduced, providing greater flexibility. These improvements ensure seamless documentation display on platforms that prioritize README.md while reducing the effort needed to maintain multiple documentation files.
+
 Furthermore, this release brings a range of notable additions and improvements to the language, runtime, Ballerina library, and developer tools. For a comprehensive overview of all the new features and improvements brought by Swan Lake Update 11, see the [release note](https://ballerina.io/downloads/swan-lake-release-notes/swan-lake-2201.11.0).
 
 We encourage our community to explore these features and provide feedback. Your input is invaluable in shaping the future of Ballerina and ensuring it meets your needs.
