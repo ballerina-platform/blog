@@ -22,6 +22,9 @@ import matter from 'gray-matter';
 import { Row, Col, Container } from "react-bootstrap";
 import Head from "next/head";
 import generateRssFeed from "../utils/generateRSSFeed";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 
 import Layout from "../layouts/LayoutHome";
 
@@ -152,7 +155,18 @@ export default function Blog({ blogs }) {
                   <div key={index} className='blogInfo'>
                     <p className='blogDate'>{frontmatter[`published-date`]}</p>
                     <a className='blogLink' href={`/posts/${slug}`} >
-                      <h4 className='blogTitle'>{frontmatter.title}</h4>
+                      <ReactMarkdown
+                        remarkPlugins={[remarkGfm]}
+                        rehypePlugins={[rehypeRaw]}
+                        components={{
+                          p({ node, inline, className, children, ...props }) {
+                            return <h4 className='blogTitle' {...props}>
+                              {children}
+                            </h4>
+                          }
+                        }}>
+                        {frontmatter.title}
+                      </ReactMarkdown>
                     </a>
                     <p className='blogAuthor'>{frontmatter.author}</p>
                   </div>

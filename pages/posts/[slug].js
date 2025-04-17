@@ -19,6 +19,9 @@
 import fs from "fs";
 import matter from "gray-matter";
 import React from "react";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import { Col, Row, Container } from "react-bootstrap";
 import Head from "next/head";
 import Link from "next/link";
@@ -178,7 +181,18 @@ export default function PostPage({ frontmatter, content, codes, slug }) {
                     <Container>
                         <div className="topRow">
                             <Col xs={12}>
-                                <h1>{frontmatter.title}</h1>
+                                <ReactMarkdown
+                                    remarkPlugins={[remarkGfm]}
+                                    rehypePlugins={[rehypeRaw]}
+                                    components={{
+                                        p({ node, inline, className, children, ...props }) {
+                                            return <h1 className={className} {...props}>
+                                                {children}
+                                            </h1>
+                                        }
+                                    }}>
+                                    {frontmatter.title}
+                                </ReactMarkdown>
                                 <p className="dateAuth"><span className='blogAuthor'>{frontmatter.author}</span><br />{frontmatter[`published-date`]}</p>
                             </Col>
                         </div>
