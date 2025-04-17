@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-title: Introducing Natural Programming
+title: "Natural Language <i>is</i> Code: A hybrid approach with Natural Programming"
 author: Rania Khalaf, Maryam Ziyad, Sasindu Alahakoon, Sameera Jayasoma, Sanjiva Weerawarana
 published-date: 17 Mar 2025
 status: Published
@@ -96,7 +96,7 @@ Place[] places = check getPlacesToSee("Australia", "adventure");
 
 Note that unlike with using prompts to generate code, in these examples we execute the prompt as code at runtime to ask the LLM to produce a value. Note that the evaluation of a `natural { }` expression binds the response to the desired type and does not just return strings.
 
-This can of course be implemented in any language using API calls to an LLM. However, that takes away the clarity of being able to think about the program in both natural language and code simultaneously as the mechanics of API invocations, error handling and data wrangling obfuscate the intention of defining part of the program's behavior in natural language. Recent work like [Instructor](https://github.com/instructor-ai/instructor) and structured output support in the OpenAI APIs have emerged to handle mapping LLM responses to structured outputs addressing only part of the problem.  Natural programming uplifts the level of abstraction.
+This can of course be implemented in any language using API calls to an LLM. However, that takes away the clarity of being able to think about the program in both natural language and code simultaneously as the mechanics of API invocations, error handling, and data wrangling obfuscate the intention of defining part of the program's behavior in natural language. Recent work like [Instructor](https://github.com/instructor-ai/instructor) along with LLM features for structured outputs have emerged to address only part of the problem. Natural Programming uplifts the level of abstraction.
 
 ## Natural programming in Ballerina
 
@@ -173,6 +173,6 @@ While the implementation we have done is in Ballerina, any programming language 
 
 ## Ready to try it out or interested to contribute?
 
-The upcoming release of Ballerina Swan Lake Update 13 will include experimental support for natural expressions. If you prefer a visual low code experience, Natural Programming is also underpinning Devant by WSO2, an AI iPaaS. 
+Head over to [ballerina.io](ballerina.io). Ballerina Swan Lake Update 13 will include experimental support for Natural Functions and Expressions. If you prefer a visual low code experience, Natural Programming is also available in Devant by WSO2, an AI iPaaS. 
 
 Ballerina is open source with a vibrant global community of developers and contributors. Join the community, discuss, or contribute code.
