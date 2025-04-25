@@ -5,7 +5,7 @@ author: Rania Khalaf, Maryam Ziyad, Sasindu Alahakoon, Sameera Jayasoma, Sanjiva
 published-date: 17 Mar 2025
 status: Published
 socialmediaimage: ballerina-generic-social-media-image-2023.png
-permalink: /posts/2025-04-17-introducing-natural-programming/
+permalink: /posts/2025-04-26-introducing-natural-programming/
 ---
 
 <style>.cBlogContent p{white-space: break-spaces !important;}</style>
@@ -182,6 +182,8 @@ bal dist pull 2201.13.0-m1
 ```
 
 Install the [Ballerina VS Code plugin](https://marketplace.visualstudio.com/items?itemName=WSO2.ballerina) for IDE support.
+
+Check out the complete [get popular sports person example](https://github.com/ballerina-platform/module-ballerina-np/tree/main/examples/popular-sportsperson) covering building and running code with natural expressions.
 
 If you prefer a visual low code experience, Natural Programming is also available in [Devant by WSO2](https://wso2.com/devant/), an AI iPaaS. 
 
