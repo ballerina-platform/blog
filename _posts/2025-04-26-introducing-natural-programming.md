@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-title: "Natural Language <i>is</i> Code: A hybrid approach with Natural Programming"
+title: "Natural Language *is* Code: A hybrid approach with Natural Programming"
 author: Rania Khalaf, Maryam Ziyad, Sasindu Alahakoon, Sameera Jayasoma, Sanjiva Weerawarana
 published-date: 17 Mar 2025
 status: Published
