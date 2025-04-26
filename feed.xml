@@ -9,9 +9,9 @@
             <link>https://blog.ballerina.io/</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 26 Apr 2025 00:35:35 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 26 Apr 2025 03:35:02 GMT</lastBuildDate>
         <atom:link href="https://blog.ballerina.io/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sat, 26 Apr 2025 00:35:35 GMT</pubDate>
+        <pubDate>Sat, 26 Apr 2025 03:35:02 GMT</pubDate>
         <copyright><![CDATA[2018-2023 WSO2 LLC]]></copyright>
         <item>
             <title><![CDATA[Introduction to the Ballerina 0.970 release]]></title>
@@ -136,7 +136,7 @@
             <guid isPermaLink="true">https://blog.ballerina.io/posts/2025-02-11-announcing-ballerina-2201.11.0-swan-lake-update-11</guid>
         </item>
         <item>
-            <title><![CDATA[Natural Language <i>is</i> Code: A hybrid approach with Natural Programming]]></title>
+            <title><![CDATA[Natural Language *is* Code: A hybrid approach with Natural Programming]]></title>
             <link>https://blog.ballerina.io/posts/2025-04-26-introducing-natural-programming</link>
             <guid isPermaLink="true">https://blog.ballerina.io/posts/2025-04-26-introducing-natural-programming</guid>
         </item>
