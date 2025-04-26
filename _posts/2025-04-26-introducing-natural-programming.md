@@ -187,4 +187,4 @@ Check out the complete [get popular sports person example](https://github.com/ba
 
 If you prefer a visual low code experience, Natural Programming is also available in [Devant by WSO2](https://wso2.com/devant/), an AI iPaaS. 
 
-Ballerina is open source with a vibrant global community of developers and contributors. Join the community, discuss, or contribute code.
+Ballerina is open source with a vibrant global community of developers and contributors. Join the [community](https://ballerina.io/), [discuss](https://discord.com/invite/ballerinalang), or [contribute code](https://github.com/ballerina-platform/ballerina-lang).
