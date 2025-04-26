@@ -175,15 +175,15 @@ While the implementation we have done is in Ballerina, any programming language 
 
 ## Ready to try it out or interested to contribute?
 
-Ballerina Swan Lake Update 13 (2201.13.0) will include experimental support for Natural Functions and Expressions. Try it out today by installing a milestone release of 2201.13.0. Head over to [ballerina.io](https://ballerina.io/downloads/) to download the `bal` tool and install the 2201.13.0-m1 version.
+Ballerina Swan Lake Update 13 (`2201.13.0`) will include experimental support for Natural Functions and Expressions. Try it out today by installing a milestone release of `2201.13.0`. Head over to [ballerina.io](https://ballerina.io/downloads/) to download the `bal` tool and install the `2201.13.0-m1` version.
 
 ```cmd
 bal dist pull 2201.13.0-m1
 ```
 
-Install the [Ballerina VS Code plugin](https://marketplace.visualstudio.com/items?itemName=WSO2.ballerina) for IDE support.
+Install the [Ballerina VS Code plugin](https://marketplace.visualstudio.com/items?itemName=WSO2.ballerina) for IDE support and [enable experimental features](https://ballerina.io/learn/vs-code-extension/configure-the-extension/) for Ballerina. 
 
-Check out the complete [get popular sports person example](https://github.com/ballerina-platform/module-ballerina-np/tree/main/examples/popular-sportsperson) covering building and running code with natural expressions.
+Check out the complete [get popular sportsperson example](https://github.com/ballerina-platform/module-ballerina-np/tree/main/examples/popular-sportsperson) covering how to build and run code with natural expressions.
 
 If you prefer a visual low code experience, Natural Programming is also available in [Devant by WSO2](https://wso2.com/devant/), an AI iPaaS. 
 
