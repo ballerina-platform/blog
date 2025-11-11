@@ -5,7 +5,7 @@ author: Asma Jabir
 published-date: 11 Nov 2025
 status: Published
 socialmediaimage: ballerina-generic-social-media-image-2023.png
-permalink: /posts/2025-01-11-announcing-ballerina-2201.13.0-swan-lake-update-13/
+permalink: /posts/2025-11-11-announcing-ballerina-2201.13.0-swan-lake-update-13/
 ---
 
 <style>.cBlogContent p{white-space: break-spaces !important;}</style>
@@ -20,7 +20,7 @@ Natural expressions are blocks of natural language instructions executed at runt
 
 This feature supports multimodal inputs, handling document types such as images, audios and files.
 
-<img alt="Multimodel inputs" src="/images/u13/multimodel-inputs-np.png">
+<img alt="Multimodal inputs" src="/images/u13/multimodal-inputs-np.png">
 
 Moreover, compile-time code generation allows describing data structures or function implementations in natural language, which are then generated at compile time using AI. The language provides built-in support to generate test data and to describe the behavior of the function.
 
@@ -28,7 +28,7 @@ Moreover, compile-time code generation allows describing data structures or func
 
 ## Workspace
 
-Multi-package [workspaces](https://ballerina.io/learn/workspaces/) allows organizing related Ballerina packages in a unified structure, supporting the monorepo architecture. With workspaces, packages can reference each other directly during development without the need to publish them to a repository. This streamlines the workflow by allowing to manage all related packages together within a single project.
+Multi-package [workspaces](https://ballerina.io/learn/workspaces/) allows organizing related Ballerina packages in a unified structure, supporting the monorepo architecture. With workspaces, packages can reference each other directly during development without the need to publish them to a repository. This streamlines the workflow by allowing you to manage all related packages together within a single project.
 
 Previously, developing interdependent packages required publishing each package before dependent packages could use the changes. With workspace support, dependencies within the workspace are resolved seamlessly, eliminating the need to publish to a package repository. This enables faster development cycles and easier testing of changes across packages.
 
@@ -36,7 +36,7 @@ For example, if you are building an application with separate packages for diffe
 
 ![Workspace](/images/u13/workspace-screen-rec.gif)
 
-Service consolidation also becomes simpler with workspaces. In monolithic environments, services are deployed as a consolidated service rather than deploying them as seperate services. When the consolidator package is created within the workspace the specified services are resolved seamlessly. This eliminates the intermediate step of publishing packages locally before consolidating them, streamlining the path from development to deployment.
+Service consolidation also becomes simpler with workspaces. In monolithic environments, services are deployed as a consolidated service rather than deploying them as separate services. When the consolidator package is created within the workspace the specified services are resolved seamlessly. This eliminates the intermediate step of publishing packages locally before consolidating them, streamlining the path from development to deployment.
 
 ## OpenShift support
 
