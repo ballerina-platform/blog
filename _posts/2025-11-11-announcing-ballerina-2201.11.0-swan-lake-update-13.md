@@ -48,7 +48,7 @@ The Ballerina code-to-cloud plugin now supports generating OpenShift artifacts. 
 
 The CLI now uses build caching to skip redundant compilation when no changes are made to the project. After the first build, subsequent builds within 24 hours will detect unchanged projects and skip compilation, showing them as "UP-TO-DATE". This can significantly reduce the development time. The build cache can be invalidated when a fresh compilation is needed.
 
-For example, a simple HTTP greeting service takes less than a second when the project remains unchanged.
+For example, a simple HTTP greeting service takes just one second when the project remains unchanged.
 
 <img alt="Caching builds" src="/images/u13/build-cache.png">
 
@@ -56,6 +56,6 @@ Moreover, OpenAPI, GraphQL, gRPC, Persist, and AsyncAPI CLI tools can now be upd
 
 ## Get started with Swan Lake Update 13
 
-In addition to the features highlighted above, this release includes numerous improvements across the language, runtime, Ballerina library, and developer tools. For a comprehensive overview of all the new features and improvements brought by Swan Lake Update 13, see the [release note](https://ballerina.io/downloads/swan-lake-release-notes/2201.13.0/).
+In addition to the features highlighted above, this release includes numerous improvements across the language, runtime, Ballerina library, and developer tools. For a comprehensive overview of all the new features and improvements brought by Swan Lake Update 13, see the [release note](https://ballerina.io/downloads/swan-lake-release-notes/swan-lake-2201.13.0).
 
 Fueled by the collective innovation of the Ballerina community, Swan Lake Update 13 advances the language to help developers build connected systems with ease. Get started with Ballerina Swan Lake Update 13 and elevate your integration experience.
