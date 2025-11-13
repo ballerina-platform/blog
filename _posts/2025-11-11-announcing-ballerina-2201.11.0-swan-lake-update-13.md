@@ -20,13 +20,44 @@ Natural expressions are blocks of natural language instructions executed at runt
 
 Natural expressions supports multimodal inputs such as images and audio files.
 
-<img alt="Multimodal inputs" src="/images/u13/multimodal-inputs-np.png">
+```ballerina
+import ballerina/ai;
+
+final ai:ModelProvider model = check ai:getDefaultModelProvider();
+
+type Attraction record {|
+    string name;
+    string city;
+    string highlight;
+|};
+
+function findAttractions(string country, string interest) returns Attraction[]|error {
+    return natural(model) {
+        List top attractions in ${country} for someone interested in ${interest}.
+        Include a one-line highlight for each.
+    };
+}
+```
 
 For more information on the wider concept proposed as "Natural Programming", see [Natural Language is Code: A hybrid approach with Natural Programming](https://blog.ballerina.io/posts/2025-04-26-introducing-natural-programming/)
 
 An experimental implementation of compile-time code generation has also been introduced. This allows users to describe the structure of data (e.g., test data) or the implementation of a function in natural language in the source code, and have the corresponding code be generated at compile time with the help of a generative AI model.
 
-<img alt="Compile-time test data generation" src="/images/u13/compile-time-test-data.png">
+```ballerina
+// Generate test data at compile time
+Employee[] testData = const natural {
+    Create a diverse dataset of 50 employees across engineering, sales,
+    and finance departments with realistic salary distributions.
+};
+
+// Describe function implementation in natural language
+function filterEmployees(Employee[] employees, string department, decimal salary) 
+    returns Employee[] = 
+    @natural:code {
+        prompt: "Filter employees by department and salary threshold."
+    } external;
+ 
+```
 
 ## Workspaces
 
