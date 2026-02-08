@@ -134,7 +134,7 @@ $ bal openapi flatten <openapi.yaml>
 * Introduced the `align` sub-command, which aligns the OpenAPI contract file according to Ballerina's naming practices. The Ballerina name extensions are added to the schemas, which can not be modified directly. The output is a modified OpenAPI contract.
 
 ```
-$ bal openpai align <openapi.yaml>
+$ bal openapi align <openapi.yaml>
 ```
 
 * Code generation support has been added with the new Ballerina name extensions, which are mapped as relevant annotations in the generated types, parameters, and record fields. This support is available for client, service implementation, and service type code generation. Additionally, relaxed data binding for client-side payloads has been introduced, allowing nil values to be considered optional and treating absent fields as nilable types.
