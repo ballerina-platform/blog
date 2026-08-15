@@ -30,13 +30,13 @@ Nutcracker complements Swan Lake; it does not replace it. Both target the same [
 
 ## Ballerina Nutcracker 0.6
 
-Today, we're thrilled to announce the first public release of Ballerina Nutcracker: 0.6, our new native Ballerina compiler, runtime, and standard library. We have been building Nutcracker through a series of milestone releases, and 0.6, adding HTTP service support, is the first one we're opening up for everyone to try.
+Today, we're thrilled to announce Ballerina Nutcracker 0.6, our new native Ballerina compiler, runtime, and standard library. We have been building Nutcracker through a series of milestone releases, and 0.6, adding HTTP service support, is the first one we're opening up for everyone to try.
 
 There are three easy ways to get started:
 
 - Run it in your browser. The new [Ballerina Playground](https://play.ballerina.io/) compiles and runs Ballerina programs entirely in the browser using WebAssembly - no server-side compilation, no installation, no waiting.
-- [Download](https://ballerina.io/nutcracker/#latest-release) it. Grab the 0.6 distribution for Windows, Linux, or macOS (x64 and ARM64) from the Ballerina downloads page. It is a single self-contained archive - download it, unzip it, and run it. There is nothing to install, and it will not interfere with an existing Ballerina Swan Lake installation on your machine.
-- Explore the source. Visit the [Ballerina Nutcracker GitHub](https://github.com/ballerina-nutcracker/ballerina) organization to browse the code, follow the milestones, join the [design discussions](https://github.com/ballerina-nutcracker/ballerina/discussions) — and don't forget to **star** the repo.
+- [Download](https://ballerina.io/nutcracker/#latest-release) it. Grab the 0.6 distribution for Windows (x64), Linux (x64/ARM64), or macOS (x64/ARM64) from the Ballerina downloads page. It is a single self-contained archive - download it, unzip it, and run it. There is nothing to install, and it will not interfere with an existing Ballerina Swan Lake installation on your machine.
+- Explore the source. Visit the [Ballerina Nutcracker GitHub](https://github.com/ballerina-nutcracker/ballerina) repository to browse the code, follow the milestones, join the [design discussions](https://github.com/ballerina-nutcracker/ballerina/discussions) — and don't forget to **star** the repo.
 
 ![The Ballerina Playground](/images/nutcracker-0.6/playground.gif)
 
@@ -52,7 +52,7 @@ Here's how a .bal file moves from your editor to a running program - from the CL
 
 Ballerina source compiles to BIR, Ballerina's intermediate representation, and Nutcracker's interpreter runs that BIR directly. The Ballerina compiler emits BIR either way; bal build packages that BIR with the Nutcracker runtime into one standalone binary that can be deployed in server mode.
 
-Everything that binary touches outside itself goes through the PAL, a thin Platform Abstraction Layer, which is also what lets the same code run unmodified as WebAssembly right inside a browser tab. The Library, covering the language and standard modules, is resolved at compile time and wired in through extern calls at runtime, while Ballerina Central is the remote registry the toolchain reaches out to only when fetching dependencies. For a closer look at how all these pieces fit together, see the full [architecture guide](https://github.com/ballerina-nutcracker/ballerina/blob/main/doc/guides/ARCHITECTURE.md).
+Everything that binary touches outside itself goes through the PAL, a thin Platform Abstraction Layer, which is also what lets the same code run unmodified as WebAssembly right inside a browser tab. The Library, covering the language and standard modules, is resolved at compile time; pure Ballerina modules are linked directly, while modules that need native code are wired in through extern calls at runtime. Ballerina Central is the remote registry the toolchain reaches out to only when fetching dependencies. For a closer look at how all these pieces fit together, see the full [architecture guide](https://github.com/ballerina-nutcracker/ballerina/blob/main/doc/guides/ARCHITECTURE.md).
 
 ## Running Your Program: Interpret or Build
 
@@ -67,15 +67,17 @@ For example, take a small HTTP service:
 import ballerina/http;
 
 service / on new http:Listener(8080) {
-    resource function get greeting(string name) returns string {
-        return string `Hello, ${name}! Running on Nutcracker.`;
+    resource function get greeting/[string name]() returns http:Response {
+        http:Response resp = new;
+        resp.setTextPayload(string `Hello, ${name}! Running on Nutcracker.`);
+        return resp;
     }
 }
 ```
 
 Run it either way from the same source:
 
-```
+```shell
 bal run      # interpret and run immediately
 bal build    # produce a native executable
 ```
@@ -98,4 +100,4 @@ All of this is tracked in the open on the GitHub milestones page, where you can 
 
 The fastest way to experience Nutcracker is the Ballerina Playground - write a Ballerina program and run it right in your browser. When you're ready for more, download 0.6 and take it for a spin on your own machine.
 
-Nutcracker is being built in the open, and your feedback will directly shape where it goes next. [Report issues on GitHub](https://github.com/ballerina-nutcracker/ballerina) or chat with the team on the [Ballerina Discord](https://discord.com/invite/ballerinalang). We can't wait to see what you build - and where you run it.
+Nutcracker is being built in the open, and your feedback will directly shape where it goes next. [Report issues on GitHub](https://github.com/ballerina-nutcracker/ballerina/issues) or chat with the team on the [Ballerina Discord](https://discord.com/invite/ballerinalang). We can't wait to see what you build - and where you run it.
