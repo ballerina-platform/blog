@@ -10,11 +10,13 @@ permalink: /posts/2026-10-28-announcing-ballerina-2201.14.0-swan-lake-update-14/
 
 <style>.cBlogContent p{white-space: break-spaces !important;}</style>
 
-The Ballerina team is excited to announce the fourteenth update release of Ballerina Swan Lake, Ballerina Swan Lake Update 14 (2201.14.0). This update introduces durable workflows, along with several improvements to the AI library and other areas.
+The Ballerina team is excited to announce the fourteenth update release of Ballerina Swan Lake, Ballerina Swan Lake Update 14 (2201.14.0). This update introduces durable workflows for long-running business processes that wait on people and other systems, along with AI library improvements for building agents with human oversight, parallel tool calls, and selective tool loading. The runtime also moves to Java 25, the latest long-term support (LTS) release.
 
 ## Durable workflows
 
-Update 14 introduces the `ballerina/workflow` library for writing durable workflows. A workflow is a Ballerina function that can pause for hours or days, waiting for a person to approve a task or for data from another system, and then continue from the same point, even after a restart.
+Many business processes run for hours or days. An order waits for a manager's approval, and the payment arrives later from another system. Written as ordinary application code, such a process has to save its own state, handle failures, and avoid repeating completed steps after a restart.
+
+Update 14 introduces the `ballerina/workflow` library for writing these processes as durable workflows. A workflow is a plain Ballerina function. The runtime records each completed step, so the workflow can pause while it waits and continue from the same point, even after a restart.
 
 The following workflow reserves stock, waits for a manager's approval and for the payment, and then ships the order:
 
@@ -51,25 +53,33 @@ The Ballerina VS Code extension shows a workflow as a diagram, with separate nod
 
 ![A workflow in the Ballerina VS Code extension](/images/u14/workflow-diagram.png)
 
-For development, the in-memory mode runs everything inside your program with no server. In production, workflows run on Temporal, either self-hosted or on Temporal Cloud. For more information, see the [workflow examples](https://ballerina.io/learn/by-example/).
+For development, the in-memory mode runs everything inside your program with no server, but it keeps state in memory, so workflows do not survive a restart. In production, workflows run on Temporal, either self-hosted or on Temporal Cloud. For more information, see the [workflow examples](https://ballerina.io/learn/by-example/).
 
 ## AI library improvements
 
 This release also brings the following improvements to the AI library (`ballerina/ai`).
 
+### Safer agent execution
+
 - **Human approval for tools:** Mark a tool with `requiresApproval`, and the agent pauses before calling it until a person approves or rejects the call. A function can decide per call, for example, only for refunds above a limit. Chat services get a `decision` resource to receive the answer.
+- **Agent identity:** Agents can carry their own credentials, and tools can require scopes.
+
+### More efficient tool execution
+
 - **Parallel tool calls:** Tool calls returned in a single model response now run in parallel by default.
 - **Selective tool loading:** With `LLM_FILTER`, the agent sends the model only the schemas of the tools it needs, which helps with large MCP toolkits.
+
+### Agent development and evaluation
+
 - **Structured input:** Agents accept any `anydata` value as input, not only text.
 - **Reusable agents:** Agents can be written as classes and shared as packages.
 - **Traces and evaluations:** An agent run can return an `ai:Trace` with every tool call, and conversations can be loaded from evaluation datasets to test agents.
-- **Agent identity:** Agents can carry their own credentials, and tools can require scopes.
 
 ![An agent tool that needs approval, marked in the Ballerina VS Code extension](/images/u14/ai-agent-tools.png)
 
 ## Runtime updates
 
-The Ballerina runtime now runs on JDK 25, the latest long-term support release of Java. The installers include the JRE, so most programs need no change.
+Ballerina Swan Lake Update 14 upgrades the underlying runtime to Java 25, the latest long-term support (LTS) release of Java. This keeps Ballerina aligned with the latest supported Java runtime. Since Ballerina distributions include the required Java runtime, most Ballerina applications continue to run without installing or configuring Java separately.
 
 ## Get started with Swan Lake Update 14
 
