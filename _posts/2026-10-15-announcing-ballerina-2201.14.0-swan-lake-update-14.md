@@ -2,10 +2,10 @@
 layout: blog-post
 title: Announcing Ballerina Swan Lake Update 14 (2201.14.0)
 author: Hasitha Aravinda
-published-date: 28 Oct 2026
+published-date: 15 Oct 2026
 status: Published
 socialmediaimage: ballerina-generic-social-media-image-2023.png
-permalink: /posts/2026-10-28-announcing-ballerina-2201.14.0-swan-lake-update-14/
+permalink: /posts/2026-10-15-announcing-ballerina-2201.14.0-swan-lake-update-14/
 ---
 
 <style>.cBlogContent p{white-space: break-spaces !important;}</style>
